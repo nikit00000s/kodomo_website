@@ -1,0 +1,102 @@
+zap
+load=1p47
+define protein_nonpolar :A and (*:*.c?? or *:*.s?)
+define protein_polar :A and (*:*.n?? or *:*.o??)
+define ribose_polar nucleic and backbone and (*:*.O?')
+define ribose_nonpolar nucleic and backbone and (*:*.c??)
+define phosphate_polar nucleic and backbone and (*:*.op?)
+define phosphate_nonpolar nucleic and backbone and (*.p)
+define majgr_polar (DT:*.o4 or DA:*.n6 or DA:*.n7 or DG:*.n7 or DG:*.o6 or DC:*.n4)
+define majgr_nonpolar (DT:*.c7 or DT:*.c6 or DT:*.c5 or DT:*.c4 or DA:*.c8 or DA:*.c6 or DA:*.c5 or DG:*.c8 or DG:*.c6 or DG:*.c5 or DC:*.c6 or DC:*.c5 or DC:*.c4)
+define mingr_polar (DT:*.n1 or DT:*.n3 or DA:*.n3 or DA:*.n9 or DG:*.n2 or DG:*.n3 or DG:*.n9 or DC:*.n1 or DC:*.n3 or DC:*.o2)
+define mingr_nonpolar (DT:*.c2 or DA:*.c4 or DA:*.c2 or DG:*.c4 or DG:*.c2 or DC:*.c2)
+
+restrict DNA or :A and not water
+wireframe only
+wireframe 0.15
+color cpk
+
+select (protein_polar and within(3.5, ribose_polar))
+cpk 0.8
+color red
+select (ribose_polar and within(3.5, protein_polar))
+cpk 0.8
+color blue
+pause
+
+select (ribose_polar and within(3.5, protein_polar)) or (protein_polar and within(3.5, ribose_polar))
+color cpk
+cpk off
+select (protein_nonpolar and within(4.5, ribose_nonpolar))
+cpk 0.8
+color red
+select (ribose_nonpolar and within(4.5, protein_nonpolar))
+cpk 0.8
+color blue
+pause
+
+select (protein_nonpolar and within(4.5, ribose_nonpolar)) or (ribose_nonpolar and within(4.5, protein_nonpolar))
+color cpk
+cpk off
+select (protein_polar and within(3.5, phosphate_polar))
+cpk 0.8
+color red
+select (phosphate_polar and within(3.5, protein_polar))
+cpk 0.8
+color blue
+pause
+
+select (protein_polar and within(3.5, phosphate_polar)) or (phosphate_polar and within(3.5, protein_polar))
+color cpk
+cpk off
+select (protein_nonpolar and within(4.5, phosphate_nonpolar))
+cpk 0.8
+color red
+select (phosphate_nonpolar and within(4.5, protein_nonpolar))
+cpk 0.8
+color blue
+pause
+
+select (protein_nonpolar and within(4.5, phosphate_nonpolar)) or (phosphate_nonpolar and within(4.5, protein_nonpolar))
+color cpk
+cpk off
+select (protein_polar and within(3.5, majgr_polar))
+cpk 0.8
+color red
+select (majgr_polar and within(3.5, protein_polar))
+cpk 0.8
+color blue
+pause
+
+select (protein_polar and within(3.5, majgr_polar)) or (majgr_polar and within(3.5, protein_polar))
+color cpk
+cpk off
+select (protein_nonpolar and within(4.5, majgr_nonpolar))
+cpk 0.8
+color red
+select (majgr_nonpolar and within(4.5, protein_nonpolar))
+cpk 0.8
+color blue
+pause
+
+select (protein_nonpolar and within(4.5, majgr_nonpolar)) or (majgr_nonpolar and within(4.5, protein_nonpolar))
+color cpk
+cpk off
+select (protein_polar and within(3.5, mingr_polar))
+cpk 0.8
+color red
+select (mingr_polar and within(3.5, protein_polar))
+cpk 0.8
+color blue
+pause
+
+select (protein_polar and within(3.5, mingr_polar)) or (mingr_polar and within(3.5, protein_polar))
+color cpk
+cpk off
+select (protein_nonpolar and within(4.5, mingr_nonpolar))
+cpk 0.8
+color red
+select (mingr_nonpolar and within(4.5, protein_nonpolar))
+cpk 0.8
+color blue
+pause

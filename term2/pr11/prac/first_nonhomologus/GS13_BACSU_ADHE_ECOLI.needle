@@ -1,0 +1,105 @@
+########################################
+# Program: needle
+# Rundate: Sun 12 May 2019 11:32:37
+# Commandline: needle
+#    [-asequence] GS13_BACSU.fasta
+#    [-bsequence] ADHE_ECOLI.fasta
+#    -outfile GS13_BACSU_ADHE_ECOLI.needle
+#    -auto
+# Align_format: srspair
+# Report_file: GS13_BACSU_ADHE_ECOLI.needle
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: GS13_BACSU
+# 2: ADHE_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 897
+# Identity:      38/897 ( 4.2%)
+# Similarity:    60/897 ( 6.7%)
+# Gaps:         773/897 (86.2%)
+# Score: 28.0
+# 
+#
+#=======================================
+
+GS13_BACSU         1 ----------------MAAKFEVGSVYTGKVTGLQAYGAFVALDEETQ-G     33
+                                     ..|:.|..|....:|..:....|..|.|.... .
+ADHE_ECOLI         1 MAVTNVAELNALVERVKKAQREYASFTQEQVDKIFRAAALAAADARIPLA     50
+
+GS13_BACSU        34 LVHISEVTHGFVKD--INEHL-------SVGDEVQVKVLAVDEEKGKIS-     73
+                     .:.::|...|.|:|  |..|.       :..||....||:.|:..|.|: 
+ADHE_ECOLI        51 KMAVAESGMGIVEDKVIKNHFASEYIYNAYKDEKTCGVLSEDDTFGTITI    100
+
+GS13_BACSU        74 -------------------------LSIRATQA---APEKKESKPRKPKA     95
+                                              :|::...|   :|..: :|....||
+ADHE_ECOLI       101 AEPIGIICGIVPTTNPTSTAIFKSLISLKTRNAIIFSPHPR-AKDATNKA    149
+
+GS13_BACSU        96 AQVSEEASTPQGFNTLKDKLEEWI-----EMSNRKDLIKK----------    130
+                     |.:..:|:...|  ..|| |..||     |:||.  |:..          
+ADHE_ECOLI       150 ADIVLQAAIAAG--APKD-LIGWIDQPSVELSNA--LMHHPDINLILATG    194
+
+GS13_BACSU       130 --------------------------------------------------    130
+                                                                       
+ADHE_ECOLI       195 GPGMVKAAYSSGKPAIGVGAGNTPVVIDETADIKRAVASVLMSKTFDNGV    244
+
+GS13_BACSU       130 --------------------------------------------------    130
+                                                                       
+ADHE_ECOLI       245 ICASEQSVVVVDSVYDAVRERFATHGGYLLQGKELKAVQDVILKNGALNA    294
+
+GS13_BACSU       130 --------------------------------------------------    130
+                                                                       
+ADHE_ECOLI       295 AIVGQPAYKIAELAGFSVPENTKILIGEVTVVDESEPFAHEKLSPTLAMY    344
+
+GS13_BACSU       130 --------------------------------------------------    130
+                                                                       
+ADHE_ECOLI       345 RAKDFEDAVEKAEKLVAMGGIGHTSCLYTDQDNQPARVSYFGQKMKTARI    394
+
+GS13_BACSU       130 --------------------------------------------------    130
+                                                                       
+ADHE_ECOLI       395 LINTPASQGGIGDLYNFKLAPSLTLGCGSWGGNSISENVGPKHLINKKTV    444
+
+GS13_BACSU       130 --------------------------------------------------    130
+                                                                       
+ADHE_ECOLI       445 AKRAENMLWHKLPKSIYFRRGSLPIALDEVITDGHKRALIVTDRFLFNNG    494
+
+GS13_BACSU       130 --------------------------------------------------    130
+                                                                       
+ADHE_ECOLI       495 YADQITSVLKAAGVETEVFFEVEADPTLSIVRKGAELANSFKPDVIIALG    544
+
+GS13_BACSU       130 --------------------------------------------------    130
+                                                                       
+ADHE_ECOLI       545 GGSPMDAAKIMWVMYEHPETHFEELALRFMDIRKRIYKFPKMGVKAKMIA    594
+
+GS13_BACSU       130 --------------------------------------------------    130
+                                                                       
+ADHE_ECOLI       595 VTTTSGTGSEVTPFAVVTDDATGQKYPLADYALTPDMAIVDANLVMDMPK    644
+
+GS13_BACSU       130 --------------------------------------------------    130
+                                                                       
+ADHE_ECOLI       645 SLCAFGGLDAVTHAMEAYVSVLASEFSDGQALQALKLLKEYLPASYHEGS    694
+
+GS13_BACSU       130 --------------------------------------------------    130
+                                                                       
+ADHE_ECOLI       695 KNPVARERVHSAATIAGIAFANAFLGVCHSMAHKLGSQFHIPHGLANALL    744
+
+GS13_BACSU       130 --------------------------------------------------    130
+                                                                       
+ADHE_ECOLI       745 ICNVIRYNANDNPTKQTAFSQYDRPQARRRYAEIADHLGLSAPGDRTAAK    794
+
+GS13_BACSU       130 --------------------------------------------------    130
+                                                                       
+ADHE_ECOLI       795 IEKLLAWLETLKAELGIPKSIREAGVQEADFLANVDKLSEDAFDDQCTGA    844
+
+GS13_BACSU       130 -----------------------------------------------    130
+                                                                    
+ADHE_ECOLI       845 NPRYPLISELKQILLDTYYGRDYVEGETAAKKEAAPAKAEKKAKKSA    891
+
+
+#---------------------------------------
+#---------------------------------------

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>#7 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,800&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../../css/common-style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/old_style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="pr7.css">
+</head>
+<body>
+
+<div id="button-to-end" onclick="window.scrollTo(0,document.body.scrollHeight);">
+    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+</div>
+
+<!-- MAIN -->
+<main>
+
+    <div class="container-fluid big-header">
+        <div class="row ls-txt-black">
+            <div class="col p-0">
+
+                <!--TEXT WELCOME-->
+                <h1 class="h1 text-md-center big-header-title">
+                    <span>
+                        <a class="big-header-link" href="http://kodomo.cmm.msu.su/wiki/2018/2/pr7">
+                            <i class="fa fa-bookmark" aria-hidden="true"></i>
+                            Практикум #7.
+                        </a>
+                        <span class="big-header-btitle">
+                            EMBOSS и протеомы
+                        </span>
+                    </span>
+                </h1>
+
+                <h6 class="h6 text-md-center big-header-date">26 марта 2019 г.</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid prac_content">
+        <div class="row justify-content-center">
+            <div class="basic_task col col-12 col-lg-8">
+                <!-- #FIXME -->
+                <h2 class="prac_title text-center">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i> Знакомство с EMBOSS, команда grep
+                </h2>
+
+                <p class="prac_intro">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> Данный практикум посвящен работе EMBOSS. Это
+                    бесплатный пакет программного обеспечения с открытым исходным кодом, разработанный для нужд
+                    сообщества пользователей молекулярной биологии и биоинформатики.
+                </p>
+            </div>
+            <section class="basic_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-tasks" aria-hidden="true"></i> Задание 1. Частоты остатков в
+                    протеомах</h3>
+
+                <p class="task_intro">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    Что сделали? <br/>
+                    <i class="fa fa-list-alt" aria-hidden="true"></i> Сначала скачали из Uniprot два полных протеома в
+                    fasta-формате: <i>Escherichia coli</i> K12 и <i>Kitasatospora
+                    setae</i>. Затем посчитали число последовательностей и число аминокислот (не число разных, а общее
+                    число) в каждом протеоме. Программой wordcount из пакета EMBOSS посчитали частоты (в штуках) букв
+                    (аминокислотных остатков) в протеомах. Далее вычислили процент каждой буквы в каждом протеоме (с
+                    помощью Python, <a href="table_tab.py">скрипт <i class="fa fa-file-code-o"
+                                                                     aria-hidden="true"></i></a>). Создали
+                    единую таблицу процентов букв в обоих организмах,
+                    упорядоченную по убыванию процента в <i>Kitasatospora setae</i> (также с помощью Python, <a
+                        href="table_html.py">скрипт <i class="fa fa-file-code-o" aria-hidden="true"></i></a>). Посчитали
+                    разность процентов для каждой буквы.
+                    Полученная информация представлена в таблице 1.
+                </p>
+
+                <p class="task-info">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> Информация о протеомах<br/>
+                    <i class="fa fa-circle" aria-hidden="true"></i> Протеом <i>Escherichia coli</i>. ID: <a
+                        href="https://www.uniprot.org/proteomes/UP000000625">UP000000625</a>. Количество записей: 4352.
+                    <br/><i class="fa fa-circle" aria-hidden="true"></i> Протеом <i>Kitasatospora setae</i>. ID: <a
+                        href="https://www.uniprot.org/proteomes/UP000007076">UP000007076</a>. Количество записей: 7443.
+                </p>
+
+                <table class="task_table table table-borderless">
+                    <caption>
+                        <span class="table_number">
+                            <i class="fa fa-table" aria-hidden="true"></i> Таблица 1.
+                        </span>
+                        Основная информация о протеомах.
+                    </caption>
+                    <!-- горизонтальный вариант таблицы, ниже есть вертикальный, выбирайте любой, второй удалите -->
+
+                    <tbody>
+                    <tr>
+                        <th>
+                            Остаток
+                        </th>
+                        <th>
+                            Процент в K. setae
+                        </th>
+                        <th>
+                            Процент в E. coli
+                        </th>
+                        <th>
+                            Разница
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            A
+                        </td>
+                        <td>
+                            15.0
+                        </td>
+                        <td>
+                            9.5
+                        </td>
+                        <td>
+                            5.5
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            L
+                        </td>
+                        <td>
+                            11.0
+                        </td>
+                        <td>
+                            10.7
+                        </td>
+                        <td>
+                            0.4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            G
+                        </td>
+                        <td>
+                            9.7
+                        </td>
+                        <td>
+                            7.4
+                        </td>
+                        <td>
+                            2.4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            R
+                        </td>
+                        <td>
+                            8.3
+                        </td>
+                        <td>
+                            5.5
+                        </td>
+                        <td>
+                            2.8
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            V
+                        </td>
+                        <td>
+                            8.1
+                        </td>
+                        <td>
+                            7.1
+                        </td>
+                        <td>
+                            1.1
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            P
+                        </td>
+                        <td>
+                            6.8
+                        </td>
+                        <td>
+                            4.4
+                        </td>
+                        <td>
+                            2.3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            T
+                        </td>
+                        <td>
+                            6.0
+                        </td>
+                        <td>
+                            5.4
+                        </td>
+                        <td>
+                            0.6
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            D
+                        </td>
+                        <td>
+                            5.8
+                        </td>
+                        <td>
+                            5.1
+                        </td>
+                        <td>
+                            0.6
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            E
+                        </td>
+                        <td>
+                            5.3
+                        </td>
+                        <td>
+                            5.8
+                        </td>
+                        <td>
+                            -0.4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            S
+                        </td>
+                        <td>
+                            4.7
+                        </td>
+                        <td>
+                            5.8
+                        </td>
+                        <td>
+                            -1.1
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Q
+                        </td>
+                        <td>
+                            2.7
+                        </td>
+                        <td>
+                            4.4
+                        </td>
+                        <td>
+                            -1.7
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            I
+                        </td>
+                        <td>
+                            2.6
+                        </td>
+                        <td>
+                            6.0
+                        </td>
+                        <td>
+                            -3.4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            F
+                        </td>
+                        <td>
+                            2.5
+                        </td>
+                        <td>
+                            3.9
+                        </td>
+                        <td>
+                            -1.4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            H
+                        </td>
+                        <td>
+                            2.3
+                        </td>
+                        <td>
+                            2.3
+                        </td>
+                        <td>
+                            0.0
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Y
+                        </td>
+                        <td>
+                            2.0
+                        </td>
+                        <td>
+                            2.8
+                        </td>
+                        <td>
+                            -0.9
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            K
+                        </td>
+                        <td>
+                            1.7
+                        </td>
+                        <td>
+                            4.4
+                        </td>
+                        <td>
+                            -2.7
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            N
+                        </td>
+                        <td>
+                            1.7
+                        </td>
+                        <td>
+                            3.9
+                        </td>
+                        <td>
+                            -2.3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            W
+                        </td>
+                        <td>
+                            1.5
+                        </td>
+                        <td>
+                            1.5
+                        </td>
+                        <td>
+                            -0.0
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            M
+                        </td>
+                        <td>
+                            1.4
+                        </td>
+                        <td>
+                            2.8
+                        </td>
+                        <td>
+                            -1.4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            C
+                        </td>
+                        <td>
+                            0.8
+                        </td>
+                        <td>
+                            1.2
+                        </td>
+                        <td>
+                            -0.4
+                        </td>
+                    </tr>
+                    </tbody>
+
+                </table>
+
+                <p class="task_outro">
+                    <i class="fa fa-comment" aria-hidden="true"></i>
+                    Самыми популярными аминокислотами являются: аланин, лейцин, глицин, валин.
+                    Интересно, что в протеоме у <i>Kitasatospora setae</i> очень много аланина, пролина, глицина и
+                    аргинина, в то время как у <i>Escherichia coli</i> больше изолейцина, лизина и глутамина.
+                </p>
+
+            </section>
+
+
+            <section class="basic_task task2 col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-tasks" aria-hidden="true"></i> Задание 2. Комманда compseq,
+                    справочная информация.</h3>
+
+                <p class="task_intro">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    Далее будет приведена справочная информация для compseq - одной из комманд EMBOSS. <br/>
+                </p>
+                <h6 class="h6 ls-h6 bg-h6">
+                    <i class="fa fa-cogs" aria-hidden="true"></i> Функция
+                </h6>
+                <p>Рассчитывает состав уникальных слов в последовательностях.</p>
+
+                <h6 class="h6 ls-h6 bg-h6">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> Описание
+                </h6>
+                <p>
+                    compseq вычисляет состав слов заданной длины (из 2 букв, из 3 и т. д.) во входных
+                    последовательностях.
+                    Длина слова указывается пользователем. Уникальные последовательности (слова), их наблюдаемое
+                    количество, наблюдаемая частота, ожидаемая частота и (наблюдаемая / ожидаемая) частота записываются
+                    в выходной файл. (Наблюдаемая / ожидаемая) частота выделяет любые слова с необычно высоким (или
+                    низким) вхождением во входных последовательностях.
+                </p>
+
+                <h6 class="h6 ls-h6 bg-h6">
+                    <i class="fa fa-code" aria-hidden="true"></i> Пример
+                </h6>
+                <p>Для подсчета частот динуклеотидов в файле:
+                    <span class="bash">
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span> compseq tembl:x65923 -word 2 result3.comp <span
+                            class="bash-cursor"></span>
+                </span>
+                    <i class="fa fa-sign-in" aria-hidden="true"></i> В данном примере на вход поступает PDB файл из
+                    банка последовательностей TrEMBL. <br/>
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> На выходе получаем:
+                    <span class="txt-file">#
+# Output from 'compseq'
+#
+# The Expected frequencies are calculated on the (false) assumption that every
+# word has equal frequency.
+#
+# The input sequences are:
+#	X65923
+
+
+Word size	2
+Total count	517
+
+#
+# Word	Obs Count	Obs Frequency	Exp Frequency	Obs/Exp Frequency
+#
+AA	45		0.0870406	0.0625000	1.3926499
+AC	20		0.0386847	0.0625000	0.6189555
+AG	45		0.0870406	0.0625000	1.3926499
+AT	14		0.0270793	0.0625000	0.4332689
+CA	34		0.0657640	0.0625000	1.0522244
+CC	43		0.0831721	0.0625000	1.3307544
+CG	25		0.0483559	0.0625000	0.7736944
+CT	37		0.0715667	0.0625000	1.1450677
+GA	31		0.0599613	0.0625000	0.9593810
+GC	43		0.0831721	0.0625000	1.3307544
+GG	46		0.0889749	0.0625000	1.4235977
+GT	28		0.0541586	0.0625000	0.8665377
+TA	15		0.0290135	0.0625000	0.4642166
+TC	33		0.0638298	0.0625000	1.0212766
+TG	32		0.0618956	0.0625000	0.9903288
+TT	26		0.0502901	0.0625000	0.8046422
+
+Other	0		0.0000000	0.0000000	10000000000.0000000
+                    </span>
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> Вывод программы wordcount (другой input):
+                    <span class="txt-file">L	144488
+A	128666
+G	99690
+V	95687
+I	81357
+S	78483
+E	77984
+R	74712
+T	73007
+D	69656
+Q	60126
+P	59938
+K	59642
+N	53299
+F	52705
+Y	38502
+M	38236
+H	30714
+W	20735
+C	15727
+U	3
+                    </span>
+                    <i class="fa fa-comment" aria-hidden="true"></i> По-моему, использовать wordcount для наших целей
+                    (просто подсчет аминокислот) легче, потом мне
+                    самому проще импортировать эти данные в python и обрабатывать их там.
+            </section>
+            <!-- #FIXME -->
+        </div>
+    </div>
+
+
+</main>
+
+<!-- Footer -->
+<footer class="page-footer ls-footer">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- TERMS, FOOTER column -->
+            <div class="col-md-6 mx-auto">
+
+                <h5 class="font-weight-bold text-uppercase">Семестры</h5>
+
+                <div class="row">
+
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="../../term1/index.html">Первый</a>
+                            </li>
+                            <li>
+                                <a href="../../term2/index.html">Второй</a>
+                            </li>
+                            <li>
+                                <a href="#">Третий</a>
+                            </li>
+                            <li>
+                                <a href="#">Четвёртый</a>
+                            </li>
+                            <li>
+                                <a href="#">Пятый</a>
+                            </li>
+                            <li>
+                                <a href="#">Шестой</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Седьмой</a>
+                            </li>
+                            <li>
+                                <a href="#">Восьмой</a>
+                            </li>
+                            <li>
+                                <a href="#">Девятый</a>
+                            </li>
+                            <li>
+                                <a href="#">Десятый</a>
+                            </li>
+                            <li>
+                                <a href="#">Одиннадцатый</a>
+                            </li>
+                            <li>
+                                <a href="#">Двенадцатый</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <!-- Links -->
+
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto">
+
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase">МГУ</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="http://www.fbb.msu.ru/" class="li">
+                            Сайт ФББ МГУ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.msu.ru/">МГУ</a>
+                    </li>
+                </ul>
+
+
+                <!--SOCIAL-->
+                <h5 class="font-weight-bold text-uppercase">Связь</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://vk.com/nikgr1">Вконтакте | <i class="fa fa-vk" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:nikit00000s@fbb.msu.ru">Почта kodomo | <i class="fa fa-envelope"
+                                                                                  aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:NikGR1@yandex.ru">Личная почта | <i class="fa fa-envelope"
+                                                                            aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto">
+
+                <!-- STUFF -->
+                <h5 class="font-weight-bold text-uppercase">Остальное на сайте</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="../../index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="../../html/about_me/about_me.html">Обо мне</a>
+                    </li>
+                    <li>
+                        <a href="http://kodomo.cmm.msu.su/wiki/2018">KodomoFBB</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+
+    <div class="footer-copyright text-center py-3">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+        Спасибо за помощь <a href="https://vk.com/id350523696">Грызунову Сергею</a>.
+    </div>
+</footer>
+
+
+<script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../js/own/yearInit.js"></script>
+</body>
+</html>

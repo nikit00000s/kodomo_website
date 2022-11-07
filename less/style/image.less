@@ -1,0 +1,158 @@
+@import "variables";
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+img.es {
+  max-width: 576px / 3; /*3 times less than in bootstrap*/
+}
+
+img.sm {
+  max-width: 576px / 2; /*2 times less than in bootstrap*/
+}
+
+img.md {
+  max-width: 720px / 2; /*2 times less than in bootstrap*/
+}
+
+img.lg {
+  max-width: 960px / 2; /*2 times less than in bootstrap*/
+}
+
+img.xl {
+  max-width: 1140px / 2; /*2 times less than in bootstrap*/
+}
+
+img.xxl {
+  max-width: 1140px * .8; /*.8 times less than in bootstrap*/
+}
+
+img.xxxl {
+  max-width: 1140px; /*like in bootstrap*/
+}
+
+.wrap-img-es {
+  max-width: 576px / 3; /*3 times less than in bootstrap*/
+  margin: 0 auto;
+  .img-cap { display: block }
+}
+
+.wrap-img-sm {
+  max-width: 576px / 2; /*2 times less than in bootstrap*/
+  margin: 0 auto;
+  .img-cap { display: block }
+}
+
+.wrap-img-md {
+  max-width: 720px / 2; /*2 times less than in bootstrap*/
+  margin: 0 auto;
+  .img-cap { display: block }
+}
+
+.wrap-img-lg {
+  max-width: 960px / 2; /*2 times less than in bootstrap*/
+  margin: 0 auto;
+  .img-cap { display: block }
+}
+
+.wrap-img-xl {
+  max-width: 1140px / 2; /*2 times less than in bootstrap*/
+  margin: 0 auto;
+  .img-cap { display: block }
+}
+
+.wrap-img-xxl {
+  max-width: 1140px * .8; /*.8 times less than in bootstrap*/
+  margin: 0 auto;
+  .img-cap { display: block }
+}
+
+.wrap-img-xxxl {
+  max-width: 1140px; /*like in bootstrap*/
+  margin: 0 auto;
+  .img-cap { display: block }
+}
+
+.wrap-img-full-hd {
+  max-width: 1920px;
+  margin: 0 auto;
+  .img-cap { display: block }
+}
+
+.wrap-img-es-left {
+  .wrap-img-es;
+  float: left;
+}
+
+.wrap-img-sm-left {
+  .wrap-img-sm;
+  float: left;
+}
+
+.wrap-img-md-left {
+  .wrap-img-md;
+  float: left;
+}
+
+.wrap-img-lg-left {
+  .wrap-img-lg;
+  float: left;
+}
+
+.wrap-img-xl-left {
+  .wrap-img-xl;
+  float: left;
+}
+
+.wrap-img-xxl-left {
+  .wrap-img-xxl;
+  float: left;
+}
+
+.wrap-img-xxxl-left {
+  .wrap-img-xxxl;
+  float: left;
+}
+
+.wrap-img-full-hd-left {
+  .wrap-img-full-hd;
+  float: left;
+}
+
+.fluid-wrap-img-full-width {
+  position: relative;
+  max-width: 100%;
+  overflow-x: scroll;
+  img {
+    width: auto;
+  }
+  .img-cap {
+    width: 100%;
+    position: sticky;
+  }
+}
+
+.img-cap {
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  margin-top: .5em;
+  margin-bottom: 1em;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.2;
+  font-family: @f_text;
+  font-size: .8em;
+  letter-spacing: .02em;
+  span {
+    font-style: normal;
+    font-weight: 700;
+    &:before {
+      .icon-in-text;
+      content: @fa-var-image;
+      color: @c_burgundy;
+    }
+  }
+}

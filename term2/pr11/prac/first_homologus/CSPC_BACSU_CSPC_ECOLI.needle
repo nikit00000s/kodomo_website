@@ -1,0 +1,41 @@
+########################################
+# Program: needle
+# Rundate: Sun 12 May 2019 11:31:43
+# Commandline: needle
+#    [-asequence] CSPC_BACSU.fasta
+#    [-bsequence] CSPC_ECOLI.fasta
+#    -outfile CSPC_BACSU_CSPC_ECOLI.needle
+#    -auto
+# Align_format: srspair
+# Report_file: CSPC_BACSU_CSPC_ECOLI.needle
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: CSPC_BACSU
+# 2: CSPC_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 69
+# Identity:      37/69 (53.6%)
+# Similarity:    45/69 (65.2%)
+# Gaps:           3/69 ( 4.3%)
+# Score: 186.0
+# 
+#
+#=======================================
+
+CSPC_BACSU         1 --MEQGTVKWFNAEKGFGFIERENGD-DVFVHFSAIQSDGFKSLDEGQKV     47
+                       ..:|.|||||..||||||...:|. ||||||||||.:|||:|.|||.|
+CSPC_ECOLI         1 MAKIKGQVKWFNESKGFGFITPADGSKDVFVHFSAIQGNGFKTLAEGQNV     50
+
+CSPC_BACSU        48 SFDVEQGARGAQAANVQKA     66
+                     .|:::.|.:|..|.||...
+CSPC_ECOLI        51 EFEIQDGQKGPAAVNVTAI     69
+
+
+#---------------------------------------
+#---------------------------------------

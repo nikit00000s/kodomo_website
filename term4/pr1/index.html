@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>#1,2 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../less/simple_style/style.css">
+</head>
+<body>
+
+<h1>Практикум 1. Филогенетическое дерево.</h1>
+<h3>Отобранные бактерии</h3>
+<table>
+    <tbody>
+    <tr>
+        <td><p class="line862">Название</p></td>
+        <td><p class="line862">Мнемоника</p></td>
+    </tr>
+    <tr>
+        <td><span class="anchor" id="line-10"></span>
+            <p class="line891"><em>Bacillus anthracis</em></p></td>
+        <td><p class="line862">BACAN</p></td>
+    </tr>
+    <tr>
+        <td><span class="anchor" id="line-11"></span>
+            <p class="line891"><em>Bacillus subtilis</em></p></td>
+        <td><p class="line862">BACSU</p></td>
+    </tr>
+    <tr>
+        <td><span class="anchor" id="line-14"></span>
+            <p class="line891"><em>Enterococcus faecalis</em></p></td>
+        <td><p class="line862">ENTFA</p></td>
+    </tr>
+    <tr>
+        <td><span class="anchor" id="line-15"></span>
+            <p class="line891"><em>Geobacillus kaustophilus</em></p></td>
+        <td><p class="line862">GEOKA</p></td>
+    </tr>
+    <tr>
+        <td><span class="anchor" id="line-17"></span>
+            <p class="line891"><em>Lactobacillus delbrueckii subsp. bulgaricus</em></p></td>
+        <td><p class="line862">LACDA</p></td>
+    </tr>
+    <tr>
+        <td><span class="anchor" id="line-18"></span>
+            <p class="line891"><em>Lactococcus lactis subsp. cremoris</em></p></td>
+        <td><p class="line862">LACLM</p></td>
+    </tr>
+    <tr>
+        <td><span class="anchor" id="line-19"></span>
+            <p class="line891"><em>Listeria monocytogenes serovar 1/2a</em></p></td>
+        <td><p class="line862">LISMO</p></td>
+    </tr>
+    <tr>
+        <td><span class="anchor" id="line-22"></span>
+            <p class="line891"><em>Staphylococcus epidermidis</em></p></td>
+        <td><p class="line862">STAES</p></td>
+    </tr>
+    </tbody>
+</table>
+<h3>Скобочная формула дерева</h3>
+<p>
+    ((((((BACAN, BACSU), GEOKA), LISMO), STAES), (ENTFA, LACDA));
+</p>
+<h3>Изображение дерева</h3>
+<figure>
+    <img src="img/tree.png" alt="tree" width="700">
+    <figcaption>
+        <h6>Рисунок 1.</h6> Изображение филогенетического дерева
+    </figcaption>
+</figure>
+
+<h3>Ветви дерева</h3>
+<p>
+    Нетривиальные деревья:
+</p>
+<ul>
+    <li>
+        {ENTFA, LACDA} против {STAES, LISMO, GEOKA, BACAN, BACSU}
+    </li>
+    <li>
+        {ENTFA, LACDA, STAES} против {LISMO, GEOKA, BACAN, BACSU}
+    </li>
+    <li>
+        {ENTFA, LACDA, STAES, LISMO} против {GEOKA, BACAN, BACSU}
+    </li>
+    <li>
+        {ENTFA, LACDA, STAES, LISMO, GEOKA} против {BACAN, BACSU}
+    </li>
+</ul>
+
+<h1>Практикум 2. Реконструкция филогении</h1>
+
+<p>
+    Нетривиальные ветви и таксоны:
+</p>
+<figure>
+    <img src="img/tree_clades.png" alt="tree" width="700">
+    <figcaption>
+        <h6>Рисунок 2.</h6> Изображение филогенетического дерева. 1 - Bacillus, 2 - Bacillaceae, 4 - Bacillales, 5 - Lactobacillales. По 3 ветви нет иформации о таксоне.
+    </figcaption>
+</figure>
+<p>
+    Было выбрано семейство триггер-факторов с мнемоникой TIG, и на основе последовательностей этих белков были построены 3 древа:
+</p>
+<ul>
+    <li>
+        ((((BACAN,GEOKA),BACSU),STAES),LISMO,(LACDA,ENTFA)); - Maximum Likehood method
+    </li>
+    <li>
+        ((((BACAN,GEOKA),BACSU),STAES),LISMO,(LACDA,ENTFA)); - Neighbor-Joining method
+    </li>
+    <li>
+        ((((BACAN,GEOKA),BACSU),STAES),LISMO,(LACDA,ENTFA)); - Minimum Evolution method
+    </li>
+</ul>
+<a href="../" class="back">Вернуться на страницу семестра</a>
+<h3></h3>
+</body>
+</html>

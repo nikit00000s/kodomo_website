@@ -1,0 +1,37 @@
+########################################
+# Program: water
+# Rundate: Sun 12 May 2019 11:18:53
+# Commandline: water
+#    [-asequence] DEGR_BACSU.fasta
+#    [-bsequence] RALR_ECOLI.fasta
+#    -outfile DEGR_BACSU_RALR_ECOLI.water
+#    -auto
+# Align_format: srspair
+# Report_file: DEGR_BACSU_RALR_ECOLI.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: DEGR_BACSU
+# 2: RALR_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 7
+# Identity:       2/7 (28.6%)
+# Similarity:     6/7 (85.7%)
+# Gaps:           0/7 ( 0.0%)
+# Score: 16.0
+# 
+#
+#=======================================
+
+DEGR_BACSU        32 KPSMEKY     38
+                     |.::|::
+RALR_ECOLI        44 KEALERW     50
+
+
+#---------------------------------------
+#---------------------------------------

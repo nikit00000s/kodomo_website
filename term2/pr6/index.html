@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>#6 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,800&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../../css/common-style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/old_style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="pr6.css">
+
+    <script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+
+    <script src="../../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+    <script src="../../js/own/green_rain.js"></script>
+</head>
+<body>
+
+<div id="button-to-end" onclick="window.scrollTo(0,document.body.scrollHeight);">
+    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+</div>
+
+<main>
+    <div class="container-fluid big-header">
+        <div class="row justify-content-center">
+            <div class="col col-12 p-0" id="sketch-parent">
+                <h1 class="h1 text-md-center big-header-title">
+                    <span>
+                        <a class="big-header-link" href="http://kodomo.cmm.msu.su/wiki/2018/2/pr6">&nbsp;<i
+                                class="fa fa-terminal" aria-hidden="true"></i>
+                            Практикум #6.</a>
+                        <span class="big-header-btitle">
+                            Bash
+                        </span>
+                    </span>
+                </h1>
+
+                <h6 class="h6 text-md-center big-header-date">19 марта 2019 г.</h6>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col col-12 col-lg-8">
+                <h1 class="bg-h1">&nbsp;<span class="bash-path"><i
+                        class="fa fa-terminal" aria-hidden="true"></i></span> Bash
+                </h1>
+                <p class="bash"><span class="bash-path"><i class="fa fa-info-circle"></i></span> <span
+                        class="bash-user">Bash</span> (от англ. Bourne again shell) —
+                    усовершенствованная и модернизированная вариация командной оболочки <span class="bash-path">Bourne shell</span>.
+                    Одна из наиболее
+                    популярных современных разновидностей командной оболочки <span class="bash-path">UNIX</span>.
+                    Особенно популярна в среде <span class="bash-path">Linux</span>, где
+                    она часто используется в качестве предустановленной командной оболочки.</p>
+
+
+                <h1 class="bg-h1">&nbsp;<span class="bash-path"><i
+                        class="fa fa-terminal" aria-hidden="true"></i></span> Краткое описание команд bash
+                </h1>
+                <p class="bash"><span class="bash-path"><i class="fa fa-info-circle"></i></span> <span
+                        class="bash-user">Как я получил информацию о командах?</span> <br/>
+                    Информация по встроенным командам расписана в справочной странице bash:
+                    <span class="bash-path">man /*команда*/</span>
+                </p>
+
+
+                <h2 class="bg-h2">
+                    <span class="bash-path">1.</span> Команда ls
+                </h2>
+                <p class="bash">
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>ls -1<span
+                        class="bash-cursor"></span> <br/>
+                    Выводить по одному файлу в линию.
+                </p>
+                <p class="bash">
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>ls -d<span
+                        class="bash-cursor"></span> <br/>
+                    Отображать директории, не их содержимое.
+                </p>
+                <p class="bash">
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>ls -lh<span
+                        class="bash-cursor"></span> <br/>
+                    Отображать размеры папок и файлов в единицах размера, кратных байту (Kb, Mb, Gb...)
+                </p>
+                <p class="bash">
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>ls -r<span
+                        class="bash-cursor"></span> <br/>
+                    Отображать директории рекурсивно.
+                </p>
+                <p class="bash">
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>ls -S<span
+                        class="bash-cursor"></span> <br/>
+                    Отображать отсортированные по размеру файлы.
+                </p>
+
+
+                <h2 class="bg-h2">
+                    <span class="bash-path">2.</span> Команда cut
+                </h2>
+                <p class="bash">
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>cut -d<span
+                        class="bash-cursor"></span> <br/>
+                    Использовать определённый разделитель (записывается сразу после флага, по умолчанию - TAB).
+                </p>
+                <p class="bash">
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>cut -f<span
+                        class="bash-cursor"></span> <br/>
+                    Вырезать определённый столбец n (номер записывается сразу после флага).
+                </p>
+                <p class="bash">
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>cut -s<span
+                        class="bash-cursor"></span> <br/>
+                    Вырезать определённую последовательность символов с n по m (номера указать после флага в виде n-m)
+                </p>
+                <p class="bash">
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>cut -f<span
+                        class="bash-cursor"></span> <br/>
+                    Печать только тех полей, которые перечислены в списке полей. Поля по умолчанию разделяются символом
+                    TAB.
+                </p>
+
+
+                <h2 class="bg-h2">
+                    <span class="bash-path">3.</span> Команда cat
+                </h2>
+                <p class="bash">
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>cat -b<span
+                        class="bash-cursor"></span> <br/>
+                    Нумеровать непустые строки.
+                </p>
+                <p class="bash">
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>cat -E<span
+                        class="bash-cursor"></span> <br/>
+                    Дописывать $ в конце каждой строки.
+                </p>
+                <p class="bash">
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>cat -T<span
+                        class="bash-cursor"></span> <br/>
+                    Отображать табуляцию как ^I.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="page-footer ls-footer">
+
+    <div id="back-footer"></div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- TERMS, FOOTER column -->
+            <div class="col col-md-6 mx-auto">
+
+                <h5 class="font-weight-bold text-uppercase">Семестры</h5>
+
+                <div class="row">
+
+                    <div class="col col-6">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="../../term1/index.html">Первый</a>
+                            </li>
+                            <li>
+                                <a href="../../term2/index.html">Второй</a>
+                            </li>
+                            <li>
+                                <a href="#">Третий</a>
+                            </li>
+                            <li>
+                                <a href="#">Четвёртый</a>
+                            </li>
+                            <li>
+                                <a href="#">Пятый</a>
+                            </li>
+                            <li>
+                                <a href="#">Шестой</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col col-6">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Седьмой</a>
+                            </li>
+                            <li>
+                                <a href="#">Восьмой</a>
+                            </li>
+                            <li>
+                                <a href="#">Девятый</a>
+                            </li>
+                            <li>
+                                <a href="#">Десятый</a>
+                            </li>
+                            <li>
+                                <a href="#">Одиннадцатый</a>
+                            </li>
+                            <li>
+                                <a href="#">Двенадцатый</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <!-- Links -->
+
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col col-md-3 mx-auto">
+
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase">МГУ</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="http://www.fbb.msu.ru/" class="li">
+                            Сайт ФББ МГУ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.msu.ru/">МГУ</a>
+                    </li>
+                </ul>
+
+                <!--SOCIAL-->
+                <h5 class="font-weight-bold text-uppercase">Связь</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://vk.com/nikgr1">Вконтакте | <i class="fa fa-vk" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:nikit00000s@fbb.msu.ru">Почта kodomo | <i class="fa fa-envelope"
+                                                                                  aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:NikGR1@yandex.ru">Личная почта | <i class="fa fa-envelope"
+                                                                            aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto">
+
+                <!-- STUFF -->
+                <h5 class="font-weight-bold text-uppercase">Остальное на сайте</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="../../index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="../../html/about_me/about_me.html">Обо мне</a>
+                    </li>
+                    <li>
+                        <a href="http://kodomo.cmm.msu.su/wiki/2018">KodomoFBB</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- TERMS, FOOTER column -->
+            <div class="col col-12 text-center">
+                <!-- Copyright -->
+
+                <div class="footer-copyright text-center py-3">
+                    <i class="fa fa-copyright" aria-hidden="true"></i>
+                    Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+                    Спасибо за помощь <a href="https://vk.com/id350523696">Грызунову Сергею</a>.
+                </div>
+
+                <hr/>
+
+                Sketch made by <a href="http://xie-emily.com/">Emily Xie</a>
+
+            </div>
+        </div>
+    </div>
+
+</footer>
+<script src="../../js/InitYear.js"></script>
+
+</body>
+</html>

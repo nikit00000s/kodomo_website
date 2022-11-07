@@ -1,0 +1,89 @@
+########################################
+# Program: needle
+# Rundate: Sun 12 May 2019 11:32:37
+# Commandline: needle
+#    [-asequence] COX2_BACSU.fasta
+#    [-bsequence] ALR2_ECOLI.fasta
+#    -outfile COX2_BACSU_ALR2_ECOLI.needle
+#    -auto
+# Align_format: srspair
+# Report_file: COX2_BACSU_ALR2_ECOLI.needle
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: COX2_BACSU
+# 2: ALR2_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 668
+# Identity:      16/668 ( 2.4%)
+# Similarity:    21/668 ( 3.1%)
+# Gaps:         624/668 (93.4%)
+# Score: 15.0
+# 
+#
+#=======================================
+
+COX2_BACSU         0 --------------------------------------------------      0
+                                                                       
+ALR2_ECOLI         1 MTRPIQASLDLQALKQNLSIVRQAATHARVWSVVKANAYGHGIERIWSAI     50
+
+COX2_BACSU         0 --------------------------------------------------      0
+                                                                       
+ALR2_ECOLI        51 GATDGFALLNLEEAITLRERGWKGPILMLEGFFHAQDLEIYDQHRLTTCV    100
+
+COX2_BACSU         0 --------------------------------------------------      0
+                                                                       
+ALR2_ECOLI       101 HSNWQLKALQNARLKAPLDIYLKVNSGMNRLGFQPDRVLTVWQQLRAMAN    150
+
+COX2_BACSU         0 --------------------------------------------------      0
+                                                                       
+ALR2_ECOLI       151 VGEMTLMSHFAEAEHPDGISGAMARIEQAAEGLECRRSLSNSAATLWHPE    200
+
+COX2_BACSU         0 --------------------------------------------------      0
+                                                                       
+ALR2_ECOLI       201 AHFDWVRPGIILYGASPSGQWRDIANTGLRPVMTLSSEIIGVQTLKAGER    250
+
+COX2_BACSU         0 --------------------------------------------------      0
+                                                                       
+ALR2_ECOLI       251 VGYGGRYTARDEQRIGIVAAGYADGYPRHAPTGTPVLVDGVRTMTVGTVS    300
+
+COX2_BACSU         1 --MVKHWRLILLLALVPLLLSGCGKP---------FLSTLKPAGEVADKQ     39
+                       |       |.:.|.|...:|.|.|         .......||.|.   
+ALR2_ECOLI       301 MDM-------LAVDLTPCPQAGIGTPVELWGKEIKIDDVAAAAGTVG---    340
+
+COX2_BACSU        40 YDL-TVLSTLIMVVVVAVVSVIFFYVIVRFRRSRVGENTIPKQVEGNKFL     88
+                     |:| ..|:..:.||.|                                  
+ALR2_ECOLI       341 YELMCALALRVPVVTV----------------------------------    356
+
+COX2_BACSU        89 EITWTVIPILLLIILVIPVVLYTLELADTSPMDKKGRKAEDALVVNVRAN    138
+                                                                       
+ALR2_ECOLI       356 --------------------------------------------------    356
+
+COX2_BACSU       139 LYWWEFEYPDYGIITSQELIVPTDQRVYFNLKASDVKHSFWIPSVGGKLD    188
+                                                                       
+ALR2_ECOLI       356 --------------------------------------------------    356
+
+COX2_BACSU       189 TNTDNENKFFLTFDSKRSKEAGDMFFGKCAELCGPSHALMDFKVKTMSAK    238
+                                                                       
+ALR2_ECOLI       356 --------------------------------------------------    356
+
+COX2_BACSU       239 EFQGWTKEMKNYKSTAESDLAKQGEELFKEKNCLSCHAVEPNDKRAEAAR    288
+                                                                       
+ALR2_ECOLI       356 --------------------------------------------------    356
+
+COX2_BACSU       289 TAPNLATFGERTKVAGVKEANKENVKAWLKDPDSIKPGNKMTGTYPKLSD    338
+                                                                       
+ALR2_ECOLI       356 --------------------------------------------------    356
+
+COX2_BACSU       339 SETNALYEYLKGLKAESK    356
+                                       
+ALR2_ECOLI       356 ------------------    356
+
+
+#---------------------------------------
+#---------------------------------------

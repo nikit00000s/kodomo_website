@@ -1,0 +1,159 @@
+@import "variables.less";
+
+@header_size: 1rem;
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: @c_sand;
+  font-family: @f_text;
+  font-size: @header_size;
+
+  .button {
+    .standart-transform;
+    .icon-button-scale;
+
+    font-weight: 900;
+    font-family: @f_awesome;
+    display: block;
+    position: absolute;
+    bottom: 3rem;
+    right: 50%;
+    transform: translateX(50%);
+    margin: 0 auto;
+    padding: 0;
+    background: @c_burgundy 50%;
+    color: @c_white;
+    border-radius: 1.5em;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5em;
+
+
+    &:before {
+      content: @fa-var-hand-point-down;
+      display: inline-block;
+      transform: scale(-1, 1);
+    }
+
+    &:hover {
+      height: @f_icon_button_scale * 2;
+      background: @c_burgundy;
+    }
+  }
+
+  .yellow-gradient {
+    background-color: @c_purple;
+    &:hover {
+      background: linear-gradient(to right, #fe8c00, #f83600);
+    }
+  }
+
+  /*.container, .container-fluid, .row {
+    height: inherit;
+  }*/
+
+  .col {
+    color: @c_purple;
+    display: flex;
+  }
+
+  .container-fluid {
+    .col {
+      padding: 0 2em;
+    }
+  }
+
+  .container {
+    .col {
+      padding: 0;
+    }
+  }
+
+  .col:nth-child(1) {
+    font-weight: 900;
+    font-size: 1em;
+
+    h1 {
+      font-family: @f_header;
+      font-weight: 500;
+      font-size: 3em;
+    }
+
+    h1.left {
+      text-align: left;
+    }
+
+    span {
+      .first-level;
+      font-size: 1em;
+    }
+
+    .name {
+      color: @c_purple_dark;
+      font-family: inherit;
+      display: inline;
+      font-size: 1em;
+
+      &:before {
+        .standart-transform;
+        .fa-spin;
+        .icon-box-scale;
+        display: inline-block;
+        animation-duration: 5s;
+        animation-direction: reverse;
+        content: @fa-var-atom;
+        font-family: @f_awesome;
+        color: inherit;
+        font-size: 1.1em;
+        font-weight: 700;
+      }
+
+      &:after {
+        .icon-box-scale;
+        color: inherit;
+      }
+    }
+
+    a {
+      .standart-transform;
+      .name;
+
+      &:hover {
+        text-decoration: none;
+        color: @c_purple;
+      }
+    }
+  }
+
+  .col:nth-child(2) {
+    h3 {
+      .first-level;
+      font-size: 1em;
+      font-weight: 700;
+      margin-bottom: 1em;
+      font-family: @f_text;
+      display: block;
+      color: @c_white;
+
+      &:before {
+        .icon-box-scale;
+        display: inline-block;
+        content: @fa-var-calendar-day;
+        font-family: @f_awesome;
+        color: inherit;
+      }
+    }
+    h3.yellow-gradient {
+      background: linear-gradient(to right, #fe8c00, #f83600);
+    }
+    h3.purple {
+      color: @c_purple;
+      background-color: @c_purple_light;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,41 @@
+########################################
+# Program: water
+# Rundate: Sun 12 May 2019 11:18:53
+# Commandline: water
+#    [-asequence] COTI_BACSU.fasta
+#    [-bsequence] PLSX_ECOLI.fasta
+#    -outfile COTI_BACSU_PLSX_ECOLI.water
+#    -auto
+# Align_format: srspair
+# Report_file: COTI_BACSU_PLSX_ECOLI.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: COTI_BACSU
+# 2: PLSX_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 99
+# Identity:      24/99 (24.2%)
+# Similarity:    44/99 (44.4%)
+# Gaps:           9/99 ( 9.1%)
+# Score: 42.0
+# 
+#
+#=======================================
+
+COTI_BACSU       185 LMAEAEKEDPFSQLYLQEIDGFIEDGLRIKDRLLQSTYVPWTEQLKKSPN    234
+                     ::||...|.|..::.|..|.   |:.::..|.:..::.|     ||..|:
+PLSX_ECOLI       167 VLAEEVVEIPNPRVALLNIG---EEEVKGLDSIRDASAV-----LKTIPS    208
+
+COTI_BACSU       235 LCHQDYGTGNTLLGENEQIWVIDLDTVSFDL-PIRDLRKMIIPLLDTTG    282
+                     :.:..|...|.||.....:.|.|..|.:..| .:..:.:|.:.||.:.|
+PLSX_ECOLI       209 INYIGYLEANELLTGKTDVLVCDGFTGNVTLKTMEGVVRMFLSLLKSQG    257
+
+
+#---------------------------------------
+#---------------------------------------

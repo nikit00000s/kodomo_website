@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="fimo.xsl"?>
+<!-- Begin document body -->
+<fimo version="4.3.0" release="6 PDT 20">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation=  xmlns:fimo="http://noble.gs.washington.edu/schema/fimo"
+>
+<command-line>fimo --oc . --verbosity 1 --norc meme_out/meme.html upstream_sequences.fasta</command-line>
+<settings>
+<setting name="output directory">.</setting>
+<setting name="MEME file name">meme_out/meme.html</setting>
+<setting name="sequence file name">upstream_sequences.fasta</setting>
+<setting name="background file name">(null)</setting>
+<setting name="motif name">motif</setting>
+<setting name="allow clobber">true</setting>
+<setting name="compute q-values">true</setting>
+<setting name="output p-threshold set">false</setting>
+<setting name="output q-threshold set">false</setting>
+<setting name="text only">false</setting>
+<setting name="scan both strands">false</setting>
+<setting name="max sequence length">250000000</setting>
+<setting name="output q-value threshold">  1</setting>
+<setting name="output p-value threshold">0.0001</setting>
+<setting name="pseudocount">0.1</setting>
+<setting name="verbosity">1</setting>
+</settings>
+<sequence-data num-sequences="9" num-residues="900"/>
+<alphabet>nucleotide</alphabet>
+<motif name="1" width="13" best-possible-match="ATCTGACAAGGAG"/>
+<motif name="2" width="6" best-possible-match="ACACCA"/>
+<motif name="3" width="15" best-possible-match="GCATCTGGGCGCCTG"/>
+<background source="non-redundant database">
+<value letter="A">0.282</value>
+<value letter="C">0.222</value>
+<value letter="G">0.229</value>
+<value letter="T">0.267</value>
+</background>
+<cisml-file>cisml.xml</cisml-file>
+</fimo>

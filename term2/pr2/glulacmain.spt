@@ -1,0 +1,118 @@
+zap
+load =4YNU
+
+set echo top center
+font echo 20
+color echo black
+echo 4YNU: A:LCG’602:O4 - A:ARG’501:NH2
+
+select not (602:A or 501:A)
+cpk off
+wireframe off
+cartoons on
+color TRANSLUCENT chain
+
+select 602:A or 501:A
+calculate hbonds
+hbonds 50
+cpk on
+wireframe on
+cartoons off
+color cpk
+cpk 150
+wireframe 50
+center selected
+zoom 350
+draw line (602:A.O4) (501:A.NH2)
+color draw red
+measure (602:A.O4) (501:A.NH2)
+
+pause
+resume
+
+draw off
+hbonds off
+set echo top center
+font echo 20
+color echo black
+echo 4YNU: A:LCG’602:O3 - A:ARG’501:NH1
+
+select not (602:A or 501:A)
+cpk off
+wireframe off
+cartoons on
+color TRANSLUCENT chain
+
+select 602:A or 501:A
+calculate hbonds
+hbonds 50
+cpk on
+wireframe on
+cartoons off
+color cpk
+cpk 150
+wireframe 50
+center selected
+zoom 350
+draw line (602:A.O3) (501:A.NH1)
+color draw red
+measure (602:A.O3) (501:A.NH1)
+
+
+
+set echo top center
+font echo 20
+color echo black
+echo 4YNU: A:LCG'602:O2 - A:ASN'503:O
+
+select not (602:A or 503:A)
+cpk off
+wireframe off
+cartoons on
+color TRANSLUCENT chain
+
+select 602:A or 503:A
+calculate hbonds
+hbonds 50
+cpk on
+wireframe on
+cartoons off
+color cpk
+cpk 150
+wireframe 50
+center selected
+zoom 350
+draw line (602:A.O2) (503:A.O)
+color draw red
+measure (602:A.O2) (503:A.O)
+
+pause
+resume
+
+draw off
+hbonds off
+set echo top center
+font echo 20
+color echo black
+echo 4YNU: A:LCG'602:O1 - A:HIS'505:NE2
+
+select not (602:A or 505:A)
+cpk off
+wireframe off
+cartoons on
+color TRANSLUCENT chain
+
+select 602:A or 505:A
+calculate hbonds
+hbonds 50
+cpk on
+wireframe on
+cartoons off
+color cpk
+cpk 150
+wireframe 50
+center selected
+zoom 350
+draw line (602:A.O1) (505:A.NE2)
+color draw red
+measure (602:A.O1) (505:A.NE2)

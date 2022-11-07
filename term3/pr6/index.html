@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>#6 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../../less/style/common_style.css">
+    <link rel="stylesheet" href="../../less/style/loading.css">
+    <link rel="stylesheet" href="page_style.css">
+</head>
+<body>
+
+<div id="button-to-end"
+     onclick="window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: window.scroll_behavior})"></div>
+<div id="breadcrumb">
+    <a href="../index.html">3 семестр</a><a href="index.html">6 практикум</a>
+</div>
+
+<header class="background-topography">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col col-12 align-self-end">
+                <h1>
+                    <a class="header-link" href="http://kodomo.cmm.msu.su/wiki/2018/3/pr6">
+                        Секвенирование по Сэнгерy
+                    </a>
+                </h1>
+            </div>
+            <div class="col col-12 align-self-baseline justify-content-end">
+                <h3 class="purple">8 октября 2019 г.</h3>
+            </div>
+            <div class="button"
+                 onclick="window.scrollTo({left: 0, top: document.documentElement.clientHeight, behavior: window.scroll_behavior})"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container prac_content">
+        <div class="row basic_task-top">
+            <div class="col col-12 task_intro">
+                <h1 class="prac_title">Получение последовательности ДНК</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12 col-md-6">
+                <p><span class="what">Что нужно сделать?</span>
+                    Получить последовательность ДНК на основании данных, полученных из капиллярного секвенатора.
+                    Составить отчёт о проблемах при чтении хроматограмм.
+                </p>
+                <p>Файлы в формате <span class="mono">.ab</span> с информацией о хроматограмме сохранены на выходе из
+                    капиллярного секвенатора (с прямой и обратной цепями).
+                    Эти файлы были открыты как один проект в программе <a class="gradient ext-link"
+                                                                          href="http://genestudio.com/" title="Перейти на сайт">GeneStudio</a>.
+                </p>
+                <p>Сначала были удалены нечитабельные участки хроматограммы. Это происходит автоматически при импорте
+                    файла в программу. Они оказались следующими:</p>
+                <ol>
+                    <li> Прямая цепь (<a class="file-download gradient" href="prac/06_F.ab1" download="06_F.ab1" title="Скачать файл">Скачать</a> <span class="mono">06_F.ab1</span>)
+                        <ul class="short">
+                            <li>Нечитаемый участок на <span class="mono">5'</span> конце: <span class="nowrap">до 19&ndash;го нуклеотида</span>
+                            </li>
+                            <li>Нечитаемый участок на <span class="mono">3'</span> конце: <span class="nowrap">с 693&ndash;го нуклеотида</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li> Обратная цепь (<a class="file-download gradient" href="prac/06_R.ab1" download="06_R.ab1" title="Скачать файл">Скачать</a> <span class="mono">06_R.ab1</span>)
+                        <ul class="short">
+                            <li>Нечитаемый участок на <span class="mono">5'</span> конце: <span class="nowrap">до 28&ndash;го нуклеотида</span>
+                            </li>
+                            <li>Нечитаемый участок на <span class="mono">3'</span> конце: <span class="nowrap">с 768&ndash;го нуклеотида</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>Общая характеристика хроматограмм:</p>
+                <ol class="short">
+                    <li>
+
+                    </li>
+                </ol>
+                <p>Перед тем, как перейти к редактированию последовательности, сперва нужно было выровнять прямую и
+                    комплементарную к обратной последовательности, что произошло автоматически при загрузке обеих
+                    последовательностей в один проект.</p>
+                <p>
+            </div>
+            <div class="col col-12 col-md-6 basic_task-bottom">
+                <h6 class="what">Результаты редактирования.</h6>
+                <p>
+                    Были получены консенсусная последовательность (<a href="prac/result.fasta" class="ext-link gradient">просмотр</a>)
+                    и изображение с полным выравниванием и редактированием двух хроматограмм (<a
+                        href="#img1"
+                        class="int-link standart" title="Перейти к элементу">рисунок 1</a>).
+                    В целом, качество хроматограммы неплохое (уровень шума низкий), у прямой оно несколько выше, чем у
+                    обратной цепи.
+                    Для начала рассмотрим случаи полиморфизма, а затем и остальные проблемные нуклеотиды.
+                </p>
+                <p>
+                    Эти случаи были обнаружены на обратной цепи, в той части, что не имеет комплементарного продолжения
+                    прямой цепи.
+                    На позиции 695 в примерно равном количестве присутствует сигнал гуанина и цитозина&nbsp;(<a
+                        class="standart int-link" href="#img2" title="Перейти к элементу">рисунок 2</a>),
+                    поэтому этой позиции был присвоен код&nbsp;<span class="highlight mono">S</span>&nbsp;(<a
+                        href="https://www.bioinformatics.org/sms/iupac.html" class="ext-link gradient" title="Перейти на сайт">IUPAC Codes</a>).
+                    А в случае с позициями 773 и 780 присутсвуют сигналы как цитозина, так и тимина в практически
+                    одинаковом
+                    количестве, поэтому этим позициям был присвоен код&nbsp;<span class="highlight mono">Y</span>&nbsp;(<a
+                        href="#img3" class="int-link standart" title="Перейти к элементу">рисунок 3</a>).
+                </p>
+                <p>
+                    Остальные проблемные нуклеотиды содержатся практически на всей длине последовательности. К примеру,
+                    3&ndash;ий нуклеотид&nbsp;(<a href="#img4" class="standart int-link" title="Перейти к элементу">рисунок 4</a>) с некоторой
+                    точностью имеет
+                    код <span class="highlight mono">A</span> (точно сказать нельзя: на этом участке нет информации с
+                    обратной цепи).
+                    Так же и в случае с 36&ndash;ым нуклеотидом, он, скорее всего, является тимином <span
+                        class="mono highlight">T</span>&nbsp;(<a href="#img5" class="standart int-link" title="Перейти к элементу">рисунок 5</a>).
+                    На <a href="#img6" class="standart int-link" title="Перейти к элементу">рисунке 6</a> изображены два спорных нуклеотида по
+                    прямой цепи:
+                    319&nbsp;&mdash;&nbsp;<span class="highlight mono">C</span>&nbsp;и 321&nbsp;&mdash;&nbsp;<span
+                        class="highlight mono">T</span>.
+                    Мы почти с полной уверенностью можем сказать, что у этих позиций такие коды, так как на обратной
+                    цепи
+                    эти коды и находятся&nbsp;(комплементарность). Похожий случай изображен на <a href="#img7"
+                                                                                                  class="standart int-link" title="Перейти к элементу">рисунке
+                    7</a>.
+                    Нуклеотиды&nbsp;427&nbsp;и 434&nbsp;&mdash;&nbsp; на прямой цепи <span
+                        class="highlight mono">T</span>&nbsp;и&nbsp;<span class="highlight mono">G</span>,
+                    соответственно,
+                    исходя из информации обратной цепи.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-12 task_intro">
+                <h1 class="task_title">Пример нечитаемого фрагмента хроматограммы</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12 col-md-4">
+                <p>
+                    Для данного задания был выбран файл <span class="mono">06_F.ab</span> и был рассмотрен участок с <span class="nowrap">700&ndash;го</span> до <span class="nowrap">760&ndash;го</span> нуклеотида.
+                    Как видно из <a href="#img8" class="int-link standart" title="Перейти к элементу">рисунка 8</a>,
+                    общая картина хроматограммы в данном участке оставляет желать лучшего. Видны многочисленные пятна красителя,
+                    смещенные и совмещенные пики.
+                </p>
+            </div>
+            <div class="col col-12 col-md-8">
+                <div class="wrap-img-xxl" id="img8">
+                    <img src="img/too_bad.PNG" alt="bad chromatography">
+                    <div class="img-cap"><span>Рисунок 8.</span> Случай полиморфизма, позиции 773 и 780</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col col-12">
+                <h4 class="supplementary">Дополнительные материалы</h4>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col col-12">
+                <div class="fluid-wrap-img-full-width" id="img1">
+                    <img src="img/all.png" alt="full chromatography">
+                    <div class="img-cap"><span>Рисунок 1.</span> Сравнение прямого и обратного прочтения</div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col col-12 col-sm-6 col-md-4">
+                <div class="wrap-img-md" id="img2">
+                    <img src="img/ambiguous1.PNG" alt="ambiguous 1">
+                    <div class="img-cap"><span>Рисунок 2.</span> Случай полиморфизма, позиция 695</div>
+                </div>
+            </div>
+            <div class="col col-12 col-sm-6 col-md-4">
+                <div class="wrap-img-md" id="img3">
+                    <img src="img/ambiguous2.PNG" alt="ambiguous 2&3">
+                    <div class="img-cap"><span>Рисунок 3.</span> Случай полиморфизма, позиции 773 и 780</div>
+                </div>
+            </div>
+
+
+            <div class="col col-12 col-sm-6 col-md-4">
+                <div class="wrap-img-sm" id="img4">
+                    <img src="img/determined1.png" alt="determined 1">
+                    <div class="img-cap"><span>Рисунок 4.</span> Проблемный нуклеотид, позиция 3</div>
+                </div>
+            </div>
+            <div class="col col-12 col-sm-6 col-md-4">
+                <div class="wrap-img-sm" id="img5">
+                    <img src="img/determined2.png" alt="determined 2">
+                    <div class="img-cap"><span>Рисунок 5.</span> Проблемный нуклеотид, позиция 37</div>
+                </div>
+            </div>
+            <div class="col col-12 col-sm-6 col-md-4">
+                <div class="wrap-img-sm" id="img6">
+                    <img src="img/determined34.png" alt="determined 3&4">
+                    <div class="img-cap"><span>Рисунок 6.</span> Два проблемных нуклеотида, позиции 319 и 321</div>
+                </div>
+            </div>
+            <div class="col col-12 col-sm-6 col-md-4">
+                <div class="wrap-img-sm" id="img7">
+                    <img src="img/determined56.png" alt="determined 5&6">
+                    <div class="img-cap"><span>Рисунок 7.</span> Два проблемных нуклеотида, позиции 427 и 434</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="row justify-content-around">
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 terms resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Семестры
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term1/index.html">Первый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term2/index.html">Второй</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term3/index.html">Третий</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term4/index.html">Четвёртый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term5/index.html">Пятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term6/index.html">Шестой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term7/index.html">Седьмой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term8/index.html">Восьмой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term9/index.html">Девятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term10/index.html">Десятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term11/index.html">Одиннадцатый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term12/index.html">Двенадцатый</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 university resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Университет
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="http://www.fbb.msu.ru/" class="fbb">Сайт ФББ МГУ</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="https://www.msu.ru/" class="msu">Сайт МГУ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 communication resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Связь
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="https://vk.com/nikgr1" class="vk">Вконтакте |</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="mailto:nikit00000s@fbb.msu.ru" class="envelope">Почта kodomo |</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="mailto:NikGR1@yandex.ru" class="envelope">Личная почта |</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 other resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Остальное на сайте
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="../../index.html" class="main-page">Главная</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="../../html/about_me/about_me.html" class="me">Обо мне</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="http://kodomo.cmm.msu.su/wiki/2018" class="kodomofbb">KodomoFBB</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr class="clearfix hr-divider">
+
+    <div class="footer-copyright">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+    </div>
+    <div id="button-to-start" onclick="window.scrollTo({left: 0, top: 0, behavior: window.scroll_behavior})"></div>
+</footer>
+
+
+<script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../js/parallax.js-1.5.0/parallax.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+
+<script src="../../js/own/construction.js"></script>
+<script src="../../js/own/backgroundIcons.js"></script>
+<script src="../../js/own/timer.js"></script>
+</body>
+</html>

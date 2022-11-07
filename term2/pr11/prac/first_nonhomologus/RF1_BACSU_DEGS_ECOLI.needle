@@ -1,0 +1,85 @@
+########################################
+# Program: needle
+# Rundate: Sun 12 May 2019 11:32:37
+# Commandline: needle
+#    [-asequence] RF1_BACSU.fasta
+#    [-bsequence] DEGS_ECOLI.fasta
+#    -outfile RF1_BACSU_DEGS_ECOLI.needle
+#    -auto
+# Align_format: srspair
+# Report_file: RF1_BACSU_DEGS_ECOLI.needle
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: RF1_BACSU
+# 2: DEGS_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 608
+# Identity:      30/608 ( 4.9%)
+# Similarity:    47/608 ( 7.7%)
+# Gaps:         505/608 (83.1%)
+# Score: 14.5
+# 
+#
+#=======================================
+
+RF1_BACSU          1 MLDRLKSIEERYEKLNELLSDPEVVNDPKKLREYSKEQSDIQETVDVYRQ     50
+                                                                       
+DEGS_ECOLI         0 --------------------------------------------------      0
+
+RF1_BACSU         51 YRDASEQLADAKAMLEEKLDAEMRDMVKEEISELQKETETLSERLKVLLI    100
+                                                                       
+DEGS_ECOLI         0 --------------------------------------------------      0
+
+RF1_BACSU        101 PKDPNDDKNVIMEIRGAAGGEEAALFAGNLYRMYSRYAELQGWKTEVMEA    150
+                                                                       
+DEGS_ECOLI         0 --------------------------------------------------      0
+
+RF1_BACSU        151 NVTGTGGYKEIIFMITGSGAYSKLKYENGAHRVQRVPETESGGRIHTSTA    200
+                                                                       
+DEGS_ECOLI         0 --------------------------------------------------      0
+
+RF1_BACSU        201 TVACLPEAEEVEVDIHEKDIRVDTFASSGPGGQSVNTTMSAVRLTHLPTG    250
+                                                           |....|..:..|
+DEGS_ECOLI         1 --------------------------------------MFVKLLRSVAIG     12
+
+RF1_BACSU        251 VVVSC----------------------QDEKSQIKNKEKAMKVLRA----    274
+                     ::|..                      .||.....|    :.|.||    
+DEGS_ECOLI        13 LIVGAILLVAMPSLRSLNPLSTPQFDSTDETPASYN----LAVRRAAPAV     58
+
+RF1_BACSU        275 -RIYDKFQQEAQAEYDQTRKSAVGSGDRSERIRTYNFPQNRVTDHRIGLT    323
+                      .:|::...  ...::|.....:|||...:: |.|......|        
+DEGS_ECOLI        59 VNVYNRGLN--TNSHNQLEIRTLGSGVIMDQ-RGYIITNKHV--------     97
+
+RF1_BACSU        324 IQKLDQILEGKLD-EVVEALIVEDQA------SKLQQSEG----------    356
+                     |...|||:....| .|.|||:|...:      .|:..:.|          
+DEGS_ECOLI        98 INDADQIIVALQDGRVFEALLVGSDSLTDLAVLKINATGGLPTIPINARR    147
+
+RF1_BACSU        356 --------------------------------------------------    356
+                                                                       
+DEGS_ECOLI       148 VPHIGDVVLAIGNPYNLGQTITQGIISATGRIGLNPTGRQNFLQTDASIN    197
+
+RF1_BACSU        356 --------------------------------------------------    356
+                                                                       
+DEGS_ECOLI       198 HGNSGGALVNSLGELMGINTLSFDKSNDGETPEGIGFAIPFQLATKIMDK    247
+
+RF1_BACSU        356 --------------------------------------------------    356
+                                                                       
+DEGS_ECOLI       248 LIRDGRVIRGYIGIGGREIAPLHAQGGGIDQLQGIVVNEVSPDGPAANAG    297
+
+RF1_BACSU        356 --------------------------------------------------    356
+                                                                       
+DEGS_ECOLI       298 IQVNDLIISVDNKPAISALETMDQVAEIRPGSVIPVVVMRDDKQLTLQVT    347
+
+RF1_BACSU        356 --------    356
+                             
+DEGS_ECOLI       348 IQEYPATN    355
+
+
+#---------------------------------------
+#---------------------------------------

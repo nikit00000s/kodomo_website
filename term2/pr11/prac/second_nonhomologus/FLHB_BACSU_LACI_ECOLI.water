@@ -1,0 +1,45 @@
+########################################
+# Program: water
+# Rundate: Sun 12 May 2019 11:18:53
+# Commandline: water
+#    [-asequence] FLHB_BACSU.fasta
+#    [-bsequence] LACI_ECOLI.fasta
+#    -outfile FLHB_BACSU_LACI_ECOLI.water
+#    -auto
+# Align_format: srspair
+# Report_file: FLHB_BACSU_LACI_ECOLI.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: FLHB_BACSU
+# 2: LACI_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 120
+# Identity:      24/120 (20.0%)
+# Similarity:    47/120 (39.2%)
+# Gaps:          27/120 (22.5%)
+# Score: 40.5
+# 
+#
+#=======================================
+
+FLHB_BACSU       250 KQRQR-EMAM-------RRMMQE----------VPKADVIITNPTHYAIA    281
+                     |.|:: |.||       .|:.|:          |..:.:.:..|:....|
+LACI_ECOLI        33 KTREKVEAAMAELNYIPNRVAQQLAGKQSLLIGVATSSLALHAPSQIVAA     82
+
+FLHB_BACSU       282 LKYDEEKMDAPYIVA----KGVDHLALKIRKIAKEHDVMMVENRPLARAL    327
+                     :|...:::.|..:|:    .||:.....:..:..:....::.|.||..  
+LACI_ECOLI        83 IKSRADQLGASVVVSMVERSGVEACKAAVHNLLAQRVSGLIINYPLDD--    130
+
+FLHB_BACSU       328 YDQVEIDQA---VPEEFFKV    344
+                     .|.:.::.|   ||..|..|
+LACI_ECOLI       131 QDAIAVEAACTNVPALFLDV    150
+
+
+#---------------------------------------
+#---------------------------------------

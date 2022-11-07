@@ -1,0 +1,28 @@
+.alignments {
+  width: 100%;
+  overflow-x: scroll;
+  vertical-align: top;
+}
+figure {
+  margin-top: 0.5rem;
+}
+.figcaption {
+  display: inline-block;
+  width: 90%;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+}
+.figcaption h5 {
+  display: inline-block;
+  font-size: 1rem;
+  font-style: normal;
+}
+.task_info hr {
+  border: solid 0.1rem #C6B79B;
+}
+.task_info {
+  margin-top: 3.5rem !important;
+}
+/*# sourceMappingURL=page_style.css.map */

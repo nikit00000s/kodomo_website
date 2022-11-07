@@ -1,0 +1,1655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MEME</title>
+<style type="text/css">
+        td.left {text-align: left;}
+        td.right {text-align: right; padding-right: 1cm;}
+      </style>
+</head>
+<body bgcolor="#D5F0FF"><form enctype="application/x-www-form-urlencoded" method="post" target="_new" action="http://kodomo/meme/cgi-bin/process_request.cgi">
+<a name="top_buttons"></a><hr>
+<table summary="buttons" align="left" cellspacing="0"><tr>
+<td bgcolor="#DDDDFF"><a href="#command"><b>Command line</b></a></td>
+<td bgcolor="#00FFFF"><a href="#sequences"><b>Training Set</b></a></td>
+<td bgcolor="#DDFFDD"><a href="#summary1"><b>First Motif</b></a></td>
+<td bgcolor="#FFDDFF"><a href="#motif-summary"><b>Summary of Motifs</b></a></td>
+<td bgcolor="#00FF00"><a href="#stopped"><b>Termination</b></a></td>
+<td bgcolor="#FFFF00"><a href="#explanation"><b>Explanation</b></a></td>
+</tr></table>
+<br clear="left"><b><br><input type="submit" name="action" value="MAST">
+      Search sequence databases for the best combined matches with these motifs using
+      <a href="http://kodomo/meme/mast-intro.html">MAST.</a><br><input type="submit" name="action" value="FIMO">
+      Search sequence databases for all matches with these motifs using
+      <a href="http://kodomo/meme/fimo-intro.html">FIMO</a>.
+      <br><input type="submit" name="action" value="GOMO">
+	      Find Genome Ontology terms associated
+	      with upstream sequences matching these motifs using 
+	      <a href="http://kodomo/meme/gomo-intro.html">GOMO</a>.
+	<br><input type="submit" name="action" value="BLOCKS">
+      Submit these motifs to 
+      <a href="http://blocks.fhcrc.org/blocks/process_blocks.html">
+        BLOCKS multiple alignment processor.
+      </a><br></b><br clear="left"><hr>
+<center>
+<a name="version"></a><big><b><a href="#version_doc">MEME - Motif discovery tool</a></b></big>
+</center>
+<hr>
+<p>
+MEME version 4.3.0 (Release date: Sat Sep 26 01:51:56 PDT 2009)
+     </p>
+<p>
+     For further information on how to interpret these results or to get
+     a copy of the MEME software please access 
+     <a href="http://meme.sdsc.edu">http://meme.sdsc.edu</a>.
+     </p>
+<p>
+     This file may be used as input to the MAST algorithm for searching
+     sequence databases for matches to groups of motifs.  MAST is available
+     for interactive use and downloading at 
+     <a href="http://meme.sdsc.edu">http://meme.sdsc.edu</a>.
+     </p>
+<hr>
+<center>
+<a name="reference"></a><big><b><a href="#reference_doc">REFERENCE</a></b></big>
+</center>
+<hr>
+<p>
+    If you use this program in your research, please cite:
+    </p>
+<h4>
+    Timothy L. Bailey and Charles Elkan,
+    "Fitting a mixture model by expectation maximization to discover
+    motifs in biopolymers", Proceedings of the Second International
+    Conference on Intelligent Systems for Molecular Biology, pp. 28-36,
+    AAAI Press, Menlo Park, California, 1994.
+    </h4>
+<hr>
+<hr>
+<center><big><b><a name="sequences"></a><a href="#sequences_doc">TRAINING SET</a></b></big></center>
+<hr>
+<table style="line-height: 1em; font-family: monospace;">
+<thead>
+<tr><td>DATAFILE= upstream_sequences.fasta</td></tr>
+<tr><td>
+ALPHABET= ACGT
+</td></tr>
+<tr>
+<td style="padding-right: 2em; border-bottom: dashed thin black;">Sequence name</td>
+<td style="padding-right: 2em; border-bottom: dashed thin black;">Weight</td>
+<td align="right" style="border-bottom: dashed thin black;">Length</td>
+<td style="padding-left: 5em; padding-right: 2em; border-bottom: dashed thin black;">Sequence name</td>
+<td style="padding-right: 2em; border-bottom: dashed thin black;">Weight</td>
+<td align="right" style="border-bottom: dashed thin black;">Length</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding-right: 2em">orf1ab</td>
+<td style="padding-right: 2em">1.0000</td>
+<td align="right">100</td>
+<td style="padding-left: 5em; padding-right: 2em">S</td>
+<td style="padding-right: 2em">1.0000</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td style="padding-right: 2em">E</td>
+<td style="padding-right: 2em">1.0000</td>
+<td align="right">100</td>
+<td style="padding-left: 5em; padding-right: 2em">M</td>
+<td style="padding-right: 2em">1.0000</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td style="padding-right: 2em">NS6</td>
+<td style="padding-right: 2em">1.0000</td>
+<td align="right">100</td>
+<td style="padding-left: 5em; padding-right: 2em">N</td>
+<td style="padding-right: 2em">1.0000</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td style="padding-right: 2em">NS7a</td>
+<td style="padding-right: 2em">1.0000</td>
+<td align="right">100</td>
+<td style="padding-left: 5em; padding-right: 2em">NS7b</td>
+<td style="padding-right: 2em">1.0000</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td style="padding-right: 2em">NS7c</td>
+<td style="padding-right: 2em">1.0000</td>
+<td align="right">100</td>
+<td style="padding-left: 5em; padding-right: 2em"></td>
+<td style="padding-right: 2em"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<input type="hidden" name="name" value="upstream_sequences.fasta">
+<input type="hidden" name="alphabet" value="ACGT">
+<input type="hidden" name="url" value="http://kodomo/meme">
+<input type="hidden" name="version" value="MEME version 4.3.0">
+<input type="hidden" name="version" value="strands: +">
+<input type="hidden" name="bgfreq" value="
+A 0.275 C 0.240 G 0.205 T 0.280 "><hr>
+<center>
+<a name="command"></a><big><b><a href="#command_doc">COMMAND LINE SUMMARY</a></b></big>
+</center>
+<hr>
+<pre>
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme upstream_sequences.fasta -dna -nmotifs 3 -minw 6 -maxw -50 </pre>
+<table style="line-height: 1em; font-family: monospace;">
+<tr>
+<td class="left">model:</td>
+<td class="left">mod=</td>
+<td class="right">zoops</td>
+<td class="left">nmotifs=</td>
+<td class="right">3</td>
+<td class="left">evt=</td>
+<td class="right">inf</td>
+</tr>
+<tr>
+<td class="left" colspan="4">object function= E-value of product of p-values</td>
+<td class="left"></td>
+<td class="right"></td>
+<td class="left"></td>
+<td class="right"></td>
+<td class="left"></td>
+<td class="right"></td>
+</tr>
+<tr>
+<td class="left">width:</td>
+<td class="left">minw=</td>
+<td class="right">6</td>
+<td class="left">maxw=</td>
+<td class="right">100</td>
+<td class="left">minic=</td>
+<td class="right">    0.00</td>
+</tr>
+<tr>
+<td class="left">width:</td>
+<td class="left">wg=</td>
+<td class="right">11</td>
+<td class="left">ws=</td>
+<td class="right">1</td>
+<td class="left">endgaps=</td>
+<td class="right">yes</td>
+</tr>
+<tr>
+<td class="left">nsites:</td>
+<td class="left">minsites=</td>
+<td class="right">2</td>
+<td class="left">maxsites=</td>
+<td class="right">9</td>
+<td class="left">wnsites=</td>
+<td class="right">0.8</td>
+</tr>
+<tr>
+<td class="left">theta:</td>
+<td class="left">prob=</td>
+<td class="right">1</td>
+<td class="left">spmap=</td>
+<td class="right">uni</td>
+<td class="left">spfuzz=</td>
+<td class="right">0.5</td>
+</tr>
+<tr>
+<td class="left">em:</td>
+<td class="left">prior=</td>
+<td class="right">dirichlet</td>
+<td class="left">b=</td>
+<td class="right">0.01</td>
+<td class="left">maxiter=</td>
+<td class="right">50</td>
+</tr>
+<tr>
+<td class="left"></td>
+<td class="left">distance=</td>
+<td class="right">1e-05</td>
+</tr>
+<tr>
+<td class="left">data:</td>
+<td class="left">n=</td>
+<td class="right">900</td>
+<td class="left">N=</td>
+<td class="right">9</td>
+</tr>
+<tr><td>
+strands: +
+</td></tr>
+<tr>
+<td class="left">sample:</td>
+<td class="left">seed=</td>
+<td class="right">0</td>
+<td class="left">seqfrac=</td>
+<td class="right">       1</td>
+</tr>
+<tr><td colspan="4">Letter frequencies in dataset:</td></tr>
+<tr><td colspan="4">
+    A 0.276 C 0.240 G 0.204 T 0.280 </td></tr>
+<tr><td colspan="4">
+      Background letter frequencies (from dataset with add-one prior applied):<br>
+
+A 0.275 C 0.240 G 0.205 T 0.280 
+<input type="hidden" name="bgfreq" value="
+A 0.275 C 0.240 G 0.205 T 0.280 ">
+</td></tr>
+</table>
+<hr>
+<center>
+<a name="summary1"></a><table summary="buttons" align="left" cellspacing="0"><tr>
+<td bgcolor="#00FFFF"><a href="#motif-summary"><b>P</b></a></td>
+<td bgcolor="#FFFF00"><a href="#summary2"><b>N</b></a></td>
+</tr></table>
+<big><b><a href="#summary_doc">MOTIF 1</a>  
+      width = 13
+      sites = 9
+      llr = 84
+      E-value = 1.4e+000<br clear="left"></b></big>
+</center>
+<hr>
+<table>
+<tr>
+<th>
+<a name="logo1"></a><a href="#logo_doc">SEQUENCE LOGO</a>
+</th>
+<td rowspan="4"><img src="logo1.png" alt="PNG LOGOS require CONVERT from ImageMagick; see MEME installation guide"></td>
+</tr>
+<tr><td align="center"><table>
+<tr><th><a href="#ic_doc">Information Content</a></th></tr>
+<tr><td align="center"><b>13.5 (bits) </b></td></tr>
+</table></td></tr>
+<tr><td align="center"><table>
+<tr><th><a href="#re_doc">Relative Entropy</a></th></tr>
+<tr><td align="center"><b>13.5 (bits) </b></td></tr>
+</table></td></tr>
+<tr><td align="center"><table>
+<tr><th><a href="#download"> Download LOGO</a></th></tr>
+<tr><td>
+<b>Without SSC:</b><a href="logo1.eps">[EPS]</a><a href="logo1.png">[PNG]</a>
+</td></tr>
+<tr><td>
+<b>With SSC:</b><a href="logo_ssc1.eps">[EPS]</a><a href="logo_ssc1.png">[PNG]</a>
+</td></tr>
+</table></td></tr>
+</table>
+<table cellpadding="0.5cm">
+<thead><tr>
+<th align="left" style="padding-right: 1cm">NAME
+         <a name="sites1"></a>
+</th>
+<th align="left" style="padding-right: 1cm">START</th>
+<th align="left" style="padding-right: 2cm">P-VALUE</th>
+<th align="center"><a href="#sites_doc">SITES</a></th>
+</tr></thead>
+<tbody>
+<tr>
+<td>NS7a</td>
+<td align="right" style="padding-right: 1cm">10</td>
+<td align="right" style="padding-right: 2cm">1.25e-08</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">ATAGCAAGCC</font></big></tt></td>
+<td><tt><big><b><font color="red">A</font><font color="green">T</font><font color="blue">C</font><font color="green">T</font><font color="orange">G</font><font color="red">A</font><font color="blue">C</font><font color="red">A</font><font color="red">A</font><font color="orange">G</font><font color="orange">G</font><font color="red">A</font><font color="orange">G</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">GCCCCTGCTG</font></big></tt></td>
+</tr>
+<tr>
+<td>S</td>
+<td align="right" style="padding-right: 1cm">22</td>
+<td align="right" style="padding-right: 2cm">9.43e-06</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">CGCCCATAAT</font></big></tt></td>
+<td><tt><big><b><font color="blue">C</font><font color="green">T</font><font color="blue">C</font><font color="blue">C</font><font color="green">T</font><font color="blue">C</font><font color="blue">C</font><font color="red">A</font><font color="red">A</font><font color="orange">G</font><font color="orange">G</font><font color="red">A</font><font color="orange">G</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">TTGGAGAAGA</font></big></tt></td>
+</tr>
+<tr>
+<td>M</td>
+<td align="right" style="padding-right: 1cm">53</td>
+<td align="right" style="padding-right: 2cm">1.29e-05</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">CTCAAACAGT</font></big></tt></td>
+<td><tt><big><b><font color="blue">C</font><font color="green">T</font><font color="blue">C</font><font color="green">T</font><font color="orange">G</font><font color="red">A</font><font color="blue">C</font><font color="red">A</font><font color="blue">C</font><font color="green">T</font><font color="orange">G</font><font color="red">A</font><font color="orange">G</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">TTTGTAAAGT</font></big></tt></td>
+</tr>
+<tr>
+<td>E</td>
+<td align="right" style="padding-right: 1cm">43</td>
+<td align="right" style="padding-right: 2cm">1.42e-05</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">TTGGGCTCTT</font></big></tt></td>
+<td><tt><big><b><font color="blue">C</font><font color="green">T</font><font color="blue">C</font><font color="green">T</font><font color="blue">C</font><font color="red">A</font><font color="blue">C</font><font color="red">A</font><font color="red">A</font><font color="blue">C</font><font color="red">A</font><font color="red">A</font><font color="orange">G</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">AGAAACACCG</font></big></tt></td>
+</tr>
+<tr>
+<td>NS6</td>
+<td align="right" style="padding-right: 1cm">11</td>
+<td align="right" style="padding-right: 2cm">1.86e-05</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">AGCTGTCTTG</font></big></tt></td>
+<td><tt><big><b><font color="red">A</font><font color="green">T</font><font color="blue">C</font><font color="green">T</font><font color="red">A</font><font color="green">T</font><font color="blue">C</font><font color="red">A</font><font color="orange">G</font><font color="orange">G</font><font color="orange">G</font><font color="red">A</font><font color="orange">G</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">ACCGCTCCTC</font></big></tt></td>
+</tr>
+<tr>
+<td>orf1ab</td>
+<td align="right" style="padding-right: 1cm">9</td>
+<td align="right" style="padding-right: 2cm">2.78e-05</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">GTGTAAGTG</font></big></tt></td>
+<td><tt><big><b><font color="red">A</font><font color="green">T</font><font color="blue">C</font><font color="green">T</font><font color="orange">G</font><font color="red">A</font><font color="green">T</font><font color="blue">C</font><font color="green">T</font><font color="orange">G</font><font color="orange">G</font><font color="red">A</font><font color="blue">C</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">GTATCGTGTT</font></big></tt></td>
+</tr>
+<tr>
+<td>NS7c</td>
+<td align="right" style="padding-right: 1cm">20</td>
+<td align="right" style="padding-right: 2cm">3.51e-05</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">GAAACAGGGC</font></big></tt></td>
+<td><tt><big><b><font color="red">A</font><font color="green">T</font><font color="blue">C</font><font color="blue">C</font><font color="orange">G</font><font color="blue">C</font><font color="green">T</font><font color="blue">C</font><font color="red">A</font><font color="orange">G</font><font color="orange">G</font><font color="blue">C</font><font color="orange">G</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">ACTGGGAATC</font></big></tt></td>
+</tr>
+<tr>
+<td>NS7b</td>
+<td align="right" style="padding-right: 1cm">78</td>
+<td align="right" style="padding-right: 2cm">5.84e-05</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">TATTGAATCA</font></big></tt></td>
+<td><tt><big><b><font color="blue">C</font><font color="green">T</font><font color="blue">C</font><font color="green">T</font><font color="blue">C</font><font color="blue">C</font><font color="green">T</font><font color="green">T</font><font color="green">T</font><font color="orange">G</font><font color="red">A</font><font color="red">A</font><font color="orange">G</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">GCCCTGATT</font></big></tt></td>
+</tr>
+<tr>
+<td>N</td>
+<td align="right" style="padding-right: 1cm">68</td>
+<td align="right" style="padding-right: 2cm">9.05e-05</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">AATTATGCAT</font></big></tt></td>
+<td><tt><big><b><font color="red">A</font><font color="green">T</font><font color="red">A</font><font color="green">T</font><font color="red">A</font><font color="red">A</font><font color="green">T</font><font color="green">T</font><font color="red">A</font><font color="blue">C</font><font color="orange">G</font><font color="red">A</font><font color="orange">G</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">TTTGACACCA</font></big></tt></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<center><big><b><a name="diagrams1"></a><a href="#diagrams_doc">Motif 1 block diagrams</a></b></big></center>
+<hr>
+<table border="1">
+<thead><tr>
+<th align="left">
+<br>Name</th>
+<th align="left">Lowest<br>p-value</th>
+<th align="center">Motifs</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>NS7a</td>
+<td>1.25e-08</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 20px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 154px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>S</td>
+<td>9.43e-06</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 44px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 130px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>M</td>
+<td>1.29e-05</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 106px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 68px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>E</td>
+<td>1.42e-05</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 86px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 88px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>NS6</td>
+<td>1.86e-05</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 22px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 152px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>orf1ab</td>
+<td>2.78e-05</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 18px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 156px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>NS7c</td>
+<td>3.51e-05</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 40px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 134px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>NS7b</td>
+<td>5.84e-05</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 156px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 18px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>N</td>
+<td>9.05e-05</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 136px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 38px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<th rowspan="2" colspan="2" style="color: blue;">SCALE</th>
+<td><table style="border-collapse: collapse;">
+<tr>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+</tr>
+<tr>
+<td style="width: 50px;" align="left"><font color="blue">1</font></td>
+<td style="width: 50px;" align="left"><font color="blue">25</font></td>
+<td style="width: 50px;" align="left"><font color="blue">50</font></td>
+<td style="width: 50px;" align="left"><font color="blue">75</font></td>
+</tr>
+</table></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<center><big><b><a name="blocks1"></a><a href="#BLOCKS_doc">Motif 1 in BLOCKS format</a></b></big></center>
+<hr>
+<input type="hidden" name="BLOCKS1" value="
+BL   MOTIF 1 width=13 seqs=9
+NS7a  ( 10) ATCTGACAAGGAG 1 
+S  ( 22) CTCCTCCAAGGAG 1 
+M  ( 53) CTCTGACACTGAG 1 
+E  ( 43) CTCTCACAACAAG 1 
+NS6  ( 11) ATCTATCAGGGAG 1 
+orf1ab  ( 9) ATCTGATCTGGAC 1 
+NS7c  ( 20) ATCCGCTCAGGCG 1 
+NS7b  ( 78) CTCTCCTTTGAAG 1 
+N  ( 68) ATATAATTACGAG 1 
+//
+
+">
+<input type="submit" name="action" value="View BLOCK 1">
+<input type="submit" name="action" value="View FASTA 1">
+<input type="submit" name="action" value="View RAW 1">
+<br><input type="submit" name="action" value="Submit BLOCK 1">
+<b> to <a href="http://blocks.fhcrc.org/blocks/process_blocks.html">BLOCKS multiple alignment processor.</a></b>
+<hr>
+<center>
+<a name="pssm1"></a><big><b><a href="#pssm_doc">Motif 1 position-specific scoring matrix</a></b></big>
+</center>
+<hr>
+<input type="hidden" name="motifblock1" value=" 
+BL   MOTIF 1 width=13 seqs=9 "><input type="hidden" name="pssm1" value=" 
+log-odds matrix: alength= 4 w= 13 n= 9 bayes= 6.57872 E= 1.4e+000
+101 89 -982 -982 
+-982 -982 -982 184 
+-131 189 -982 -982 
+-982 -11 -982 147 
+-31 -11 112 -133 
+101 47 -982 -133 
+-982 121 -982 67 
+101 -11 -982 -33 
+101 -111 -88 -33 
+-982 -11 170 -133 
+-31 -982 193 -982 
+169 -111 -982 -982 
+-982 -111 212 -982 
+ ">
+<input type="submit" name="action" value="View PSSM 1">
+<br><input type="submit" name="action" value="MAST PSSM 1"><b> Scan sequence databases for the best match in each sequence using <a href="http://kodomo/meme/cgi-bin/mast.cgi">MAST</a>.</b>
+
+
+<hr>
+<center>
+<a name="pspm1"></a>
+<big><b><a href="#pspm_doc">Motif 1 position-specific probability matrix</a>
+</b></big>
+</center>
+<hr>
+<input type="hidden" name="pspm1" value="
+letter-probability matrix: alength= 4 w= 13 nsites= 9 E= 1.4e+000
+0.555556 0.444444 0.000000 0.000000 
+0.000000 0.000000 0.000000 1.000000 
+0.111111 0.888889 0.000000 0.000000 
+0.000000 0.222222 0.000000 0.777778 
+0.222222 0.222222 0.444444 0.111111 
+0.555556 0.333333 0.000000 0.111111 
+0.000000 0.555556 0.000000 0.444444 
+0.555556 0.222222 0.000000 0.222222 
+0.555556 0.111111 0.111111 0.222222 
+0.000000 0.222222 0.666667 0.111111 
+0.222222 0.000000 0.777778 0.000000 
+0.888889 0.111111 0.000000 0.000000 
+0.000000 0.111111 0.888889 0.000000 
+ ">
+<input type="submit" name="action" value="View PSPM 1">
+<br><input type="submit" name="action" value="FIMO PSPM 1"><b> Scan sequence databases for all matches with this motif using <a href="http://kodomo/meme/cgi-bin/fimo.cgi">FIMO</a>.</b><br><input type="submit" name="action" value="TOMTOM PSPM 1"><b> Compare to known motifs in motif databases using 
+              <a href="http://kodomo/meme/cgi-bin/tomtom.cgi">Tomtom</a>.</b><br><input type="submit" name="action" value="GOMO PSPM 1"><b> Find Genome Ontology terms associated with 
+              upstream regions matching this motif using 
+              <a href="http://kodomo/meme/cgi-bin/gomo.cgi">GOMO</a>.</b><hr>
+<center><big><b><a name="regular_expression1"></a><a href="#regular_expression_doc">Motif 1 regular-expression</a></b></big></center>
+<hr>
+<b>
+[AC]TC[TC][GAC][AC][CT][ACT][AT][GC][GA]AG
+</b><br><hr>
+<tt>
+      Time 0.56 secs.
+      </tt><br><hr>
+<center>
+<a name="summary2"></a><table summary="buttons" align="left" cellspacing="0"><tr>
+<td bgcolor="#00FFFF"><a href="#summary1"><b>P</b></a></td>
+<td bgcolor="#FFFF00"><a href="#summary3"><b>N</b></a></td>
+</tr></table>
+<big><b><a href="#summary_doc">MOTIF 2</a>  
+      width = 6
+      sites = 9
+      llr = 59
+      E-value = 4.5e+000<br clear="left"></b></big>
+</center>
+<hr>
+<table>
+<tr>
+<th>
+<a name="logo2"></a><a href="#logo_doc">SEQUENCE LOGO</a>
+</th>
+<td rowspan="4"><img src="logo2.png" alt="PNG LOGOS require CONVERT from ImageMagick; see MEME installation guide"></td>
+</tr>
+<tr><td align="center"><table>
+<tr><th><a href="#ic_doc">Information Content</a></th></tr>
+<tr><td align="center"><b>9.5 (bits) </b></td></tr>
+</table></td></tr>
+<tr><td align="center"><table>
+<tr><th><a href="#re_doc">Relative Entropy</a></th></tr>
+<tr><td align="center"><b>9.4 (bits) </b></td></tr>
+</table></td></tr>
+<tr><td align="center"><table>
+<tr><th><a href="#download"> Download LOGO</a></th></tr>
+<tr><td>
+<b>Without SSC:</b><a href="logo2.eps">[EPS]</a><a href="logo2.png">[PNG]</a>
+</td></tr>
+<tr><td>
+<b>With SSC:</b><a href="logo_ssc2.eps">[EPS]</a><a href="logo_ssc2.png">[PNG]</a>
+</td></tr>
+</table></td></tr>
+</table>
+<table cellpadding="0.5cm">
+<thead><tr>
+<th align="left" style="padding-right: 1cm">NAME
+         <a name="sites2"></a>
+</th>
+<th align="left" style="padding-right: 1cm">START</th>
+<th align="left" style="padding-right: 2cm">P-VALUE</th>
+<th align="center"><a href="#sites_doc">SITES</a></th>
+</tr></thead>
+<tbody>
+<tr>
+<td>NS7c</td>
+<td align="right" style="padding-right: 1cm">69</td>
+<td align="right" style="padding-right: 2cm">2.87e-04</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">CACAGTGTTT</font></big></tt></td>
+<td><tt><big><b><font color="red">A</font><font color="blue">C</font><font color="red">A</font><font color="blue">C</font><font color="blue">C</font><font color="red">A</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">TACCTTCACC</font></big></tt></td>
+</tr>
+<tr>
+<td>NS7a</td>
+<td align="right" style="padding-right: 1cm">89</td>
+<td align="right" style="padding-right: 2cm">2.87e-04</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">GGATGCGTAG</font></big></tt></td>
+<td><tt><big><b><font color="red">A</font><font color="blue">C</font><font color="red">A</font><font color="blue">C</font><font color="blue">C</font><font color="red">A</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">ATCTA</font></big></tt></td>
+</tr>
+<tr>
+<td>N</td>
+<td align="right" style="padding-right: 1cm">85</td>
+<td align="right" style="padding-right: 2cm">2.87e-04</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">TACGAGTTTG</font></big></tt></td>
+<td><tt><big><b><font color="red">A</font><font color="blue">C</font><font color="red">A</font><font color="blue">C</font><font color="blue">C</font><font color="red">A</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">AAACCTATT</font></big></tt></td>
+</tr>
+<tr>
+<td>M</td>
+<td align="right" style="padding-right: 1cm">77</td>
+<td align="right" style="padding-right: 2cm">2.87e-04</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">TTGTAAAGTT</font></big></tt></td>
+<td><tt><big><b><font color="red">A</font><font color="blue">C</font><font color="red">A</font><font color="blue">C</font><font color="blue">C</font><font color="red">A</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">ATTTCCTAGA</font></big></tt></td>
+</tr>
+<tr>
+<td>S</td>
+<td align="right" style="padding-right: 1cm">92</td>
+<td align="right" style="padding-right: 2cm">7.84e-04</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">GCTAGTCAGA</font></big></tt></td>
+<td><tt><big><b><font color="blue">C</font><font color="blue">C</font><font color="red">A</font><font color="blue">C</font><font color="blue">C</font><font color="red">A</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">GA</font></big></tt></td>
+</tr>
+<tr>
+<td>orf1ab</td>
+<td align="right" style="padding-right: 1cm">40</td>
+<td align="right" style="padding-right: 2cm">7.84e-04</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">TTGCGCAAGT</font></big></tt></td>
+<td><tt><big><b><font color="red">A</font><font color="blue">C</font><font color="red">A</font><font color="orange">G</font><font color="blue">C</font><font color="red">A</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">CCCATAGGAG</font></big></tt></td>
+</tr>
+<tr>
+<td>NS6</td>
+<td align="right" style="padding-right: 1cm">75</td>
+<td align="right" style="padding-right: 2cm">1.21e-03</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">AATTCTGGCA</font></big></tt></td>
+<td><tt><big><b><font color="red">A</font><font color="blue">C</font><font color="orange">G</font><font color="blue">C</font><font color="blue">C</font><font color="red">A</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">GGATTTACAA</font></big></tt></td>
+</tr>
+<tr>
+<td>E</td>
+<td align="right" style="padding-right: 1cm">60</td>
+<td align="right" style="padding-right: 2cm">1.21e-03</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">AACAAGAGAA</font></big></tt></td>
+<td><tt><big><b><font color="red">A</font><font color="blue">C</font><font color="red">A</font><font color="blue">C</font><font color="blue">C</font><font color="orange">G</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">AGTCCATACC</font></big></tt></td>
+</tr>
+<tr>
+<td>NS7b</td>
+<td align="right" style="padding-right: 1cm">4</td>
+<td align="right" style="padding-right: 2cm">1.43e-03</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">CTAA</font></big></tt></td>
+<td><tt><big><b><font color="blue">C</font><font color="blue">C</font><font color="red">A</font><font color="orange">G</font><font color="blue">C</font><font color="red">A</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">TCTTTTCCAT</font></big></tt></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<center><big><b><a name="diagrams2"></a><a href="#diagrams_doc">Motif 2 block diagrams</a></b></big></center>
+<hr>
+<table border="1">
+<thead><tr>
+<th align="left">
+<br>Name</th>
+<th align="left">Lowest<br>p-value</th>
+<th align="center">Motifs</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>NS7c</td>
+<td>2.87e-04</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 138px;"><hr size="4" noshade></td>
+<td style="width: 12px; background: aqua; color: black; text-align: center;">+2</td>
+<td style="width: 50px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>NS7a</td>
+<td>2.87e-04</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 178px;"><hr size="4" noshade></td>
+<td style="width: 12px; background: aqua; color: black; text-align: center;">+2</td>
+<td style="width: 10px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>N</td>
+<td>2.87e-04</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 170px;"><hr size="4" noshade></td>
+<td style="width: 12px; background: aqua; color: black; text-align: center;">+2</td>
+<td style="width: 18px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>M</td>
+<td>2.87e-04</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 154px;"><hr size="4" noshade></td>
+<td style="width: 12px; background: aqua; color: black; text-align: center;">+2</td>
+<td style="width: 34px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>S</td>
+<td>7.84e-04</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 184px;"><hr size="4" noshade></td>
+<td style="width: 12px; background: aqua; color: black; text-align: center;">+2</td>
+<td style="width: 4px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>orf1ab</td>
+<td>7.84e-04</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 80px;"><hr size="4" noshade></td>
+<td style="width: 12px; background: aqua; color: black; text-align: center;">+2</td>
+<td style="width: 108px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>NS6</td>
+<td>1.21e-03</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 150px;"><hr size="4" noshade></td>
+<td style="width: 12px; background: aqua; color: black; text-align: center;">+2</td>
+<td style="width: 38px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>E</td>
+<td>1.21e-03</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 120px;"><hr size="4" noshade></td>
+<td style="width: 12px; background: aqua; color: black; text-align: center;">+2</td>
+<td style="width: 68px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>NS7b</td>
+<td>1.43e-03</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 8px;"><hr size="4" noshade></td>
+<td style="width: 12px; background: aqua; color: black; text-align: center;">+2</td>
+<td style="width: 180px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<th rowspan="2" colspan="2" style="color: blue;">SCALE</th>
+<td><table style="border-collapse: collapse;">
+<tr>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+</tr>
+<tr>
+<td style="width: 50px;" align="left"><font color="blue">1</font></td>
+<td style="width: 50px;" align="left"><font color="blue">25</font></td>
+<td style="width: 50px;" align="left"><font color="blue">50</font></td>
+<td style="width: 50px;" align="left"><font color="blue">75</font></td>
+</tr>
+</table></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<center><big><b><a name="blocks2"></a><a href="#BLOCKS_doc">Motif 2 in BLOCKS format</a></b></big></center>
+<hr>
+<input type="hidden" name="BLOCKS2" value="
+BL   MOTIF 2 width=6 seqs=9
+NS7c  ( 69) ACACCA 1 
+NS7a  ( 89) ACACCA 1 
+N  ( 85) ACACCA 1 
+M  ( 77) ACACCA 1 
+S  ( 92) CCACCA 1 
+orf1ab  ( 40) ACAGCA 1 
+NS6  ( 75) ACGCCA 1 
+E  ( 60) ACACCG 1 
+NS7b  ( 4) CCAGCA 1 
+//
+
+">
+<input type="submit" name="action" value="View BLOCK 2">
+<input type="submit" name="action" value="View FASTA 2">
+<input type="submit" name="action" value="View RAW 2">
+<br><input type="submit" name="action" value="Submit BLOCK 2">
+<b> to <a href="http://blocks.fhcrc.org/blocks/process_blocks.html">BLOCKS multiple alignment processor.</a></b>
+<hr>
+<center>
+<a name="pssm2"></a><big><b><a href="#pssm_doc">Motif 2 position-specific scoring matrix</a></b></big>
+</center>
+<hr>
+<input type="hidden" name="motifblock2" value=" 
+BL   MOTIF 2 width=6 seqs=9 "><input type="hidden" name="pssm2" value=" 
+log-odds matrix: alength= 4 w= 6 n= 9 bayes= 6.69025 E= 4.5e+000
+150 -11 -982 -982 
+-982 206 -982 -982 
+169 -982 -88 -982 
+-982 169 12 -982 
+-982 206 -982 -982 
+169 -982 -88 -982 
+ ">
+<input type="submit" name="action" value="View PSSM 2">
+<br><input type="submit" name="action" value="MAST PSSM 2"><b> Scan sequence databases for the best match in each sequence using <a href="http://kodomo/meme/cgi-bin/mast.cgi">MAST</a>.</b>
+
+
+<hr>
+<center>
+<a name="pspm2"></a>
+<big><b><a href="#pspm_doc">Motif 2 position-specific probability matrix</a>
+</b></big>
+</center>
+<hr>
+<input type="hidden" name="pspm2" value="
+letter-probability matrix: alength= 4 w= 6 nsites= 9 E= 4.5e+000
+0.777778 0.222222 0.000000 0.000000 
+0.000000 1.000000 0.000000 0.000000 
+0.888889 0.000000 0.111111 0.000000 
+0.000000 0.777778 0.222222 0.000000 
+0.000000 1.000000 0.000000 0.000000 
+0.888889 0.000000 0.111111 0.000000 
+ ">
+<input type="submit" name="action" value="View PSPM 2">
+<br><input type="submit" name="action" value="FIMO PSPM 2"><b> Scan sequence databases for all matches with this motif using <a href="http://kodomo/meme/cgi-bin/fimo.cgi">FIMO</a>.</b><br><input type="submit" name="action" value="TOMTOM PSPM 2"><b> Compare to known motifs in motif databases using 
+              <a href="http://kodomo/meme/cgi-bin/tomtom.cgi">Tomtom</a>.</b><br><input type="submit" name="action" value="GOMO PSPM 2"><b> Find Genome Ontology terms associated with 
+              upstream regions matching this motif using 
+              <a href="http://kodomo/meme/cgi-bin/gomo.cgi">GOMO</a>.</b><hr>
+<center><big><b><a name="regular_expression2"></a><a href="#regular_expression_doc">Motif 2 regular-expression</a></b></big></center>
+<hr>
+<b>
+[AC]CA[CG]CA
+</b><br><hr>
+<tt>
+      Time 0.88 secs.
+      </tt><br><hr>
+<center>
+<a name="summary3"></a><table summary="buttons" align="left" cellspacing="0"><tr>
+<td bgcolor="#00FFFF"><a href="#summary2"><b>P</b></a></td>
+<td bgcolor="#FFFF00"><a href="#summary4"><b>N</b></a></td>
+</tr></table>
+<big><b><a href="#summary_doc">MOTIF 3</a>  
+      width = 15
+      sites = 2
+      llr = 38
+      E-value = 4.0e+002<br clear="left"></b></big>
+</center>
+<hr>
+<table>
+<tr>
+<th>
+<a name="logo3"></a><a href="#logo_doc">SEQUENCE LOGO</a>
+</th>
+<td rowspan="4"><img src="logo3.png" alt="PNG LOGOS require CONVERT from ImageMagick; see MEME installation guide"></td>
+</tr>
+<tr><td align="center"><table>
+<tr><th><a href="#ic_doc">Information Content</a></th></tr>
+<tr><td align="center"><b>26.0 (bits) </b></td></tr>
+</table></td></tr>
+<tr><td align="center"><table>
+<tr><th><a href="#re_doc">Relative Entropy</a></th></tr>
+<tr><td align="center"><b>27.3 (bits) </b></td></tr>
+</table></td></tr>
+<tr><td align="center"><table>
+<tr><th><a href="#download"> Download LOGO</a></th></tr>
+<tr><td>
+<b>Without SSC:</b><a href="logo3.eps">[EPS]</a><a href="logo3.png">[PNG]</a>
+</td></tr>
+<tr><td>
+<b>With SSC:</b><a href="logo_ssc3.eps">[EPS]</a><a href="logo_ssc3.png">[PNG]</a>
+</td></tr>
+</table></td></tr>
+</table>
+<table cellpadding="0.5cm">
+<thead><tr>
+<th align="left" style="padding-right: 1cm">NAME
+         <a name="sites3"></a>
+</th>
+<th align="left" style="padding-right: 1cm">START</th>
+<th align="left" style="padding-right: 2cm">P-VALUE</th>
+<th align="center"><a href="#sites_doc">SITES</a></th>
+</tr></thead>
+<tbody>
+<tr>
+<td>orf1ab</td>
+<td align="right" style="padding-right: 1cm">72</td>
+<td align="right" style="padding-right: 2cm">2.25e-09</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">ATCCTATTCT</font></big></tt></td>
+<td><tt><big><b><font color="orange">G</font><font color="blue">C</font><font color="red">A</font><font color="orange">G</font><font color="blue">C</font><font color="green">T</font><font color="blue">C</font><font color="blue">C</font><font color="orange">G</font><font color="blue">C</font><font color="orange">G</font><font color="blue">C</font><font color="blue">C</font><font color="green">T</font><font color="orange">G</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">ATATAGTTTT</font></big></tt></td>
+</tr>
+<tr>
+<td>S</td>
+<td align="right" style="padding-right: 1cm">68</td>
+<td align="right" style="padding-right: 2cm">4.28e-09</td>
+<td align="right" style="padding-right: 2mm"><tt><big><font color="grey">GTATCTTGTT</font></big></tt></td>
+<td><tt><big><b><font color="orange">G</font><font color="blue">C</font><font color="red">A</font><font color="green">T</font><font color="blue">C</font><font color="green">T</font><font color="orange">G</font><font color="orange">G</font><font color="blue">C</font><font color="blue">C</font><font color="orange">G</font><font color="blue">C</font><font color="blue">C</font><font color="green">T</font><font color="orange">G</font></b></big></tt></td>
+<td align="left" style="padding-left: 2mm"><tt><big><font color="grey">CTAGTCAGAC</font></big></tt></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<center><big><b><a name="diagrams3"></a><a href="#diagrams_doc">Motif 3 block diagrams</a></b></big></center>
+<hr>
+<table border="1">
+<thead><tr>
+<th align="left">
+<br>Name</th>
+<th align="left">Lowest<br>p-value</th>
+<th align="center">Motifs</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>orf1ab</td>
+<td>2.25e-09</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 144px;"><hr size="4" noshade></td>
+<td style="width: 30px; background: aqua; color: black; text-align: center;">+3</td>
+<td style="width: 26px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>S</td>
+<td>4.28e-09</td>
+<td><table style="border-collapse: collapse;"><tr>
+<td style="width: 136px;"><hr size="4" noshade></td>
+<td style="width: 30px; background: aqua; color: black; text-align: center;">+3</td>
+<td style="width: 34px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<th rowspan="2" colspan="2" style="color: blue;">SCALE</th>
+<td><table style="border-collapse: collapse;">
+<tr>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+</tr>
+<tr>
+<td style="width: 50px;" align="left"><font color="blue">1</font></td>
+<td style="width: 50px;" align="left"><font color="blue">25</font></td>
+<td style="width: 50px;" align="left"><font color="blue">50</font></td>
+<td style="width: 50px;" align="left"><font color="blue">75</font></td>
+</tr>
+</table></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<center><big><b><a name="blocks3"></a><a href="#BLOCKS_doc">Motif 3 in BLOCKS format</a></b></big></center>
+<hr>
+<input type="hidden" name="BLOCKS3" value="
+BL   MOTIF 3 width=15 seqs=2
+orf1ab  ( 72) GCAGCTCCGCGCCTG 1 
+S  ( 68) GCATCTGGCCGCCTG 1 
+//
+
+">
+<input type="submit" name="action" value="View BLOCK 3">
+<input type="submit" name="action" value="View FASTA 3">
+<input type="submit" name="action" value="View RAW 3">
+<br><input type="submit" name="action" value="Submit BLOCK 3">
+<b> to <a href="http://blocks.fhcrc.org/blocks/process_blocks.html">BLOCKS multiple alignment processor.</a></b>
+<hr>
+<center>
+<a name="pssm3"></a><big><b><a href="#pssm_doc">Motif 3 position-specific scoring matrix</a></b></big>
+</center>
+<hr>
+<input type="hidden" name="motifblock3" value=" 
+BL   MOTIF 3 width=15 seqs=2 "><input type="hidden" name="pssm3" value=" 
+log-odds matrix: alength= 4 w= 15 n= 2 bayes= 8.59246 E= 4.0e+002
+-765 -765 228 -765 
+-765 205 -765 -765 
+185 -765 -765 -765 
+-765 -765 128 83 
+-765 205 -765 -765 
+-765 -765 -765 183 
+-765 105 128 -765 
+-765 105 128 -765 
+-765 105 128 -765 
+-765 205 -765 -765 
+-765 -765 228 -765 
+-765 205 -765 -765 
+-765 205 -765 -765 
+-765 -765 -765 183 
+-765 -765 228 -765 
+ ">
+<input type="submit" name="action" value="View PSSM 3">
+<br><input type="submit" name="action" value="MAST PSSM 3"><b> Scan sequence databases for the best match in each sequence using <a href="http://kodomo/meme/cgi-bin/mast.cgi">MAST</a>.</b>
+
+
+<hr>
+<center>
+<a name="pspm3"></a>
+<big><b><a href="#pspm_doc">Motif 3 position-specific probability matrix</a>
+</b></big>
+</center>
+<hr>
+<input type="hidden" name="pspm3" value="
+letter-probability matrix: alength= 4 w= 15 nsites= 2 E= 4.0e+002
+0.000000 0.000000 1.000000 0.000000 
+0.000000 1.000000 0.000000 0.000000 
+1.000000 0.000000 0.000000 0.000000 
+0.000000 0.000000 0.500000 0.500000 
+0.000000 1.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 1.000000 
+0.000000 0.500000 0.500000 0.000000 
+0.000000 0.500000 0.500000 0.000000 
+0.000000 0.500000 0.500000 0.000000 
+0.000000 1.000000 0.000000 0.000000 
+0.000000 0.000000 1.000000 0.000000 
+0.000000 1.000000 0.000000 0.000000 
+0.000000 1.000000 0.000000 0.000000 
+0.000000 0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000 0.000000 
+ ">
+<input type="submit" name="action" value="View PSPM 3">
+<br><input type="submit" name="action" value="FIMO PSPM 3"><b> Scan sequence databases for all matches with this motif using <a href="http://kodomo/meme/cgi-bin/fimo.cgi">FIMO</a>.</b><br><input type="submit" name="action" value="TOMTOM PSPM 3"><b> Compare to known motifs in motif databases using 
+              <a href="http://kodomo/meme/cgi-bin/tomtom.cgi">Tomtom</a>.</b><br><input type="submit" name="action" value="GOMO PSPM 3"><b> Find Genome Ontology terms associated with 
+              upstream regions matching this motif using 
+              <a href="http://kodomo/meme/cgi-bin/gomo.cgi">GOMO</a>.</b><hr>
+<center><big><b><a name="regular_expression3"></a><a href="#regular_expression_doc">Motif 3 regular-expression</a></b></big></center>
+<hr>
+<b>
+GCA[GT]CT[CG][CG][CG]CGCCTG
+</b><br><hr>
+<tt>
+      Time 1.16 secs.
+      </tt><br><hr>
+<table summary="buttons" align="left" cellspacing="0"><tr>
+<td bgcolor="#OOFFFF"><a href="#summary3"><b>P</b></a></td>
+<td bgcolor="#FFFFOO"><a href="#summary1"><b>N</b></a></td>
+</tr></table>
+<center><big><b><a name="summary4"></a><a name="motif-summary"></a><a href="#motif-summary-doc">SUMMARY OF MOTIFS</a></b></big></center>
+<hr>
+<hr>
+<center><big><b>
+    Combined block diagrams: non-overlapping sites with p-value &lt;
+    0.0001</b></big></center>
+<hr>
+<table border="1">
+<thead><tr>
+<th align="left">
+<br>Name</th>
+<th align="left">Combined<br>p-value</th>
+<th align="left">
+<br>Motifs</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>orf1ab</td>
+<td>1.07e-08</td>
+<td colspan="4"><table style="border-collapse: collapse;"><tr>
+<td style="width: 18px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 100px;"><hr size="4" noshade></td>
+<td style="width: 30px; background: red; color: black; text-align: center;">+3</td>
+<td style="width: 26px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>S</td>
+<td>7.17e-09</td>
+<td colspan="4"><table style="border-collapse: collapse;"><tr>
+<td style="width: 44px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 66px;"><hr size="4" noshade></td>
+<td style="width: 30px; background: red; color: black; text-align: center;">+3</td>
+<td style="width: 34px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>E</td>
+<td>6.07e-03</td>
+<td colspan="4"><table style="border-collapse: collapse;"><tr>
+<td style="width: 86px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 88px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>M</td>
+<td>1.71e-03</td>
+<td colspan="4"><table style="border-collapse: collapse;"><tr>
+<td style="width: 106px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 68px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>NS6</td>
+<td>4.88e-03</td>
+<td colspan="4"><table style="border-collapse: collapse;"><tr>
+<td style="width: 22px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 152px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>N</td>
+<td>8.73e-03</td>
+<td colspan="4"><table style="border-collapse: collapse;"><tr>
+<td style="width: 136px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 38px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>NS7a</td>
+<td>1.57e-06</td>
+<td colspan="4"><table style="border-collapse: collapse;"><tr>
+<td style="width: 20px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 154px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>NS7b</td>
+<td>7.85e-03</td>
+<td colspan="4"><table style="border-collapse: collapse;"><tr>
+<td style="width: 156px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 18px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<td>NS7c</td>
+<td>1.77e-03</td>
+<td colspan="4"><table style="border-collapse: collapse;"><tr>
+<td style="width: 40px;"><hr size="4" noshade></td>
+<td style="width: 26px; background: aqua; color: black; text-align: center;">+1</td>
+<td style="width: 134px;"><hr size="4" noshade></td>
+</tr></table></td>
+</tr>
+<tr>
+<th rowspan="2" colspan="2" style="color: blue;">SCALE</th>
+<td><table>
+<tr>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+<td style="width: 50px;" align="left"><font color="blue">|</font></td>
+</tr>
+<tr>
+<td style="width: 50px;" align="left"><font color="blue">1</font></td>
+<td style="width: 50px;" align="left"><font color="blue">25</font></td>
+<td style="width: 50px;" align="left"><font color="blue">50</font></td>
+<td style="width: 50px;" align="left"><font color="blue">75</font></td>
+</tr>
+</table></td>
+</tr>
+</tbody>
+</table>
+<input type="hidden" name="motif-summary" value=" 
+orf1ab 1.07e-08 2 100 +1 9 2.78e-05 +3 72 2.25e-09 
+S 7.17e-09 2 100 +1 22 9.43e-06 +3 68 4.28e-09 
+E 6.07e-03 1 100 +1 43 1.42e-05 
+M 1.71e-03 1 100 +1 53 1.29e-05 
+NS6 4.88e-03 1 100 +1 11 1.86e-05 
+N 8.73e-03 1 100 +1 68 9.05e-05 
+NS7a 1.57e-06 1 100 +1 10 1.25e-08 
+NS7b 7.85e-03 1 100 +1 78 5.84e-05 
+NS7c 1.77e-03 1 100 +1 20 3.51e-05 
+ ">
+    <input type="hidden" name="nmotifs" value="3"><br><input type="submit" name="action" value="View motif summary"><b>Motif summary in machine readable format.</b><hr>
+<center><big><b><a name="stopped"></a><a href="#stopped_doc">Stopped</a>  
+      because Stopped because nmotifs = 3 reached..
+    </b></big></center>
+<hr>
+<tt><br><br>
+    CPU:  kodomo<br><br></tt><a name="explanation"></a><center>
+<hr>
+<h3>
+        EXPLANATION OF MEME RESULTS
+      </h3>
+<hr>
+</center>
+<h4>The MEME results consist of:</h4>
+<ul>
+<li>
+<a name="version_doc"></a>
+        The <a href="#version"><b>version</b></a>
+         of MEME and the date it was released.
+      </li>
+<li>
+<a name="reference_doc"></a>
+        The <a href="#reference"><b>reference</b></a>
+        to cite if you use MEME in your research.
+      </li>
+<li>
+<a name="sequences_doc"></a>
+        A description of the
+        <a href="#sequences"><b>sequences</b></a>
+        you submitted (the "training set") showing the name,
+        "weight" and length of each sequence.
+      </li>
+<li>
+<a name="command_doc"></a>
+        The <a href="#command"><b>command line summary</b></a> 
+        detailing the parameters with which you ran MEME.
+      </li>
+<li>
+<a name="motifs_doc"></a>
+        Information on each of the <a href="#motifs"><b>motifs</b></a> 
+        MEME discovered, including:
+        <ol>
+<li>
+            A <a name="summary_doc" href="#summary_doc2">summary line</a>
+            showing the width, number of occurrences, log likelihood ratio
+            and statistical significance of the motif.
+          </li>
+<li>
+            A <a name="logo_doc" href="#logo_doc2"> sequence LOGO</a>. 
+          </li>
+<li>
+            The <a name="ic_doc" href="#ic_doc2"> information content</a> 
+	    of the motif.
+          </li>
+<li>
+            The <a name="re_doc" href="#re_doc2"> relative entropy</a> 
+            of the motif.
+          </li>
+<li>
+<a name="download" href="#download2"> Downloadable LOGO files</a> 
+	    suitable for publication.
+          </li>
+<li>
+            The
+            <a name="sites_doc" href="#sites_doc2">occurrences of the motif</a>
+            sorted by <i>p</i>-value and aligned with each other.
+          </li>
+<li>
+<a name="diagrams_doc" href="#diagrams_doc2">Block diagrams</a> 
+            of the occurrences of the motif within each sequence in the 
+            training set.
+          </li>
+<li>
+            The motif in 
+            <a name="BLOCKS_doc" href="#BLOCKS_doc2">BLOCKS or FASTA format</a>.
+          </li>
+<li>
+            A <a name="pssm_doc" href="#pssm_doc2">
+            position-specific scoring matrix (PSSM)</a> 
+            for use by the <a href="meme.nbcr.net/meme/mast-intro.html">MAST</a>
+            database search program.
+          </li>
+<li>
+            The <a name="pspm_doc" href="#pspm_doc2">
+            position specific probability matrix (PSPM)</a> 
+            describing the motif.
+          </li>
+<li>
+            A <a name="regular_expression_doc" href="#regular_expression_doc2">
+            regular expression</a> describing the motif.
+          </li>
+</ol>
+</li>
+<li>
+<a name="motif-summary-doc"></a>
+         A <a href="#motif-summary"><b>summary of motifs</b></a>
+         showing an optimized (non-overlapping) 
+         <a href="#motif-summary-doc2">tiling</a> 
+         of all of the motifs onto each of the sequences in the training set.
+         <a name="stopped_doc"></a>
+</li>
+<li>
+        The reason why MEME <a href="#stopped">stopped</a>
+        and the name of the CPU on which it ran.
+        <a name="explanation_doc"></a>
+</li>
+<li>
+        This <b>explanation</b> of how to interpret MEME results.
+      </li>
+</ul>
+<p><a href="#summary1" name="motifs">MOTIFS</a></p>
+<p>
+    For each motif that it discovers in the training set,
+    MEME prints the following information:
+    </p>
+<ul>
+<li>
+<h4><a name="summary_doc2" href="#summary1">Summary Line</a></h4>
+        This line gives the width (<b>'width'</b>), 
+        number of occurrences in the training set (<b>'sites'</b>), 
+        log likelihood ratio (<b>'llr'</b>) and 
+        <b>'<i>E</i>-value'</b> of the motif.
+        Each motif describes a pattern of a fixed width--no gaps are 
+        allowed in MEME motifs.
+        MEME numbers the motifs consecutively from one as it finds them. 
+        MEME usually finds the most statistically significant
+        (low <i>E</i>-value) motifs first.
+        The statistical significance of a motif is based on its log 
+        likelihood ratio, its width and number of occurrences, the 
+        background letter frequencies (given in the 
+        <a href="#command_doc">command line summary</a>
+        ), and the size of the training set.  The <i>E</i>-value is an
+        estimate of the expected number of motifs with the given log 
+        likelihood ratio (or higher), and with the same width and number of 
+        occurrences, that one would find in a similarly sized set of random 
+        sequences. 
+        (In random sequences each position is independent with letters chosen
+        according to the background letter frequencies.)  The log likelihood
+        ratio is the logarithm of the ratio of the probability of the 
+        occurrences of the motif given the motif model (likelihood given the 
+        motif) versus their probability given the background model 
+        (likelihood given the null model).  
+        (Normally the background model is a 0-order Markov model
+        using the background letter frequencies, but higher order Markov 
+        models may be specified via the <b>-bfile</b> option to MEME.)
+        Clicking on the <b>buttons</b> to the left of the motif summary line 
+        takes you to the previous motif (P) or next motif (N).
+      </li>
+<li>
+<h4><a name="logo_doc2" href="#logo1">Sequence LOGO</a></h4>
+        MEME motifs are represented by position-specific probability matrices 
+        that specify the probability of each possible letter appearing at each
+        possible position in an occurrence of the motif.  These are displayed
+	as "sequence LOGOS", containing stacks of letters at each position
+	in the motif.  The total height of the stack is the "information
+        content" of that position in the motif in bits.  The height of the 
+        individual letters in a stack is the probability of the letter at that 
+	position multiplied by the total information content of the stack.
+        <p><a name="download2" href="#logo1">Note:</a>
+	The MEME LOGO differs from those produced by the 
+        <a href="http://weblogo.berkeley.edu">Weblogo</a> program
+	because a <b>small-sample correction is NOT applied</b>.  
+        However, MEME LOGOs in PNG and encapsulated postscript (EPS) formats 
+	<b>with small-sample correction (SSC)</b> are available by clicking 
+	on one of the links named "With SSC" (EPS or PNG) under 
+        <a href="#download">Download LOGO</a>.
+        The MEME LOGOs without small sample correction are similarly available.
+	Error bars are included in the LOGOs with small-sample correction.
+        </p>
+        The information content of each motif position is computed
+ 	as described in the paper by Schneider and Stephens, 
+	"Sequence Logos: A New Way to Display Consensus Sequences" but
+	<b>the small-sample correction, <tt>e(n)</tt>,
+        is set to zero for the LOGO displayed in the MEME output.</b>
+	The corrected information content of position <tt>i</tt> is given by
+         <pre>
+           R(i) for amino acids   = log2(20) - (H(i) + e(n))   (1a) 
+           R(i) for nucleic acids =    2    - (H(i) + e(n))    (1b)
+         </pre>
+         where H(i) is the entropy of position <tt>i</tt>,
+         <pre>
+           H(l) = - (Sum f(a,i) * log2[ f(a,i) ]).             (2)
+         </pre>
+         Here, f(a,i) is the frequency of base or amino acid <tt>a</tt> 
+         at position <tt>i</tt>, and <tt>e(n)</tt> is the 
+         small-sample correction for an alignment of <tt>n</tt> letters.
+         The height of letter <tt>a</tt> in column <tt>i</tt> is given by
+         <pre>
+           height = f(a,i) * R(i)                              (3)
+         </pre>
+         The approximation for the small-sample correction, <tt>e(n)</tt>, 
+         is given by:
+         <pre>
+           e(n) = (s-1) / (2 * ln(2) * n),                     (4)
+         </pre>
+         where <tt>s</tt> is 4 for nucleotides, 20 for amino acids, and 
+         <tt>n</tt> is the number of sequences in the alignment.
+         <p>
+           The letters in the logos are colored as follows.
+	   For DNA sequences, the letter categories contain one letter
+	   each.  For proteins,  the categories are based on the biochemical properties
+	   of the various amino acids.  The categories and their colors are:
+         </p>
+<center>
+<table border="1">
+<thead><tr>
+<th>NUCLEIC ACIDS</th>
+<th align="left">COLOR</th>
+</tr></thead>
+<tr>
+<td>A</td>
+<td><font color="red">RED</font></td>
+</tr>
+<tr>
+<td>C</td>
+<td><font color="blue">BLUE</font></td>
+</tr>
+<tr>
+<td>G</td>
+<td><font color="orange">ORANGE</font></td>
+</tr>
+<tr>
+<td>T</td>
+<td><font color="green">GREEN</font></td>
+</tr>
+</table>
+<table border="1">
+<thead><tr>
+<th>AMINO ACIDS</th>
+<th align="left">COLOR</th>
+<th align="left">PROPERTIES</th>
+</tr></thead>
+<tr>
+<td>A, C, F, I, L, V, W and M</td>
+<td><font color="blue">BLUE</font></td>
+<td>Most hydrophobic[Kyte and Doolittle, 1982]</td>
+</tr>
+<tr>
+<td>NQST</td>
+<td><font color="green">GREEN</font></td>
+<td>Polar, non-charged, non-aliphatic residues</td>
+</tr>
+<tr>
+<td>DE</td>
+<td><font color="magenta">MAGENTA</font></td>
+<td>Acidic</td>
+</tr>
+<tr>
+<td>KR</td>
+<td><font color="red">RED</font></td>
+<td>Positively charged</td>
+</tr>
+<tr>
+<td>H</td>
+<td><font color="pink">PINK</font></td>
+</tr>
+<tr>
+<td>G</td>
+<td><font color="orange">ORANGE</font></td>
+</tr>
+<tr>
+<td>P</td>
+<td><font color="yellow">YELLOW</font></td>
+</tr>
+<tr>
+<td>Y</td>
+<td><font color="turquoise">TURQUOISE</font></td>
+</tr>
+</table>
+</center>
+<p>
+	   J. Kyte and R. Doolittle, 1982.
+	   "A Simple Method for Displaying the Hydropathic Character of a Protein",
+	   J. Mol Biol. 157, 105-132.
+         </p>
+<p><b>Note:</b> the "text" output format of 
+	   MEME preserves the historical MEME format where LOGOS 
+	   are replaced by a simplified probability matrix, 
+	   a relative entropy plot, and a multi-level
+	   consensus sequence.
+	 </p>
+</li>
+<li>
+<h4><a name="ic_doc2" href="#logo1">Information Content</a></h4>
+        This is the information content of the motif in bits.
+	    It is equal to the sum of the <b>uncorrected</b> 
+            information content, <tt>R()</tt>, 
+	    in the columns of the <a href="#logo_doc2">LOGO</a>.
+	    This is equal relative entropy of the motif relative to a 
+            uniform background frequency model.  
+      </li>
+<li>
+<h4><a name="re_doc2" href="#logo1">Relative Entropy</a></h4>
+            This is the relative entropy of the motif, 
+            computed in bits and relative to the background 
+            letter frequencies given in the
+	    <a href="#command">command line summary</a>.  It is equal to
+	    the <a href="#summary_doc2">log-likelihood ratio (llr)</a> 
+            divided by the number of 
+            <a href="#summary_doc2">occurrences (sites)</a> 
+            of the motif times <tt>1/ln(2)</tt>,
+	    <pre>
+               re = llr / (sites * ln(2)).
+	    </pre>
+</li>
+<li>
+<h4><a name="sites_doc2" href="#sites1">Occurrences of the Motif</a></h4>
+        MEME displays the occurrences (sites) of the motif in the
+        training set.  
+        The sites are shown aligned with each other, and the ten sequence
+        positions preceding and following each site are also shown.
+        Each site is identified by the name of the sequence where it occurs,
+        the strand (if both strands of DNA sequences are being used), and the
+        position in the sequence where the site begins.  When the DNA strand
+        is specified, '+' means the sequence in the training set,
+        and '-' means the reverse complement of the training set sequence.
+        (For '-' strands, the 'start' position is actually the position on the
+        <b>positive</b> strand where the site ends.)
+        The sites are listed in order of increasing statistical significance
+        (<i>p</i>-value).  The <i>p</i>-value of a site is computed from the 
+        the match score of the site with the 
+        <a href="#pssm_doc2">position specific scoring matrix</a> 
+        for the motif.
+        The <i>p</i>-value gives the probability of a random string
+        (generated from the background letter frequencies) having the
+        same match score or higher.
+        (This is referred to as the <b>position <i>p</i>-value</b>
+        by the MAST algorithm.)
+      </li>
+<li>
+<h4><a name="diagrams_doc2" href="#diagrams1">Block Diagrams of Motif Occurrences</a></h4>
+        The occurrences of the motif in the training set sequences are 
+        shown with MAST-style block diagrams.  One diagram is printed for each
+        sequence showing all the occurrences of the motif in that sequence.
+        The sequences are sorted by the <b>lowest</b> <i>p</i>-value among
+        all occurrences of the motif in a given sequence.
+        (The <i>p</i>-value of an occurrence is the probability of a single
+        random subsequence the length of the motif,
+        generated according to the 0-order background model, having a score
+        at least as high as the score of the occurrence.)
+        When the DNA strand is specified, '+' means the motif appears from
+        left to right on the sequence, and '-' means the motif appears
+        from right to left on the complementary strand.
+        A sequence position scale is shown at the end of each table of block
+        diagrams.
+        Very long sequences are shown with thick lines connecting the
+        motifs and are <b>not</b> drawn to scale.
+      </li>
+<li>
+<h4><a name="BLOCKS_doc2" href="#blocks1">Motif in BLOCKS format or FASTA format&gt;</a></h4>
+        For use with
+        <a href="http://blocks.fhcrc.org/blocks">BLOCKS tools</a>,
+        MEME prints the occurrences of the motif in BLOCKS format.
+        <p>
+        You can convert these blocks to 
+        PSSMs (position-specific scoring matrices),
+        LOGOS (color representations of the motifs),
+        phylogeny trees and search them against a database of other
+        blocks by pasting everything from the "BL" line to the "//"
+        line (inclusive) into the
+        <a href="http://blocks.fhcrc.org/blocks/process_blocks.html">
+          Multiple Alignment Processor.
+        </a></p>
+        If you include the
+        <b>-print_fasta</b>
+        switch on the command line, MEME prints
+        the motif sites in FASTA format instead of BLOCKS format.
+      </li>
+<li>
+<h4><a name="pssm_doc2" href="#pssm1">Position-Specific Scoring Matrix</a></h4>
+        The position-specific scoring matrix corresponding to the motif 
+        is printed for use by database search programs such as MAST.
+        This matrix is a log-odds matrix calculated by taking 100 times
+        the log (base 2) of the ratio <i>p/f</i> at each position in
+        the motif where <i>p</i> is the probability of a particular letter
+        at that position in the motif, and <i>f</i> is the background 
+        frequency of the letter (given in the 
+        <a href="#command_doc">command line summary</a>
+        section.)
+        This is the same matrix that is used above in computing the
+        <i>p</i>-values of the occurrences of the motif in the
+        <a href="#sites_doc2">Occurrences of the Motif</a>
+        and
+        <a href="#diagrams_doc2">Block Diagrams of Motif Occurrences</a>
+        sections.  
+        The scoring matrix is printed "sideways"--columns
+        correspond to the letters in the alphabet (in the same order as 
+        shown in the simplified motif) and rows corresponding to the 
+        positions of the motif, position one first.
+        The scoring matrix is preceded by a line starting with
+        "log-odds matrix:" and containing the length of the alphabet, width
+        of the motif, number of characters in the training set, the scoring 
+        threshold (obsolete) and the motif <i>E</i>-value.
+        <p><b>Note:</b> The probability <i>p</i> used to compute the PSSM
+        is <i>not</i> exactly the same as the corresponding value in the 
+        Position Specific Probability Matrix (PSPM).  
+        The values of <i>p</i> used to compute the PSSM take
+        into account the motif prior, whereas the values in the PSPM are just
+        the <i>observed</i> frequencies of letters in the motif sites.
+        </p>
+</li>
+<li>
+<h4><a name="pspm_doc2" href="#pspm1">Position-Specific Probability Matrix</a></h4>
+        The motif itself is a position-specific probability matrix giving,
+        for each position in the pattern, the observed frequency 
+        ("probability") of each possible letter.  
+        The probability matrix is printed "sideways"--columns
+        correspond to the letters in the alphabet (in the same order as 
+        shown in the simplified motif) and rows corresponding to the 
+        positions of the motif, position one first.
+        The motif is preceded by a line starting with
+        "letter-probability matrix:" and containing the length of the 
+        alphabet, width of the motif, number of occurrences of the motif,
+        and the <i>E</i>-value of the motif.
+        <p><b>Note:</b> Earlier versions
+        of MEME gave the posterior probabilities--the probability after 
+        applying a prior on letter frequencies--rather than the observed 
+        frequencies.
+        These versions of MEME also gave the number of <i>possible</i>
+        positions for the motif rather than the actual number of occurrences.
+        The output from these earlier versions of MEME can be distinguished
+        by "n=" rather than "nsites=" in the line preceding the matrix.
+        </p>
+</li>
+<li>
+<h4><a name="regular_expression_doc2" href="#regular_expression1">Regular Expression</a></h4>
+        This is a regular expression (RE) describing the motif.  In each column,
+        all letters with observed frequencies greater than 0.2 are shown;
+        less-frequent letters are not included in the RE.
+        MEME regular expressions are interpreted as follows: 
+        single letters match that letter; groups of letters in square brackets 
+        match any of the letters in the group.
+        Regular expressions can be used for searching for the motif in
+        sequences (using, for example,
+        <a href="http://nar.oxfordjournals.org/cgi/content/full/33/suppl_2/W262">
+         PatMatch
+        </a>
+        ) but the search accuracy will usually be better with the PSSM (using,
+        for example
+        <a href="http://meme.nbcr.net/meme/mast-intro.html">MAST</a>.)
+      </li>
+<li>
+<h4><a name="motif-summary-doc2" href="#motif-summary">Motif Summary Tiling</a></h4>
+        The motif summary tiling is done using the same algorithm as used by 
+        <a href="http://meme.nbcr.net/meme/mast-intro.html">MAST</a>.
+        The motif occurrences shown in the motif summary
+        <b>may not be exactly the same as those reported in each motif section</b>
+        because only motifs with a position <em>p</em>-value of 0.0001 that
+        don't overlap other, more significant motif occurrences are shown.
+        The format of the machine readable motif-summary is:
+        <pre>
+        [sequence_name combined_<em>p</em>-value number_of_motif_occurrences [motif_number start_of_motif position_<em>p</em>-value]+]+
+        </pre>
+        See the documentation for 
+        <a href="http://meme.nbcr.net/meme/mast-output.html">MAST output</a>
+        for the definition of position and
+        combined <em>p</em>-values.
+      </li>
+</ul>
+</form></body>
+</html>

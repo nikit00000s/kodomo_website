@@ -1,0 +1,35 @@
+#template() {
+  --burgundy: #BA0F30;
+  --purple: #2F2440;
+  --sand: #C6B79B;
+  --red: #FF2511;
+
+  --gray: #212529;
+  --back: #fff;
+  --footer: #cecece;
+  --i: #b60000;
+  --table-gray: #f1f1f1;
+}
+
+
+figure.height-scroll {
+  max-height: 65vh!important;
+}
+
+ul.blast_page {
+  max-height: 65vh;
+}
+
+.short-descr.blast_page {
+  li:before {
+    color: #template[--purple];
+  }
+
+  h5 {
+    color: #template[--burgundy];
+    &:after {
+      color: #template[--purple];
+    }
+  }
+}
+

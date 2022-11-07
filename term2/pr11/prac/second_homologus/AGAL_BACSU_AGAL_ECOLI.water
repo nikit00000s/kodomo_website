@@ -1,0 +1,69 @@
+########################################
+# Program: water
+# Rundate: Sun 12 May 2019 11:24:22
+# Commandline: water
+#    [-asequence] AGAL_BACSU.fasta
+#    [-bsequence] AGAL_ECOLI.fasta
+#    -outfile AGAL_BACSU_AGAL_ECOLI.water
+#    -auto
+# Align_format: srspair
+# Report_file: AGAL_BACSU_AGAL_ECOLI.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: AGAL_BACSU
+# 2: AGAL_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 441
+# Identity:     219/441 (49.7%)
+# Similarity:   287/441 (65.1%)
+# Gaps:          14/441 ( 3.2%)
+# Score: 1070.0
+# 
+#
+#=======================================
+
+AGAL_BACSU         3 KITFIGAGSTIFAKNVLGDCLLTEALNGFEFALYDIDPKRLQESQLMLEN     52
+                     ||||||||||||.||:|||....|||.....||.||||.||:||.:::..
+AGAL_ECOLI         6 KITFIGAGSTIFVKNILGDVFHREALKTAHIALMDIDPTRLEESHIVVRK     55
+
+AGAL_BACSU        53 LRDRYNPSVAINSYDDRKLALQNAGYVINAIQVGGYKPSTVIDFEIPKRY    102
+                     |.|....|..|..:..:|.||::|.:|:.|.|:|||:|.||.|||:.||:
+AGAL_ECOLI        56 LMDSAGASGKITCHTQQKEALEDADFVVVAFQIGGYEPCTVTDFEVCKRH    105
+
+AGAL_BACSU       103 GLRQTIADTVGIGGIFRSLRTIPVLFDIAKDMEEMCPDAWFLNYTNPMAT    152
+                     ||.||||||:|.|||.|:|||||.|:.|.:||.|:||||..|||.||||.
+AGAL_ECOLI       106 GLEQTIADTLGPGGIMRALRTIPHLWQICEDMTEVCPDATMLNYVNPMAM    155
+
+AGAL_BACSU       153 LTGAM-LRYTNIKTIGLCHSVQVCTKDLFKALGMEHDGIEERIAGINHMA    201
+                     .|.|| .||.:||.:|||||||...::|.:.|.::...:..|.|||||||
+AGAL_ECOLI       156 NTWAMYARYPHIKQVGLCHSVQGTAEELARDLNIDPATLRYRCAGINHMA    205
+
+AGAL_BACSU       202 WLLEVKK---DGT--DLYPEIKRRAKEKQ--------KTKHHDMVRFELM    238
+                     :.||:::   ||:  :||||:....:..|        .|:..::||:|:.
+AGAL_ECOLI       206 FYLELERKTADGSYVNLYPELLAAYEAGQAPKPNIHGNTRCQNIVRYEMF    255
+
+AGAL_BACSU       239 DKFGYYVTESSEHNAEYHPYFIKRNYPELISELQIPLDEYPRRCVKQIEN    288
+                     .|.||:|||||||.|||.|:|||....:||...::||||||:|||:|:.|
+AGAL_ECOLI       256 KKLGYFVTESSEHFAEYTPWFIKPGREDLIERYKVPLDEYPKRCVEQLAN    305
+
+AGAL_BACSU       289 WEKMRDDIVNNKNLTHERSKEYGSRIIEAMETNEPFTFGGNVLNTGLITN    338
+                     |.|..::......:..:.|:||.|.|:.|:.|.||....|||.|.|||.|
+AGAL_ECOLI       306 WHKELEEYKKASRIDIKPSREYASTIMNAIWTGEPSVIYGNVRNDGLIDN    355
+
+AGAL_BACSU       339 LPSKAVVEVTCVADRKKITPCFAGELPEQLAALNRTNINTQLMTIEAAVT    388
+                     ||....|||.|:.|...|.|...|.||..||||.:||||.|.:..||.:|
+AGAL_ECOLI       356 LPQGCCVEVACLVDANGIQPTKVGTLPSHLAALMQTNINVQTLLTEAILT    405
+
+AGAL_BACSU       389 RKKEAVYQAAMLDPHTSAELSMKDIISMCDDLFAAHGDWLP    429
+                     ..::.||.|||:||||:|.|.:.:|.::.|||.||||||||
+AGAL_ECOLI       406 ENRDRVYHAAMMDPHTAAVLGIDEIYALVDDLIAAHGDWLP    446
+
+
+#---------------------------------------
+#---------------------------------------

@@ -1,0 +1,54 @@
+zap
+load =1YEK
+wireframe off
+define MyResidue 118:L
+
+set echo top center
+font echo 20
+color echo black
+echo 1YEK: a. L:PHE'118
+
+select not MyResidue
+hide selected
+select MyResidue
+color green
+cpk off
+spacefill on
+center selected
+zoom 350
+
+pause
+resume
+
+set echo top center
+font echo 20
+color echo black
+echo 1YEK: b. L:PHE'118 + 7 (cpk)
+
+hide none
+select not within(7.0, MyResidue)
+hide selected
+select within(7.0, MyResidue) and not MyResidue
+color TRANSLUCENT cpk
+cpk 20
+zoom 350
+
+for (var i = 1; i <= 7; i++ ) {
+
+pause
+resume
+
+set echo top center
+font echo 20
+color echo black
+echo 1YEK: @{"L:PHE'118 +  " + @{i}}
+
+hide none
+select not within(@{i}, MyResidue)
+hide selected
+select within(@{i}, MyResidue) and not MyResidue
+color TRANSLUCENT cpk
+spacefill on
+zoom 350
+
+}

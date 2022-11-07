@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>#5 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,800&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/old_style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="pr5.css">
+    <style>
+        @media (max-width: 48em) {
+            body, html {
+                min-height: 70em;
+            }
+        }
+        p:first-line, .prac_intro {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div id="button-to-end" onclick="window.scrollTo(0,document.body.scrollHeight);">
+    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+</div>
+
+<!-- MAIN -->
+<main>
+
+    <div class="container-fluid big-header">
+        <div class="row ls-txt-black">
+            <div class="col p-0">
+
+                <!--TEXT WELCOME-->
+                <h1 class="h1 text-md-center big-header-title">
+                    <span>
+                        <a class="big-header-link" href="http://kodomo.cmm.msu.su/wiki/2018/2/pr5">
+                            <i class="fa fa-bookmark" aria-hidden="true"></i>
+                            Практикум #5.
+                        </a>
+                        <span class="big-header-btitle">
+                            Uniprot
+                        </span>
+                    </span>
+                </h1>
+
+                <h6 class="h6 text-md-center big-header-date">12 марта 2019 г.</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid prac_content">
+        <div class="row justify-content-center">
+            <div class="basic_task col col-12 col-lg-8">
+                <!-- #FIXME -->
+                <h2 class="h2 prac_title text-center">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i> Знакомство с UniProt
+                    <!-- например, "Знакомство с UniProt" -->
+                </h2>
+
+                <p class="prac_intro">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> Данный практикум посвящен работе с базой данных
+                    UniProt&nbsp;&mdash;
+                    открытой базой данных последовательностей белков.
+                </p>
+            </div>
+            <section class="basic_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-bookmark" aria-hidden="true"></i> 1. Информация о белке
+                    HCS_KITSK
+                    <!-- например, "Получение информации о белке NNN_MMMMM" --></h3>
+
+                <p class="task_intro">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    Как ее получили? <br/>
+                    Сначала нашли свой белок в базе UniProt. Перешли на страницу белка, открыли текстовый режим
+                    отображения информации. Нашли информацию для таблицы из полей DE&nbsp;(рекомендуемое название),
+                    DR(идентификаторы PDB и RefSeq), SQ&nbsp;(длина в аминокислотных остатках и молекулярная масса&nbsp;(MW) в
+                    дальтонах). Полученная информация представлена в таблице 1.
+                    <!-- обязательно вставьте ссылку на таблицу, например, "Полученная информация представлена в таблице 1" -->
+                </p>
+
+                <table class="task_table table table-primary table-striped table-bordered table-hover">
+                    <caption>
+                        <span class="table_number">
+                            <i class="fa fa-table" aria-hidden="true"></i> Таблица 1.
+                        </span>
+                        Основная информация о белке HCS_KITSK из UniProt.
+                    </caption>
+                    <!-- горизонтальный вариант таблицы, ниже есть вертикальный, выбирайте любой, второй удалите -->
+
+                    <tbody>
+                    <tr>
+                        <th class="row_header">UniProt ID</th>
+                        <td>HCS_KITSK</td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">UniProt AC</th>
+                        <td>E4MYY0</td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">Название белка</th>
+                        <td>(2Z,6E)-hedycaryol synthase</td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">RefSeq ID</th>
+                        <td>WP_014133196.1</td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">PDB ID</th>
+                        <td>4MC0, 4MC3, 4MC8</td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">Длина белка&nbsp;(а.о.)</th>
+                        <td>338</td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">Молекулярная масса&nbsp;(Да)</th>
+                        <td>37&nbsp;591</td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">Рекомендуемое название</th>
+                        <td>(2Z,6E)-hedycaryol synthase</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <p class="task_info">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> Небольшая информация о белке <br/> Данный белок&nbsp;&mdash;
+                    гомодимер, является ферментом, который катализирует превращение&nbsp;(2E,6E)-фарнезил дифосфата
+                   &nbsp;(FPP) в&nbsp;(2Z,6E)-хедикариол посредством 1,11-циклизации. Этот фермент включён в процесс
+                    биосинтеза терпеноидов, который является частью синтеза вторичных метаболитов у бактерии <i>Kitasatospora
+                    setae</i>.
+                </p>
+
+                <p class="task_outro">
+                    <i class="fa fa-comment" aria-hidden="true"></i> Выводы <br/>
+                    Для всего белка HCS_KITSK структура известна. В записях PDB она представлена одной цепью.
+                    Интересно, что в первой записи белок&nbsp;A/B, а в двух более поздних&nbsp;(и более точных)&nbsp;&mdash;&nbsp;A. У белка
+                    есть лиганд&nbsp;&mdash; Mg<sup>2+</sup>. Последовательность белков посадочного сайта лиганда критически
+                    важна для работы фермента.
+                    <!-- про цепи и представленность в PDB и т.д., здесь же можете прокомментировать в целом задание 1, ваши впечатления от UniProt, или ещё что-то. -->
+                </p>
+
+            </section>
+            <div class="ls-txtbar bg-transparent col col-12"></div>
+
+            <section class="basic_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-bookmark" aria-hidden="true"></i> 2. Поиск белка HCS_KITSK в
+                    UniRef
+                    <!-- например, "Поиск белка NNN_MMMMM в UniRef" --></h3>
+
+                <p class="task_intro">
+                    <i class="fa fa-book" aria-hidden="true"></i> Что было сделано? <br/>
+                    Для описания кластеров белка нашел по одному кластеру в UniRef50, UniRef90 и UniRef100&nbsp;(поиск
+                    через выбор базы). <!--Что и для чего было сделано, опять нужна ссылка на таблицу.-->Полученная
+                    информация представлена в таблице 2.
+                </p>
+
+                <table class="task_table table table-primary table-striped table-bordered table-hover">
+                    <caption>
+                            <span class="table_number">
+                                <i class="fa fa-table" aria-hidden="true"></i> Таблица 2.
+                            </span>
+                        Кластеры UniRef, содержащие белок HCS_KITSK.
+                    </caption>
+
+                    <tbody>
+                    <tr>
+                        <th class="column_header"></th>
+                        <th class="column_header">UniRef100</th>
+                        <th class="column_header">UniRef90</th>
+                        <th class="column_header">UniRef50</th>
+                    </tr>
+                    <tr>
+                        <th class="row_header">ID кластера</th>
+                        <td>UniRef100_E4MYY0</td>
+                        <td>UniRef90_E4MYY0</td>
+                        <td>UniRef50_E4MYY0</td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">Название кластера</th>
+                        <td>Cluster:&nbsp;(2Z,6E)-hedycaryol synthase</td>
+                        <td>Cluster:&nbsp;(2Z,6E)-hedycaryol synthase</td>
+                        <td>Cluster:&nbsp;(2Z,6E)-hedycaryol synthase</td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">Размер кластера</th>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>9</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <p class="task_outro">
+                    <i class="fa fa-comment" aria-hidden="true"></i> Вывод <br/>
+                    Интересно, что белков, схожих с&nbsp;(2Z, 3E)-хедикариолсинтазой&nbsp;(HCS_KITSK) очень мало. Возможно, это
+                    связано с функцией белка&nbsp;&mdash; синтезом вторичных метаболитов. <br/>
+                    Идет ветер к югу, и переходит к северу,
+                    кружится, кружится на ходу своем, и возвращается ветер на круги свои.
+                    <!-- опять можете описать ваши впечатления, теперь от UniRef -->
+                </p>
+
+            </section>
+            <div class="ls-txtbar bg-transparent col col-12"></div>
+
+            <section class="basic_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-bookmark" aria-hidden="true"></i> 3. Сеансы поиска в UniProt.
+                    <!-- например, "Сеансы поиска в UniProt" --></h3>
+
+                <p class="task_intro">
+                    <i class="fa fa-book" aria-hidden="true"></i> Что было сделано? <br/>
+                    В базе данных UniProt были осуществлены процедуры поиска белков через специальный синтаксис запросов&nbsp;(кнопка Advanced). Для знакомства с этим синтаксисом запросов в UniProt были проведены следующие
+                    сеансы поиска.
+                    <!--Что и для чего было сделано. Что-то типа "для знакомства с синтаксисом запросов в UniProt были проведены следующие сеансы поиска."-->
+                </p>
+
+                <!-- Этот раздел можете оформлять на свое усмотрение, в виде таблицы, списка, просто текстом, или еще как-то. Но очень желательно, чтобы его можно было проверять, не проклиная Вас =). Ниже просто не самый плохой из вариантов. -->
+
+                <h4 class="task_subtitle"><i class="fa fa-search" aria-hidden="true"></i> Поиск&nbsp;(2Z,
+                    3E)-хедикариолсинтазы</h4>
+                <ul class="search_list">
+                    <li>
+                        <h5>Поиск по рекомендованному полному названию белка: <span class="color">(2Z,6E)-hedycaryol synthase</span>
+                        </h5>
+                        <p>
+                            Текст запроса: <kbd>"name:"2z 6e hedycaryol synthase""</kbd> <br/>
+                            Количество находок в Swiss-Prot: <span class="color">1</span> <br/>
+                            Общее количество находок: <span class="color">1</span> <br/>
+                        </p>
+                    </li>
+
+                    <li>
+                        <h5>Поиск по рекомендованному сокращенному названию белка: <span class="color">HcS</span></h5>
+                        <p>
+                            Текст запроса: <kbd>"name:hcs"</kbd> <br/>
+                            Количество находок в Swiss-Prot: <span class="color">10</span> <br/>
+                            Общее количество находок: <span class="color">65</span> <br/>
+                        </p>
+                    </li>
+
+                    <li>
+                        <h5>Поиск по рекомендованному сокращенному названию белка: <span class="color">HcS</span>;<br/>
+                            и одновременно по организму <i>Kitasatospora setae</i></h5>
+                        <p>
+                            Текст запроса: <kbd>"name:hcs organism:"kitasatospora setae""</kbd> <br/>
+                            Количество находок в Swiss-Prot: <span class="color">1</span> <br/>
+                            Общее количество находок: <span class="color">1</span> <br/>
+                        </p>
+                    </li>
+
+                    <li>
+                        <h5>Поиск по рекомендованному сокращенному названию белка: <span class="color">HcS</span>;<br/>
+                            и одновременно по семейству <span class="color">Streptomycetaceae</span></h5>
+                        <p>
+                            Текст запроса: <kbd>"name:hcs taxonomy:streptomycetaceae"</kbd> <br/>
+                            Количество находок в Swiss-Prot: <span class="color">1</span> <br/>
+                            Общее количество находок: <span class="color">1</span> <br/>
+                        </p>
+                    </li>
+
+                    <li>
+                        <h5>Поиск по рекомендованному сокращенному названию белка: <span class="color">HcS</span>;<br/>
+                            и одновременно по отделу <span class="color"> Actinobacteria</span></h5>
+                        <p>
+                            Текст запроса: <kbd>"name:hcs taxonomy:actinobacteria"</kbd> <br/>
+                            Количество находок в Swiss-Prot: <span class="color">1</span> <br/>
+                            Общее количество находок: <span class="color">1</span> <br/>
+                        </p>
+                    </li>
+
+                </ul>
+
+                <h4 class="task_subtitle"><i class="fa fa-search" aria-hidden="true"></i> Поиск аллергенов</h4>
+                <ul class="search_list">
+                    <li>
+                        <h5>Поиск всех аллергенов</h5>
+                        <p>
+                            Текст запроса: <kbd>"name:allergen"</kbd> <br/>
+                            Количество находок в Swiss-Prot: <span class="color">483</span> <br/>
+                            Общее количество находок: <span class="color">11 242</span> <br/>
+                        </p>
+                    </li>
+
+                    <li>
+                        <h5>Поиск среди зеленых растений <span class="color">Viridiplantae</span></h5>
+                        <p>
+                            Текст запроса: <kbd>"name:allergen taxonomy:viridiplantae"</kbd> <br/>
+                            Количество находок в Swiss-Prot: <span class="color">309</span> <br/>
+                            Общее количество находок: <span class="color">2 148</span> <br/>
+                        </p>
+                    </li>
+
+                    <li>
+                        <h5>Поиск среди бурых водорослей <span class="color">Phaeophyceae</span></h5>
+                        <p>
+                            Текст запроса: <kbd>"name:allergen taxonomy:phaeophyceae"</kbd> <br/>
+                            Количество находок в Swiss-Prot: <span class="color">0</span> <br/>
+                            Общее количество находок: <span class="color">1</span> <br/>
+                        </p>
+                    </li>
+                </ul>
+
+                <h4 class="task_subtitle"><i class="fa fa-search" aria-hidden="true"></i> Поиск трипсинов</h4>
+                <ul class="search_list">
+                    <li>
+                        <h5>Поиск трипсина <span class="color">без отсеивания ингибиторов</span></h5>
+                        <p>
+                            Текст запроса: <kbd>"name:trypsin"</kbd> <br/>
+                            Количество находок в Swiss-Prot: <span class="color">312</span> <br/>
+                            Общее количество находок: <span class="color">23 018</span> <br/>
+                        </p>
+                    </li>
+
+                    <li>
+                        <h5>Поиск трипсина <span class="color">с отсеиванием ингибиторов</span></h5>
+                        <p>
+                            Текст запроса: <kbd>"name:trypsin NOT inhibitor"</kbd> <br/>
+                            Количество находок в Swiss-Prot: <span class="color">95</span> <br/>
+                            Общее количество находок: <span class="color">18 204</span> <br/>
+                        </p>
+                    </li>
+                </ul>
+
+                <p class="task_outro">
+                    <i class="fa fa-comment" aria-hidden="true"></i> Вывод <br/>
+                    Интересно, что белок&nbsp;(2Z,
+                    3E)-хедикариолсинтаза&nbsp;(HCS_KITSK) пока что был найден только в одном организме. Но это и не
+                    удивительно: ведь он
+                    занимается синтезом вторичных метаболитов, которые могут быть уникальными.
+                    Ведь среди всех записей UniProt нашлось всего 65 белков с рекомендованным сокращенным названием белка&nbsp;<span class="color">HcS<span>.
+                </p>
+
+            </section>
+            <div class="ls-txtbar bg-transparent col col-12"></div>
+
+            <section class="suppl_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-bookmark" aria-hidden="true"></i> 4. Различия в записях UniProt и
+                    RefSeq Protein </h3>
+
+                <p class="task_intro">
+                    <i class="fa fa-book" aria-hidden="true"></i> Что было сделано? <br/>
+                    Нашел запись <a
+                        href="https://www.ncbi.nlm.nih.gov/protein/WP_014133196.1">RefSeq Protein</a>, соответствующую
+                    моему белку&nbsp;(<a href="https://www.uniprot.org/uniprot/E4MYY0.txt">UniProt</a>).
+                </p>
+                <p class="task_info">
+                    <i class="fa fa-file-text" aria-hidden="true"></i> О различиях <br/>
+                    Главное различие&nbsp;&mdash; формат файлов. Обе системы используют обычные текстовые файлы&nbsp;(на RefSeq также
+                    можно получить fasta-файл), структура у них схожая. Названия, идентификаторы, даты, информация о
+                    происхождении белка&nbsp;(из какого организма был получен), а также таксономия расположены в верхней
+                    части файла, в "шапке". Аминокислотные последовательности расположены внизу, в "подвале". Самые
+                    главные различия локализованы где-то посередине. В RefSeq тут находятся небольшие и неизбыточные
+                    сведения об отдельных частях белка, которые могут выполнять какую-либо функцию. Белок здесь может
+                    быть аннотирован даже не одним геномом одного организма, а сразу несколькими. В UniProt все сложнее.
+                    Здесь указаны авторы работы, название работы, метод, которым был исследован белок, описываются
+                    другие результаты исследований, которые были проведены авторами&nbsp;(в моем случае это индуцированный
+                    мутагенез). Также здесь для бактерии указывается штамм, функции белка, каталитическую активность,
+                    кофакторы. Описывается, в каких метаболических путях участвует этот белок, тип четвертичной
+                    структуры, схожесть с другими белками. Еще здесь есть дополнительная информация об особенностях
+                    белка. Здесь указываются авторские права, указываются PDB идентификаторами, метод, которым была
+                    получена запись и ее точность. Указывается длина белка, описывается его вторичная структура, участки
+                    с функциональными особенностями.
+                </p>
+                <p class="task_outro"><i class="fa fa-chevron-right" aria-hidden="true"></i> Вывод <br/>
+                    В общем, информация в UniProt более емкая, точная, и в некотором смысле, избыточная.
+                </p>
+            </section>
+
+            <div class="ls-txtbar bg-transparent col col-12"></div>
+
+            <section class="suppl_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-bookmark" aria-hidden="true"></i> 5. Обзор истории изменений
+                    записи Uniprot </h3>
+
+                <p class="task_intro">
+                    <i class="fa fa-book" aria-hidden="true"></i> Что было сделано? <br/>
+                    Нашел <a
+                        href="https://www.uniprot.org/uniprot/E4MYY0?version=*">историю</a> записей UniProt моего белка.
+                    Здесь есть кнопка "Compare", которой довольно удобно пользоваться.
+                </p>
+                <p class="task_info"> Выполнение задания <br/>
+                    <i class="fa fa-file-text" aria-hidden="true"></i> <a
+                        href="https://www.uniprot.org/uniprot/E4MYY0?version=48&version=1&diff=true">Сравним</a>,
+                    например, самую первую и последнюю версии&nbsp;(от
+                    <a href="https://www.uniprot.org/uniprot/E4MYY0.txt?version=1">2011-02-08</a> и <a
+                        href="https://www.uniprot.org/uniprot/E4MYY0.txt?version=48">2019-02-13</a> соответсвенно) <br/>
+                    В этих версиях очень много разичий. Изменился ID, запись переместилась из TrEMBL в Swiss-Prot
+                   &nbsp;(2018-07-18), были даны рекомендованные имена&nbsp;(короткое и полное). Белок стали получать не только из
+                    штамма KM-6054, добавили объемное описание белка.
+                </p>
+                <p class="task_outro"><i class="fa fa-chevron-right" aria-hidden="true"></i> Вывод <br/>
+                    В общем, информации о белке стало в несколько раз больше.
+                </p>
+            </section>
+
+            <div class="ls-txtbar bg-transparent col col-12"></div>
+
+            <section class="suppl_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-bookmark" aria-hidden="true"></i> 6. Ключи таблицы локальных
+                    особенностей</h3>
+
+                <p class="task_intro">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> Ключи таблицы локальных особенностей&nbsp;(Feature
+                    Table) созданы для описания интересных областей или участков в последовательности белка, такие как
+                    посттрансляционные модификации, сайты связывания, активные центры фермента и так далее. <br/>
+                    Название поля для таблицы локальных особенностей в записи UniProt&nbsp;&mdash; FT.
+                </p>
+                <p class="task_info">
+                    <i class="fa fa-book" aria-hidden="true"></i> Выполнение задания <br/>
+                    Некоторые ключи для поля FT с ссылками на пример
+                    представлены в таблице 3.
+                </p>
+
+                <table class="task_table table table-primary table-striped table-bordered table-hover">
+                    <caption>
+                            <span class="table_number">
+                                <i class="fa fa-table" aria-hidden="true"></i> Таблица 3.
+                            </span>
+                        Ключи таблицы локальных особенностей с примерами.
+                    </caption>
+
+                    <tbody>
+                    <tr>
+                        <th class="column_header">Особенность</th>
+                        <th class="column_header">Ключ</th>
+                        <th class="column_header">Пример</th>
+                    </tr>
+                    <tr>
+                        <th class="row_header">Нестандартные аминокислотные остатки</th>
+                        <td>NON_STD</td>
+                        <td><a href="https://www.uniprot.org/uniprot/P24183.txt">Селеноцистеин</a> <br/> <a href="https://www.uniprot.org/uniprot/Q8TTA5.txt">Пирролизин</a></td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">Посттрансляционная модификация</th>
+                        <td>1. INIT_MET <br/>
+                            2. SIGNAL <br/>
+                            3. LIPID <br/>
+                            4. CARBOHYD <br/>
+                            5. MOD_RES
+                        </td>
+                        <td>1. <a href="https://www.uniprot.org/uniprot/Q9H425.txt">Отщепление инициаторного метионина</a><br/>
+                            2. <a href="https://www.uniprot.org/uniprot/P01165.txt">Сигнальный пептид</a> <br/>
+                            3. <a href="https://www.uniprot.org/uniprot/P84077.txt">Липидирование</a> <br/>
+                            4. <a href="https://www.uniprot.org/uniprot/P08195.txt">Гликозилирование</a> <br/>
+                            5. <a href="https://www.uniprot.org/uniprot/O15350.txt">Модификация аминокислотного остатка</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">Альтернативный сплайсинг</th>
+                        <td>VAR_SEQ</td>
+                        <td><a href="https://www.uniprot.org/uniprot/P04150.txt">Альтернативный сплайсинг</a></td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">Дисульфидные связи</th>
+                        <td>DISULFID</td>
+                        <td><a href="https://www.uniprot.org/uniprot/P10846.txt">Дисульфидная связь</a></td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">Варианты последовательности</th>
+                        <td>VARIANT</td>
+                        <td><a href="https://www.uniprot.org/uniprot/P04150.txt">Точечные мутации</a></td>
+                    </tr>
+                    <tr>
+                        <th class="row_header">Вторичная структура</th>
+                        <td>1. HELIX <br/>
+                            2. TURN <br/>
+                            3. STRAND
+                        </td>
+                        <td><a href="https://www.uniprot.org/uniprot/E4MYY0.txt">Пример</a>
+                            1. Спираль <br/>
+                            2. Поворот <br/>
+                            3. Бета-лист
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <p class="prac_outro">
+                    <i class="fa fa-flask" aria-hidden="true"></i> Конец <br/>
+
+                    <span class="bash"><span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span> Продолжение следует... <span class="bash-cursor"></span></span>
+                </p>
+            </section>
+
+            <div class="ls-txtbar bg-transparent col col-12"></div>
+
+        </div>
+    </div>
+
+
+</main>
+
+<!-- Footer -->
+<footer class="page-footer ls-footer">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- TERMS, FOOTER column -->
+            <div class="col-md-6 mx-auto">
+
+                <h5 class="font-weight-bold text-uppercase">Семестры</h5>
+
+                <div class="row">
+
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="../../term1/index.html">Первый</a>
+                            </li>
+                            <li>
+                                <a href="../../term2/index.html">Второй</a>
+                            </li>
+                            <li>
+                                <a href="#">Третий</a>
+                            </li>
+                            <li>
+                                <a href="#">Четвёртый</a>
+                            </li>
+                            <li>
+                                <a href="#">Пятый</a>
+                            </li>
+                            <li>
+                                <a href="#">Шестой</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Седьмой</a>
+                            </li>
+                            <li>
+                                <a href="#">Восьмой</a>
+                            </li>
+                            <li>
+                                <a href="#">Девятый</a>
+                            </li>
+                            <li>
+                                <a href="#">Десятый</a>
+                            </li>
+                            <li>
+                                <a href="#">Одиннадцатый</a>
+                            </li>
+                            <li>
+                                <a href="#">Двенадцатый</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <!-- Links -->
+
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto">
+
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase">МГУ</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="http://www.fbb.msu.ru/" class="li">
+                            Сайт ФББ МГУ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.msu.ru/">МГУ</a>
+                    </li>
+                </ul>
+
+
+                <!--SOCIAL-->
+                <h5 class="font-weight-bold text-uppercase">Связь</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://vk.com/nikgr1">Вконтакте | <i class="fa fa-vk" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:nikit00000s@fbb.msu.ru">Почта kodomo | <i class="fa fa-envelope"
+                                                                                  aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:NikGR1@yandex.ru">Личная почта | <i class="fa fa-envelope"
+                                                                            aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto">
+
+                <!-- STUFF -->
+                <h5 class="font-weight-bold text-uppercase">Остальное на сайте</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="../../index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="../../html/about_me/about_me.html">Обо мне</a>
+                    </li>
+                    <li>
+                        <a href="http://kodomo.cmm.msu.su/wiki/2018">KodomoFBB</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+
+    <div class="footer-copyright text-center py-3">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+        Спасибо за помощь <a href="https://vk.com/id350523696">Грызунову Сергею</a>.
+    </div>
+</footer>
+
+
+<script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../js/own/yearInit.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+#color() {
+  orange-primary: #a66428;
+  orange-secondary: #ffbe6d;
+  dark-blue: #08050f;
+  light-blue: #b3bce4;
+  strong-orange: #f9a132;
+}
+
+main {
+  background: url(sky_background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.big-header {
+  background: transparent;
+}
+
+.big-header-title > span {
+  background: #color[orange-primary];
+}
+
+.big-header-title a {
+  color: #color[orange-secondary];
+}
+
+.big-header-date {
+  background: #color[orange-primary];
+  color: #color[orange-secondary];
+}
+
+.prac_content {
+  //background: #color[dark-blue];
+  background: #141E30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #141E30, #08050f); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #141E30, #08050f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #color[light-blue];
+}
+
+.basic_task {
+  height: fit-content;
+  padding: 5rem 1.5rem;
+}
+
+.prac_title {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  color: #color[orange-secondary];
+}
+
+.prac_content i {
+  color: #color[orange-secondary];
+}
+
+.prac_content p {
+  padding-bottom: 1rem;
+}
+
+.task_title {
+  padding-top: 4rem;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.task_table {
+  font-size: 1.15rem;
+  font-family: monospace;
+  color: #color[dark-blue];
+}
+
+.task_table caption {
+  color: #color[light-blue];
+  text-align: center;
+}
+
+.task-info {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.task_outro {
+  margin-top: 1rem;
+}
+
+.ls-txtbar {
+  background: url(sky_background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.search_list {
+  list-style: none;
+}
+
+span.color {
+  color: #color[orange-secondary];
+}
+
+kbd {
+  color: #color[dark-blue];
+  background: #color[strong-orange];
+  font-family: monospace;
+  display: inline-block;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.search_list p {
+  margin: 0;
+  padding: 0;
+}
+
+.search_list li {
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+  border-left: 0.5rem dotted #color[light-blue];
+  padding-left: 1rem;
+  display: block;
+  clear: none;
+}
+
+.search_list h5 {
+  line-height: 1.5;
+}
+
+.prac_content a {
+  color: #color[orange-secondary];
+  text-decoration: underline dotted;
+}
+
+.prac_content a:hover {
+  color: #color[strong-orange];
+  text-decoration: underline solid;
+}
+
+.prac_content table a {
+  color: #color[dark-blue];
+}
+
+.prac_outro {
+  margin-top: 12rem;
+  margin-bottom: 2rem;
+}
+
+.p:first-line {
+  font-weight: bold!important;
+  color: red;
+}
+

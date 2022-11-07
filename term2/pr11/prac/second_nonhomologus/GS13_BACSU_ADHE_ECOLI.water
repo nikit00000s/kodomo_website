@@ -1,0 +1,45 @@
+########################################
+# Program: water
+# Rundate: Sun 12 May 2019 11:18:52
+# Commandline: water
+#    [-asequence] GS13_BACSU.fasta
+#    [-bsequence] ADHE_ECOLI.fasta
+#    -outfile GS13_BACSU_ADHE_ECOLI.water
+#    -auto
+# Align_format: srspair
+# Report_file: GS13_BACSU_ADHE_ECOLI.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: GS13_BACSU
+# 2: ADHE_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 137
+# Identity:      31/137 (22.6%)
+# Similarity:    53/137 (38.7%)
+# Gaps:          43/137 (31.4%)
+# Score: 41.5
+# 
+#
+#=======================================
+
+GS13_BACSU        23 AFVALDEETQGLVHISEVTHGFVKDINEHL--SVGDEVQVKVLAVDEEKG     70
+                     |.:|:.|...|:|....:.:.|.   :|::  :..||....||:.|:..|
+ADHE_ECOLI        50 AKMAVAESGMGIVEDKVIKNHFA---SEYIYNAYKDEKTCGVLSEDDTFG     96
+
+GS13_BACSU        71 KIS--------------------------LSIRATQA---APEKKESKPR     91
+                     .|:                          :|::...|   :|..: :|..
+ADHE_ECOLI        97 TITIAEPIGIICGIVPTTNPTSTAIFKSLISLKTRNAIIFSPHPR-AKDA    145
+
+GS13_BACSU        92 KPKAAQVSEEASTPQGFNTLKDKLEEWI-----EMSN    123
+                     ..|||.:..:|:...|  ..|| |..||     |:||
+ADHE_ECOLI       146 TNKAADIVLQAAIAAG--APKD-LIGWIDQPSVELSN    179
+
+
+#---------------------------------------
+#---------------------------------------

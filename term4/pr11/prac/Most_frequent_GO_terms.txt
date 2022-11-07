@@ -1,0 +1,13 @@
+tetrahydrobiopterin biosynthetic process (GO:0006729)
+tetrahydrobiopterin metabolic process (GO:0046146)
+pteridine-containing compound biosynthetic process (GO:0042559)
+diol biosynthetic process (GO:0034312)
+diol metabolic process (GO:0034311)
+pteridine-containing compound metabolic process (GO:0042558)
+organic hydroxy compound biosynthetic process (GO:1901617)
+polyol biosynthetic process (GO:0046173)
+organic hydroxy compound metabolic process (GO:1901615)
+polyol metabolic process (GO:0019751)
+
+
+5 most frequent: GO:0006729,GO:0042559,GO:0034312,GO:0034311,GO:0046146

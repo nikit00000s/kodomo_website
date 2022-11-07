@@ -1,0 +1,57 @@
+########################################
+# Program: water
+# Rundate: Sun 12 May 2019 11:24:22
+# Commandline: water
+#    [-asequence] 6PGL_BACSU.fasta
+#    [-bsequence] 6PGL_ECOLI.fasta
+#    -outfile 6PGL_BACSU_6PGL_ECOLI.water
+#    -auto
+# Align_format: srspair
+# Report_file: 6PGL_BACSU_6PGL_ECOLI.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: 6PGL_BACSU
+# 2: 6PGL_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 265
+# Identity:      81/265 (30.6%)
+# Similarity:   129/265 (48.7%)
+# Gaps:          16/265 ( 6.0%)
+# Score: 317.0
+# 
+#
+#=======================================
+
+6PGL_BACSU        67 VAAYQIDKNSGELTFLNHQLIDGPSPCHVSVDDQNQFVLTANYHSGKVHV    116
+                     |.||:|..:.|.|||.....:.| ||.|:|.|.|.|||...:|::|.|.|
+6PGL_ECOLI        60 VLAYRIAPDDGALTFAAESALPG-SPTHISTDHQGQFVFVGSYNAGNVSV    108
+
+6PGL_BACSU       117 FPVQEDGSLQSPVSEAAHTGKGPHERQEKPHTHYAGFTPEHNYVVAVDLG    166
+                     ..: ||| |...|.:......|         .|.|..:|::..:....|.
+6PGL_ECOLI       109 TRL-EDG-LPVGVVDVVEGLDG---------CHSANISPDNRTLWVPALK    147
+
+6PGL_BACSU       167 IDKLYTYKLKDG---VLTESGSHSFAPGAGPRHIAFHPKEKYAYVMTELS    213
+                     .|::..:.:.|.   |..:....:...||||||:.|||.|:|||.:.||:
+6PGL_ECOLI       148 QDRICLFTVSDDGHLVAQDPAEVTTVEGAGPRHMVFHPNEQYAYCVNELN    197
+
+6PGL_BACSU       214 NEVIALEYNPTAGEFREIQVVSAIPDDFTDNSQGSAIHVTQDGRFVYVAN    263
+                     :.|...|.....|....:|.:..:|::|:|....:.||:|.|||.:|..:
+6PGL_ECOLI       198 SSVDVWELKDPHGNIECVQTLDMMPENFSDTRWAADIHITPDGRHLYACD    247
+
+6PGL_BACSU       264 RGHDSIAVFEVNQYSGELAFVERVSTEGNWPRDFVFDPTEGFLVASNEET    313
+                     |....|.||.|:: .|.:...|........||.|..|.:..:|:|:.:::
+6PGL_ECOLI       248 RTASLITVFSVSE-DGSVLSKEGFQPTETQPRGFNVDHSGKYLIAAGQKS    296
+
+6PGL_BACSU       314 GNLVLFERDKETGRL    328
+                     .::.::|...|.|.|
+6PGL_ECOLI       297 HHISVYEIVGEQGLL    311
+
+
+#---------------------------------------
+#---------------------------------------

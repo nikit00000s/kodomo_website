@@ -1,0 +1,85 @@
+########################################
+# Program: needle
+# Rundate: Sun 12 May 2019 11:32:37
+# Commandline: needle
+#    [-asequence] DHLE_BACSU.fasta
+#    [-bsequence] YPDF_ECOLI.fasta
+#    -outfile DHLE_BACSU_YPDF_ECOLI.needle
+#    -auto
+# Align_format: srspair
+# Report_file: DHLE_BACSU_YPDF_ECOLI.needle
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: DHLE_BACSU
+# 2: YPDF_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 621
+# Identity:      36/621 ( 5.8%)
+# Similarity:    60/621 ( 9.7%)
+# Gaps:         517/621 (83.3%)
+# Score: 22.0
+# 
+#
+#=======================================
+
+DHLE_BACSU         1 MELFKYMEKYDYEQLVFCQDEQSGLKAIIAIHDTTLGPALGGTRMWTYEN     50
+                                                                       
+YPDF_ECOLI         0 --------------------------------------------------      0
+
+DHLE_BACSU        51 EEAAIEDALRLARGMTYKNAAAGLNLGGGKTVIIGDPRKDKNEEMFRAFG    100
+                                                                       
+YPDF_ECOLI         0 --------------------------------------------------      0
+
+DHLE_BACSU       101 RYIQGLNGRYITAEDVGTTVEDMDIIHDETDYVTGISPAFGSSGNPSPVT    150
+                                                                       
+YPDF_ECOLI         0 --------------------------------------------------      0
+
+DHLE_BACSU       151 AYGVYRGMKAAAKAAFGTDSLEGKTIAVQGVGNVAYNLCRHLHEEGANLI    200
+                                                                       
+YPDF_ECOLI         0 --------------------------------------------------      0
+
+DHLE_BACSU       201 VTDINKQSVQRAVEDFGARAVDPDDIYSQDCDIYAPCALGATIND-DTIK    249
+                                                         ..|.|::.| ...:
+YPDF_ECOLI         1 ------------------------------------MTLLASLRDWLKAQ     14
+
+DHLE_BACSU       250 QLKAKVIAGAANNQ--------------LKETRH----------------    269
+                     ||.|.:::...|.|              .:|:.|                
+YPDF_ECOLI        15 QLDAVLLSSRQNKQPHLGISTGSGYVVISRESAHILVDSRYYVEVEARAQ     64
+
+DHLE_BACSU       270 GDQIHEMGIVYAPDYVINAGGVINVADE---LYGYNAER-----------    305
+                     |.|:|.:........::|.    .:|||   ..|:..::           
+YPDF_ECOLI        65 GYQLHLLDATNTLTTIVNQ----IIADEQLQTLGFEGQQVSWETAHRWQS    110
+
+DHLE_BACSU       306 ------------ALKKVEGIYGNIERVLEISQRDGIPAYLAADRLAEERI    343
+                                 .|::::    ..|.|.:|....||     |||.|    
+YPDF_ECOLI       111 ELNAKLVSATPDVLRQIK----TPEEVEKIRLACGI-----ADRGA----    147
+
+DHLE_BACSU       344 ERMRRSRSQFLQNGHSVLSRR-----------------------------    364
+                     |.:||    |:|.|   :|.|                             
+YPDF_ECOLI       148 EHIRR----FIQAG---MSEREIAAELEWFMRQQGAEKASFDTIVASGWR    190
+
+DHLE_BACSU       364 --------------------------------------------------    364
+                                                                       
+YPDF_ECOLI       191 GALPHGKASDKIVAAGEFVTLDFGALYQGYCSDMTRTLLVNGEGVSAESH    240
+
+DHLE_BACSU       364 --------------------------------------------------    364
+                                                                       
+YPDF_ECOLI       241 LLFNVYQIVLQAQLAAISAIRPGVRCQQVDDAARRVITEAGYGDYFGHNT    290
+
+DHLE_BACSU       364 --------------------------------------------------    364
+                                                                       
+YPDF_ECOLI       291 GHAIGIEVHEDPRFSPRDTTTLQPGMLLTVEPGIYLPGQGGVRIEDVVLV    340
+
+DHLE_BACSU       364 ---------------------    364
+                                          
+YPDF_ECOLI       341 TPQGAEVLYAMPKTVLLTGEA    361
+
+
+#---------------------------------------
+#---------------------------------------

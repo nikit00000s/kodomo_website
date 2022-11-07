@@ -1,0 +1,65 @@
+########################################
+# Program: needle
+# Rundate: Sun 12 May 2019 11:31:43
+# Commandline: needle
+#    [-asequence] 6PGL_BACSU.fasta
+#    [-bsequence] 6PGL_ECOLI.fasta
+#    -outfile 6PGL_BACSU_6PGL_ECOLI.needle
+#    -auto
+# Align_format: srspair
+# Report_file: 6PGL_BACSU_6PGL_ECOLI.needle
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: 6PGL_BACSU
+# 2: 6PGL_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 371
+# Identity:      94/371 (25.3%)
+# Similarity:   156/371 (42.0%)
+# Gaps:          62/371 (16.7%)
+# Score: 304.5
+# 
+#
+#=======================================
+
+6PGL_BACSU         1 --MTKYIGYVGTYTKGGSEGIYSFELDTEKKALSEPKLAAKLGNPTYVAT     48
+                       .|.||      ....|:.|:.:.|:.| .||:..::....|....:..
+6PGL_ECOLI         1 MKQTVYI------ASPESQQIHVWNLNHE-GALTLTQVVDVPGQVQPMVV     43
+
+6PGL_BACSU        49 NKNNTILYSIEKADGQGGVAAYQIDKNSGELTFLNHQLIDGPSPCHVSVD     98
+                     :.:...||...:.:.:  |.||:|..:.|.|||.....:.| ||.|:|.|
+6PGL_ECOLI        44 SPDKRYLYVGVRPEFR--VLAYRIAPDDGALTFAAESALPG-SPTHISTD     90
+
+6PGL_BACSU        99 DQNQFVLTANYHSGKVHVFPVQEDGSLQSPVSEAAHTGKGPHERQEKPHT    148
+                     .|.|||...:|::|.|.|..: ||| |...|.:......|         .
+6PGL_ECOLI        91 HQGQFVFVGSYNAGNVSVTRL-EDG-LPVGVVDVVEGLDG---------C    129
+
+6PGL_BACSU       149 HYAGFTPEHNYVVAVDLGIDKLYTYKLKDG---VLTESGSHSFAPGAGPR    195
+                     |.|..:|::..:....|..|::..:.:.|.   |..:....:...|||||
+6PGL_ECOLI       130 HSANISPDNRTLWVPALKQDRICLFTVSDDGHLVAQDPAEVTTVEGAGPR    179
+
+6PGL_BACSU       196 HIAFHPKEKYAYVMTELSNEVIALEYNPTAGEFREIQVVSAIPDDFTDNS    245
+                     |:.|||.|:|||.:.||::.|...|.....|....:|.:..:|::|:|..
+6PGL_ECOLI       180 HMVFHPNEQYAYCVNELNSSVDVWELKDPHGNIECVQTLDMMPENFSDTR    229
+
+6PGL_BACSU       246 QGSAIHVTQDGRFVYVANRGHDSIAVFEVNQYSGELAFVERVSTEGNWPR    295
+                     ..:.||:|.|||.:|..:|....|.||.|:: .|.:...|........||
+6PGL_ECOLI       230 WAADIHITPDGRHLYACDRTASLITVFSVSE-DGSVLSKEGFQPTETQPR    278
+
+6PGL_BACSU       296 DFVFDPTEGFLVASNEETGNLVLFERDKETGRLTLLPSTVSVPYPVCVKF    345
+                     .|..|.:..:|:|:.:::.::.::|...|.|                  .
+6PGL_ECOLI       279 GFNVDHSGKYLIAAGQKSHHISVYEIVGEQG------------------L    310
+
+6PGL_BACSU       346 LHQV-----------------    349
+                     ||:.                 
+6PGL_ECOLI       311 LHEKGRYAVGQGPMWVVVNAH    331
+
+
+#---------------------------------------
+#---------------------------------------

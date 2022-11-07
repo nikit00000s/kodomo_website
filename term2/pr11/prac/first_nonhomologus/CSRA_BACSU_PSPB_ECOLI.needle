@@ -1,0 +1,41 @@
+########################################
+# Program: needle
+# Rundate: Sun 12 May 2019 11:32:38
+# Commandline: needle
+#    [-asequence] CSRA_BACSU.fasta
+#    [-bsequence] PSPB_ECOLI.fasta
+#    -outfile CSRA_BACSU_PSPB_ECOLI.needle
+#    -auto
+# Align_format: srspair
+# Report_file: CSRA_BACSU_PSPB_ECOLI.needle
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: CSRA_BACSU
+# 2: PSPB_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 95
+# Identity:      16/95 (16.8%)
+# Similarity:    26/95 (27.4%)
+# Gaps:          42/95 (44.2%)
+# Score: 12.5
+# 
+#
+#=======================================
+
+CSRA_BACSU         1 MLVLSRKINEAIQIGADIEVKVIAVEGDQVKLGIDAPKHIDIH------R     44
+                             ..|:.:...:.:.|:.|          .|..:.:|      |
+PSPB_ECOLI         1 --------MSALFLAIPLTIFVLFV----------LPIWLWLHYSNRSGR     32
+
+CSRA_BACSU        45 KEIYLTIQEENNRAAALSSDV------ISALSSQKK---------     74
+                     .|:   .|.|..|.|.|:.:.      |.||.|...         
+PSPB_ECOLI        33 SEL---SQSEQQRLAQLADEAKRMRERIQALESILDAEHPNWRDR     74
+
+
+#---------------------------------------
+#---------------------------------------

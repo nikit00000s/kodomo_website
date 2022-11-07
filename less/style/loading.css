@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "EB Garamond";
+  src: url("../../font/EB_Garamond/EBGaramond-VariableFont:wght.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Sans";
+  src: url("../../font/Fira_Sans/FiraSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../../font/Ubuntu/Ubuntu-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../../font/Ubuntu/Ubuntu-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../../font/Ubuntu/Ubuntu-Bold.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../../font/Ubuntu/Ubuntu-Light.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../font/OpenSans/OpenSans-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../font/OpenSans/OpenSans-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../font/OpenSans/OpenSans-ExtraBold.ttf");
+  font-weight: 900;
+}
+.col-txt {
+  text-indent: 1.6em;
+  font-size: 1em;
+  color: #2F2440;
+  font-family: "Ubuntu";
+}
+.col-txt:first-letter {
+  font-weight: 700;
+}
+.icon-in-text {
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  text-indent: 0;
+  font-size: 1.1em;
+  line-height: 1;
+  padding: 0 0.2em;
+}
+.icon-in-text.fa-pull-left {
+  margin-right: 0.3em;
+}
+.icon-in-text.fa-pull-right {
+  margin-left: 0.3em;
+}
+.icon-box-scale {
+  height: 1.5em;
+  width: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+}
+.icon-button-scale {
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  text-align: center;
+}
+.standart-transform {
+  transition: all ease 200ms;
+}
+.button_start-opacity {
+  opacity: 0.85;
+}
+.button_end-opacity:hover {
+  opacity: 1;
+}
+.top-level {
+  z-index: 10000000;
+}
+.first-level {
+  z-index: 100;
+}
+.first-level:before {
+  z-index: 100;
+}
+.first-level:after {
+  z-index: 100;
+}
+.load-1x {
+  animation: all 200ms ease 1 0ms load_x;
+}
+.light-shadow {
+  -moz-box-shadow: 0 2px 12px 0 #d8d4dd;
+  -webkit-box-shadow: 0 2px 12px 0 #d8d4dd;
+  box-shadow: 0 2px 12px 0 #d8d4dd;
+}
+@keyframes scaleIn_button_to_start {
+  from {
+    transform: scaleY(0) translate(-50%, 0%);
+  }
+  to {
+    transform: scaleY(1) translate(-50%, 0%);
+  }
+}
+@keyframes scaleIn_x {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes scaleIn_y {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes scaleIn_both {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+@keyframes fadeIn {
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes translateLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+header > *,
+main,
+footer > * {
+  opacity: 0;
+}
+header h1 {
+  transform: translateX(0);
+  transform-origin: left;
+}
+header h3,
+header div.button {
+  opacity: 0;
+}
+#breadcrumb {
+  opacity: 0;
+}
+.footer hr.hr-divider {
+  transform: scaleX(0);
+  transform-origin: center;
+}
+#button-to-end {
+  transform: scaleY(0);
+  transform-origin: top;
+}
+#button-to-start {
+  transform: scaleY(0) translate(-50%, 0%);
+  transform-origin: bottom;
+}
+.loaded main,
+.loaded header > *,
+.loaded footer > * {
+  animation: fadeIn 400ms ease-in 200ms forwards;
+}
+.loaded #breadcrumb {
+  animation: fadeIn 400ms ease forwards;
+}
+.loaded hr.hr-divider {
+  animation: scaleIn_x 400ms ease forwards;
+}
+.loaded #button-to-end {
+  animation: scaleIn_y 400ms ease forwards;
+}
+.loaded #button-to-start {
+  animation: scaleIn_button_to_start 200ms 200ms ease forwards;
+}
+.loaded header h1 {
+  animation: translateLeft 200ms 400ms ease forwards;
+}
+.loaded header h3 {
+  animation: fadeIn 400ms 200ms ease-in forwards;
+}
+.loaded header div.button {
+  animation: fadeIn 200ms 200ms ease-in forwards;
+}
+/*# sourceMappingURL=loading.css.map */

@@ -1,0 +1,89 @@
+########################################
+# Program: needle
+# Rundate: Sun 12 May 2019 11:32:37
+# Commandline: needle
+#    [-asequence] FLHB_BACSU.fasta
+#    [-bsequence] LACI_ECOLI.fasta
+#    -outfile FLHB_BACSU_LACI_ECOLI.needle
+#    -auto
+# Align_format: srspair
+# Report_file: FLHB_BACSU_LACI_ECOLI.needle
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: FLHB_BACSU
+# 2: LACI_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 681
+# Identity:      10/681 ( 1.5%)
+# Similarity:    18/681 ( 2.6%)
+# Gaps:         642/681 (94.3%)
+# Score: 23.5
+# 
+#
+#=======================================
+
+FLHB_BACSU         1 MKLRVDLQFFAGEKTEKATPKKRKDTRKKGQVAKSSDVNTAVSLLVIFLS     50
+                                                                       
+LACI_ECOLI         0 --------------------------------------------------      0
+
+FLHB_BACSU        51 LIAIGPYMRDRLLSFIETFYTESLTMKLSESNVHTLFVSLLKDMGMILAP    100
+                                                                       
+LACI_ECOLI         0 --------------------------------------------------      0
+
+FLHB_BACSU       101 ILLVALVAGVVSNYMQVGFLFSAEVIQPKLEKLDPIKGFKRIYSMRAIVE    150
+                                                                       
+LACI_ECOLI         0 --------------------------------------------------      0
+
+FLHB_BACSU       151 LIKSILKIVVVGFAAFAVLWLHYGEILRLPLLTPEEALSFVSKLTLWMGL    200
+                                                                       
+LACI_ECOLI         0 --------------------------------------------------      0
+
+FLHB_BACSU       201 SGAGALLILAGLDYLYQRFDYEKNIKMSKQDIKDEYKKSEGDPIIKSKIK    250
+                                                                       
+LACI_ECOLI         0 --------------------------------------------------      0
+
+FLHB_BACSU       251 QRQREMAMRRMMQEVPKADVIITNPTHYAIALKYDEEKMDAPYIVAKGVD    300
+                                                                       
+LACI_ECOLI         0 --------------------------------------------------      0
+
+FLHB_BACSU       301 HLALKIRKIAKEHDVMMVENRPLARALYDQVEIDQAVPEEFFKVLAEILA    350
+                                        .:|:  .|||..|......:...:|:.:...
+LACI_ECOLI         1 -------------------MKPV--TLYDVAEYAGVSYQTVSRVVNQASH     29
+
+FLHB_BACSU       351 YVYKTKQKVY----------------------------------------    360
+                     ...||::||.                                        
+LACI_ECOLI        30 VSAKTREKVEAAMAELNYIPNRVAQQLAGKQSLLIGVATSSLALHAPSQI     79
+
+FLHB_BACSU       360 --------------------------------------------------    360
+                                                                       
+LACI_ECOLI        80 VAAIKSRADQLGASVVVSMVERSGVEACKAAVHNLLAQRVSGLIINYPLD    129
+
+FLHB_BACSU       360 --------------------------------------------------    360
+                                                                       
+LACI_ECOLI       130 DQDAIAVEAACTNVPALFLDVSDQTPINSIIFSHEDGTRLGVEHLVALGH    179
+
+FLHB_BACSU       360 --------------------------------------------------    360
+                                                                       
+LACI_ECOLI       180 QQIALLAGPLSSVSARLRLAGWHKYLTRNQIQPIAEREGDWSAMSGFQQT    229
+
+FLHB_BACSU       360 --------------------------------------------------    360
+                                                                       
+LACI_ECOLI       230 MQMLNEGIVPTAMLVANDQMALGAMRAITESGLRVGADISVVGYDDTEDS    279
+
+FLHB_BACSU       360 --------------------------------------------------    360
+                                                                       
+LACI_ECOLI       280 SCYIPPLTTIKQDFRLLGQTSVDRLLQLSQGQAVKGNQLLPVSLVKRKTT    329
+
+FLHB_BACSU       360 -------------------------------    360
+                                                    
+LACI_ECOLI       330 LAPNTQTASPRALADSLMQLARQVSRLESGQ    360
+
+
+#---------------------------------------
+#---------------------------------------

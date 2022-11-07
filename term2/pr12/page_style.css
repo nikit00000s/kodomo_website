@@ -1,0 +1,16 @@
+figure.height-scroll {
+  max-height: 65vh!important;
+}
+ul.blast_page {
+  max-height: 65vh;
+}
+.short-descr.blast_page li:before {
+  color: #2F2440;
+}
+.short-descr.blast_page h5 {
+  color: #BA0F30;
+}
+.short-descr.blast_page h5:after {
+  color: #2F2440;
+}
+/*# sourceMappingURL=page_style.css.map */

@@ -1,0 +1,37 @@
+########################################
+# Program: water
+# Rundate: Sun 12 May 2019 11:18:54
+# Commandline: water
+#    [-asequence] CSRA_BACSU.fasta
+#    [-bsequence] PSPB_ECOLI.fasta
+#    -outfile CSRA_BACSU_PSPB_ECOLI.water
+#    -auto
+# Align_format: srspair
+# Report_file: CSRA_BACSU_PSPB_ECOLI.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: CSRA_BACSU
+# 2: PSPB_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 26
+# Identity:       9/26 (34.6%)
+# Similarity:    11/26 (42.3%)
+# Gaps:           6/26 (23.1%)
+# Score: 27.5
+# 
+#
+#=======================================
+
+CSRA_BACSU        52 QEENNRAAALSSDV------ISALSS     71
+                     |.|..|.|.|:.:.      |.||.|
+PSPB_ECOLI        37 QSEQQRLAQLADEAKRMRERIQALES     62
+
+
+#---------------------------------------
+#---------------------------------------

@@ -1,0 +1,89 @@
+########################################
+# Program: needle
+# Rundate: Sun 12 May 2019 11:31:43
+# Commandline: needle
+#    [-asequence] CHEA_BACSU.fasta
+#    [-bsequence] CHEA_ECOLI.fasta
+#    -outfile CHEA_BACSU_CHEA_ECOLI.needle
+#    -auto
+# Align_format: srspair
+# Report_file: CHEA_BACSU_CHEA_ECOLI.needle
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: CHEA_BACSU
+# 2: CHEA_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 697
+# Identity:     236/697 (33.9%)
+# Similarity:   394/697 (56.5%)
+# Gaps:          68/697 ( 9.8%)
+# Score: 1042.5
+# 
+#
+#=======================================
+
+CHEA_BACSU         1 --MDMNQYLDVFIDESKEHLQTCNEKLLLLEKDPTDLQLVHDIFRAAHTL     48
+                       ||::.:...|.||:.|.|....:.||:|:.:..|.:.::.||||||::
+CHEA_ECOLI         1 MSMDISDFYQTFFDEADELLADMEQHLLVLQPEAPDAEQLNAIFRAAHSI     50
+
+CHEA_BACSU        49 KGMSATMGYTDLAHLTHLLENVLDAIRNGDMEVTSDWLDILFEALDHLET     98
+                     ||.:.|.|::.|...|||:||:||..|.|:|::.:|.:::..|..|.::.
+CHEA_ECOLI        51 KGGAGTFGFSVLQETTHLMENLLDEARRGEMQLNTDIINLFLETKDIMQE    100
+
+CHEA_BACSU        99 MVQSIIDGGDGKRDISEVSAKLDVNGAHAESAASAEPAEAQSSASDWEYD    148
+                     .:.:.      |:.....:|..|.........|.....|..|:.:     
+CHEA_ECOLI       101 QLDAY------KQSQEPDAASFDYICQALRQLALEAKGETPSAVT-----    139
+
+CHEA_BACSU       149 EFERTVIQEAE---EQGFKRYEIKISLNENCMLKAVRVYMVFEKLNEVGE    195
+                       ..:|:.::|   ||...:...:|.|:.   |||..|.::.|:|..:..
+CHEA_ECOLI       140 --RLSVVAKSEPQDEQSRSQSPRRIILSR---LKAGEVDLLEEELGHLTT    184
+
+CHEA_BACSU       196 VAKTIPSAEVLETEDFGTDFQVCFLTHQSAE-DIEQLINGVSEIEHV--E    242
+                     :...:..|:.|.          ..|....|| ||..::..|.|.:.:  |
+CHEA_ECOLI       185 LTDVVKGADSLS----------AILPGDIAEDDITAVLCFVIEADQITFE    224
+
+CHEA_BACSU       243 VIQGAPLTSAEKPEESKQEDSPAAAVPAKQEKQKQPAKNDEQAKHSAGGS    292
+                     .::.:|..|.....:...|.:|...|    |::|....|:         |
+CHEA_ECOLI       225 TVEVSPKISTPPVLKLAAEQAPTGRV----EREKTTRSNE---------S    261
+
+CHEA_BACSU       293 KTIRVNIDRLDSLMNLFEELVIDRGRLEQIAKELE---HNELTETVERMT    339
+                     .:|||.::::|.|:||..||||.:..|.|.:.||:   |.:|..::.::.
+CHEA_ECOLI       262 TSIRVAVEKVDQLINLVGELVITQSMLAQRSSELDPVNHGDLITSMGQLQ    311
+
+CHEA_BACSU       340 RISGDLQSIILNMRMVPVETVFNRFPRMIRQLQKELNKKIELSIIGAETE    389
+                     |.:.|||..::::||:|:|.||:|:||::|.|..:|.|::||:::|:.||
+CHEA_ECOLI       312 RNARDLQESVMSIRMMPMEYVFSRYPRLVRDLAGKLGKQVELTLVGSSTE    361
+
+CHEA_BACSU       390 LDRTVIDEIGDPLVHLIRNSIDHGIEAPETRLQKGKPESGKVVLKAYHSG    439
+                     ||:::|:.|.|||.||:|||:|||||.||.||..||...|.::|.|.|.|
+CHEA_ECOLI       362 LDKSLIERIIDPLTHLVRNSLDHGIELPEKRLAAGKNSVGNLILSAEHQG    411
+
+CHEA_BACSU       440 NHVFIEVEDDGAGLNRKKILEKALERGVITEKEAETLEDNQIYELIFAPG    489
+                     .::.|||.||||||||::||.||..:|:..   :|.:.|:::..||||||
+CHEA_ECOLI       412 GNICIEVTDDGAGLNRERILAKAASQGLTV---SENMSDDEVAMLIFAPG    458
+
+CHEA_BACSU       490 FSTADQISDISGRGVGLDVVKNKLESLGGSVSVKSAEGQGSLFSIQLPLT    539
+                     ||||:|::|:||||||:||||..::.:||.|.::|.:|.|:...|.||||
+CHEA_ECOLI       459 FSTAEQVTDVSGRGVGMDVVKRNIQKMGGHVEIQSKQGTGTTIRILLPLT    508
+
+CHEA_BACSU       540 LSIISVLLIKLEEETFAIPISSIIETAVIDRKDI--LQTHDREVIDFRGH    587
+                     |:|:..:.:::.:|.|.:|:::::|:......|:  |...:| |::.||.
+CHEA_ECOLI       509 LAILDGMSVRVADEVFILPLNAVMESLQPREADLHPLAGGER-VLEVRGE    557
+
+CHEA_BACSU       588 IVPVVYLKEEFKIEDTRKDAEQLHIIVVKKGDKPTAFVVDSFIGQQEVVL    637
+                     .:|:|.|.:.|.:...:.:|.|..:::::.|.:..|.:||..|||.:||:
+CHEA_ECOLI       558 YLPIVELWKVFNVAGAKTEATQGIVVILQSGGRRYALLVDQLIGQHQVVV    607
+
+CHEA_BACSU       638 KSLGDYLTNVFAISGATILGDGEVALIIDCNALII------------    672
+                     |:|......|..||.|||||||.||||:|.:||..            
+CHEA_ECOLI       608 KNLESNYRKVPGISAATILGDGSVALIVDVSALQAINREQRMANTAA    654
+
+
+#---------------------------------------
+#---------------------------------------

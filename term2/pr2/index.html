@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практикум #2</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,800&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../../css/common-style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/old_style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="pr2.css">
+
+    <script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+
+    <script type="text/javascript"
+            src="https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js">
+    </script>
+    <script type="text/javascript">
+        //Define basic settings for JSMol applet
+        var Main = {
+            serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+            j2sPath: "https://chemapps.stolaf.edu/jmol/jsmol/j2s/",
+            use: "HTML5",
+            deferApplet: true,
+            //Basic visual settings
+            width: 700,
+            height: 700,
+            color: "whitesmoke",
+            script: "",
+            coverImage: "Load.png"
+        };
+        //After full page will be loaded
+        $(document).ready(function () {
+            //Create JSMol applet with name 'JSMol' and settings from Info
+            //And put in element with id='jmol
+            $("#jmol1").html(Jmol.getAppletHtml("JSMol1", Main));
+            $("#jmolFAD").html(Jmol.jmolButton("JSMol1", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/fad.spt', 'С ФАД'));
+            $("#jmolGlulacmain").html(Jmol.jmolButton("JSMol1", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/glulacmain.spt', 'С глюконоглактоном основным'));
+            $("#jmolGlulacext").html(Jmol.jmolButton("JSMol1", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/glulacext.spt', 'С глюконолактоном дополнительным'));
+            $("#jmolResume1").html(Jmol.jmolButton("JSMol1", 'resume', 'Продолжить показ'));
+
+            $("#jmol2").html(Jmol.getAppletHtml("JSMol2", Main));
+            $("#jmolHbonds2").html(Jmol.jmolButton("JSMol2", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/hbonds1.spt', 'Водородные связи'));
+            $("#jmolSulfur2").html(Jmol.jmolButton("JSMol2", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/sulfur1.spt', 'Серный мостик'));
+            $("#jmolSaltbridge2").html(Jmol.jmolButton("JSMol2", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/saltbridge1.spt', 'Солевые мостики'));
+            $("#jmolDensity2").html(Jmol.jmolButton("JSMol2", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/density1.spt', 'Гидрофобное ядро'));
+            $("#jmolResume2").html(Jmol.jmolButton("JSMol2", 'resume', 'Продолжить показ'));
+
+        });
+
+    </script>
+</head>
+
+<body>
+
+<!--#FIXME-->
+<div id="button-to-end" onclick="window.scrollTo(0,document.body.scrollHeight);">
+    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+</div>
+
+<main class="p-0">
+    <div class="container-fluid big-header p-0 m-0">
+        <div class="row p-0 m-0">
+            <div class="col p-0 m-0">
+
+                <h1 class="h1 ls-h1 big-header-title"><span>
+                        <a class="big-header-link" href="http://kodomo.cmm.msu.su/wiki/2018/2/pr2"> <i
+                                class="fa fa-flask" aria-hidden="true"></i> Практикум #2.</a> Атлас контактов
+                    </span>
+                </h1>
+
+                <div class="bg-title-img"><img src="title3.png" alt="title"></div>
+
+                <a href="http://www.fbb.msu.ru/" class="bg-logo-a"><img src="logo-title.png" alt="title"
+                                                                        class="img-fluid"></a>
+                <span class="big-header-date"><i class="fa fa-language" aria-hidden="true"></i> RU <a
+                        href="index_en.html">EN</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="container section">
+        <div class="row">
+            <div class="col">
+                <h2 class="h2 ls-h2 section-h"><span><i class="fa fa-flask" aria-hidden="true"></i>
+                    Описание FAD-глюкозодегидрогеназы <i>A. flavus</i>
+                </span></h2>
+                <p>
+                    <!--Это ФАД-зависимая глюкозодегидрогеназа [КФ 1.1.1.47] в комплексе с ФАД и D-глюконо-1,5-лактоном
+                    (Глюконо-d-лактон, глюконо-дельта-лактон), также известный как пищевая добавка E575, стабилизатор,
+                    эмульгатор и регулятор кислотности за счёт желирующего и pH-стабилизирующего эффектов глюконовой
+                    кислоты. Используется в производстве сыра как сбраживающий агент для молока.-->
+                    ФАД-зависимая глюкозодегидрогеназа (<a href="https://www.uniprot.org/uniprot/B8MX95"
+                                                           class="ls-link-black">UNIPROT</a>,
+                    <a href="https://www.rcsb.org/structure/4YNU" class="ls-link-black">RCSB</a>) функционально
+                    относится к ферментам
+                    оксидоредуктазам, она катализирует окисление первой гидроксильной группы глюкозы. Оксидоредуктазы
+                    способны использовать целый ряд химических соединений. Как превичный акцептор электронов, ФАДЗГД
+                    использует для этих целей флавинадениндинуклеотид . Рассматриваемая ФАДЗГД является внеклеточным
+                    ферментом. В настоящее время этот белок привлекает внимание ученых, как компонент сенсоров,
+                    чувствительных к глюкозе. ФАДЗГД имеет ряд преимуществ в отношении других ферментов: она имеет
+                    большую специфичность к субстрату, чем пирролохинолин-зависимая глюкозодегидрогеназа и не реагирует
+                    с кислородом, как это делает золотой стандарт определения глюкозы глюкозооксидаза.
+                </p>
+                <p>
+                    Сайт связывания лиганда. <br/>
+                    Две длинные петли: одна между H2 и H3, другая между B16 и H14 пересекаются и образуют узкий канал.
+                    ФАД занимает место в белковом кармане, и покрывается элементами вторичной стуктуры, как двумя
+                    крышками. Изоаллоксазиновое кольцо лиганда меняет конформацию при восстановлении: плоская структура
+                    немного сгибается. Место связывания ФАД содержит сайт гликозилирования Асп69 (возможно, для
+                    ингибирования активности фермента).
+
+                </p>
+                <p>
+                    Белок связывает две молекулы глюкозы: на внешней и внутренней поверхности. В каталитическом центре
+                    субстрат взаимодействует с Tyr53, Arg501, Asn503, His505, His548. Leu401 и Trp415, образующие
+                    гидрофобную среду вокруг молекулы субстрата. Интересно, что эти остатки являются достаточно
+                    консервативными среди других родственных ФАДЗГД белков (AnGOx, PaGOx). Отличием исследуемого белка
+                    является остаток Glu413, который образует связь с сахаром, усиливая таким образом специфичность
+                    распознавания субстрата.
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container section">
+        <div class="row ligand-img-container">
+            <div class="col">
+                <h2 class="h2 bg-h2 section-h"><span><i class="fa fa-flask" aria-hidden="true"></i>
+                    Описание лигандов FAD-глюкозодегидрогеназы
+                </span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center ligand-img-container">
+                <h3 class="h3 bg-h3 ligand-num"><span> <i class="fa fa-circle" aria-hidden="true"></i>
+                    1. Flavin adenine dinucleotide
+                </span></h3>
+                <img src="fad-jmol.jpg" alt="fad" class="ligand-img">
+            </div>
+            <div class="col-6 text-center">
+                <img src="fad.png" alt="fad" class="ligand-img">
+            </div>
+            <div class="col-6">
+                <p class="ligand-description">
+                    Флавинадениндинуклеотид это продукт конденсации рибофлавина и аденозиндифосфата. Коэнзим ряда
+                    аэробных дегидрогеназ. В том числе и исследуемого нами фермента.
+                </p>
+
+            </div>
+            <div class="ligand-table col-12">
+                <table class="table table-hover table-borderless">
+                    <caption>
+                        <i class="fa fa-table" aria-hidden="true"></i> Таблица 1. Характеристика ФАД
+                    </caption>
+                    <tbody>
+                    <tr>
+                        <td class="description-table-ligand" colspan="2">
+                            Физико-химические свойства ФАД
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Название по IUPAC
+                        </td>
+                        <td>
+                            [[(2R,3S,4R,5R)-5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy-hydroxyphosphoryl]
+                            [(2R,3S,4S)-5-(7,8-dimethyl-2,4-dioxobenzo[g]pteridin-10-yl)-2,3,4-trihydroxypentyl]
+                            hydrogen phosphate
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Химическая формула (SMILES)
+                        </td>
+                        <td>
+                            CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(COP(=O)(O)OP(=O)(O)OCC4C(C(C(O4)N5C=NC6=C5N=CN=C6N)O)O)O)O)O
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Брутто-формула
+                        </td>
+                        <td>
+                            C<sub>27</sub>H<sub>33</sub>N<sub>9</sub>O<sub>15</sub>P<sub>2</sub>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Молярная масса
+                        </td>
+                        <td>
+                            785.557 М
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            PubChem CID
+                        </td>
+                        <td>
+                            <a href="https://pubchem.ncbi.nlm.nih.gov/compound/643975#section=Top">643975</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center ligand-img-container">
+                <p class="h3 bg-h3 ligand-num"><span> <i class="fa fa-circle" aria-hidden="true"></i>
+                    2. Gluconolactone
+                </span></p>
+                <img src="glulac-jmol.jpg" alt="gluconolactone" class="ligand-img">
+            </div>
+            <div class="col-6">
+                <p class="ligand-description">
+                    Глюконолактон это лактон, окисленное соединение глюкозы. Глюконолактон это полигидроксильная
+                    кислота, способная хелатировтаь металлы, а также может реагировать со свободными радикалами.
+                    Это вещество часто используется в структурном анализе вместо глюкозы. Его ценные свойства сводятся к
+                    тому, что он образует более стабильные комплексы с белком.
+                    По этой причине его находят в структуре исследуемого белка.
+                </p>
+            </div>
+            <div class="col-6 text-center">
+                <img src="gluconolactone.png" alt="gluconolactone" class="ligand-img">
+            </div>
+            <div class="ligand-table col-12">
+                <table class="table table-hover table-borderless">
+                    <caption>
+                        <i class="fa fa-table" aria-hidden="true"></i> Таблица 2. Характеристика глюконолактона
+                    </caption>
+                    <tbody>
+                    <tr>
+                        <td class="description-table-ligand" colspan="2">
+                            Физико-химические свойства глюконолактона
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Название по IUPAC
+                        </td>
+                        <td>
+                            (3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-one
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Химическая формула (SMILES)
+                        </td>
+                        <td>
+                            C(C1C(C(C(C(=O)O1)O)O)O)O
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Брутто-формула
+                        </td>
+                        <td>
+                            C<sub>6</sub>H<sub>10</sub>O<sub>6</sub>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Молярная масса
+                        </td>
+                        <td>
+                            178.14 М
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            PubChem CID
+                        </td>
+                        <td>
+                            <a href="https://pubchem.ncbi.nlm.nih.gov/compound/7027#section=Top">7027</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container jsmol-container">
+        <div class="row justify-content-center">
+            <div class="col col-12">
+                <h2 class="h2 ls-h2 jsmol-h"><span><i class="fa fa-eye" aria-hidden="true"></i> Визуализация связей FAD-глюкозодегидрогеназы в JSMol</span>
+                </h2>
+
+                <div id="jmol1" class="applet-container"></div>
+
+                <h3 class="h3 out-button bg-h3">Показать водородные связи:</h3>
+                <div class="text-center  buttons">
+                    <div class="btn btn-primary" id="jmolFAD"></div>
+                    <div class="btn btn-primary" id="jmolGlulacmain"></div>
+                    <div class="btn btn-primary" id="jmolGlulacext"></div>
+                    <div class="btn btn-outline-primary" id="jmolResume1"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid description-main-prot">
+        <div class="row justify-content-center">
+
+            <div class="mt-4 col-12 col-md-10 col-lg-8 table-main-prot">
+                <table class="table table-hover table-dark table-borderless">
+                    <caption>
+                        <i class="fa fa-table" aria-hidden="true"></i> Таблица 3. Характеристика связей в
+                        FAD-глюкозодегидрогеназe
+                    </caption>
+                    <tbody>
+                    <tr>
+                        <td class="description-main-prot-h" colspan="5">
+                            Параметры связей в FAD-глюкозодегидрогеназы
+                        </td>
+                    </tr>
+                    <tr class="description-main-prot-h2">
+                        <td>
+                            #
+                        </td>
+                        <td>
+                            Имена остатков
+                        </td>
+                        <td>
+                            Тип связи
+                        </td>
+                        <td>
+                            Длина связи (&#8491;)
+                        </td>
+                        <td>
+                            Угол связи (°)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            H:CYS'140 - H:CYS'206
+                        </td>
+                        <td>
+                            Дисульфидный мостик
+                        </td>
+                        <td>
+                            2,0 (S-S)
+                        </td>
+                        <td>
+                            089,3 (C-S-S-C)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            H:GLY'104 - L:SER'043
+                        </td>
+                        <td>
+                            Водородная связь
+                        </td>
+                        <td>
+                            2,7 (O-O)
+                        </td>
+                        <td>
+                            144.1 (C=O-O)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            L:ILE'117 - H:GLY'129
+                        </td>
+                        <td>
+                            Водородная связь
+                        </td>
+                        <td>
+                            3,0 (O-O)
+                        </td>
+                        <td>
+                            140,4 (C=O-N)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            L:TYR'032 - L:ASN'028
+                        </td>
+                        <td>
+                            Водородная связь
+                        </td>
+                        <td>
+                            2,9 (O-N)
+                        </td>
+                        <td>
+                            136,8 (C=O-N)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            H:GLU'100B- L:LYS'030
+                        </td>
+                        <td>
+                            Солевой мостик
+                        </td>
+                        <td>
+                            2,5 (O-N)
+                        </td>
+                        <td>
+                            161.8 (C=O-N)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            L:ASP'082 - L:ARG'061
+                        </td>
+                        <td>
+                            Солевой мостик
+                        </td>
+                        <td>
+                            *
+                        </td>
+                        <td>
+                            125.58 ([ASP]82:L.CG - [ASP]82:L.OD2 - [ARG]61:L.NH1)
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--#FIXME-->
+    <div class="container section">
+        <div class="row">
+            <div class="col">
+                <h2 class="h2 ls-h2 section-h"><span><i class="fa fa-flask" aria-hidden="true"></i>
+                    Описание FAD-глюкозодегидрогеназы <i>A. flavus</i>
+                </span></h2>
+                <p>
+                    1YEK - эстеразоподобное каталитическое антитело D2.3 мыши (Mus musculus), участвующее в реакции
+                    гидролиза 4-нитробензоловых и 4-нитрофениловых эфиров.
+                </p>
+                <p>
+
+                    Для неё характерно ингибирование по принципу обратной связи, но только в отношении нитробензола. Это
+                    связано с особенностями механизма высвобождения продуктов: 4-нитрофенол слабее взаимодействует с
+                    гидрофобным окружением в активном центре, чем нитробензол, за счёт гидрофильной OH-группы, а также в
+                    комплексе с нитрофенолом отсутствует водородная связь Asn L34 с -NO2 из-за увеличенного размера
+                    лиганда по сравнению с нитробензолом. В результате 4-нитрофенол легко высвобождается из активного
+                    центра и не выступает в качестве ингибитора.
+                </p>
+                <p>
+                    Мы изучили строение комплекса этого антитела с 4-нитрофенолом.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container jsmol-container">
+        <div class="row justify-content-center">
+            <div class="col col-12">
+                <h2 class="h2 ls-h2 jsmol-h"><span><i class="fa fa-eye" aria-hidden="true"></i> Визуализация связей эстеразоподобного антитела в JSMol</span>
+                </h2>
+
+                <div id="jmol2" class="applet-container"></div>
+
+                <h3 class="h3 out-button bg-h3">Показать связи:</h3>
+                <div class="text-center buttons">
+                    <div class="btn btn-outline-primary" id="jmolResume2"></div>
+                    <div class="btn btn-primary" id="jmolSulfur2"></div>
+                    <div class="btn btn-primary" id="jmolHbonds2"></div>
+                    <div class="btn btn-primary" id="jmolSaltbridge2"></div>
+                    <div class="btn btn-primary" id="jmolDensity2"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container section nucleus">
+        <div class="row">
+            <div class="col">
+                <h2 class="h2 ls-h2 section-h"><span><i class="fa fa-flask" aria-hidden="true"></i>
+                    Описание гидрофобного ядра эстеразоподобного антитела <i>A. flavus</i>
+                </span></h2>
+                <p> В гидрофобном ядре атомы достаточно плотно упакованы, атомы на расстоянии 3 ангстрем уже формируют
+                    заметное окружение, а на расстоянии 5 ангстрем от выбранного остатка полностью покрывают его
+                    поверхность. Среднее расстояние между соседними не связанными ковалентно атомами в ядре варьирует от
+                    3 до 4 ангстрем, что, учитывая радиусы атомов (1.4-1.85 &#197;), не позволяет молекуле воды (как и
+                    практически любой другой) находиться внутри него. </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid description-main-prot">
+        <div class="row justify-content-center">
+
+            <div class="mt-4 col-12 col-md-10 col-lg-8 table-main-prot">
+                <table class="table table-hover table-dark table-borderless">
+                    <caption>
+                        <i class="fa fa-table" aria-hidden="true"></i> Таблица 4. Характеристика связей в
+                        эстеразоподобном антителе
+                    </caption>
+                    <tbody>
+                    <tr>
+                        <td class="description-main-prot-h" colspan="5">
+                            Параметры связей в эстеразоподобном антителе
+                        </td>
+                    </tr>
+                    <tr class="description-main-prot-h2">
+                        <td>
+                            #
+                        </td>
+                        <td>
+                            Имена остатков
+                        </td>
+                        <td>
+                            Тип связи
+                        </td>
+                        <td>
+                            Длина связи (&#8491;)
+                        </td>
+                        <td>
+                            Угол связи (°)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            H:CYS'140 - H:CYS'206
+                        </td>
+                        <td>
+                            Дисульфидный мостик
+                        </td>
+                        <td>
+                            2,0 (S-S)
+                        </td>
+                        <td>
+                            089,3 (C-S-S-C)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            H:GLY'104 - L:SER'043
+                        </td>
+                        <td>
+                            Водородная связь
+                        </td>
+                        <td>
+                            2,7 (O-O)
+                        </td>
+                        <td>
+                            144.1 (C=O-O)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            L:ILE'117 - H:GLY'129
+                        </td>
+                        <td>
+                            Водородная связь
+                        </td>
+                        <td>
+                            3,0 (O-O)
+                        </td>
+                        <td>
+                            140,4 (C=O-N)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            L:TYR'032 - L:ASN'028
+                        </td>
+                        <td>
+                            Водородная связь
+                        </td>
+                        <td>
+                            2,9 (O-N)
+                        </td>
+                        <td>
+                            136,8 (C=O-N)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            H:GLU'100B- L:LYS'030
+                        </td>
+                        <td>
+                            Солевой мостик
+                        </td>
+                        <td>
+                            2,5 (O-N)
+                        </td>
+                        <td>
+                            161.8 (C=O-N)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            H:GLU'100B - L:LYS'030
+                        </td>
+                        <td>
+                            Солевой мостик
+                        </td>
+                        <td>
+                            2.5 (C=O- -H-N)
+                        </td>
+                        <td>
+                            *
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid extra-content">
+        <div class="row justify-content-center">
+            <div class="col col-12 col-lg-10">
+                <h2 class="h2 ls-h2 extra-content-h"><span><i class="fa fa-camera" aria-hidden="true"></i>
+                    Фотогалерея
+                </span></h2>
+            </div>
+        </div>
+
+        <div class="extra-content-carousel row justify-content-center">
+            <div id="carouselExampleCaptions" class="carousel slide col" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="pymol1.jpg" class="d-block" alt="pymol">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>PI стекинг</h5>
+                            <p>
+                                1V3L A:Phe'259 - A:Gal'704. <br/>
+                                Параметры: угол 3.36°, расстояние 4.23 &#8491;
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="pymol2.jpg" class="d-block" alt="pymol">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>PI стекинг</h5>
+                            <p>
+                                1YEK A:Trp'95 - A:Npo'551 <br/>
+                                Параметры: угол 6.878°, расстояние 3.681 &#8491;
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="pymol3.jpg" class="d-block" alt="pymol">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Поверхность с выемками и рукавами для лигандов</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="pymol4.jpg" class="d-block" alt="pymol">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Поверхность с выемками и рукавами для лигандов</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="page-footer ls-footer">
+
+    <div class="container text-center text-md-left">
+
+        <div class="row pt-3">
+            <div class="col-md-6">
+
+                <h5 class="font-weight-bold text-uppercase">Практикум #2: Атлас контактов. <i
+                        class="fa fa-address-card-o" aria-hidden="true"></i> Источники:</h5>
+
+                <a href="https://www.uniprot.org/uniprot/B8MX95"></a> UniProtKB - B8MX95 (B8MX95_ASPFN)<br/>
+
+                <a href="https://www.uniprot.org/uniprot/P01863"> UniProtKB - P01863 (GCAA_MOUSE)</a> <br/>
+
+                <a href="https://www.sciencedirect.com/science/article/pii/S0022283698921982?via%3Dihub">Crossreactivity,
+                    efficiency and catalytic specificity of an esterase-like antibody
+                </a> <br/>
+
+                <a href="https://www.ncbi.nlm.nih.gov/pubmed/23742246">Structural and energetic basis of
+                    carbohydrate-aromatic packing interactions in proteins.</a> <br/>
+
+                <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/prot.24527">Cation–pi, amino–pi, pi-pi, and
+                    H‐bond interactions stabilize antigen–antibody interfaces</a> <br/>
+
+            </div>
+
+            <hr class="clearfix w-100 d-md-none">
+        </div>
+    </div>
+
+    <div class="container text-center text-md-left">
+
+        <div class="row pt-3">
+            <div class="col-md-6">
+
+                <h5 class="font-weight-bold text-uppercase">Практикум #2: Атлас контактов. <i
+                        class="fa fa-address-card-o" aria-hidden="true"></i> Авторы:</h5>
+
+                <a href="https://kodomo.fbb.msu.ru/~artemisbakulin/">Бакулин Артемий</a> <br/>
+
+                <a href="https://kodomo.fbb.msu.ru/~tirena/">Тулаева Екатерина</a> <br/>
+
+                <a href="https://kodomo.fbb.msu.ru/~nikit00000s/index.html">Грызунов Никита</a> <br/>
+
+            </div>
+
+            <hr class="clearfix w-100 d-md-none">
+        </div>
+    </div>
+
+    <div class="container text-center text-md-left">
+        <div class="row pt-3">
+            <h5 class="col col-12 font-weight-bold text-uppercase">Вклад авторов.</h5>
+
+            <!-- TERMS, FOOTER column -->
+
+            <div class="col-4">
+                Бакулин Артемий <br/> Теоретический обзор, написание текстов
+            </div>
+
+            <div class="col-4">
+                Тулаева Екатерина <br/> Навигация, работа с PyMol
+            </div>
+
+            <div class="col-4">
+                Грызунов Никита <br/> Веб-дизайн, работа с J(s)Mol
+            </div>
+
+            <hr class="clearfix w-100 d-md-none">
+        </div>
+    </div>
+
+    <!-- Copyright -->
+
+    <div class="footer-copyright text-center py-5">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+    </div>
+</footer>
+
+
+
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../js/own/yearInit.js"></script>
+</body>
+</html>

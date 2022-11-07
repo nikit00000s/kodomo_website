@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>#8 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../../less/style/common_style.css">
+    <link rel="stylesheet" href="../../less/style/loading.css">
+    <link rel="stylesheet" href="page_style.css">
+</head>
+<body>
+
+<div id="button-to-end"
+     onclick="window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: window.scroll_behavior})"></div>
+<div id="breadcrumb">
+    <a href="../index.html">3 семестр</a><a href="index.html">8 практикум</a>
+</div>
+
+<header class="background-graph-paper">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col col-12 align-self-end">
+                <h1>
+                    <a class="header-link" href="http://kodomo.cmm.msu.su/wiki/2018/3/pr8">
+                        Поиск по сходству (BLAST)
+                    </a>
+                </h1>
+            </div>
+            <div class="col col-12 align-self-baseline justify-content-end">
+                <h3 class="purple">22 октября 2019 г.</h3>
+            </div>
+            <div class="button"
+                 onclick="window.scrollTo({left: 0, top: document.documentElement.clientHeight, behavior: window.scroll_behavior})"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container prac_content">
+        <div class="row big-indent-top">
+            <div class="col col-12">
+                <h1 class="prac_title">Определение таксономии и функции нуклеотидной последовательности</h1>
+            </div>
+        </div>
+        <div class="row big-indent-bottom">
+            <div class="col col-12 col-md-7">
+                <p>
+                    Для выполнения данного задания была выбрана консенсусная последовательность из <a
+                        href="../pr6/index.html" class="ext-link gradient nowrap">практикума 6</a>. Поиск проводился
+                    программой <span class="mono program">blastn</span>&nbsp;(для поиска сколько&ndash;нибудь похожих
+                    нуклеотидных последовательностей). Был изменен только один параметр&nbsp;&mdash; <span
+                        class="highlight mono nowrap">Word Size</span> на <span class="highlight mono">7</span>&nbsp;(остальные
+                    параметры оставил неизменными).
+                </p>
+                <h6>Что получили?</h6>
+                <p> Некоторая часть списка находок изображена на <a href="#img2" class="int-link standart">рисунке 2</a>.
+                    Результаты поиска с помощью <span class="mono">blastn</span> говорят о том, что данная нуклеотидная
+                    последовательность, скорее всего, кодирует рибосомальную РНК. Если быть точным, то исходя из того,
+                    что все первые 100 результатов с довольно большими E&ndash;value кодируют <a
+                            href="https://en.wikipedia.org/wiki/18S_ribosomal_RNA" class="ext-link gradient mono"
+                            title="Статья в Википедии">18S rRNA</a>, которая является структурным компонентом малой
+                    субъединицы рибосомы эукариот, то и исследуемая последовательность также, скорее всего, кодирует
+                    <span class="mono">18S rRNA</span>. Она довольно консервативна, ее активно используют в
+                    филогенетике. Что касается таксономии организма, из которого был получен образец ДНК, то можно
+                    сказать, что его происхождение следующее: </p>
+                <span class="lineage"><span>Metazoa</span> <span>Eumetazoa</span> <span>Bilateria</span> <span>Platyhelminthes</span> <span>Cestoda</span> <span>Eucestoda</span> <span>Diphyllobothriidea</span> Diphyllobothriidae</span>
+                <p> Это предположение выдвинуто из&ndash;за того, что у четырех первых организмов с лучшими
+                    выравниваниями эти таксоны оказались максимально совпавшими. Также это вытекает из филогенетического
+                    древа, изображенного на <a href="#img3" class="int-link standart">рисунке 3</a>.
+                </p>
+            </div>
+            <div class="col col-12 col-md-5">
+                <div class="wrap-img-lg">
+                    <img src="img/blast_results_top100.png" alt="top 100 Blast hits">
+                    <div class="img-cap"><span>Рисунок 1.</span> Список 100 лучших совпадений, найденных blast по
+                        последовательности из практикума&nbsp;6
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12">
+                <h5>Выравнивания</h5>
+                <p>1. Выравнивание исследуемой последовательности (Query) и <a class="mono ext-link gradient"
+                                                                               href="https://www.ncbi.nlm.nih.gov/nucleotide/KY552791.1?report=genbank&log$=nuclalign&blast_rank=1&RID=V57G2TPX014"
+                                                                               title="Перейти к записи на сайте NCBI">KY552791.1</a>
+                    (Sbjct) из <i>Pyramicocephalus phocarum</i></p>
+                <pre class="max-70-height fs-min dashed-bottom-light">
+Query  1     TGACGGAAGGGCACCACCAGGAGTGGAGCCTGCGGCTTAATTTGACTCAACACGGGAAAA  60
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1240  TGACGGAAGGGCACCACCAGGAGTGGAGCCTGCGGCTTAATTTGACTCAACACGGGAAAA  1299
+
+Query  61    CTCACCCGGCCCGGACACTGTGAGGATTGACAGATTGATAGCTCTTTCTTGATTTGGTGG  120
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1300  CTCACCCGGCCCGGACACTGTGAGGATTGACAGATTGATAGCTCTTTCTTGATTTGGTGG  1359
+
+Query  121   TTGGTGGTGCATGGCCGTTCTTAGTTGGTGGAGCGATTTGTCTGGTTAATTCCGATAACG  180
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1360  TTGGTGGTGCATGGCCGTTCTTAGTTGGTGGAGCGATTTGTCTGGTTAATTCCGATAACG  1419
+
+Query  181   AACGAGACTCTAGCCTGCTAATTAGTACGCCTGTCCTCTGTTCCTGTGCTGGCGGTGCTT  240
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1420  AACGAGACTCTAGCCTGCTAATTAGTACGCCTGTCCTCTGTTCCTGTGCTGGCGGTGCTT  1479
+
+Query  241   TGGTGAAACTGCTCACATATGCCGACTGCTATCGGGACGCGTTCTTGCGTGCGTTGCGAG  300
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1480  TGGTGAAACTGCTCACATATGCCGACTGCTATCGGGACGCGTTCTTGCGTGCGTTGCGAG  1539
+
+Query  301   CTCCTCGTGGGCGAGTGGCGTGTGTAGGGGCGTGAACTGTGGTGGAAGGTGTGTGCGGTG  360
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1540  CTCCTCGTGGGCGAGTGGCGTGTGTAGGGGCGTGAACTGTGGTGGAAGGTGTGTGCGGTG  1599
+
+Query  361   GGTCCGGTGCTTGCCTCCGGGTACGGCGCAGGTGTGTCTACTTCTTAGAGGGACAAGCAT  420
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1600  GGTCCGGTGCTTGCCTCCGGGTACGGCGCAGGTGTGTCTACTTCTTAGAGGGACAAGCAT  1659
+
+Query  421   TACGAATGTGTACGAAATTGAGCAATAACAGGTCTGTGATGCCCTTAGATGTCCGGGGCC  480
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1660  TACGAATGTGTACGAAATTGAGCAATAACAGGTCTGTGATGCCCTTAGATGTCCGGGGCC  1719
+
+Query  481   GCACGCGCGCTACAATGACGGTGCCAACGAGTCTGACCTTCTGGCCCGAAAGGGTTGGGG  540
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||<span class="back-burgundy"> </span>|||
+Sbjct  1720  GCACGCGCGCTACAATGACGGTGCCAACGAGTCTGACCTTCTGGCCCGAAAGGGTT-GGG  1778
+
+Query  541   CAAACTGGTCAATCACCGTCATGACAGGGATCGGGGCTTGGAATTGTTCCCCGTGAACGA  600
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1779  CAAACTGGTCAATCACCGTCATGACAGGGATCGGGGCTTGGAATTGTTCCCCGTGAACGA  1838
+
+Query  601   GGAATTCCTAGTAAGTGCAAGTCATAAGCTTGCGCTGATTACGTCCCTGCCCTTTGTACA  660
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1839  GGAATTCCTAGTAAGTGCAAGTCATAAGCTTGCGCTGATTACGTCCCTGCCCTTTGTACA  1898
+
+Query  661   CACCGCCCGTCGCTACTACCGATTGAATGGTTTASTAAGGTCCTCGGATTGGCGCCATTG  720
+             ||||||||||||||||||||||||||||||||||<span class="back-purple"> </span>|||||||||||||||||||||||||
+Sbjct  1899  CACCGCCCGTCGCTACTACCGATTGAATGGTTTAGTAAGGTCCTCGGATTGGCGCCATTG  1958
+
+Query  721   CAGTATCACCCGCAAGGTTGGTGCTCGACAGGTGCCGAGAAGACGACCAAACYTGATCAY  780
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||<span class="back-purple"> </span>||||||<span
+                        class="back-purple"> </span>
+Sbjct  1959  CAGTATCACCCGCAAGGTTGGTGCTCGACAGGTGCCGAGAAGACGACCAAACTTGATCAT  2018
+
+Query  781   TTAGA  785
+             |||||
+Sbjct  2019  TTAGA  2023
+                </pre>
+
+                <p>2. Выравнивание исследуемой последовательности (Query) и <a class="mono ext-link gradient"
+                                                                               href="https://www.ncbi.nlm.nih.gov/nucleotide/AB512013.1?report=genbank&log$=nuclalign&blast_rank=3&RID=V57G2TPX014"
+                                                                               title="Перейти к записи на сайте NCBI">AB512013.1</a>
+                    (Sbjct) из <i>Diphyllobothrium nihonkaiense</i></p>
+                <pre class="max-70-height fs-min dashed-bottom-light">
+Query  1     TGACGGAAGGGCACCACCAGGAGTGGAGCCTGCGGCTTAATTTGACTCAACACGGGAAAA  60
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1329  TGACGGAAGGGCACCACCAGGAGTGGAGCCTGCGGCTTAATTTGACTCAACACGGGAAAA  1388
+
+Query  61    CTCACCCGGCCCGGACACTGTGAGGATTGACAGATTGATAGCTCTTTCTTGATTTGGTGG  120
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1389  CTCACCCGGCCCGGACACTGTGAGGATTGACAGATTGATAGCTCTTTCTTGATTTGGTGG  1448
+
+Query  121   TTGGTGGTGCATGGCCGTTCTTAGTTGGTGGAGCGATTTGTCTGGTTAATTCCGATAACG  180
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1449  TTGGTGGTGCATGGCCGTTCTTAGTTGGTGGAGCGATTTGTCTGGTTAATTCCGATAACG  1508
+
+Query  181   AACGAGACTCTAGCCTGCTAATTAGTACGCCTGTCCTCTGTTCCTGTGCTGGCGGTGCTT  240
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1509  AACGAGACTCTAGCCTGCTAATTAGTACGCCTGTCCTCTGTTCCTGTGCTGGCGGTGCTT  1568
+
+Query  241   TGGTGAAACTGCTCACATATGCCGACTGCTATCGGGACGCGTTCTTGCGTGCGTTGCGAG  300
+             |||<span class="back-burgundy"> </span>|||||||||||||||||<span class="back-burgundy"> </span>||||||||||<span
+                        class="back-burgundy"> </span>||||||||||||||||||<span class="back-burgundy"> </span>|<span
+                        class="back-burgundy">  </span>|||||
+Sbjct  1569  TGGCGAAACTGCTCACATATGTCGACTGCTATGGGGACGCGTTCTTGCGTGTGCCGCGAG  1628
+
+Query  301   CTCCTCGTGGGCGAGTGGCGTGTGTAGGGGCGTGAACTGTGGTGGAAGGTGTGTGCGGTG  360
+             ||||||||||||<span class="back-burgundy"> </span>|||||||||<span class="back-burgundy"> </span>||||||||||||||||||||<span
+                        class="back-burgundy"> </span>|<span class="back-burgundy"> </span>|||<span
+                        class="back-burgundy"> </span>||||||||||
+Sbjct  1629  CTCCTCGTGGGCAAGTGGCGTGCGTAGGGGCGTGAACTGTGGTAGGAGGCGTGTGCGGTG  1688
+
+Query  361   GGTCCGGTGCTTGCCTCCGGGTACGGCGCAGGTGTGTCTACTTCTTAGAGGGACAAGCAT  420
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1689  GGTCCGGTGCTTGCCTCCGGGTACGGCGCAGGTGTGTCTACTTCTTAGAGGGACAAGCAT  1748
+
+Query  421   TACGAATGTGTACGAAATTGAGCAATAACAGGTCTGTGATGCCCTTAGATGTCCGGGGCC  480
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1749  TACGAATGTGTACGAAATTGAGCAATAACAGGTCTGTGATGCCCTTAGATGTCCGGGGCC  1808
+
+Query  481   GCACGCGCGCTACAATGACGGTGCCAACGAGTCTGACCTTCTGGCCCGAAAGGGTTGGGG  540
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||<span class="back-burgundy"> </span>|||
+Sbjct  1809  GCACGCGCGCTACAATGACGGTGCCAACGAGTCTGACCTTCTGGCCCGAAAGGGTT-GGG  1867
+
+Query  541   CAAACTGGTCAATCACCGTCATGACAGGGATCGGGGCTTGGAATTGTTCCCCGTGAACGA  600
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1868  CAAACTGGTCAATCACCGTCATGACAGGGATCGGGGCTTGGAATTGTTCCCCGTGAACGA  1927
+
+Query  601   GGAATTCCTAGTAAGTGCAAGTCATAAGCTTGCGCTGATTACGTCCCTGCCCTTTGTACA  660
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1928  GGAATTCCTAGTAAGTGCAAGTCATAAGCTTGCGCTGATTACGTCCCTGCCCTTTGTACA  1987
+
+Query  661   CACCGCCCGTCGCTACTACCGATTGAATGGTTTASTAAGGTCCTCGGATTGGCGCCATTG  720
+             ||||||||||||||||||||||||||||||||||<span class="back-purple"> </span>|||||||||||||||||||||||||
+Sbjct  1988  CACCGCCCGTCGCTACTACCGATTGAATGGTTTAGTAAGGTCCTCGGATTGGCGCCATTG  2047
+
+Query  721   CAGTATCACCCGCAAGGTTGGTGCTCGACAGGTGCCGAGAAGACGACCAAACYTGATCAY  780
+             ||||||||<span class="back-burgundy"> </span>|||||||||||||||||||||||||||||||||||||||||||<span
+                        class="back-purple"> </span>||||||
+Sbjct  2048  CAGTATCAGCCGCAAGGTTGGTGCTCGACAGGTGCCGAGAAGACGACCAAACTTGATCAT  2107
+
+Query  781   TTAGAGGAAGTAAA  794
+             ||||||||||||||
+Sbjct  2108  TTAGAGGAAGTAAA  2121
+                </pre>
+
+                <p>3. Выравнивание исследуемой последовательности (Query) и <a class="mono ext-link gradient"
+                                                                               href="https://www.ncbi.nlm.nih.gov/nucleotide/DQ181944.2?report=genbank&log$=nuclalign&blast_rank=7&RID=V57G2TPX014"
+                                                                               title="Перейти к записи на сайте NCBI">DQ181944.2</a>
+                    (Sbjct) из <i>Diphyllobothrium ditremum</i></p>
+                <pre class="max-70-height fs-min dashed-bottom-light">
+Query  1    TGACGGAAGGGCACCACCAGGAGTGGAGCCTGCGGCTTAATTTGACTCAACACGGGAAAA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  127  TGACGGAAGGGCACCACCAGGAGTGGAGCCTGCGGCTTAATTTGACTCAACACGGGAAAA  186
+
+Query  61   CTCACCCGGCCCGGACACTGTGAGGATTGACAGATTGATAGCTCTTTCTTGATTTGGTGG  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  187  CTCACCCGGCCCGGACACTGTGAGGATTGACAGATTGATAGCTCTTTCTTGATTTGGTGG  246
+
+Query  121  TTGGTGGTGCATGGCCGTTCTTAGTTGGTGGAGCGATTTGTCTGGTTAATTCCGATAACG  180
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  247  TTGGTGGTGCATGGCCGTTCTTAGTTGGTGGAGCGATTTGTCTGGTTAATTCCGATAACG  306
+
+Query  181  AACGAGACTCTAGCCTGCTAATTAGTACGCCTGTCCTCTGTTCCTGTGCTGGCGGTGCTT  240
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  307  AACGAGACTCTAGCCTGCTAATTAGTACGCCTGTCCTCTGTTCCTGTGCTGGCGGTGCTT  366
+
+Query  241  TGGTGAAACTGCTCACATATGCCGACTGCTATCGGGACGCGTTCTTGCGTGCGTTGCGAG  300
+            |||<span class="back-burgundy"> </span>|||||||||||||||||<span class="back-burgundy"> </span>||||||||||||||||||||||||||||<span
+                        class="back-burgundy">  </span>|<span class="back-burgundy">  </span>|||||
+Sbjct  367  TGGCGAAACTGCTCACATATGTCGACTGCTATCGGGACGCGTTCTTGCGTATGCCGCGAG  426
+
+Query  301  CTCCTCGTGGGCGAGTGGCGTGTGTAGGGGCGTGAACTGTGGTGGAAGGTGTGTGCGGTG  360
+            ||||||||||||||||||<span class="back-burgundy"> </span>|||<span class="back-burgundy"> </span>||||||||||||||||||||<span
+                        class="back-burgundy"> </span>|<span class="back-burgundy"> </span>|||<span
+                        class="back-burgundy"> </span>||||||||||
+Sbjct  427  CTCCTCGTGGGCGAGTGGTGTGCGTAGGGGCGTGAACTGTGGTAGGAGGCGTGTGCGGTG  486
+
+Query  361  GGTCCGGTGCTTGCCTCCGGGTACGGCGCAGGTGTGTCTACTTCTTAGAGGGACAAGCAT  420
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  487  GGTCCGGTGCTTGCCTCCGGGTACGGCGCAGGTGTGTCTACTTCTTAGAGGGACAAGCAT  546
+
+Query  421  TACGAATGTGTACGAAATTGAGCAATAACAGGTCTGTGATGCCCTTAGATGTCCGGGGCC  480
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  547  TACGAATGTGTACGAAATTGAGCAATAACAGGTCTGTGATGCCCTTAGATGTCCGGGGCC  606
+
+Query  481  GCACGCGCGCTACAATGACGGTGCCAACGAGTCTGACCTTCTGGCCCGAAAGGGTTGGGG  540
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||<span class="back-burgundy"> </span>|||
+Sbjct  607  GCACGCGCGCTACAATGACGGTGCCAACGAGTCTGACCTTCTGGCCCGAAAGGGTT-GGG  665
+
+Query  541  CAAACTGGTCAATCACCGTCATGACAGGGATCGGGGCTTGGAATTGTTCCCCGTGAACGA  600
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  666  CAAACTGGTCAATCACCGTCATGACAGGGATCGGGGCTTGGAATTGTTCCCCGTGAACGA  725
+
+Query  601  GGAATTCCTAGTAAGTGCAAGTCATAAGCTTGCGCTGATTACGTCCCTGCCCTTTGTACA  660
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  726  GGAATTCCTAGTAAGTGCAAGTCATAAGCTTGCGCTGATTACGTCCCTGCCCTTTGTACA  785
+
+Query  661  CACCGCCCGTCGCTACTACCGATTGAATGGTTTASTAAGGTCCTCGGATTGGCGCCATTG  720
+            ||||||||||||||||||||||||||||||||||<span class="back-purple"> </span>|||||||||||||||||||||||||
+Sbjct  786  CACCGCCCGTCGCTACTACCGATTGAATGGTTTAGTAAGGTCCTCGGATTGGCGCCATTG  845
+
+Query  721  CAGTATCACCCGCAAGGTTGGTGCTCGACAGGTGCCGAGAAGACGACCAAACYTGATCAY  780
+            ||||||||<span class="back-burgundy"> </span>|||||||||||||||||||||||||||||||||||||||||||<span
+                        class="back-purple"> </span>||||||<span class="back-purple"> </span>
+Sbjct  846  CAGTATCAGCCGCAAGGTTGGTGCTCGACAGGTGCCGAGAAGACGACCAAACTTGATCAT  905
+
+Query  781  TTAGAGGAAGTAAA  794
+            ||||||||||||||
+Sbjct  906  TTAGAGGAAGTAAA  919
+
+</pre>
+
+                <p>4. Выравнивание исследуемой последовательности (Query) и <a class="mono ext-link gradient"
+                                                                               href="https://www.ncbi.nlm.nih.gov/nucleotide/KF218251.1?report=genbank&log$=nuclalign&blast_rank=8&RID=V57G2TPX014"
+                                                                               title="Перейти к записи на сайте NCBI">KF218251.1</a>
+                    (Sbjct) из <i>Diphyllobothrium latum</i></p>
+                <pre class="max-70-height fs-min dashed-bottom-light">
+Query  1     TGACGGAAGGGCACCACCAGGAGTGGAGCCTGCGGCTTAATTTGACTCAACACGGGAAAA  60
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1347  TGACGGAAGGGCACCACCAGGAGTGGAGCCTGCGGCTTAATTTGACTCAACACGGGAAAA  1406
+
+Query  61    CTCACCCGGCCCGGACACTGTGAGGATTGACAGATTGATAGCTCTTTCTTGATTTGGTGG  120
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1407  CTCACCCGGCCCGGACACTGTGAGGATTGACAGATTGATAGCTCTTTCTTGATTTGGTGG  1466
+
+Query  121   TTGGTGGTGCATGGCCGTTCTTAGTTGGTGGAGCGATTTGTCTGGTTAATTCCGATAACG  180
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1467  TTGGTGGTGCATGGCCGTTCTTAGTTGGTGGAGCGATTTGTCTGGTTAATTCCGATAACG  1526
+
+Query  181   AACGAGACTCTAGCCTGCTAATTAGTACGCCTGTCCTCTGTTCCTGTGCTGGCGGTGCTT  240
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1527  AACGAGACTCTAGCCTGCTAATTAGTACGCCTGTCCTCTGTTCCTGTGCTGGCGGTGCTT  1586
+
+Query  241   TGGTGAAACTGCTCACATATGCCGACTGCTATCGGGACGCGTTCTTGCGTGCGTTGCGAG  300
+             |||<span class="back-burgundy"> </span>|||||||||||||||||<span class="back-burgundy"> </span>||||||||||<span
+                        class="back-burgundy"> </span>|||||||||||||||||<span class="back-burgundy">  </span>|<span
+                        class="back-burgundy">  </span>|||||
+Sbjct  1587  TGGCGAAACTGCTCACATATGTCGACTGCTATTGGGACGCGTTCTTGCGTATGCCGCGAG  1646
+
+Query  301   CTCCTCGTGGGCGAGTGGCGTGTGTAGGGGCGTGAACTGTGGTGGAAGGTGTGTGCGGTG  360
+             ||||||||||||||||||<span class="back-burgundy"> </span>|||<span class="back-burgundy"> </span>||||||||||||||||||||<span
+                        class="back-burgundy"> </span>|<span class="back-burgundy"> </span>|||<span
+                        class="back-burgundy"> </span>||||||||||
+Sbjct  1647  CTCCTCGTGGGCGAGTGGTGTGCGTAGGGGCGTGAACTGTGGTAGGAGGCGTGTGCGGTG  1706
+
+Query  361   GGTCCGGTGCTTGCCTCCGGGTACGGCGCAGGTGTGTCTACTTCTTAGAGGGACAAGCAT  420
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1707  GGTCCGGTGCTTGCCTCCGGGTACGGCGCAGGTGTGTCTACTTCTTAGAGGGACAAGCAT  1766
+
+Query  421   TACGAATGTGTACGAAATTGAGCAATAACAGGTCTGTGATGCCCTTAGATGTCCGGGGCC  480
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1767  TACGAATGTGTACGAAATTGAGCAATAACAGGTCTGTGATGCCCTTAGATGTCCGGGGCC  1826
+
+Query  481   GCACGCGCGCTACAATGACGGTGCCAACGAGTCTGACCTTCTGGCCCGAAAGGGTTGGGG  540
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||<span class="back-burgundy"> </span>|||
+Sbjct  1827  GCACGCGCGCTACAATGACGGTGCCAACGAGTCTGACCTTCTGGCCCGAAAGGGTT-GGG  1885
+
+Query  541   CAAACTGGTCAATCACCGTCATGACAGGGATCGGGGCTTGGAATTGTTCCCCGTGAACGA  600
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1886  CAAACTGGTCAATCACCGTCATGACAGGGATCGGGGCTTGGAATTGTTCCCCGTGAACGA  1945
+
+Query  601   GGAATTCCTAGTAAGTGCAAGTCATAAGCTTGCGCTGATTACGTCCCTGCCCTTTGTACA  660
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1946  GGAATTCCTAGTAAGTGCAAGTCATAAGCTTGCGCTGATTACGTCCCTGCCCTTTGTACA  2005
+
+Query  661   CACCGCCCGTCGCTACTACCGATTGAATGGTTTASTAAGGTCCTCGGATTGGCGCCATTG  720
+             ||||||||||||||||||||||||||||||||||<span class="back-purple"> </span>|||||||||||||||||||||||||
+Sbjct  2006  CACCGCCCGTCGCTACTACCGATTGAATGGTTTAGTAAGGTCCTCGGATTGGCGCCATTG  2065
+
+Query  721   CAGTATCACCCGCAAGGTTGGTGCTCGACAGGTGCCGAGAAGACGACCAAACYTGATCAY  780
+             ||||||||<span class="back-burgundy"> </span>|||||||||||||||||||||||||||||||||||||||||||<span
+                        class="back-purple"> </span>||||||<span class="back-purple"> </span>
+Sbjct  2066  CAGTATCAGCCGCAAGGTTGGTGCTCGACAGGTGCCGAGAAGACGACCAAACTTGATCAT  2125
+
+Query  781   TTAGAGGAAGTAAA  794
+             ||||||||||||||
+Sbjct  2126  TTAGAGGAAGTAAA  2139
+</pre>
+            </div>
+            <div class="col col-12 col-md-6">
+                <span class="tip">В приведенных выше выравниваниях:
+                    <ul>
+                        <li><span class="mono">|</span> обозначает полное соответствие нуклеотидов</li>
+                        <li><span class="back-purple mono">&nbsp;</span> обозначает схожесть нуклеотидов (например, G&nbsp;входит в класс&nbsp;S)</li>
+                        <li><span class="back-burgundy mono">&nbsp;</span> обозначает полное несоответствие нуклеотидов</li>
+                        </ul>
+                </span>
+                <p>По&ndash;видимому, в интерпретации хроматограммы из практикума&nbsp;6 была допущена ошибка: был
+                    добавлен лишний гуанин на позицию <span class="highlight mono">547</span> (по последовательности
+                    Query). Возможно, конечно, это не ошибка, так как инсерция <i>одного</i> нуклеотида для рРНК не так
+                    страшна, как для белка.</p>
+            </div>
+            <div class="col col-12 col-md-6">
+                <p>Изучаемая последовательность с достаточно большой вероятностью может относиться к виду <i>Pyramicocephalus
+                    phocarum</i>, так как практически никаких разногласий между двумя последовательностями (изучаемой и
+                    из этого вида) найдено не было. А вот от последовательностей из организма рода
+                    <i>Diphyllobothrium</i> искомая последовательность отличается довольно сильно: примерно в области с
+                    <span class="mono highlight">241</span>&nbsp;по <span class="mono highlight">360</span>&nbsp;позицию
+                    находится по&nbsp;<b>12</b>&nbsp;несовпадений.
+                </p>
+            </div>
+        </div>
+
+        <div class="row big-indent-top">
+            <div class="col col-12">
+                <h1 class="task_title">Сравнение результатов работы алгоритмов BLAST</h1>
+            </div>
+        </div>
+        <div class="row big-indent-bottom">
+            <div class="col col-12 col-md-6">
+                <h5>Последовательность из практикума 6</h5>
+                <p>
+                    Для данной последовательности были запущены 3 программы: <span class="mono">megablast</span>&nbsp;(для
+                    очень схожих последовательностей), <span class="mono">blastn</span> с обычными параметрами&nbsp;(для
+                    довольно разных, но все&ndash;же схожих последовательностей) и <span class="mono">blastn</span> с
+                    чувствительными параметрами&nbsp;(для хоть сколько&ndash;нибудь схожих последовательностей).
+                    Некоторые параметры запусков описаны в <a href="#table1" class="int-link standart">таблице 1</a>.
+                    <span class="mono">megablast</span> оказался самой быстрой программой, а <span
+                        class="mono">blastn</span>
+                    с обычными параметрами оказался быстрее, чем <span class="mono">blastn</span> с модифицированными
+                    параметрами.
+                </p>
+                <p>
+                    Результат работы программ немного удивил. Почему&ndash;то, при запуске <span
+                        class="mono">blastn</span> с чувствительными параметрами находок получилось меньше, чем в
+                    обычном <span class="mono">blastn</span> и даже <span class="mono">megablast</span>. Когда же
+                    провели фильтрацию результатов (учитывали только те последовательности, у которых процент
+                    идентичности находился между 60% и 95%, а также E&ndash;value было меньше, чем 0,001), то получили
+                    следующие количества находок: <span class="mono">megablast</span>&nbsp;&mdash; 22, <span
+                        class="mono">blastn</span> обычный&nbsp;&mdash; 34, <span class="mono">blastn</span>
+                    чувтсвительный&nbsp;&mdash; 27. На рисунках <a href="#img4" class="int-link standart">4</a>, <a
+                        href="#img4" class="int-link standart">5</a>, <a href="#img4" class="int-link standart">6</a>
+                    изображены результаты работы программ <span class="mono">megablast</span>'а, обычного <span
+                        class="mono">blastn</span>'а и чувтсвительного <span class="mono">blastn</span>'а.
+                </p>
+                <p>
+                    Хочется заметить, что <span class="mono">megablast</span> упустил целый ряд важных находок.
+                    Например,
+                    он не учел запись <span class="label">Spirometra erinaceieuropaei voucher ZJ-JX 18S ribosomal RNA gene, partial sequence</span>
+                    и записи других штаммов этого вида. А результатов чувствительного <span class="mono">blastn</span>
+                    оказалось меньше, чем у <span class="mono">blastn</span> с обычными настройками из-за того, что
+                    <span class="mono">blastn</span> с обычными настройками наткнулся на сборку генома
+                    <span class="label">Schistocephalus solidus strain NST_G2</span>, а с измененными параметрами&nbsp;&mdash;
+                    нет.
+
+                </p>
+
+                <div class="table-wrap" id="table1">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Алгоритм</th>
+                            <th>Word Size</th>
+                            <th>Match/Mismatch scores</th>
+                            <th>Число находок</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>MegaBlast</th>
+                            <td>28</td>
+                            <td>1, -2</td>
+                            <td>922</td>
+                        </tr>
+                        <tr>
+                            <th>Blastn стандартный</th>
+                            <td>11</td>
+                            <td>2, -3</td>
+                            <td>962</td>
+                        </tr>
+                        <tr>
+                            <th>Blastn чувствительный</th>
+                            <td>7</td>
+                            <td>1, -1</td>
+                            <td>866</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-cap">
+                        <span>Таблица 1.</span> Параметры запусков разных программ BLAST с последовательностью из
+                        практикума&nbsp;6
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-md-6">
+                <div class="table-wrap" id="table2">
+                    <h5>Последовательность CDS <i>Thermus phage</i> <span class="nowrap">P23&ndash;77</span></h5>
+                    <p>
+                        В данной части задания нужно было провести такое же сравнение разных алгоритмов <span
+                            class="mono">BLAST</span>,
+                        как и в предыдущей части задания. Только вот для сравнения был взят кодирущий регион <span
+                            class="nowrap">4378&ndash;4899</span>
+                        <a href="prac/seq.fasta" class="ext-link gradient">NC_013197.1</a> из генома <a
+                            href="https://www.ncbi.nlm.nih.gov/nuccore/NC_013197.1" class="ext-link gradient"><i>Thermus
+                        phage</i> <span class="nowrap">P23&ndash;77</span></a>.
+                        Результат можно найти в <a href="#table2" class="int-link standart">таблице 2</a>.
+                    </p>
+                    <p> Все результаты работы можно найти на рисунках
+                        После того, как мы отфильтровали результаты (Identity 60%&ndash;95%, E&ndash;value < <span
+                                class="mono">0,001</span>),
+                        оказалось, что <span class="mono">megablast</span> не нашел ничего, <span
+                                class="mono">blastn</span> с
+                        обычными параметрами выдал 8 находок, а чувствительный <span class="mono">blastn</span> &mdash;
+                        19.
+                    </p>
+
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Алгоритм</th>
+                            <th>Word Size</th>
+                            <th>Match/Mismatch scores</th>
+                            <th>Число находок</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>MegaBlast</th>
+                            <td>28</td>
+                            <td>1, -2</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th>Blastn стандартный</th>
+                            <td>11</td>
+                            <td>2, -3</td>
+                            <td>576</td>
+                        </tr>
+                        <tr>
+                            <th>Blastn чувствительный</th>
+                            <td>7</td>
+                            <td>1, -1</td>
+                            <td>540</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-cap">
+                        <span>Таблица 2.</span> Параметры запусков разных программ BLAST с CDS <i>Thermus phage</i> <i
+                            class="nowrap">P23&ndash;77</i>.
+                    </div>
+                </div>
+
+                <p>
+                    Интересно, что чувствительный <span class="mono">blastn</span> нашел запись <span class="label">Kitasatospora setae KM-6054 DNA, complete genome</span>,
+                    то есть запись того организма, с которым я работал в практикумах первого семестра.
+                </p>
+                <h5>Выводы</h5>
+                <p>
+                    Для быстрого поиска практически идентичных последовательностей подходит <span
+                        class="mono">megablast</span>,
+                    <span class="mono">blastn</span> с обычными параметрами хорошо подходит для поиска схожих
+                    последовательностей,
+                    а вот <span class="mono">blastn</span> с чувствительными параметрами подходит для поиска сколько&ndash;нибудь
+                    схожих последовательностей, но не всегда.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col col-12">
+                <h2 class="task_title">Гомологи белков в неаннотированном геноме</h2>
+            </div>
+        </div>
+        <div class="row big-indent-bottom">
+            <div class="col col-12 col-md-6"><p>
+                В данном задании рассматривается неаннотированный геном <a
+                    href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1243177" class="ext-link gradient"
+                    title="Перейти на NCBI Taxonomy"><i>Amoeboaphelidium protococcarum</i></a>.
+                Так как было необходимо найти гомологи белков в геноме, то я пользовался <span
+                    class="mono">tblastn</span>.
+                Последовательности белков я получил с сайта <a href="https://www.uniprot.org/"
+                                                               class="ext-link gradient">UniProt</a>
+                (View Format <i class="fas fa-arrow-circle-right"></i> FASTA (canonical)).
+            </p>
+                <p><a href="https://www.uniprot.org/uniprot/P60010" class="ext-link gradient"><b>ACT_YEAST</b></a>
+                    <small>&mdash;</small>
+                    актин из <i>Saccharomyces cerevisiae</i>. Это глобулярный белок, который при сборке друг с другом
+                    дает микрофиламенты &mdash; основу цитоскелета.
+                </p>
+                <p><a href="https://www.uniprot.org/uniprot/P53312" class="ext-link gradient"><b>SUCB_YEAST</b></a>
+                    <small>&mdash;</small>
+                    β субъединица сукцинил-КоА-синтетазы (SCS) из <i class="nowrap">S. cerevisiae</i>. SCS &mdash;
+                    фермент, катализирующий обратимую реакцию превращения сукцинил&nbsp;КоА в сукцинат (одновременно образуя
+                    ГТФ или АТФ из ГДФ или АДФ и фосфата). Этот фермент принимает участие в цикле Кребса.
+                </p>
+                <p><a href="https://www.uniprot.org/uniprot/P15436" class="ext-link gradient"><b>DPOD_YEAST</b></a>
+                    <small>&mdash;</small>
+                    каталитическая субъединица ДНК полимеразы δ (Polδ) из <i class="nowrap">S. cerevisiae</i>. Polδ
+                    &mdash; фермент, осуществляющий синтез отстающей цепочки ДНК и ее пруфридинг.
+                </p>
+            </div>
+            <div class="col col-12 col-md-6">
+                <h6>Результаты</h6>
+                <p>
+                    <a href="prac/ACT_OUT.txt" class="file-download standart"><b>ACT_YEAST</b></a>:
+                    лучший результат среди всех трех белков по качеству и количеству совпадений.
+                    Итог: положительный – есть гомолог, вероятно, выполняющий ту же функцию.
+                    Самое маленькое E-value &mdash; 0 (скэффолды 444, 514 и 17). Всего 18 находок.
+                    Покрытие для лучшего результата стопроцентное, гэпов нет.
+                </p>
+                <p>
+                    <a href="prac/SUCB_OUT.txt" class="file-download standart"><b>SUCB_YEAST</b></a>:
+                    худший результат среди трех рассматриваемых белков. Итог положительный.
+                    Количество совпадений &mdash; 4, лучшее E-value &mdash; 3 * 10<sup>84</sup> (скэффолд 361).
+                    Покрытие для лучшей находки &mdash; 92%, гэпов мало.
+                </p>
+                <p>
+                    <a href="prac/POLD_OUT.txt" class="file-download standart"><b>DPOD_YEAST</b></a>:
+                    средний результат. Итог положительный. Нашлось 8 похожих последовательностей. Две последовательности
+                    (скэффолды 81 и 529) дали выравнивания с нулевым E-value. Процент покрытия для первого результата
+                    &mdash; 97%, гэпов очень мало.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-12">
+                <h2 class="task_title">Поиск гена белка в контиге</h2>
+            </div>
+        </div>
+        <div class="row big-indent-bottom">
+            <div class="col col-12 col-md-6">
+                <p>
+                    Для выполнения данного задания был выбран контиг <a href="https://www.ncbi.nlm.nih.gov/nuccore/JDSB01000005.1?report=fasta" class="ext-link gradient">JDSB01000005.1</a>
+                    из неаннотированного <a href="https://www.ncbi.nlm.nih.gov/nuccore/JDSB00000000.1/" class="ext-link gradient">генома</a>
+                    <i>Aquila chrysaetos canadensis</i>.
+                </p>
+            </div>
+            <div class="col col-12 col-md-6">
+                <p>
+                    Результат изображен на <a href="#img11" class="int-link standart">рисунке 11</a>.
+                    Можно сказать, что в контиге находится ген, кодирующий убиквитинлигазу (E3 ubiquitin ligase), так
+                    как результаты хорошие (лучшее E-value &mdash; 7 * 10<sup>-14</sup>.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-5 big-indent-top">
+            <div class="col col-12">
+                <h4 class="supplementary">Дополнительные материалы</h4>
+            </div>
+        </div>
+        <div class="row mt-5 big-indent-bottom">
+            <div class="col col-12" id="img2">
+                <div class="wrap-img-xxxl">
+                    <img src="img/blast-top-results-homologs.png" alt="blast results (search for homologs)">
+                    <div class="img-cap">
+                        <span>Рисунок 2.</span> Некоторое число лучших результатов поиска с помощью blastn
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-md-6">
+                <div class="wrap-img-md" id="img3">
+                    <img src="img/taxonomy.png" alt="blast results (search for homologs)">
+                    <div class="img-cap">
+                        <span>Рисунок 3.</span> Филогенетическое древо, составленное из результатов выравнивания blastn
+                        с исследуемой последовательностью (на рисунке&nbsp;&mdash; "unknown").
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 ">
+                <div class="wrap-img-xxl" id="img4">
+                    <img src="img/megablast.png" alt="blast results (megablast)">
+                    <div class="img-cap">
+                        <span>Рисунок 4.</span> Результат работы megablast с последовательностью из практикума&nbsp;6
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 ">
+                <div class="wrap-img-xxl" id="img5">
+                    <img src="img/blastn_orig.png" alt="blast results (blastn)">
+                    <div class="img-cap">
+                        <span>Рисунок 5.</span> Результат работы blastn при стандартных настройках с последовательностью
+                        из практикума&nbsp;6
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 ">
+                <div class="wrap-img-xxl" id="img6">
+                    <img src="img/blastn_sense.png" alt="blast results (blastn)">
+                    <div class="img-cap">
+                        <span>Рисунок 6.</span> Результат работы blastn при чувствительных настройках с
+                        последовательностью из практикума&nbsp;6
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ">
+                <div class="wrap-img-xxl" id="img7">
+                    <img src="img/virus_blastn.png" alt="blast results (blastn)">
+                    <div class="img-cap">
+                        <span>Рисунок 7.</span> Результат работы blastn при стандартных настройках с
+                        CDS вируса
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 ">
+                <div class="wrap-img-xxl" id="img8">
+                    <img src="img/virus_blastn_modif.png" alt="blast results (blastn)">
+                    <div class="img-cap">
+                        <span>Рисунок 8.</span> Результат работы blastn при чувствительных настройках с
+                        CDS вируса
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 col-md-6">
+                <div class="wrap-img-lg" id="img9">
+                    <img src="img/virus_sum.png" alt="blast results (blastn)">
+                    <div class="img-cap">
+                        <span>Рисунок 9.</span> Результат работы blastn при стандартных настройках с
+                        CDS вируса
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-md-6">
+                <div class="wrap-img-lg" id="img10">
+                    <img src="img/virus_sum_sense.png" alt="blast results (blastn)">
+                    <div class="img-cap">
+                        <span>Рисунок 10.</span> Результат работы blastn при чувствительных настройках с
+                        CDS вируса
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12">
+                <div class="wrap-img-xxl" id="img11">
+                    <img src="img/last.png" alt="blast results (blastx)">
+                    <div class="img-cap">
+                        <span>Рисунок 11.</span> Результат работы blastx с неаннотированным контигом
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="row justify-content-around">
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 terms resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Семестры
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term1/index.html">Первый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term2/index.html">Второй</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term3/index.html">Третий</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term4/index.html">Четвёртый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term5/index.html">Пятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term6/index.html">Шестой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term7/index.html">Седьмой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term8/index.html">Восьмой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term9/index.html">Девятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term10/index.html">Десятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term11/index.html">Одиннадцатый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term12/index.html">Двенадцатый</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 university resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Университет
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="http://www.fbb.msu.ru/" class="fbb">Сайт ФББ МГУ</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="https://www.msu.ru/" class="msu">Сайт МГУ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 communication resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Связь
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="https://vk.com/nikgr1" class="vk">Вконтакте |</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="mailto:nikit00000s@fbb.msu.ru" class="envelope">Почта kodomo |</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="mailto:NikGR1@yandex.ru" class="envelope">Личная почта |</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 other resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Остальное на сайте
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="../../index.html" class="main-page">Главная</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="../../html/about_me/about_me.html" class="me">Обо мне</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="http://kodomo.cmm.msu.su/wiki/2018" class="kodomofbb">KodomoFBB</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr class="clearfix hr-divider">
+
+    <div class="footer-copyright">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+    </div>
+    <div id="button-to-start" onclick="window.scrollTo({left: 0, top: 0, behavior: window.scroll_behavior})"></div>
+</footer>
+
+
+<script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../js/parallax.js-1.5.0/parallax.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+
+<script src="../../js/own/construction.js"></script>
+<script src="../../js/own/backgroundIcons.js"></script>
+<script src="../../js/own/timer.js"></script>
+</body>
+</html>

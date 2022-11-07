@@ -1,0 +1,37 @@
+zap
+load=1p47
+define set1 *.O?' and nucleic
+define set2 *.OP? and nucleic
+define set3 *.N? and nucleic
+set echo bottom right
+color echo white
+background black
+font echo 25
+
+cartoons only
+color structure
+echo "Cartoons,\n colored by secondary structure"
+pause
+
+restrict dna
+wireframe only
+color cpk
+echo "DNA,\n wireframe"
+pause
+
+select set1
+cpk 200
+echo "DNA,\n cpk deoxyribose oxygens"
+pause
+
+cpk off
+select set2
+cpk 200
+echo "DNA,\n cpk phosphate oxygens"
+pause
+
+cpk off
+select set3
+cpk 200
+echo "DNA,\n cpk nucleobase nitrogens"
+pause

@@ -1,0 +1,132 @@
+@import (reference) "../../less/fontAwesome/_variables.less";
+@import (reference) "../../less/style/variables.less";
+@import (reference) "../../less/fontAwesome/fontawesome.less";
+
+@keyframes waver {
+  0% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+#breadcrumb {
+  a {
+    &:before {
+      content: @fa-var-home;
+    }
+  }
+}
+
+header {
+  background: rgba(@c_purple, 0.5) !important;
+
+  div.container {
+    background: transparent;
+
+    div.row {
+      background: transparent;
+
+      div.col {
+        background: transparent;
+      }
+
+      div.col:nth-child(1) {
+        color: @c_white;
+        text-align: center;
+
+        a {
+          text-transform: uppercase;
+          color: @c_white;
+
+          &:after {
+            content: "👋";
+            font-family: @f_awesome;
+            animation: waver 0.65s alternate infinite;
+            transform-origin: 50% 90%;
+            animation-timing-function: ease-in-out;
+            color: @c_skin;
+            display: inline-block;
+          }
+
+          &:before {
+            content: none;
+          }
+        }
+      }
+
+      div.col:nth-child(2) {
+        color: @c_white;
+        text-align: center;
+
+        h3 {
+          width: 80%;
+          margin: 0 auto;
+          text-align: center;
+          font-weight: 500;
+          font-size: 1.1em;
+
+          &:before {
+            content: none;
+          }
+        }
+      }
+    }
+
+    .button {
+      background: @c_white;
+
+      &:before {
+        color: @c_purple;
+      }
+    }
+  }
+}
+
+div.container.prac_content {
+  .row {
+    min-height: 50vh;
+
+    h1.prac_title {
+      &:before {
+        content: @fa-var-graduation-cap;
+      }
+    }
+
+    .col {
+      z-index: 10 !important;
+
+      .to_footer:after {
+        .fa-icon;
+        .fas;
+        display: inline;
+        content: @fa-var-arrow-circle-down;
+        font-family: @f_awesome;
+        font-weight: 700;
+        padding-left: @d_padding_icon;
+
+      }
+
+      a.fbb:after {
+        .fa-icon;
+        .fas;
+        display: inline;
+        content: @fa-var-dna;
+        font-family: @f_awesome;
+        font-weight: 700;
+        padding-left: @d_padding_icon;
+
+      }
+    }
+  }
+
+  div.DNA_background-DNA {
+    color: @c_burgundy;
+  }
+}
+
+.msu_parallax {
+  height: 65vh;
+  background: linear-gradient(rgba(@c_white, 0.25), rgba(@c_purple, 0.25));
+}

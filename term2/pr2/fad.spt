@@ -1,0 +1,57 @@
+zap
+load =4YNU
+
+set echo top center
+font echo 20
+color echo black
+echo 4YNU: A:GLU'36:OE2 - A:FAD'601:O2B
+
+select not (36:A or 601:A)
+cpk off
+wireframe off
+cartoons on
+color TRANSLUCENT chain
+
+select 36:A or 601:A
+calculate hbonds
+hbonds 50
+cpk on
+wireframe on
+cartoons off
+color cpk
+cpk 150
+wireframe 50
+center selected
+zoom 350
+draw line (36:A.OE2) (601:A.O2B)
+color draw red
+measure (36:A.OE2) (601:A.O2B)
+
+pause
+resume
+
+draw off
+hbonds off
+set echo top center
+font echo 20
+color echo black
+echo 4YNU: A:ALA'85:O - A:FAD'601:O3B
+
+select not (85:A or 601:A)
+cpk off
+wireframe off
+cartoons on
+color TRANSLUCENT chain
+
+select 85:A or 601:A
+calculate hbonds
+hbonds 50
+cpk on
+wireframe on
+cartoons off
+color cpk
+cpk 150
+wireframe 50
+center selected
+zoom 350
+measure (85:A.O) (601:A.O3B)

@@ -1,0 +1,124 @@
+@keyframes waver {
+  0% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+#breadcrumb a:before {
+  content: "\f015";
+}
+header {
+  background: rgba(47, 36, 64, 0.5) !important;
+}
+header div.container {
+  background: transparent;
+}
+header div.container div.row {
+  background: transparent;
+}
+header div.container div.row div.col {
+  background: transparent;
+}
+header div.container div.row div.col:nth-child(1) {
+  color: #fff;
+  text-align: center;
+}
+header div.container div.row div.col:nth-child(1) a {
+  text-transform: uppercase;
+  color: #fff;
+}
+header div.container div.row div.col:nth-child(1) a:after {
+  content: "👋";
+  font-family: 'Font Awesome 5 Free';
+  animation: waver 0.65s alternate infinite;
+  transform-origin: 50% 90%;
+  animation-timing-function: ease-in-out;
+  color: #ffcd94;
+  display: inline-block;
+}
+header div.container div.row div.col:nth-child(1) a:before {
+  content: none;
+}
+header div.container div.row div.col:nth-child(2) {
+  color: #fff;
+  text-align: center;
+}
+header div.container div.row div.col:nth-child(2) h3 {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+header div.container div.row div.col:nth-child(2) h3:before {
+  content: none;
+}
+header div.container .button {
+  background: #fff;
+}
+header div.container .button:before {
+  color: #2F2440;
+}
+div.container.prac_content .row {
+  min-height: 50vh;
+}
+div.container.prac_content .row h1.prac_title:before {
+  content: "\f19d";
+}
+div.container.prac_content .row .col {
+  z-index: 10 !important;
+}
+div.container.prac_content .row .col .to_footer:after {
+  font-weight: normal;
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  display: inline;
+  content: "\f0ab";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  padding-left: 0.2em;
+}
+div.container.prac_content .row .col .to_footer:after.fa-pull-left {
+  margin-right: 0.3em;
+}
+div.container.prac_content .row .col .to_footer:after.fa-pull-right {
+  margin-left: 0.3em;
+}
+div.container.prac_content .row .col a.fbb:after {
+  font-weight: normal;
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  display: inline;
+  content: "\f471";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  padding-left: 0.2em;
+}
+div.container.prac_content .row .col a.fbb:after.fa-pull-left {
+  margin-right: 0.3em;
+}
+div.container.prac_content .row .col a.fbb:after.fa-pull-right {
+  margin-left: 0.3em;
+}
+div.container.prac_content div.DNA_background-DNA {
+  color: #BA0F30;
+}
+.msu_parallax {
+  height: 65vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(47, 36, 64, 0.25));
+}
+/*# sourceMappingURL=main.css.map */

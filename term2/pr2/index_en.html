@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практикум #2</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,800&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../../css/common-style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/old_style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="pr2.css">
+
+    <script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+
+
+    <script type="text/javascript"
+            src="https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js">
+    </script>
+    <script type="text/javascript">
+        //Define basic settings for JSMol applet
+        var Main = {
+            serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+            j2sPath: "https://chemapps.stolaf.edu/jmol/jsmol/j2s/",
+            use: "HTML5",
+            deferApplet: true,
+            //Basic visual settings
+            width: 700,
+            height: 700,
+            color: "whitesmoke",
+            script: "",
+            coverImage: "Load_en.png"
+        };
+        //After full page will be loaded
+        $(document).ready(function () {
+            //Create JSMol applet with name 'JSMol' and settings from Info
+            //And put in element with id='jmol
+            $("#jmol1").html(Jmol.getAppletHtml("JSMol1", Main));
+            $("#jmolFAD").html(Jmol.jmolButton("JSMol1", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/fad.spt', 'With FAD'));
+            $("#jmolGlulacmain").html(Jmol.jmolButton("JSMol1", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/glulacmain.spt', 'With main gluconolactone'));
+            $("#jmolGlulacext").html(Jmol.jmolButton("JSMol1", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/glulacext.spt', 'With additional gluconolactone'));
+            $("#jmolResume1").html(Jmol.jmolButton("JSMol1", 'resume', 'Continue'));
+
+            $("#jmol2").html(Jmol.getAppletHtml("JSMol2", Main));
+            $("#jmolHbonds2").html(Jmol.jmolButton("JSMol2", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/hbonds1.spt', 'Hydrogen bonds'));
+            $("#jmolSulfur2").html(Jmol.jmolButton("JSMol2", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/sulfur1.spt', 'Disulfide bonds'));
+            $("#jmolSaltbridge2").html(Jmol.jmolButton("JSMol2", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/saltbridge1.spt', 'Salt bridges'));
+            $("#jmolDensity2").html(Jmol.jmolButton("JSMol2", 'exit; script http://kodomo.fbb.msu.ru/~nikit00000s/term2/pr2/density1.spt', 'Hydrophobic core'));
+            $("#jmolResume2").html(Jmol.jmolButton("JSMol2", 'resume', 'Continue'));
+
+        });
+
+    </script>
+</head>
+
+<body>
+
+<!--#FIXME-->
+<div id="button-to-end" onclick="window.scrollTo(0,document.body.scrollHeight);">
+    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+</div>
+
+<main class="p-0">
+    <div class="container-fluid big-header p-0 m-0">
+        <div class="row p-0 m-0">
+            <div class="col p-0 m-0">
+
+                <h1 class="h1 ls-h1 big-header-title"><span>
+                        <a class="big-header-link" href="http://kodomo.cmm.msu.su/wiki/2018/2/pr2"> <i
+                                class="fa fa-flask" aria-hidden="true"></i> Practicum #2.</a> Contacts atlas
+                    </span>
+                </h1>
+
+                <div class="bg-title-img"><img src="title3.png" alt="title"></div>
+
+                <a href="http://www.fbb.msu.ru/" class="bg-logo-a"><img src="logo-title.png" alt="title"
+                                                                        class="img-fluid"></a>
+                <span class="big-header-date"><i class="fa fa-language" aria-hidden="true"></i> EN <a
+                        href="index.html">RU</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="container section">
+        <div class="row">
+            <div class="col">
+                <h2 class="h2 ls-h2 section-h"><span><i class="fa fa-flask" aria-hidden="true"></i>
+                    <i>A. flavus</i> FAD dehydrogenase description
+                </span></h2>
+                <p>
+                    <!--Это ФАД-зависимая глюкозодегидрогеназа [КФ 1.1.1.47] в комплексе с ФАД и D-глюконо-1,5-лактоном
+                    (Глюконо-d-лактон, глюконо-дельта-лактон), также известный как пищевая добавка E575, стабилизатор,
+                    эмульгатор и регулятор кислотности за счёт желирующего и pH-стабилизирующего эффектов глюконовой
+                    кислоты. Используется в производстве сыра как сбраживающий агент для молока.-->
+                    FAD-dependent glucose dehydrogenase (<a href="https://www.uniprot.org/uniprot/B8MX95"
+                                                            class="ls-link-black">UNIPROT</a>,
+                    <a href="https://www.rcsb.org/structure/4YNU" class="ls-link-black">RCSB</a>) functionally can be
+                    refered to as the oxidoreductase, it catalyzes the oxidation of first hydroxyl group of glucose.
+                    Oxidoreductase are capable of utilizing a number of chemical compounds as the primary electron
+                    acceptor, FADGDH employs flavin adenine dinucleotide for this. The examined FADGDH is an
+                    extracellular protein. Currently it is being considered as a potential component of glucose-specific
+                    sensor. FADGDH comprises a number of advantages against other enzymes. It is more specific to the
+                    substrate than pyrroloquinoline quinone glucose dehydrogenase and it doesn’t react with oxygen as
+                    glucose oxidase does.
+
+                </p>
+                <p>
+                    Ligand binding site. <br/>
+                    Two long loops between H2 and H3, another between B16 и H14 cross and form a narrow channel. FAD
+                    finds its place in the protein’s pocket, where it interacts with elements of secondary structure in
+                    such fashion that it’s covered by them as by two lids. Isoalloxazine ring of the ligand changes
+                    conformation in reduced state: the planar strucure slightly bends. FAD containing region has a
+                    glycosylation site Asn69 (it may be used for controlling the protein activity).
+
+                </p>
+                <p>
+                    The protein binds two glucose molecules: on exterior and interior surfaces. In catalytic centre the
+                    substrate interacts with Tyr53, Arg501, Asn503, His505, His548. Both Leu401 and Trp415 form
+                    hydrophobic environment. It is intriguing that these residues are well conserved among other related
+                    proteins (AnGOx, PaGOx). The distinct feature of this enzyme is the Glu413 residue, which forms a
+                    linkage with a sugar, thus enhancing the precision of ferment-substrate binding.
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container section">
+        <div class="row ligand-img-container">
+            <div class="col">
+                <h2 class="h2 bg-h2 section-h"><span><i class="fa fa-flask" aria-hidden="true"></i>
+                    FAD dehydrogenase ligands description
+                </span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center ligand-img-container">
+                <h3 class="h3 bg-h3 ligand-num"><span> <i class="fa fa-circle" aria-hidden="true"></i>
+                    1. Flavin adenine dinucleotide
+                </span></h3>
+                <img src="fad-jmol.jpg" alt="fad" class="ligand-img">
+            </div>
+            <div class="col-6 text-center">
+                <img src="fad.png" alt="fad" class="ligand-img">
+            </div>
+            <div class="col-6">
+                <p class="ligand-description">
+                    Flavin adenine dinucleotide is a condensation product of riboflavine and ADP. Coenzyme of a number
+                    of dehydrogenases, including the studied enzyme.
+                </p>
+
+            </div>
+            <div class="ligand-table col-12">
+                <table class="table table-hover table-borderless">
+                    <caption>
+                        <i class="fa fa-table" aria-hidden="true"></i> Table 1. Characteristic of FAD
+                    </caption>
+                    <tbody>
+                    <tr>
+                        <td class="description-table-ligand" colspan="2">
+                            Physico-chemical properties of FAD
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            IUPAC nomenclature
+                        </td>
+                        <td>
+                            [[(2R,3S,4R,5R)-5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy-hydroxyphosphoryl]
+                            [(2R,3S,4S)-5-(7,8-dimethyl-2,4-dioxobenzo[g]pteridin-10-yl)-2,3,4-trihydroxypentyl]
+                            hydrogen phosphate
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Chemical formula (SMILES)
+                        </td>
+                        <td>
+                            CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(COP(=O)(O)OP(=O)(O)OCC4C(C(C(O4)N5C=NC6=C5N=CN=C6N)O)O)O)O)O
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Brutto-formula
+                        </td>
+                        <td>
+                            C<sub>27</sub>H<sub>33</sub>N<sub>9</sub>O<sub>15</sub>P<sub>2</sub>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Molar mass
+                        </td>
+                        <td>
+                            785.557 М
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            PubChem CID
+                        </td>
+                        <td>
+                            <a href="https://pubchem.ncbi.nlm.nih.gov/compound/643975#section=Top">643975</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center ligand-img-container">
+                <p class="h3 bg-h3 ligand-num"><span> <i class="fa fa-circle" aria-hidden="true"></i>
+                    2. Gluconolactone
+                </span></p>
+                <img src="glulac-jmol.jpg" alt="gluconolactone" class="ligand-img">
+            </div>
+            <div class="col-6">
+                <p class="ligand-description">
+                    Gluconolactone is a lactone or oxidized derivative of glucose. Gluconolactone is a polyhydroxy acid
+                    (PHA) that is capable of chelating metals and may also function by scavenging free radicals.
+                    It is frequently used in structural analysis as a substitute for glucose. Its valuable properties
+                    are constituted of that it introduces less entropy into system than glucose thus it forms more
+                    stable structure. Its occurrence in the structure of the studied protein is due to the same reason.
+                </p>
+            </div>
+            <div class="col-6 text-center">
+                <img src="gluconolactone.png" alt="gluconolactone" class="ligand-img">
+            </div>
+            <div class="ligand-table col-12">
+                <table class="table table-hover table-borderless">
+                    <caption>
+                        <i class="fa fa-table" aria-hidden="true"></i> Table 2. Characteristic of gluconolactone
+                    </caption>
+                    <tbody>
+                    <tr>
+                        <td class="description-table-ligand" colspan="2">
+                            Physico-chemical properties of gluconolactone
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            IUPAC nomenclature
+                        </td>
+                        <td>
+                            (3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-one
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Chemical formula (SMILES)
+                        </td>
+                        <td>
+                            C(C1C(C(C(C(=O)O1)O)O)O)O
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Brutto-formula
+                        </td>
+                        <td>
+                            C<sub>6</sub>H<sub>10</sub>O<sub>6</sub>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Molar mass
+                        </td>
+                        <td>
+                            178.14 М
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            PubChem CID
+                        </td>
+                        <td>
+                            <a href="https://pubchem.ncbi.nlm.nih.gov/compound/7027#section=Top">7027</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container jsmol-container">
+        <div class="row justify-content-center">
+            <div class="col col-12">
+                <h2 class="h2 ls-h2 jsmol-h"><span><i class="fa fa-eye" aria-hidden="true"></i> FAD-dehydrogenase bonds' visualisation in JSMol</span>
+                </h2>
+
+                <div id="jmol1" class="applet-container"></div>
+
+                <h3 class="h3 out-button bg-h3">Show hydrogen bonds:</h3>
+                <div class="text-center  buttons">
+                    <div class="btn btn-primary" id="jmolFAD"></div>
+                    <div class="btn btn-primary" id="jmolGlulacmain"></div>
+                    <div class="btn btn-primary" id="jmolGlulacext"></div>
+                    <div class="btn btn-outline-primary" id="jmolResume1"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid description-main-prot">
+        <div class="row justify-content-center">
+
+            <div class="mt-4 col-12 col-md-10 col-lg-8 table-main-prot">
+                <table class="table table-hover table-dark table-borderless">
+                    <caption>
+                        <i class="fa fa-table" aria-hidden="true"></i> Table 3. Characteristic of FAD-dehydrogenase
+                    </caption>
+                    <tbody>
+                    <tr>
+                        <td class="description-main-prot-h" colspan="5">
+                            FAD-dehydrogenase antibody bonds'
+                        </td>
+                    </tr>
+                    <tr class="description-main-prot-h2">
+                        <td>
+                            #
+                        </td>
+                        <td>
+                            Residues' names
+                        </td>
+                        <td>
+                            Bond type
+                        </td>
+                        <td>
+                            Bond length (&#8491;)
+                        </td>
+                        <td>
+                            Bond angle (°)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            H:CYS'140 - H:CYS'206
+                        </td>
+                        <td>
+                            Disulfide bridge
+                        </td>
+                        <td>
+                            2,0 (S-S)
+                        </td>
+                        <td>
+                            089,3 (C-S-S-C)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            H:GLY'104 - L:SER'043
+                        </td>
+                        <td>
+                            Hydrogen bond
+                        </td>
+                        <td>
+                            2,7 (O-O)
+                        </td>
+                        <td>
+                            144.1 (C=O-O)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            L:ILE'117 - H:GLY'129
+                        </td>
+                        <td>
+                            Hydrogen bond
+                        </td>
+                        <td>
+                            3,0 (O-O)
+                        </td>
+                        <td>
+                            140,4 (C=O-N)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            L:TYR'032 - L:ASN'028
+                        </td>
+                        <td>
+                            Hydrogen bond
+                        </td>
+                        <td>
+                            2,9 (O-N)
+                        </td>
+                        <td>
+                            136,8 (C=O-N)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            H:GLU'100B- L:LYS'030
+                        </td>
+                        <td>
+                            Salt bridge
+                        </td>
+                        <td>
+                            2,5 (O-N)
+                        </td>
+                        <td>
+                            161.8 (C=O-N)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            L:ASP'082 - L:ARG'061
+                        </td>
+                        <td>
+                            Salt bridge
+                        </td>
+                        <td>
+                            *
+                        </td>
+                        <td>
+                            125.58 ([ASP]82:L.CG - [ASP]82:L.OD2 - [ARG]61:L.NH1)
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--#FIXME-->
+    <div class="container section">
+        <div class="row">
+            <div class="col">
+                <h2 class="h2 ls-h2 section-h"><span><i class="fa fa-flask" aria-hidden="true"></i>
+                    Esterae-like D2.3 antibody description <i>A. flavus</i>
+                </span></h2>
+                <p>1YEK is an esterae-like D2.3 antibody of mice (Mus musculus), raised against the p-nitroben- zyl
+                    phosphonate nB-P conjugated to a protein carrier. It is able to perform hydrolytic activity towards
+                    the corresponding ester nB-E.</p>
+                <p>
+                    Dependent on its substrate, the enzyme is inhibited by its product forming a negative loop. The
+                    inhibition is characteristic of nitrobenzol. Nitrophenol in comparence has an additional OH group,
+                    which reduces its hydrophobic interactions with the catalytic centre, and its size does not enable
+                    formation of hydrogen bond between Asn L34 and -NO2. As a result nitrophenol is more easily released
+                    from the binding domain and does not act as an inhibitor. </p>
+                <p>
+                    We analyzed the structure of this antibody in complex with 4-nitrophenol.</p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container jsmol-container">
+        <div class="row justify-content-center">
+            <div class="col col-12">
+                <h2 class="h2 ls-h2 jsmol-h"><span><i class="fa fa-eye" aria-hidden="true"></i>Esterae-like D2.3 antibody bonds' visualisation in JSMol</span>
+                </h2>
+
+                <div id="jmol2" class="applet-container"></div>
+
+                <h3 class="h3 out-button bg-h3">Show bonds:</h3>
+                <div class="text-center buttons">
+                    <div class="btn btn-outline-primary" id="jmolResume2"></div>
+                    <div class="btn btn-primary" id="jmolSulfur2"></div>
+                    <div class="btn btn-primary" id="jmolHbonds2"></div>
+                    <div class="btn btn-primary" id="jmolSaltbridge2"></div>
+                    <div class="btn btn-primary" id="jmolDensity2"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container section nucleus">
+        <div class="row">
+            <div class="col">
+                <h2 class="h2 ls-h2 section-h"><span><i class="fa fa-flask" aria-hidden="true"></i>
+                    The description of the Esterae-like D2.3 antibody <i>A. flavus</i> hydrophobic nucleus
+                </span></h2>
+                <p> In a hydrophobic nucleus surrounding atoms at a distance of 3 angstroms from selected residue form an
+                    environment, and at a distance of 5 angstroms completely cover its surface. The average distance
+                    between adjacent non-bonded atoms in the nucleus varies from 3 to 4 angstroms, which, given the
+                    radii of atoms (1.4-1.85 &#197;), does not allow the water molecule to be inside it, like almost any
+                    other. </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid description-main-prot">
+        <div class="row justify-content-center">
+
+            <div class="mt-4 col-12 col-md-10 col-lg-8 table-main-prot">
+                <table class="table table-hover table-dark table-borderless">
+                    <caption>
+                        <i class="fa fa-table" aria-hidden="true"></i> Table 4. Characteristic of esterase-like antibody
+                        bonds'
+                    </caption>
+                    <tbody>
+                    <tr>
+                        <td class="description-main-prot-h" colspan="5">
+                            Esterase-like antibody bonds'
+                        </td>
+                    </tr>
+                    <tr class="description-main-prot-h2">
+                        <td>
+                            #
+                        </td>
+                        <td>
+                            Residues' names
+                        </td>
+                        <td>
+                            Bond type
+                        </td>
+                        <td>
+                            Bond length (&#8491;)
+                        </td>
+                        <td>
+                            Bond angle(°)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            H:CYS'140 - H:CYS'206
+                        </td>
+                        <td>
+                            Disulfide bridge
+                        </td>
+                        <td>
+                            2,0 (S-S)
+                        </td>
+                        <td>
+                            089,3 (C-S-S-C)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            H:GLY'104 - L:SER'043
+                        </td>
+                        <td>
+                            Hydrogen bond
+                        </td>
+                        <td>
+                            2,7 (O-O)
+                        </td>
+                        <td>
+                            144.1 (C=O-O)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            L:ILE'117 - H:GLY'129
+                        </td>
+                        <td>
+                            Hydrogen bond
+                        </td>
+                        <td>
+                            3,0 (O-O)
+                        </td>
+                        <td>
+                            140,4 (C=O-N)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            L:TYR'032 - L:ASN'028
+                        </td>
+                        <td>
+                            Hydrogen bond
+                        </td>
+                        <td>
+                            2,9 (O-N)
+                        </td>
+                        <td>
+                            136,8 (C=O-N)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            H:GLU'100B- L:LYS'030
+                        </td>
+                        <td>
+                            Salt bridge
+                        </td>
+                        <td>
+                            2,5 (O-N)
+                        </td>
+                        <td>
+                            161.8 (C=O-N)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            L:ASP'082 - L:ARG'061
+                        </td>
+                        <td>
+                            Salt bridge
+                        </td>
+                        <td>
+                            *
+                        </td>
+                        <td>
+                            *
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid extra-content">
+        <div class="row justify-content-center">
+            <div class="col col-12 col-lg-10">
+                <h2 class="h2 ls-h2 extra-content-h"><span><i class="fa fa-camera" aria-hidden="true"></i>
+                    Photogallery
+                </span></h2>
+            </div>
+        </div>
+
+        <div class="extra-content-carousel row justify-content-center">
+            <div id="carouselExampleCaptions" class="carousel slide col" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="pymol1.jpg" class="d-block" alt="pymol">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>PI stacking</h5>
+                            <p>
+                                1V3L A:Phe'259 - A:Gal'704. <br/>
+                                Parameters: angle 3.36°, distance 4.23 &#8491;
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="pymol2.jpg" class="d-block" alt="pymol">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>PI stacking</h5>
+                            <p>
+                                1YEK A:Trp'95 - A:Npo'551 <br/>
+                                Parameters: angle 6.878°, distance 3.681 &#8491;
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="pymol3.jpg" class="d-block" alt="pymol">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Surface with trenches and crevices for ligands</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="pymol4.jpg" class="d-block" alt="pymol">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Surface with trenches and crevices for ligands</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="page-footer ls-footer">
+
+    <div class="container text-center text-md-left">
+
+        <div class="row pt-3">
+            <div class="col-md-6">
+
+                <h5 class="font-weight-bold text-uppercase"> Practicum #2. Contacts atlas <i
+                        class="fa fa-address-card-o" aria-hidden="true"></i> Sources:</h5>
+
+                <a href="https://www.uniprot.org/uniprot/B8MX95"></a> UniProtKB - B8MX95 (B8MX95_ASPFN)<br/>
+
+                <a href="https://www.uniprot.org/uniprot/P01863"> UniProtKB - P01863 (GCAA_MOUSE)</a> <br/>
+
+                <a href="https://www.sciencedirect.com/science/article/pii/S0022283698921982?via%3Dihub">Crossreactivity,
+                    efficiency and catalytic specificity of an esterase-like antibody
+                </a> <br/>
+
+                <a href="https://www.ncbi.nlm.nih.gov/pubmed/23742246">Structural and energetic basis of
+                    carbohydrate-aromatic packing interactions in proteins.</a> <br/>
+
+                <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/prot.24527">Cation–pi, amino–pi, pi-pi, and
+                    H‐bond interactions stabilize antigen–antibody interfaces</a> <br/>
+
+            </div>
+
+            <hr class="clearfix w-100 d-md-none">
+        </div>
+    </div>
+
+    <div class="container text-center text-md-left">
+
+        <div class="row pt-3">
+            <div class="col-md-6">
+
+                <h5 class="font-weight-bold text-uppercase">Practicum #2: Atlas of contacts. <i
+                        class="fa fa-address-card-o" aria-hidden="true"></i> Авторы:</h5>
+
+                <a href="https://kodomo.fbb.msu.ru/~artemisbakulin/">Bakulin Artemiy</a> <br/>
+
+                <a href="https://kodomo.fbb.msu.ru/~tirena/">Tulaeva Catherine</a> <br/>
+
+                <a href="https://kodomo.fbb.msu.ru/~nikit00000s/index.html">Gryzunov Nikita</a> <br/>
+
+            </div>
+
+            <hr class="clearfix w-100 d-md-none">
+        </div>
+    </div>
+
+    <div class="container text-center text-md-left">
+        <div class="row pt-3">
+            <h5 class="col col-12 font-weight-bold text-uppercase">Authors' contribution.</h5>
+
+            <!-- TERMS, FOOTER column -->
+
+            <div class="col-4">
+                Bakulin Artemiy<br/> Theoretical studies, compiling texts
+            </div>
+
+            <div class="col-4">
+                Tulaeva Catherine<br/> Navigation ("Oh, captain, my captain"), work with PyMol
+            </div>
+
+            <div class="col-4">
+                Gryzunov Nikita<br/> Web-design, work with J(s)Mol
+            </div>
+
+            <hr class="clearfix w-100 d-md-none">
+        </div>
+    </div>
+
+    <!-- Copyright -->
+
+    <div class="footer-copyright text-center py-5">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        All rights are reserved. Gryzunov Nikita, <span id="CurrentYear"></span> y.
+    </div>
+</footer>
+
+
+
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../js/own/yearInit.js"></script>
+</body>
+</html>

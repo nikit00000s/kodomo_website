@@ -1,0 +1,80 @@
+@import (reference) "../less/fontAwesome/_variables.less";
+@import (reference) "../less/style/variables.less";
+@import (reference) "../less/fontAwesome/fontawesome.less";
+
+@c_main: #de9f3e;
+
+.const-height {
+  font-size: 1.5rem;
+  height: 3rem;
+  line-height: 3rem!important;
+}
+
+header {
+  border-bottom-right-radius: 10rem;
+  background: @c_purple;
+  border-bottom: @c_purple 2vh solid;
+  h1 {
+    padding: 1em;
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+    background: linear-gradient(to right, #fe8c00, #f83600);
+  }
+
+  div.col:nth-child(1) a {
+    color: @c_white;
+    &:hover {
+      color: @c_wh-smoke
+    }
+  }
+
+  div.col:nth-child(1) a:before {
+    background: @c_white;
+    border-radius: 50%;
+    color: @c_purple_dark
+  }
+
+  div.col:nth-child(1) a:hover:before {
+    color: @c_purple_dark;
+  }
+
+  h3 {
+    .const-height;
+    width: max-content;
+    padding: 0 1em;
+    border-radius: 1.5em;
+    color: @c_white;
+    background: linear-gradient(to right,@c_link_left,@c_link_right);
+  }
+
+  div.button {
+    .const-height;
+    .first-level;
+    position: relative;
+    left: 0;
+    top: 0;
+    background: @c_purple;
+    margin: 0;
+
+    &:hover {
+      background: @c_purple_dark;
+      .const-height;
+    }
+  }
+}
+
+main {
+  overflow: hidden;
+  background: transparent;
+  min-height: unset;
+}
+
+.rf-container {
+  height: inherit;
+  .rf-elem {
+    background: @c_purple;
+    border-radius: 2.25rem;
+  }
+}
+
+

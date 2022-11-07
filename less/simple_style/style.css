@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "EB Garamond";
+  src: url("../../font/EB_Garamond/EBGaramond-VariableFont:wght.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../../font/RobotoSlab/RobotoSlab-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Slab Bold";
+  src: url("../../font/RobotoSlab/RobotoSlab-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../../font/Roboto/Roboto-Bold.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("../../font/Roboto/RobotoMono-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../font/OpenSans/OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../../font/OpenSans/OpenSans-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans Italic";
+  src: url("../../font/OpenSans/OpenSans-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+._captions {
+  margin: 0 auto;
+  padding-top: 0.5em;
+  text-align: center;
+  font-family: "Open Sans Italic";
+  font-style: italic;
+  font-size: 0.95em;
+  max-width: 75%;
+}
+._captions h6 {
+  font-family: "Open Sans Bold";
+  font-style: normal;
+  font-size: inherit;
+  display: inline;
+  color: #ff8300;
+}
+body {
+  font-size: 1em;
+  font-style: normal;
+  font-family: "Open Sans";
+  color: #000;
+  margin: 5em 4em;
+  z-index: 1;
+  background-image: url("../../img/background/Golden-Abstract-Lines-PNG-Image-Transparent.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: auto 100%;
+  background-attachment: fixed;
+}
+b {
+  font-family: "Open Sans Bold";
+}
+i {
+  font-family: "Open Sans Italic";
+}
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: "Roboto Slab Bold";
+  font-weight: 500;
+  margin-top: 5em;
+  margin-bottom: 1em;
+  color: #ff8300;
+}
+h2,
+h3 {
+  margin-top: 2em;
+  font-size: 2em;
+  font-family: "Roboto Slab";
+  font-weight: 500;
+}
+h4,
+h5,
+h6 {
+  font-size: 1.2em;
+  font-family: "Roboto Slab";
+  font-weight: 500;
+}
+p {
+  text-indent: 5em;
+  line-height: 1.7;
+  margin-bottom: 1em;
+}
+a {
+  color: #000;
+}
+a:hover {
+  color: #111111;
+}
+a.back {
+  margin-top: 5em;
+  display: block;
+  text-align: center;
+  color: #ff8300;
+  font-weight: bold;
+}
+@media screen and (min-width: 400px) {
+  body {
+    margin: 0 5em;
+  }
+}
+@media screen and (min-width: 700px) {
+  body {
+    margin: 0 7em;
+  }
+}
+@media screen and (min-width: 1400px) {
+  body {
+    margin: 0 13em;
+  }
+  figure {
+    margin: 3em 5em;
+  }
+  figure figcaption {
+    max-width: 100%;
+  }
+  table {
+    margin: 3em 5em;
+  }
+  table caption {
+    max-width: 100%;
+  }
+}
+figure {
+  margin: 3em 0;
+}
+figure img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+figure figcaption {
+  margin: 0 auto;
+  padding-top: 0.5em;
+  text-align: center;
+  font-family: "Open Sans Italic";
+  font-style: italic;
+  font-size: 0.95em;
+  max-width: 75%;
+}
+figure figcaption h6 {
+  font-family: "Open Sans Bold";
+  font-style: normal;
+  font-size: inherit;
+  display: inline;
+  color: #ff8300;
+}
+table {
+  margin: 3em;
+  border: #000 0.1em solid;
+  border-collapse: collapse;
+}
+table caption {
+  margin: 0 auto;
+  padding-top: 0.5em;
+  text-align: center;
+  font-family: "Open Sans Italic";
+  font-style: italic;
+  font-size: 0.95em;
+  max-width: 75%;
+  caption-side: bottom;
+}
+table caption h6 {
+  font-family: "Open Sans Bold";
+  font-style: normal;
+  font-size: inherit;
+  display: inline;
+  color: #ff8300;
+}
+table td {
+  border: #000 0.1em solid;
+  border-collapse: collapse;
+  padding: 0 1em;
+}
+table th {
+  border: #000 0.1em solid;
+  border-collapse: collapse;
+  padding: 0 1em;
+}
+pre {
+  font-family: "Cousine";
+  font-size: 0.9em;
+}
+.mono {
+  font-family: "Cousine";
+  font-size: 0.9em;
+}
+.code {
+  font-family: "Cousine";
+  font-size: 0.9em;
+  color: #111111;
+}
+ol,
+ul {
+  line-height: 1.5em;
+}
+ul {
+  list-style-image: url("../../img/own_icons/checkmark_.png");
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,135 @@
+@import (reference) "../../less/fontAwesome/_variables.less";
+@import (reference) "../../less/style/variables.less";
+@import (reference) "../../less/fontAwesome/fontawesome.less";
+
+@color-green-dark: #385e0f;
+@color-purple: #350F5E;
+
+header {
+  div.container {
+    background: transparent;
+
+    div.row {
+      background: transparent;
+      align-content: start;
+
+      div.col {
+        background: transparent;
+      }
+
+      div.col:nth-child(1) {
+        color: @c_burgundy;
+
+        a {
+          background: @color-green-dark;
+
+          &:before {
+            content: @fa-var-user;
+            animation: none;
+          }
+
+          &:hover {
+            color: #e8ffd9;
+          }
+        }
+      }
+
+      div.col:nth-child(2) {
+        color: @c_white;
+
+        h3 {
+          background: @color-purple;
+
+          &:before {
+            content: none;
+          }
+        }
+      }
+    }
+
+    div.button {
+      background: @c_purple;
+
+      &:before {
+        color: @c_white;
+      }
+
+      &:hover {
+        background: @c_purple_dark;
+      }
+    }
+  }
+}
+
+main {
+  background-color: transparent;
+  .container {
+    background-color: @c_white;
+  }
+}
+
+div.container.prac_content {
+  section.row {
+
+    h1.prac_title {
+      &:before {
+        content: @fa-var-address-card;
+      }
+    }
+
+    .col {
+      z-index: 10 !important;
+
+      .to_footer {
+        .fa-icon;
+        .fas;
+        font-family: @f_heading;
+        font-weight: 500;
+        display: inline;
+
+        &:after {
+          content: @fa-var-arrow-circle-down;
+          font-family: @f_awesome;
+          font-weight: 700;
+          padding-left: @d_padding_icon;
+        }
+      }
+
+      .fbb {
+        .fa-icon;
+        .fas;
+        font-family: @f_heading;
+        font-weight: 500;
+        display: inline;
+
+        &:after {
+          content: @fa-var-dna;
+          font-family: @f_awesome;
+          font-weight: 700;
+          padding-left: @d_padding_icon;
+        }
+      }
+    }
+  }
+
+  div.DNA_background-DNA {
+    color: @c_burgundy;
+
+    &:before {
+      content: @fa-var-microphone-alt;
+    }
+  }
+}
+
+.chistopol_parallax {
+  height: 90vh;
+  background: linear-gradient(rgba(@c_white, 0.25), rgba(@c_purple, 0.25));
+
+  .task_title {
+    color: @c_purple;
+
+    &:before {
+      content: @fa-var-city;
+    }
+  }
+}

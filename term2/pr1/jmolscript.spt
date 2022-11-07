@@ -1,0 +1,95 @@
+function text_modif () {
+set echo top center
+font echo 25
+color echo [xE97A24]
+return
+}
+
+load =4AXO
+
+antialiasDisplay = true
+set antialiasTranslucent true
+set antialiasImages true
+
+text_modif
+select all
+wireframe off
+cpk off
+cartoons on
+color chain
+spin 7
+echo I. 4AXO protein in cartoons, painted in chains
+
+pause
+resume
+
+select all
+color structure
+echo II. 4AXO protein in cartoons, colored by secondary structure
+
+pause
+resume
+
+spin 0
+text_modif
+cartoons on
+wireframe off
+cpk off
+color structure
+select ligand
+center ligand
+zoom 350
+cpk 350
+wireframe 80
+color violet
+echo III. 4AXO protein with ligand in ball-and-stick model
+
+pause
+resume
+
+text_modif
+restrict all
+select all
+center all
+wireframe off
+spacefill on
+restrict protein
+color cpk
+spin 7
+zoom 100
+echo IV. 4AXO protein in spacefill, colored by element
+
+pause
+resume
+
+spin 0
+text_modif
+define a_helix 152-157:B
+restrict a_helix and backbone
+cartoons off
+spacefill off
+wireframe 100
+calculate hbonds
+hbonds 75
+center selected
+zoom in
+echo V. 310-helix backbone with hydrogen bonds
+
+pause
+resume
+
+hbonds delete
+select all
+define sheets 133-149:B or 99-113:B
+color cpk
+restrict sheets and backbone
+wireframe 100
+calculate hbonds
+hbonds 75
+center selected
+zoom 150
+text_modif
+select 133-149:B and carbon
+color black
+echo VI. Beta-sheets backbone with hydrogen bonds
+pause

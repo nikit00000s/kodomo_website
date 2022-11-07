@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>#9 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../../less/style/common_style.css">
+    <link rel="stylesheet" href="../../less/style/loading.css">
+    <link rel="stylesheet" href="page_style.css">
+</head>
+<body>
+
+<div id="button-to-end"
+     onclick="window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: window.scroll_behavior})"></div>
+<div id="breadcrumb">
+    <a href="../index.html">3 семестр</a><a href="index.html">9 практикум</a>
+</div>
+
+<header class="background-hexagons">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col col-12 align-self-end">
+                <h1>
+                    <a class="header-link" href="http://kodomo.cmm.msu.su/wiki/2018/3/pr9">
+                        EMBOSS
+                    </a>
+                </h1>
+            </div>
+            <div class="col col-12 align-self-baseline justify-content-end">
+                <h3 class="purple">29 октября 2019 г.</h3>
+            </div>
+            <div class="button"
+                 onclick="window.scrollTo({left: 0, top: document.documentElement.clientHeight, behavior: window.scroll_behavior})"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container prac_content">
+        <div class="row basic_task">
+            <div class="col col-12 task_intro">
+                <h1 class="prac_title">Задание 1</h1>
+            </div>
+            <div class="col col-12 col-md-6">
+                <p>В данном задании требовалось написать скрипт для решения одной из четырех проблем. Мной была выбрана
+                    третья подзадача. В ней требуется найти частоты динуклеотидов в геноме (бактерии) и определить
+                    динуклеотид с наибольшей разницей в наблюдаемой частоте встречаемости и ожидаемой. Для нахождения
+                    частот встречаемости динуклеотидов была использована команда <a
+                            href="http://emboss.sourceforge.net/apps/cvs/emboss/apps/compseq.html"
+                            class="ext-link gradient">compseq</a>
+                    из программного пакета EMBOSS.</p>
+                <p>Пример использования команды:</p>
+                <p class="bash">
+                    <span class="bash-user">user@srv</span>:<span class="bash-path">~/$</span> compseq tembl:x65923 -word 2
+                    result3.comp
+                </p>
+            </div>
+            <div class="col col-12 col-md-6">
+                <p>
+                    В реальных последовательностях ожидаемая частота динуклеотидов неодинакова, то есть не равна 1/16.
+                    Так, например, для нуклеотида <span class="mono">XY</span>
+                    ожидаемая частота будет вычисляться по формуле: <br/>
+                    Ожидаемая частота <span class="mono">XY</span> = (Наблюдаемая частота <span class="mono">X</span>) *
+                    (Наблюдаемая частота <span class="mono">Y</span>)<br/>
+                    Поэтому, чтобы вычислять ожидаемую частоту вышеизложенным способом, был использован флаг -calcfreq.
+                </p>
+                <p>Пример использования скрипта:</p>
+                <p class="bash">
+                    <span class="bash-user">user@srv</span>:<span class="bash-path">~/$</span> python dinucl usa
+                </p>
+                <p>Также есть опция -h (помощь). <a href="prac/dinucl.py" class="gradient file-download">Ссылка на
+                    скрипт.</a></p>
+            </div>
+            <div class="col col-12">
+                <h6>Опции</h6>
+                <ul>
+                    <li>Одна обязательная опция <b>sequence</b>&nbsp;&mdash; входная последовательность в формате .fasta, для
+                    которой будут проводиться вычисления</li>
+                    <li>Необязательная опция <b>-h</b> (<b class="nowrap">--help</b>)&nbsp;&mdash; вывод сообщения с объяснением функции
+                    программы и ее опций</li>
+                    <li>Необязательная опция <b>-v</b> (<b class="nowrap">--verbose</b>)&nbsp;&mdash; отобразить в выводе программы
+                    заголовки данных</li>
+                    <li>Необязательная опция <b>-s</b> (<b class="nowrap">--short</b>)&nbsp;&mdash; отобразить только наименование
+                    динуклеотида с максимальным отклонением и его значение</li>
+                </ul>
+            </div>
+            <div class="col col-12">
+                <h6>Пример использования программы</h6>
+                <pre class="bash"><span class="bash-user">user@srv</span>:<span class="bash-path">~/$</span> python3.6 dinucl.py test.fasta -v
+Dinucl.	Abs. deviation	Obs. frequency	Exp. frequency
+CA	0.2176932	0.3913043	0.1736111</pre>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="row justify-content-around">
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 terms resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Семестры
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term1/index.html">Первый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term2/index.html">Второй</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term3/index.html">Третий</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term4/index.html">Четвёртый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term5/index.html">Пятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term6/index.html">Шестой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term7/index.html">Седьмой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term8/index.html">Восьмой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term9/index.html">Девятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term10/index.html">Десятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term11/index.html">Одиннадцатый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term12/index.html">Двенадцатый</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 university resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Университет
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="http://www.fbb.msu.ru/" class="fbb">Сайт ФББ МГУ</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="https://www.msu.ru/" class="msu">Сайт МГУ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 communication resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Связь
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="https://vk.com/nikgr1" class="vk">Вконтакте |</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="mailto:nikit00000s@fbb.msu.ru" class="envelope">Почта kodomo |</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="mailto:NikGR1@yandex.ru" class="envelope">Личная почта |</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 other resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Остальное на сайте
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="../../index.html" class="main-page">Главная</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="../../html/about_me/about_me.html" class="me">Обо мне</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="http://kodomo.cmm.msu.su/wiki/2018" class="kodomofbb">KodomoFBB</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr class="clearfix hr-divider">
+
+    <div class="footer-copyright">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+    </div>
+    <div id="button-to-start" onclick="window.scrollTo({left: 0, top: 0, behavior: window.scroll_behavior})"></div>
+</footer>
+
+
+<script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../js/parallax.js-1.5.0/parallax.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+
+<script src="../../js/own/construction.js"></script>
+<script src="../../js/own/backgroundIcons.js"></script>
+<script src="../../js/own/timer.js"></script>
+</body>
+</html>

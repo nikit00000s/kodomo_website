@@ -1,0 +1,124 @@
+@import "variables";
+
+@keyframes scaleIn_button_to_start {
+  from {
+    transform: scaleY(0) translate(-50%, 0%);
+  }
+  to {
+    transform: scaleY(1) translate(-50%, 0%);
+  }
+}
+
+@keyframes scaleIn_x {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes scaleIn_y {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes scaleIn_both {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes fadeIn {
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes translateLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+header > *,
+main,
+footer > * {
+  opacity: 0;
+}
+
+header h1 {
+  transform: translateX(0);
+  transform-origin: left;
+}
+
+header h3,
+header div.button {
+  opacity: 0;
+}
+
+#breadcrumb {
+  opacity: 0;
+}
+
+.footer hr.hr-divider {
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+#button-to-end {
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+#button-to-start {
+  transform: scaleY(0) translate(-50%, 0%);
+  transform-origin: bottom;
+}
+
+.loaded main,
+.loaded header > *,
+.loaded footer > *
+{
+  animation: fadeIn @load_speed*2 ease-in @load_speed forwards;
+}
+
+.loaded #breadcrumb
+{
+  animation: fadeIn @load_speed*2  ease forwards;
+}
+.loaded hr.hr-divider {
+  animation: scaleIn_x @load_speed*2  ease forwards;
+}
+
+.loaded #button-to-end {
+  animation: scaleIn_y @load_speed*2 ease forwards;
+}
+
+.loaded #button-to-start {
+  animation: scaleIn_button_to_start @load_speed*1 @load_speed*1 ease forwards;
+}
+
+.loaded header h1 {
+  animation: translateLeft @load_speed @load_speed*2 ease forwards;
+}
+
+.loaded header h3 {
+  animation: fadeIn @load_speed*2 @load_speed*1 ease-in forwards;
+}
+.loaded header div.button{
+  animation: fadeIn @load_speed*1 @load_speed*1 ease-in forwards;
+}

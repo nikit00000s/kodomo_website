@@ -1,0 +1,25 @@
+zap
+load =1YEK
+
+set echo top center
+font echo 20
+color echo black
+echo 1YEK: SS-bond, CYS'140-CYS'206 chain H
+
+select not (140:H or 206:H)
+cpk off
+wireframe off
+cartoons on
+color TRANSLUCENT chain
+
+select 140:H or 206:H
+cpk on
+wireframe on
+cartoons off
+color cpk
+cpk 150
+wireframe 50
+center selected
+measure (206:H.SG) (140:H.SG)
+zoom 350
+

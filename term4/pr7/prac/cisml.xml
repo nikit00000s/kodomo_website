@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="fimo.xsl"?>
+<!-- Begin document body -->
+<cis-element-search
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://zlab.bu.edu/schema/cisml cisml.xsd"
+  xmlns="http://zlab.bu.edu/schema/cisml"
+  xmlns:mem="http://noble.gs.washington.edu/meme"
+>
+<program-name>fimo</program-name>
+<parameters>
+<pattern-file>meme_out/meme.html</pattern-file>
+<sequence-file>upstream_sequences.fasta</sequence-file>
+<site-pvalue-cutoff>1e-05</site-pvalue-cutoff>
+<sequence-filtering on-off="off"/>
+</parameters>
+<pattern accession="1" name="1">
+<scanned-sequence accession="orf1ab" name="orf1ab" length="100">
+</scanned-sequence>
+<scanned-sequence accession="S" name="S" length="100">
+<matched-element start="23" stop="35" score="14.3057" pvalue="8.52e-06">
+<sequence>CTCCTCCAAGGAG</sequence>
+<mem:qvalue>0.00235</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="E" name="E" length="100">
+</scanned-sequence>
+<scanned-sequence accession="M" name="M" length="100">
+</scanned-sequence>
+<scanned-sequence accession="NS6" name="NS6" length="100">
+</scanned-sequence>
+<scanned-sequence accession="N" name="N" length="100">
+</scanned-sequence>
+<scanned-sequence accession="NS7a" name="NS7a" length="100">
+<matched-element start="11" stop="23" score="18.4693" pvalue="3.07e-08">
+<sequence>ATCTGACAAGGAG</sequence>
+<mem:qvalue>2.08e-05</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="NS7b" name="NS7b" length="100">
+</scanned-sequence>
+<scanned-sequence accession="NS7c" name="NS7c" length="100">
+</scanned-sequence>
+</pattern>
+<pattern accession="2" name="2">
+<scanned-sequence accession="orf1ab" name="orf1ab" length="100">
+</scanned-sequence>
+<scanned-sequence accession="S" name="S" length="100">
+</scanned-sequence>
+<scanned-sequence accession="E" name="E" length="100">
+</scanned-sequence>
+<scanned-sequence accession="M" name="M" length="100">
+</scanned-sequence>
+<scanned-sequence accession="NS6" name="NS6" length="100">
+</scanned-sequence>
+<scanned-sequence accession="N" name="N" length="100">
+</scanned-sequence>
+<scanned-sequence accession="NS7a" name="NS7a" length="100">
+</scanned-sequence>
+<scanned-sequence accession="NS7b" name="NS7b" length="100">
+</scanned-sequence>
+<scanned-sequence accession="NS7c" name="NS7c" length="100">
+</scanned-sequence>
+</pattern>
+<pattern accession="3" name="3">
+<scanned-sequence accession="orf1ab" name="orf1ab" length="100">
+<matched-element start="73" stop="87" score="26.6746" pvalue="1.34e-09">
+<sequence>GCAGCTCCGCGCCTG</sequence>
+<mem:qvalue>9.88e-07</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="S" name="S" length="100">
+<matched-element start="69" stop="83" score="26.4142" pvalue="5.51e-09">
+<sequence>GCATCTGGCCGCCTG</sequence>
+<mem:qvalue>2.04e-06</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="E" name="E" length="100">
+</scanned-sequence>
+<scanned-sequence accession="M" name="M" length="100">
+</scanned-sequence>
+<scanned-sequence accession="NS6" name="NS6" length="100">
+</scanned-sequence>
+<scanned-sequence accession="N" name="N" length="100">
+</scanned-sequence>
+<scanned-sequence accession="NS7a" name="NS7a" length="100">
+</scanned-sequence>
+<scanned-sequence accession="NS7b" name="NS7b" length="100">
+</scanned-sequence>
+<scanned-sequence accession="NS7c" name="NS7c" length="100">
+</scanned-sequence>
+</pattern>
+</cis-element-search>

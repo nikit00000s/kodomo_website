@@ -1,0 +1,41 @@
+########################################
+# Program: water
+# Rundate: Sun 12 May 2019 11:18:53
+# Commandline: water
+#    [-asequence] COX2_BACSU.fasta
+#    [-bsequence] ALR2_ECOLI.fasta
+#    -outfile COX2_BACSU_ALR2_ECOLI.water
+#    -auto
+# Align_format: srspair
+# Report_file: COX2_BACSU_ALR2_ECOLI.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: COX2_BACSU
+# 2: ALR2_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 90
+# Identity:      21/90 (23.3%)
+# Similarity:    36/90 (40.0%)
+# Gaps:          15/90 (16.7%)
+# Score: 34.5
+# 
+#
+#=======================================
+
+COX2_BACSU       103 LVIPVVLYTLELADTSPMDKKGRKAEDALVV----NVRANL-------YW    141
+                     |..|:.:|   |...|.|::.|.:.:..|.|    ...||:       ::
+ALR2_ECOLI       114 LKAPLDIY---LKVNSGMNRLGFQPDRVLTVWQQLRAMANVGEMTLMSHF    160
+
+COX2_BACSU       142 WEFEYPDYGIITSQELIVPTDQRVYFNLKASDVKHSFWIP    181
+                     .|.|:|| ||..:...|....:.:......|:...:.|.|
+ALR2_ECOLI       161 AEAEHPD-GISGAMARIEQAAEGLECRRSLSNSAATLWHP    199
+
+
+#---------------------------------------
+#---------------------------------------

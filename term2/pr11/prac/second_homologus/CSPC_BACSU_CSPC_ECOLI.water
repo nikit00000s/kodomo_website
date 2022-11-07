@@ -1,0 +1,41 @@
+########################################
+# Program: water
+# Rundate: Sun 12 May 2019 11:24:23
+# Commandline: water
+#    [-asequence] CSPC_BACSU.fasta
+#    [-bsequence] CSPC_ECOLI.fasta
+#    -outfile CSPC_BACSU_CSPC_ECOLI.water
+#    -auto
+# Align_format: srspair
+# Report_file: CSPC_BACSU_CSPC_ECOLI.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: CSPC_BACSU
+# 2: CSPC_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 62
+# Identity:      37/62 (59.7%)
+# Similarity:    45/62 (72.6%)
+# Gaps:           1/62 ( 1.6%)
+# Score: 193.0
+# 
+#
+#=======================================
+
+CSPC_BACSU         3 QGTVKWFNAEKGFGFIERENGD-DVFVHFSAIQSDGFKSLDEGQKVSFDV     51
+                     :|.|||||..||||||...:|. ||||||||||.:|||:|.|||.|.|::
+CSPC_ECOLI         5 KGQVKWFNESKGFGFITPADGSKDVFVHFSAIQGNGFKTLAEGQNVEFEI     54
+
+CSPC_BACSU        52 EQGARGAQAANV     63
+                     :.|.:|..|.||
+CSPC_ECOLI        55 QDGQKGPAAVNV     66
+
+
+#---------------------------------------
+#---------------------------------------

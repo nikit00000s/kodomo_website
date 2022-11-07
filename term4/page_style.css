@@ -1,0 +1,76 @@
+.const-height {
+  font-size: 1.5rem;
+  height: 3rem;
+  line-height: 3rem!important;
+}
+header {
+  border-bottom-right-radius: 10rem;
+  background: #2F2440;
+  border-bottom: #2F2440 2vh solid;
+}
+header h1 {
+  padding: 1em;
+  border-bottom-right-radius: 1em;
+  border-top-right-radius: 1em;
+  background: linear-gradient(to right, #fe8c00, #f83600);
+}
+header div.col:nth-child(1) a {
+  color: #fff;
+}
+header div.col:nth-child(1) a:hover {
+  color: #eaeaea;
+}
+header div.col:nth-child(1) a:before {
+  background: #fff;
+  border-radius: 50%;
+  color: #1f172b;
+}
+header div.col:nth-child(1) a:hover:before {
+  color: #1f172b;
+}
+header h3 {
+  font-size: 1.5rem;
+  height: 3rem;
+  line-height: 3rem!important;
+  width: max-content;
+  padding: 0 1em;
+  border-radius: 1.5em;
+  color: #fff;
+  background: linear-gradient(to right, #fe8c00, #f83600);
+}
+header div.button {
+  font-size: 1.5rem;
+  height: 3rem;
+  line-height: 3rem!important;
+  z-index: 100;
+  position: relative;
+  left: 0;
+  top: 0;
+  background: #2F2440;
+  margin: 0;
+}
+header div.button:before {
+  z-index: 100;
+}
+header div.button:after {
+  z-index: 100;
+}
+header div.button:hover {
+  background: #1f172b;
+  font-size: 1.5rem;
+  height: 3rem;
+  line-height: 3rem!important;
+}
+main {
+  overflow: hidden;
+  background: transparent;
+  min-height: unset;
+}
+.rf-container {
+  height: inherit;
+}
+.rf-container .rf-elem {
+  background: #2F2440;
+  border-radius: 2.25rem;
+}
+/*# sourceMappingURL=page_style.css.map */

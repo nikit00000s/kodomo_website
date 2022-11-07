@@ -1,0 +1,49 @@
+########################################
+# Program: water
+# Rundate: Sun 12 May 2019 11:24:23
+# Commandline: water
+#    [-asequence] APT_BACSU.fasta
+#    [-bsequence] APT_ECOLI.fasta
+#    -outfile APT_BACSU_APT_ECOLI.water
+#    -auto
+# Align_format: srspair
+# Report_file: APT_BACSU_APT_ECOLI.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: APT_BACSU
+# 2: APT_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 162
+# Identity:      91/162 (56.2%)
+# Similarity:   108/162 (66.7%)
+# Gaps:           0/162 ( 0.0%)
+# Score: 450.0
+# 
+#
+#=======================================
+
+APT_BACSU          3 LKQYVTIVPDYPKEGVQFKDITTLMDKGDVYRYATDQIVEYAKEKQIDLV     52
+                     ||..:..:.||||.|:.|:|:|:|::....|..:.|.:||..|...|..|
+APT_ECOLI         11 LKNSIKSIQDYPKPGILFRDVTSLLEDPKAYALSIDLLVERYKNAGITKV     60
+
+APT_BACSU         53 VGPEARGFIIGCPVAYALGVGFAPVRKEGKLPREVIKVDYGLEYGKDVLT    102
+                     ||.|||||:.|.|||..|||||.||||.||||||.|...|.||||.|.|.
+APT_ECOLI         61 VGTEARGFLFGAPVALGLGVGFVPVRKPGKLPRETISETYDLEYGTDQLE    110
+
+APT_BACSU        103 IHKDAIKPGQRVLITDDLLATGGTIEATIKLVEELGGVVAGIAFLIELSY    152
+                     ||.||||||.:||:.|||||||||||||:||:..|||.||..||:|.|..
+APT_ECOLI        111 IHVDAIKPGDKVLVVDDLLATGGTIEATVKLIRRLGGEVADAAFIINLFD    160
+
+APT_BACSU        153 LDGRNKLEDYDI    164
+                     |.|..:||...|
+APT_ECOLI        161 LGGEQRLEKQGI    172
+
+
+#---------------------------------------
+#---------------------------------------

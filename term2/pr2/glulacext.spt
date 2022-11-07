@@ -1,0 +1,28 @@
+zap
+load =4YNU
+
+set echo top center
+font echo 20
+color echo black
+echo 4YNU: A:LCG'603:O6 - A:LYS'76:NZ
+
+select not (603:A or 76:A)
+cpk off
+wireframe off
+cartoons on
+color TRANSLUCENT chain
+
+select 603:A or 76:A
+calculate hbonds
+hbonds 50
+cpk on
+wireframe on
+cartoons off
+color cpk
+cpk 150
+wireframe 50
+center selected
+zoom 350
+draw line (603:A.O6) (76:A.NZ)
+color draw red
+measure (603:A.O6) (76:A.NZ)

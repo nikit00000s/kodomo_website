@@ -1,0 +1,89 @@
+########################################
+# Program: water
+# Rundate: Sun 12 May 2019 11:24:23
+# Commandline: water
+#    [-asequence] CHEA_BACSU.fasta
+#    [-bsequence] CHEA_ECOLI.fasta
+#    -outfile CHEA_BACSU_CHEA_ECOLI.water
+#    -auto
+# Align_format: srspair
+# Report_file: CHEA_BACSU_CHEA_ECOLI.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: CHEA_BACSU
+# 2: CHEA_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 681
+# Identity:     236/681 (34.7%)
+# Similarity:   394/681 (57.9%)
+# Gaps:          54/681 ( 7.9%)
+# Score: 1046.5
+# 
+#
+#=======================================
+
+CHEA_BACSU         1 MDMNQYLDVFIDESKEHLQTCNEKLLLLEKDPTDLQLVHDIFRAAHTLKG     50
+                     ||::.:...|.||:.|.|....:.||:|:.:..|.:.::.||||||::||
+CHEA_ECOLI         3 MDISDFYQTFFDEADELLADMEQHLLVLQPEAPDAEQLNAIFRAAHSIKG     52
+
+CHEA_BACSU        51 MSATMGYTDLAHLTHLLENVLDAIRNGDMEVTSDWLDILFEALDHLETMV    100
+                     .:.|.|::.|...|||:||:||..|.|:|::.:|.:::..|..|.::..:
+CHEA_ECOLI        53 GAGTFGFSVLQETTHLMENLLDEARRGEMQLNTDIINLFLETKDIMQEQL    102
+
+CHEA_BACSU       101 QSIIDGGDGKRDISEVSAKLDVNGAHAESAASAEPAEAQSSASDWEYDEF    150
+                     .:.      |:.....:|..|.........|.....|..|:.:       
+CHEA_ECOLI       103 DAY------KQSQEPDAASFDYICQALRQLALEAKGETPSAVT-------    139
+
+CHEA_BACSU       151 ERTVIQEAE---EQGFKRYEIKISLNENCMLKAVRVYMVFEKLNEVGEVA    197
+                     ..:|:.::|   ||...:...:|.|:.   |||..|.::.|:|..:..:.
+CHEA_ECOLI       140 RLSVVAKSEPQDEQSRSQSPRRIILSR---LKAGEVDLLEEELGHLTTLT    186
+
+CHEA_BACSU       198 KTIPSAEVLETEDFGTDFQVCFLTHQSAE-DIEQLINGVSEIEHV--EVI    244
+                     ..:..|:.|.          ..|....|| ||..::..|.|.:.:  |.:
+CHEA_ECOLI       187 DVVKGADSLS----------AILPGDIAEDDITAVLCFVIEADQITFETV    226
+
+CHEA_BACSU       245 QGAPLTSAEKPEESKQEDSPAAAVPAKQEKQKQPAKNDEQAKHSAGGSKT    294
+                     :.:|..|.....:...|.:|...|    |::|....|:         |.:
+CHEA_ECOLI       227 EVSPKISTPPVLKLAAEQAPTGRV----EREKTTRSNE---------STS    263
+
+CHEA_BACSU       295 IRVNIDRLDSLMNLFEELVIDRGRLEQIAKELE---HNELTETVERMTRI    341
+                     |||.::::|.|:||..||||.:..|.|.:.||:   |.:|..::.::.|.
+CHEA_ECOLI       264 IRVAVEKVDQLINLVGELVITQSMLAQRSSELDPVNHGDLITSMGQLQRN    313
+
+CHEA_BACSU       342 SGDLQSIILNMRMVPVETVFNRFPRMIRQLQKELNKKIELSIIGAETELD    391
+                     :.|||..::::||:|:|.||:|:||::|.|..:|.|::||:::|:.||||
+CHEA_ECOLI       314 ARDLQESVMSIRMMPMEYVFSRYPRLVRDLAGKLGKQVELTLVGSSTELD    363
+
+CHEA_BACSU       392 RTVIDEIGDPLVHLIRNSIDHGIEAPETRLQKGKPESGKVVLKAYHSGNH    441
+                     :::|:.|.|||.||:|||:|||||.||.||..||...|.::|.|.|.|.:
+CHEA_ECOLI       364 KSLIERIIDPLTHLVRNSLDHGIELPEKRLAAGKNSVGNLILSAEHQGGN    413
+
+CHEA_BACSU       442 VFIEVEDDGAGLNRKKILEKALERGVITEKEAETLEDNQIYELIFAPGFS    491
+                     :.|||.||||||||::||.||..:|:..   :|.:.|:::..||||||||
+CHEA_ECOLI       414 ICIEVTDDGAGLNRERILAKAASQGLTV---SENMSDDEVAMLIFAPGFS    460
+
+CHEA_BACSU       492 TADQISDISGRGVGLDVVKNKLESLGGSVSVKSAEGQGSLFSIQLPLTLS    541
+                     ||:|::|:||||||:||||..::.:||.|.::|.:|.|:...|.|||||:
+CHEA_ECOLI       461 TAEQVTDVSGRGVGMDVVKRNIQKMGGHVEIQSKQGTGTTIRILLPLTLA    510
+
+CHEA_BACSU       542 IISVLLIKLEEETFAIPISSIIETAVIDRKDI--LQTHDREVIDFRGHIV    589
+                     |:..:.:::.:|.|.:|:::::|:......|:  |...:| |::.||..:
+CHEA_ECOLI       511 ILDGMSVRVADEVFILPLNAVMESLQPREADLHPLAGGER-VLEVRGEYL    559
+
+CHEA_BACSU       590 PVVYLKEEFKIEDTRKDAEQLHIIVVKKGDKPTAFVVDSFIGQQEVVLKS    639
+                     |:|.|.:.|.:...:.:|.|..:::::.|.:..|.:||..|||.:||:|:
+CHEA_ECOLI       560 PIVELWKVFNVAGAKTEATQGIVVILQSGGRRYALLVDQLIGQHQVVVKN    609
+
+CHEA_BACSU       640 LGDYLTNVFAISGATILGDGEVALIIDCNAL    670
+                     |......|..||.|||||||.||||:|.:||
+CHEA_ECOLI       610 LESNYRKVPGISAATILGDGSVALIVDVSAL    640
+
+
+#---------------------------------------
+#---------------------------------------

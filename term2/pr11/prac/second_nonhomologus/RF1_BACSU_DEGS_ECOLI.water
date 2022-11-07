@@ -1,0 +1,37 @@
+########################################
+# Program: water
+# Rundate: Sun 12 May 2019 11:18:53
+# Commandline: water
+#    [-asequence] RF1_BACSU.fasta
+#    [-bsequence] DEGS_ECOLI.fasta
+#    -outfile RF1_BACSU_DEGS_ECOLI.water
+#    -auto
+# Align_format: srspair
+# Report_file: RF1_BACSU_DEGS_ECOLI.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: RF1_BACSU
+# 2: DEGS_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 23
+# Identity:       5/23 (21.7%)
+# Similarity:    14/23 (60.9%)
+# Gaps:           0/23 ( 0.0%)
+# Score: 34.0
+# 
+#
+#=======================================
+
+RF1_BACSU        324 IQKLDQILEGKLDEVVEALIVED    346
+                     ::.:||:.|.:...|:..:::.|
+DEGS_ECOLI       316 LETMDQVAEIRPGSVIPVVVMRD    338
+
+
+#---------------------------------------
+#---------------------------------------

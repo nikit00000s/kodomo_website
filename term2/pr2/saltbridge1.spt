@@ -1,0 +1,61 @@
+zap
+load =1YEK
+
+set echo top center
+font echo 20
+color echo black
+echo 1YEK: H:GLU'100B - L:LYS'30 (C=O- -H-N)
+
+select not (100^B:H or 30:L)
+cpk off
+wireframe off
+cartoons on
+color TRANSLUCENT chain
+
+select 100^B:H or 30:L
+cpk on
+wireframe on
+cartoons off
+color cpk
+cpk 150
+wireframe 50
+calculate hbonds
+hbonds 50
+center selected
+zoom 350
+draw line (100^B:H.OE1) (30:L.NZ)
+color draw red
+measure (100^B:H.OE1) (30:L.NZ)
+
+pause
+resume
+
+draw off line
+set echo top center
+font echo 20
+color echo black
+echo 1YEK: L:ASP'082 - L:ARG'061
+
+select not (82:L or 61:L)
+cpk off
+wireframe off
+cartoons on
+color TRANSLUCENT chain
+
+select 82:L or 61:L
+cpk on
+wireframe on
+cartoons off
+color cpk
+cpk 150
+wireframe 50
+calculate hbonds
+hbonds 50
+center selected
+zoom 350
+draw line1 (82:L.OD1) (61:L.NH2)
+color draw red
+measure (82:L.OD1) (61:L.NH2)
+draw line2 (82:L.OD2) (61:L.NH1)
+color draw red
+measure (82:L.OD2) (61:L.NH1)

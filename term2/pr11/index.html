@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>#11 nikit00000s</title>
+
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/all.min.css"/>
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="../../css/old_style/template_v1.css"/>
+    <link rel="stylesheet" type="text/css" href="page_style.css">
+</head>
+<body>
+
+<div id="button-to-end" onclick="window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: 'smooth'})">
+    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+</div>
+
+<header class="container-fluid header">
+    <div class="row header-row">
+        <div class="col header-col">
+
+            <h1 class="header-caption">
+                    <span>
+                        <a class="header-link" href="http://kodomo.cmm.msu.su/wiki/2018/2/pr11">
+                            <i class="fa fa-bookmark" aria-hidden="true"></i>
+                            Практикум #11.
+                        </a>
+                        <span class="header-name">
+                            Алгоритмы выравнивания
+                        </span>
+                    </span>
+            </h1>
+            <h6 class="h6 text-md-center header-date">23 апреля 2019 г.</h6>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <div class="container-fluid prac_content">
+        <div class="row justify-content-center">
+            <div class="basic_task col col-12 col-lg-8">
+                <h2 class="prac_title text-center">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i> Практикум #11. Алгоритмы выравнивания,
+                    множественные выравнивания.
+                </h2>
+
+                <p class="prac_intro">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> Целью данного практикума является практика в
+                    выполнении выравниваний: глобального по алгоритму
+                    <a class="fa fa-wikipedia-w" aria-hidden="true"
+                       href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%9D%D0%B8%D0%B4%D0%BB%D0%BC%D0%B0%D0%BD%D0%B0_%E2%80%94_%D0%92%D1%83%D0%BD%D1%88%D0%B0">
+                        Нидельмана-Вунша</a>
+                    и локального по алгоритму
+                    <a class="fa fa-wikipedia-w" aria-hidden="true"
+                       href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%A1%D0%BC%D0%B8%D1%82%D0%B0_%E2%80%94_%D0%92%D0%B0%D1%82%D0%B5%D1%80%D0%BC%D0%B0%D0%BD%D0%B0">
+                        Смита-Вотермана</a>.
+                    <br/>
+                    Для выполнения работы было использовано программное обеспечение с открытым исходным кодом Emboss, а
+                    именно:
+                </p>
+                <ul class="short">
+                    <li>
+                        <h5>Комманда <i class="fa fa-terminal" aria-hidden="true"></i> needle(игла)</h5> &ndash;
+                        глобальное выравнивание;
+                    </li>
+                    <li>
+                        <h5>Комманда <i class="fa fa-terminal" aria-hidden="true"></i> water(вода)</h5> &ndash;
+                        локальное выравнивание.
+                    </li>
+                </ul>
+                <p>
+                    Также была использована <b> комманда <i class="fa fa-terminal" aria-hidden="true"></i> muscle </b>
+                    &ndash;
+                    множественное выравнивание.
+                </p>
+
+            </div>
+            <section class="basic_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-circle" aria-hidden="true"></i> Задание 1. Сравнение выравнивания
+                    гомологичных белков и негомологичных белков</h3>
+                <div class="task_intro">
+                    <h5><i class="fa fa-book" aria-hidden="true"></i> Что и как было сделано?</h5>
+                    <p>Белки искал на сайте Uniprot по запросу: <br/>
+                        <kbd class="search-query">(organism:"Escherichia coli (strain K12) [83333]" <br/> OR
+                            organism:"Bacillus subtilis (strain 168) [224308]") <br/> AND reviewed:yes <i
+                                    class="fa fa-tags"
+                                    aria-hidden="true"></i></kbd>
+                        <br/>
+                    <p>Результат поиска отсортировал по ID. Гомологичность белков отслеживал по мнемонике функций,
+                        отраженной в идентификаторах последовательностей. Дополнительно, кроме комманд needle и water,
+                        пользовался
+                        коммандой infoalign для получения длин последовательностей и для записей выравниваний в
+                        fasta-формате. Далее просматривал выравнивания в программе Jalview.
+
+                        Результат &ndash; в таблице <a href="prac/pr11_term2.xlsx" download=""><i
+                                class="fa fa-download" aria-hidden="true"></i> pr11_term2.xlsx</a>.
+                </div>
+
+                <div class="task_info">
+                    <h4><i class="fa fa-info-circle" aria-hidden="true"></i> Выравнивание гомологичных
+                        последовательностей</h4>
+                    <p>Для выравниваний данного типа я взял следующие белки:
+                    <ol class="height-scroll">
+                        <li>
+                            <h5>6PGL_BACSU & 6PGL_ECOLI</h5>
+                            <span class="li-description">6-phosphogluconolactonase</span>
+                            349; 331 а. о.
+                        </li>
+
+                        <li>
+                            <h5>AGAL_BACSU & AGAL_ECOLI</h5>
+                            <span class="li-description">Alpha-galactosidase</span>
+                            432; 451 а. о.
+                        </li>
+
+                        <li>
+                            <h5>APT_BACSU & APT_ECOLI</h5>
+                            <span class="li-description">Adenine phosphoribosyltransferase</span>
+                            170; 183 а. о.
+                        </li>
+
+                        <li>
+                            <h5>CHEA_BACSU & CHEA_ECOLI</h5>
+                            <span class="li-description">Chemotaxis protein CheAe</span>
+                            672; 654 а. о.
+                        </li>
+
+                        <li>
+                            <h5>CSPC_BACSU & CSPC_ECOLI</h5>
+                            <span class="li-description"> Cold shock protein CspC; Cold shock-like protein CspC</span>
+                            66; 69 а. о.
+                        </li>
+                    </ol>
+                    <span class="tip"><i class="fa fa-question" aria-hidden="true"></i> В списке последовательно отображены идентификаторы первого и второго белка, затем имена белков.
+                        Под идентификаторами белков последовательно отображена длина каждого белка из пары, в аминокислотных остатках. </span>
+                    <p> Полные результаты глобального выравнивания в таблице 1, локального - в таблице 2.
+                        Папка с глобальными выравниваниями: <a href="prac/first_homologus"><i
+                                class="fa fa-external-link-square" aria-hidden="true"></i> first_homologus</a>.
+                        Папка с локальными выравниваниями: <a href="prac/second_homologus"><i
+                                class="fa fa-external-link-square" aria-hidden="true"></i> second_homologus</a>.
+
+                    <h4><i class="fa fa-info-circle" aria-hidden="true"></i> Выравнивание негомологичных
+                        последовательностей</h4>
+                    <p>Для выравниваний данного типа я взял следующие белки:
+                    <ol class="height-scroll" id="ul1">
+                        <li>
+                            <h5>RF1_BACSU & DEGS_ECOLI</h5>
+                            <span class="li-description"> Peptide chain release factor 1;  Serine endoprotease DegS</span>
+                            356; 355 а. о.
+                        </li>
+
+                        <li>
+                            <h5>COX2_BACSU & ALR2_ECOLI</h5>
+                            <span class="li-description"> Cytochrome c oxidase subunit 2;  Alanine racemase, catabolic</span>
+                            356; 357 а. о.
+                        </li>
+
+                        <li>
+                            <h5>COTI_BACSU & PLSX_ECOLI</h5>
+                            <span class="li-description"> Spore coat protein I;  Phosphate acyltransferase</span>
+                            357; 356 а. о.
+                        </li>
+
+                        <li>
+                            <h5>FLHB_BACSU & LACI_ECOLI</h5>
+                            <span class="li-description"> Flagellar biosynthetic protein FlhB;  Lactose operon repressor</span>
+                            360; 360 а. о.
+                        </li>
+
+                        <li>
+                            <h5>DHLE_BACSU & YPDF_ECOLI</h5>
+                            <span class="li-description"> Leucine dehydrogenase;  Aminopeptidase YpdF</span>
+                            364; 361 а. о.
+                        </li>
+
+                        <li>
+                            <h5>SKFA_BACSU & RMF_ECOLI</h5>
+                            <span class="li-description"> Sporulation killing factor, SKF;  Ribosome modulation factor, RMF</span>
+                            55; 55 а. о.
+                        </li>
+
+                        <li>
+                            <h5>DEGR_BACSU & RALR_ECOLI</h5>
+                            <span class="li-description"> Regulatory protein DegR;  Endodeoxyribonuclease toxin RalR</span>
+                            60; 64 а. о.
+                        </li>
+
+                        <li>
+                            <h5>COPZ_BACSU & CCMD_ECOLI</h5>
+                            <span class="li-description"> Copper chaperone CopZ;  Heme exporter protein D</span>
+                            69; 69 а. о.
+                        </li>
+
+                        <li>
+                            <h5>CSRA_BACSU & PSPB_ECOLI</h5>
+                            <span class="li-description"> Translational regulator CsrA;  Phage shock protein B</span>
+                            74; 74 а. о.
+                        </li>
+
+                        <li>
+                            <h5>COTD_BACSU & FEOA_ECOLI</h5>
+                            <span class="li-description"> Spore coat protein D,  Fe(2+) transport protein A</span>
+                            75; 75 а. о.
+                        </li>
+
+
+                        <li class="button" id="b-ul1"
+                            onclick="ul = document.getElementById('ul1'); ul.scrollTo({top: ul.scrollTop + ul.offsetHeight, left: 0, behavior: 'smooth'});">
+                            <i class="fa fa-arrow-down"></i>
+                        </li>
+                    </ol>
+                    <span class="tip"><i class="fa fa-question" aria-hidden="true"></i> В списке последовательно отображены идентификаторы первого и второго белка, затем имена белков.
+                        Под идентификаторами белков последовательно отображена длина каждого белка из пары, в аминокислотных остатках. </span>
+                    <p> Полные результаты глобального выравнивания в таблице 3, локального - в таблице 4.
+                        Папка с глобальными выравниваниями: <a href="prac/first_nonhomologus"><i
+                                class="fa fa-external-link-square" aria-hidden="true"></i> first_nonhomologus</a>.
+                        Папка с локальными выравниваниями: <a href="prac/second_nonhomologus"><i
+                                class="fa fa-external-link-square" aria-hidden="true"></i> second_nonhomologus</a>.
+
+                </div>
+
+                <div>
+                    <h5><i class="fa fa-plus" aria-hidden="true"></i> Дополнительные материалы</h5>
+
+                    <div class="tip"><i class="fa fa-question" aria-hidden="true"></i>
+                        Ниже представлены результаты задания 1 в виде таблиц. Строки - парные выравнивания, столбцы -
+                        характеристики выравниваний. Обозначения:
+                        <ul class="short">
+                            <li>
+                                Protein Name(-s) - название белков на английском (для гомологичных белков общее, для
+                                негомологичных - названия двух белков через запятую);
+                            </li>
+                            <li>
+                                Program - использованная программа для
+                                выравнивания;
+                            </li>
+                            <li>
+                                ID 1 - идентификатор первого белка;
+                            </li>
+                            <li>
+                                ID 2 - идентификатор второго белка;
+                            </li>
+                            <li>
+                                Score - очки выравнивания двух белков;
+                            </li>
+                            <li>
+                                % Identity - соответствие двух белков, в
+                                процентах;
+                            </li>
+                            <li>
+                                % Similarity - схожесть двух белков, в процентах;
+                            </li>
+                            <li>
+                                Gap symbols (-) -
+                                количество символов пропуска в выравнивании;
+                            </li>
+                            <li>
+                                Indels - количество блоков последовательных
+                                (неразрывных) пропусков;
+                            </li>
+                            <li>
+                                % Coverage 1 - покрытие выравниванием первого белка (для
+                                глобального всегда 100%);
+                            </li>
+                            <li>
+                                % Coverage 2 - покрытие выравниванием второго белка (для
+                                глобального всегда 100%).
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="table_wrap">
+                        <table class="table table-borderless">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Protein Name(-s)</th>
+                                <th>Program</th>
+                                <th>ID 1</th>
+                                <th>ID 2</th>
+                                <th>Score</th>
+                                <th>% Identity</th>
+                                <th>% Similarity</th>
+                                <th>Gap symbols (-)</th>
+                                <th>Indels</th>
+                                <th>% Coverage 1</th>
+                                <th>% Coverage 2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>0</th>
+                                <td>Enolase</td>
+                                <td>needle</td>
+                                <td>ENO_ECOLI</td>
+                                <td>ENO_BACSU</td>
+                                <td>1351.0</td>
+                                <td>62.1</td>
+                                <td>74.8</td>
+                                <td>20</td>
+                                <td>5</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <td>6-phosphogluconolactonase</td>
+                                <td>needle</td>
+                                <td>6PGL_BACSU</td>
+                                <td>6PGL_ECOLI</td>
+                                <td>304.5</td>
+                                <td>25.3</td>
+                                <td>42.0</td>
+                                <td>62</td>
+                                <td>6</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Alpha-galactosidase</td>
+                                <td>needle</td>
+                                <td>AGAL_BACSU</td>
+                                <td>AGAL_ECOLI</td>
+                                <td>1066.0</td>
+                                <td>48.6</td>
+                                <td>63.9</td>
+                                <td>19</td>
+                                <td>6</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>Adenine phosphoribosyltransferase</td>
+                                <td>needle</td>
+                                <td>APT_BACSU</td>
+                                <td>APT_ECOLI</td>
+                                <td>441.5</td>
+                                <td>50.3</td>
+                                <td>61.2</td>
+                                <td>13</td>
+                                <td>3</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>Chemotaxis protein CheAe</td>
+                                <td>needle</td>
+                                <td>CHEA_BACSU</td>
+                                <td>CHEA_ECOLI</td>
+                                <td>1042.5</td>
+                                <td>33.9</td>
+                                <td>56.7</td>
+                                <td>68</td>
+                                <td>11</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>Cold shock protein CspC; Cold shock-like protein</td>
+                                <td>needle</td>
+                                <td>CSPC_BACSU</td>
+                                <td>CSPC_ECOLI</td>
+                                <td>186.0</td>
+                                <td>53.6</td>
+                                <td>65.2</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="caption">
+                        <h5>
+                            <i class="fa fa-table" aria-hidden="true"></i> Таблица 1.
+                        </h5>
+                        Глобальное выравнивание гомологичных последовательностей
+                    </div>
+
+
+                    <div class="table_wrap">
+                        <table class="table table-borderless">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Protein Name(-s)</th>
+                                <th>Program</th>
+                                <th>ID 1</th>
+                                <th>ID 2</th>
+                                <th>Score</th>
+                                <th>% Identity</th>
+                                <th>% Similarity</th>
+                                <th>Gap symbols (-)</th>
+                                <th>Indels</th>
+                                <th>% Coverage 1</th>
+                                <th>% Coverage 2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>0</th>
+                                <td>Enolase</td>
+                                <td>water</td>
+                                <td>ENO_ECOLI</td>
+                                <td>ENO_BACSU</td>
+                                <td>1359.0</td>
+                                <td>64.1</td>
+                                <td>77.2</td>
+                                <td>7</td>
+                                <td>3</td>
+                                <td>98.1</td>
+                                <td>97.9</td>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <td>6-phosphogluconolactonase</td>
+                                <td>water</td>
+                                <td>6PGL_BACSU</td>
+                                <td>6PGL_ECOLI</td>
+                                <td>317.0</td>
+                                <td>30.6</td>
+                                <td>48.7</td>
+                                <td>16</td>
+                                <td>5</td>
+                                <td>75.1</td>
+                                <td>76.1</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Alpha-galactosidase</td>
+                                <td>water</td>
+                                <td>AGAL_BACSU</td>
+                                <td>AGAL_ECOLI</td>
+                                <td>1070.0</td>
+                                <td>49.7</td>
+                                <td>65.1</td>
+                                <td>14</td>
+                                <td>4</td>
+                                <td>98.8</td>
+                                <td>97.8</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>Adenine phosphoribosyltransferase</td>
+                                <td>water</td>
+                                <td>APT_BACSU</td>
+                                <td>APT_ECOLI</td>
+                                <td>450.0</td>
+                                <td>56.2</td>
+                                <td>66.7</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>95.3</td>
+                                <td>88.5</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>Chemotaxis protein CheAe</td>
+                                <td>water</td>
+                                <td>CHEA_BACSU</td>
+                                <td>CHEA_ECOLI</td>
+                                <td>1046.5</td>
+                                <td>34.7</td>
+                                <td>57.9</td>
+                                <td>54</td>
+                                <td>11</td>
+                                <td>99.7</td>
+                                <td>97.6</td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>Cold shock protein CspC; Cold shock-like protein</td>
+                                <td>water</td>
+                                <td>CSPC_BACSU</td>
+                                <td>CSPC_ECOLI</td>
+                                <td>193.0</td>
+                                <td>59.7</td>
+                                <td>72.6</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>92.4</td>
+                                <td>89.9</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="caption">
+                        <h5>
+                            <i class="fa fa-table" aria-hidden="true"></i> Таблица 2.
+                        </h5>
+                        Локальное выравнивание гомологичных последовательностей
+                    </div>
+
+
+                    <div class="table_wrap">
+                        <table class="table table-borderless">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Protein Name(-s)</th>
+                                <th>Program</th>
+                                <th>ID 1</th>
+                                <th>ID 2</th>
+                                <th>Score</th>
+                                <th>% Identity</th>
+                                <th>% Similarity</th>
+                                <th>Gap symbols (-)</th>
+                                <th>Indels</th>
+                                <th>% Coverage 1</th>
+                                <th>% Coverage 2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>0</th>
+                                <td>General stress protein 13, Aldehyde-alcohol dehydrogenase</td>
+                                <td>needle</td>
+                                <td>GS13_BACSU</td>
+                                <td>ADHE_ECOLI</td>
+                                <td>28.0</td>
+                                <td>4.2</td>
+                                <td>6.7</td>
+                                <td>733</td>
+                                <td>25</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <td>Peptide chain release factor 1; Serine endoprotease DegS</td>
+                                <td>needle</td>
+                                <td>RF1_BACSU</td>
+                                <td>DEGS_ECOLI</td>
+                                <td>14.5</td>
+                                <td>4.9</td>
+                                <td>7.7</td>
+                                <td>505</td>
+                                <td>10</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Cytochrome c oxidase subunit 2; Alanine racemase, catabolic</td>
+                                <td>needle</td>
+                                <td>COX2_BACSU</td>
+                                <td>ALR2_ECOLI</td>
+                                <td>15.0</td>
+                                <td>2.4</td>
+                                <td>3.1</td>
+                                <td>624</td>
+                                <td>6</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>Spore coat protein I; Phosphate acyltransferase</td>
+                                <td>needle</td>
+                                <td>COTI_BACSU</td>
+                                <td>PLSX_ECOLI</td>
+                                <td>27.0</td>
+                                <td>7.1</td>
+                                <td>13.5</td>
+                                <td>411</td>
+                                <td>13</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>Flagellar biosynthetic protein FlhB; Lactose operon repressor</td>
+                                <td>needle</td>
+                                <td>FLHB_BACSU</td>
+                                <td>LACI_ECOLI</td>
+                                <td>23.5</td>
+                                <td>1.5</td>
+                                <td>2.6</td>
+                                <td>642</td>
+                                <td>3</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>Leucine dehydrogenase; Aminopeptidase YpdF</td>
+                                <td>needle</td>
+                                <td>DHLE_BACSU</td>
+                                <td>YPDF_ECOLI</td>
+                                <td>22.0</td>
+                                <td>5.8</td>
+                                <td>9.7</td>
+                                <td>517</td>
+                                <td>13</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td>Sporulation killing factor, SKF; Ribosome modulation factor, RMF</td>
+                                <td>needle</td>
+                                <td>SKFA_BACSU</td>
+                                <td>RMF_ECOLI</td>
+                                <td>12.0</td>
+                                <td>5.4</td>
+                                <td>13.0</td>
+                                <td>74</td>
+                                <td>3</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <td>Regulatory protein DegR; Endodeoxyribonuclease toxin RalR</td>
+                                <td>needle</td>
+                                <td>DEGR_BACSU</td>
+                                <td>RALR_ECOLI</td>
+                                <td>5.0</td>
+                                <td>0.8</td>
+                                <td>1.7</td>
+                                <td>116</td>
+                                <td>2</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <td>Copper chaperone CopZ; Heme exporter protein D</td>
+                                <td>needle</td>
+                                <td>COPZ_BACSU</td>
+                                <td>CCMD_ECOLI</td>
+                                <td>8.0</td>
+                                <td>3.7</td>
+                                <td>12.8</td>
+                                <td>80</td>
+                                <td>3</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>9</th>
+                                <td>Translational regulator CsrA; Phage shock protein B</td>
+                                <td>needle</td>
+                                <td>CSRA_BACSU</td>
+                                <td>PSPB_ECOLI</td>
+                                <td>12.5</td>
+                                <td>16.8</td>
+                                <td>27.4</td>
+                                <td>42</td>
+                                <td>6</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td>Spore coat protein D, Fe(2+) transport protein A</td>
+                                <td>needle</td>
+                                <td>COTD_BACSU</td>
+                                <td>FEOA_ECOLI</td>
+                                <td>10.5</td>
+                                <td>8.2</td>
+                                <td>10.7</td>
+                                <td>94</td>
+                                <td>5</td>
+                                <td>100.0</td>
+                                <td>100.0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="caption">
+                        <h5>
+                            <i class="fa fa-table" aria-hidden="true"></i> Таблица 3.
+                        </h5>
+                        Глобальное выравнивание негомологичных последовательностей
+                    </div>
+
+
+                    <div class="table_wrap">
+                        <table class="table table-borderless">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Protein Name(-s)</th>
+                                <th>Program</th>
+                                <th>ID 1</th>
+                                <th>ID 2</th>
+                                <th>Score</th>
+                                <th>% Identity</th>
+                                <th>% Similarity</th>
+                                <th>Gap symbols (-)</th>
+                                <th>Indels</th>
+                                <th>% Coverage 1</th>
+                                <th>% Coverage 2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>0</th>
+                                <td>General stress protein 13, Aldehyde-alcohol dehydrogenase</td>
+                                <td>water</td>
+                                <td>GS13_BACSU</td>
+                                <td>ADHE_ECOLI</td>
+                                <td>41.5</td>
+                                <td>22.6</td>
+                                <td>38.7</td>
+                                <td>43</td>
+                                <td>7</td>
+                                <td>77.7</td>
+                                <td>14.6</td>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <td>Peptide chain release factor 1; Serine endoprotease DegS</td>
+                                <td>water</td>
+                                <td>RF1_BACSU</td>
+                                <td>DEGS_ECOLI</td>
+                                <td>34.0</td>
+                                <td>21.7</td>
+                                <td>60.9</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>6.5</td>
+                                <td>6.5</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Cytochrome c oxidase subunit 2; Alanine racemase, catabolic</td>
+                                <td>water</td>
+                                <td>COX2_BACSU</td>
+                                <td>ALR2_ECOLI</td>
+                                <td>34.5</td>
+                                <td>23.3</td>
+                                <td>40.0</td>
+                                <td>15</td>
+                                <td>4</td>
+                                <td>21,6</td>
+                                <td>24,2</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>Spore coat protein I; Phosphate acyltransferase</td>
+                                <td>water</td>
+                                <td>COTI_BACSU</td>
+                                <td>PLSX_ECOLI</td>
+                                <td>42.0</td>
+                                <td>24.2</td>
+                                <td>44.4</td>
+                                <td>9</td>
+                                <td>3</td>
+                                <td>27,5</td>
+                                <td>25,5</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>Flagellar biosynthetic protein FlhB; Lactose operon repressor</td>
+                                <td>water</td>
+                                <td>FLHB_BACSU</td>
+                                <td>LACI_ECOLI</td>
+                                <td>40.5</td>
+                                <td>20.0</td>
+                                <td>39.2</td>
+                                <td>27</td>
+                                <td>6</td>
+                                <td>26.4</td>
+                                <td>32.8</td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>Leucine dehydrogenase; Aminopeptidase YpdF</td>
+                                <td>water</td>
+                                <td>DHLE_BACSU</td>
+                                <td>YPDF_ECOLI</td>
+                                <td>36.0</td>
+                                <td>15.1</td>
+                                <td>39.7</td>
+                                <td>17</td>
+                                <td>5</td>
+                                <td>39.6</td>
+                                <td>36.3</td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td>Sporulation killing factor, SKF; Ribosome modulation factor, RMF</td>
+                                <td>water</td>
+                                <td>SKFA_BACSU</td>
+                                <td>RMF_ECOLI</td>
+                                <td>20.0</td>
+                                <td>42.9</td>
+                                <td>85.7</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>12.7</td>
+                                <td>12.7</td>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <td>Regulatory protein DegR; Endodeoxyribonuclease toxin RalR</td>
+                                <td>water</td>
+                                <td>DEGR_BACSU</td>
+                                <td>RALR_ECOLI</td>
+                                <td>16.0</td>
+                                <td>28.6</td>
+                                <td>85.7</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>11.7</td>
+                                <td>10.9</td>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <td>Copper chaperone CopZ; Heme exporter protein D</td>
+                                <td>water</td>
+                                <td>COPZ_BACSU</td>
+                                <td>CCMD_ECOLI</td>
+                                <td>14.0</td>
+                                <td>21.1</td>
+                                <td>57.9</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>27.5</td>
+                                <td>26</td>
+                            </tr>
+                            <tr>
+                                <th>9</th>
+                                <td>Translational regulator CsrA; Phage shock protein B</td>
+                                <td>water</td>
+                                <td>CSRA_BACSU</td>
+                                <td>PSPB_ECOLI</td>
+                                <td>27.5</td>
+                                <td>34.6</td>
+                                <td>42.3</td>
+                                <td>6</td>
+                                <td>1</td>
+                                <td>27.0</td>
+                                <td>35.1</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td>Spore coat protein D, Fe(2+) transport protein A</td>
+                                <td>water</td>
+                                <td>COTD_BACSU</td>
+                                <td>FEOA_ECOLI</td>
+                                <td>24.0</td>
+                                <td>44.4</td>
+                                <td>66.7</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>12.0</td>
+                                <td>12.0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="caption">
+                        <h5>
+                            <i class="fa fa-table" aria-hidden="true"></i> Таблица 4.
+                        </h5>
+                        Локальное выравнивание негомологичных последовательностей
+                    </div>
+
+
+                </div>
+
+                <div class="task_outro">
+
+                    <h4><i class="fa fa-comment"></i> Выводы</h4>
+                    <p> В случае глобального выравнивания белков мы можем много чего сказать. Во-первых, в среднем у
+                        гомологичных белков достаточно большой процент схожести (Similarity) > ~ 70% и соответствия
+                        (Identity) > ~ 50%. Во-вторых, большое количество очков (Score) - в среднем, на 2 порядка
+                        больше, чем у негомологичных. В третьих, малое количество инделей ( ~ 3), в то время, как у
+                        негомологичных больше ( ~ 6). Про гэпы довольно сложно судить, так как один шаг эволюции линейно
+                        не зависит от их количества, здесь имеется лишь косвенная связь. <br/>
+                    <p> Про локальные выравнивания мы можем сказать, что все вышесказанное для них тоже присуще. Кроме
+                        того, покрытие (Coverage) тоже довольно важно. Чем оно больше, тем более последовательность как
+                        целое гомологично другому белку, тем меньше произошло больших инсерций или делеций. <br/>
+                    <p> Также можно заметить, что в глобальных и особенно в локальных выравниваниях короткие белки (№
+                        6-10 в таблицах 3 и 4) получают довольно большой процент сходства.
+                </div>
+
+            </section>
+
+            <section class="basic_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-circle" aria-hidden="true"></i> Задание 2.
+                    Отличия в парных выравниваниях последовательностей одних и тех же белков, построенных разными
+                    программами</h3>
+
+                <div class="task_intro">
+                    <h5><i class="fa fa-book" aria-hidden="true"></i> Что было сделано?</h5>
+                    <p> Сначала нашли интересующую нас мнемонику белка. Поиск был осуществлен коммандой в
+                        терминале:<br/>
+                        <span class="bash"><span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>
+                            infoseq 'sw:*_human' -only -name -length -out human.txt <span
+                                    class="bash-cursor"></span></span>
+                    <p>Затем скачали все последовательности из Swissprot с одной мнемоникой. Произвели выравнивание
+                        программой muscle.
+                        Импортировали в одно окно Jalview это выравнивание. Затем произвели раскраску колонок в двух
+                        режимах: Clustal (рис. 1) и Blossum62 (рис. 2). Раскрашены только те колонки, в которых процент
+                        соответствия равен или превышает 80%.
+                </div>
+
+                <div class="task_info">
+                    <h4>
+                        <i class="fa fa-info-circle" aria-hidden="true"></i> Множественное выравнивание.
+                    </h4>
+                    <p> В данном задании была выбрана мнемоника <i>RF1</i>. По ней в банке последовательностей Swissprot
+                        были найдены белки <i>Peptide chain release factor 1</i> из разных организмов: </p>
+                    <ol class="height-scroll">
+                        <li>
+                            <h5>
+                                RF1_DEHMC
+                            </h5>
+                            <span class="li-description"><i class="species"> <i class="fa fa-bug"
+                                                                                aria-hidden="true"></i>
+                                Dehalococcoides mccartyi</i> (strain CBDB1)
+                            </span>
+                            Bacteria <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Chloroflexi <i
+                                class="fa fa-chevron-circle-right" aria-hidden="true"></i> Dehalococcoidia <i
+                                class="fa fa-chevron-circle-right" aria-hidden="true"></i> Dehalococcoidales
+                        </li>
+                        <li>
+                            <h5>
+                                RF1_DEHM1
+                            </h5>
+                            <span class="li-description"><i class="species"> <i class="fa fa-bug"
+                                                                                aria-hidden="true"></i>
+                                Dehalococcoides mccartyi </i> (strain ATCC BAA-2266 / KCTC 15142 / 195) (Dehalococcoides ethenogenes (strain 195))
+                            </span>
+                            Bacteria <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Chloroflexi <i
+                                class="fa fa-chevron-circle-right" aria-hidden="true"></i> Dehalococcoidia <i
+                                class="fa fa-chevron-circle-right" aria-hidden="true"></i> Dehalococcoidales
+                        </li>
+                        <li>
+                            <h5>
+                                RF1_PARL1
+                            </h5>
+                            <span class="li-description"><i class="species"> <i class="fa fa-bug"
+                                                                                aria-hidden="true"></i>
+                                Parvibaculum lavamentivorans </i> (strain DS-1 / DSM 13023 / NCIMB 13966)
+                            </span>
+                            Bacteria <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Proteobacteria <i
+                                class="fa fa-chevron-circle-right" aria-hidden="true"></i> Alphaproteobacteria <i
+                                class="fa fa-chevron-circle-right" aria-hidden="true"></i> Rhizobiales
+                        </li>
+                        <li>
+                            <h5>
+                                RF1_RICAH
+                            </h5>
+                            <span class="li-description"><i class="species"> <i class="fa fa-bug"
+                                                                                aria-hidden="true"></i>
+                                Rickettsia akari </i> (strain Hartford)
+                            </span>
+                            Bacteria <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Proteobacteria <i
+                                class="fa fa-chevron-circle-right" aria-hidden="true"></i> Alphaproteobacteria <i
+                                class="fa fa-chevron-circle-right" aria-hidden="true"></i> Rickettsiales
+                        </li>
+                        <li>
+                            <h5>
+                                RF1_RICTY
+                            </h5>
+                            <span class="li-description"><i class="species"> <i class="fa fa-bug"
+                                                                                aria-hidden="true"></i>
+                                 Rickettsia typhi </i> (strain ATCC VR-144 / Wilmington)
+                            </span>
+                            Bacteria <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Proteobacteria <i
+                                class="fa fa-chevron-circle-right" aria-hidden="true"></i> Alphaproteobacteria <i
+                                class="fa fa-chevron-circle-right" aria-hidden="true"></i> Rickettsiales
+                        </li>
+                    </ol>
+                    <span class="tip"> <i class="fa fa-question" aria-hidden="true"></i>
+                        Выше был представлен список белков для множественного выравнивания. Сначала идет идентификатор последовательности, затем из какого организма он был получен и таксономия этого организма.
+                    </span>
+
+
+                    <h5><i class="fa fa-plus" aria-hidden="true"></i> Дополнительные материалы</h5>
+                    <figure class="image">
+                        <img src="img/muscle1.png" alt="alignment1">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-image" aria-hidden="true"></i> Рисунок 1.</h5>
+                        Множественное выравнивание из программы muscle, просмотр в Jalview, раскраска Clustal
+                    </div>
+
+                    <figure class="image">
+                        <img src="img/muscle2.png" alt="alignment2">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-image" aria-hidden="true"></i> Рисунок 2.</h5>
+                        Множественное выравнивание из программы muscle, просмотр в Jalview, раскраска Blossum62
+
+                    </div>
+                </div>
+                <div class="task_info">
+                    <h4>
+                        <i class="fa fa-info-circle" aria-hidden="true"></i> Сравнение выравниваний.
+                    </h4>
+                    <p>
+                        В данной части задания были сравнены два выравнивания: множественное пяти выше представленных
+                        белков и парное двух самых далеких из них.
+                        Для парного выравнивания были выбраны два следующих белка: <i>RF1_PARL1</i> и <i>RF1_RICTY</i>.
+                        Они были выбраны из-за того, что в большинстве случаев последовательности именно этих белков
+                        вызывали в выравнивании неполную консервативность данной позиции (функциональную), хотя они и
+                        входят в одну группу <i>Alphaproteobacteria</i> и в выравнивании есть последовательности более
+                        далеких организмов, чем последовательности этих двух. Выравнивания были получены коммандами
+                        needle&nbsp;(глобальное), water&nbsp;(локальное) и muscle&nbsp;(множественное, в нашем случае
+                        выравнивание только двух последовательностей). Сравнение выравниваний было получено командами:
+                    </p>
+                    <span class="bash">
+                        <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>
+                            muscle -profile -in1 global.fasta -in2 local.fasta -out n-w.fasta <span
+                            class="bash-cursor"></span>
+                        <br/>
+                    <span class="bash-user">user@ubuntu</span>:<span class="bash-path">~$</span>
+                            muscle -profile -in1 global.fasta -in2 n-w.fasta -out comparison.fasta <span
+                            class="bash-cursor"></span>
+                    </span>
+
+                    <figure class="image">
+                        <img src="img/comparison.png" alt="compare">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-image" aria-hidden="true"></i> Рисунок 3.</h5>
+                        Сравнение выравниваний программ muscle&nbsp;(первая и вторая последовательности),
+                        water&nbsp;(третья и четвертая последовательности), needle&nbsp;(пятая и шестая
+                        последовательности)
+
+                    </div>
+                    <p>
+                        Выравнивания&nbsp;(рисунок 3) во многом похожи между собой. Локальное выравнивание&nbsp;(третья
+                        и четвертая последовательности на рисунке 3) имеет гэп в самом начале&nbsp;(M-[IS]-[PF]-[ES]
+                        отсутствует) и в самом конце&nbsp;(G-D-E-A у последовательности RF1_PARL1). Других различий (в
+                        инделях) у выравниваний практически нет, кроме инделя 68-70 в множественном выравнивании&nbsp;(первая
+                        и вторая последовательности на рисунке 3) у последовательности RF1_PARL1 и инделей 73-74 в
+                        глобальном (пятая и шестая последовательности на рисунке 3) и локальном.
+                    </p>
+                    <p>
+                        В остальном, выравнивания полностью совпадают. Также можно заметить, что needle ведет себя в
+                        моем случае более похоже на muscle, чем water. То есть, поведение needle&nbsp;&mdash; нечто
+                        среднее в моем
+                        случае между поведением water и muscle.
+                    </p>
+                    <p>
+                        В общем, можно сказать, что:
+                    </p>
+                    <ul class="short">
+                        <li>
+                            Алгоритм множественного выравнивания сдвигает аргинин R с 68 позиции (у локального и
+                            глобального) на 71 позицию из-за трех последовательных гэпов, стоящих перед этим аргинином
+                            (в множественном выравнивании с гомологами алгоритм посчитал, что у последовательности
+                            RF1_PARL1 произошла делеция с 68 позиции по 70 позицию);
+                        </li>
+                        <li>
+                            У последовательностей глобального и локального выравниваний происходит сдвиг аспарагиновой
+                            кислоты 70, метионина 71, аргинина 72 (D-M-A) на одну позицию вправо из-за гэпа 69 у
+                            последовательности RF_PARL1. Также, после позиции 73 алгоритмы глобального и локального
+                            выравниваний поставили два гэпа (74 и 75 позиции). То есть, здесь мы можем сказать, что множественное
+                            выравнивание более успешно в плане выстраивания эволюционных событий, а локальное и глобальное выравнивания
+                            допускают большее количество ошибок;
+                        </li>
+                        <li>
+                            Алгоритм локального выравнивания отсекает первые 4 аминокислоты у обеих последовательностей&nbsp;(M-I-P-E
+                            у RF1_PARL1 и M-S-F-S у RF1_RICTY) и четыре последних аминокислоты&nbsp;(G-D-E-A) у
+                            последовательности RF1_PARL1. То есть, алгоритм посчитал, что начальные и концевые участки
+                            последовательностей не имеют сходства.
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <!-- #FIXME -->
+            <div id="sleep">
+
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- TERMS, FOOTER column -->
+
+            <div class="col col-6 terms">
+                <h1 class="text-uppercase">Семестры</h1>
+                <div class="terms1">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="../../term1/index.html">Первый</a>
+                        </li>
+                        <li>
+                            <a href="../../term2/index.html">Второй</a>
+                        </li>
+                        <li>
+                            <a href="../../term3/index.html">Третий</a>
+                        </li>
+                        <li>
+                            <a href="../../term4/index.html">Четвёртый</a>
+                        </li>
+                        <li>
+                            <a href="../../term5/index.html">Пятый</a>
+                        </li>
+                        <li>
+                            <a href="../../term6/index.html">Шестой</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="terms2">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="../../term7/index.html">Седьмой</a>
+                        </li>
+                        <li>
+                            <a href="../../term8/index.html">Восьмой</a>
+                        </li>
+                        <li>
+                            <a href="../../term9/index.html">Девятый</a>
+                        </li>
+                        <li>
+                            <a href="../../term10/index.html">Десятый</a>
+                        </li>
+                        <li>
+                            <a href="../../term11/index.html">Одиннадцатый</a>
+                        </li>
+                        <li>
+                            <a href="../../term12/index.html">Двенадцатый</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <hr class="clearfix w-100 d-md-none">
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col col-md-3 mx-auto">
+
+                <!-- Links -->
+                <h1 class="text-uppercase">МГУ</h1>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="http://www.fbb.msu.ru/" class="li">
+                            Сайт ФББ МГУ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.msu.ru/">МГУ</a>
+                    </li>
+                </ul>
+
+
+                <!--SOCIAL-->
+                <h1 class="text-uppercase">Связь</h1>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://vk.com/nikgr1">Вконтакте | <i class="fa fa-vk" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:nikit00000s@fbb.msu.ru">Почта kodomo | <i class="fa fa-envelope"
+                                                                                  aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:NikGR1@yandex.ru">Личная почта | <i class="fa fa-envelope"
+                                                                            aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col col-md-3 mx-auto">
+
+                <!-- STUFF -->
+                <h1 class="text-uppercase">Остальное на сайте</h1>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="../../index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="../../about_me.html">Обо мне</a>
+                    </li>
+                    <li>
+                        <a href="../../html/fun-useful-statements.html">Котелок</a>
+                    </li>
+                    <li>
+                        <a href="http://kodomo.cmm.msu.su/wiki/2018">KodomoFBB</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <hr class="clearfix w-100">
+    </div>
+    <!-- Copyright -->
+
+    <div class="footer-copyright">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+    </div>
+</footer>
+
+
+<script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../js/own/yearInit.js"></script>
+</body>
+</html>

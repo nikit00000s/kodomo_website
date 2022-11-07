@@ -1,0 +1,328 @@
+///////////////TITLE//////////////////
+
+#top() {
+  h: #48a4d4;
+  h-activated: #63b5d4;
+  primary: #057afc;
+  secondary: #0961B2;
+  black: #040404; //#000000;
+  red: #B2362F;
+  white: whitesmoke;
+}
+
+.big-header {
+  height: 90vh;
+  vertical-align: middle;
+  overflow: hidden;
+  background: #2980B9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.big-header-title {
+  z-index: 100000;
+}
+
+.big-header-title > span {
+  background: #top[h];
+  color: #top[black];
+}
+
+.big-header-link, .big-header-date a {
+  background: #top[h];
+  color: #top[black];
+  text-decoration: none;
+}
+
+.big-header-link:hover, .big-header-date a:hover {
+  color: #top[h-activated];
+  background: #top[black];
+}
+
+.bg-title-img {
+  filter: blur(3.5px);
+  position: absolute;
+  right: -10px;
+  top: -200px;
+}
+
+.bg-title-img > img {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.bg-logo-a {
+  position: absolute;
+  top: 4vh;
+  left: 5vw;
+  height: 14vw;
+  width: 14vw;
+}
+
+.bg-logo-a > img {
+  height: 14vw;
+}
+
+.big-header-date {
+  background: #top[h];
+  color: #top[white];
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: none;
+  transition: all 300ms ease-out;
+  padding: 0 0.2rem;
+}
+
+.big-header-date a {
+  display: inline-block;
+  transition: all 300ms ease-out;
+}
+
+main {
+  background: #top[white];
+}
+
+main i {
+  color: #top[red];
+}
+
+.big-header i {
+  color: #top[white];
+}
+
+/////////////////////FADGDH//////////////////////////
+
+.section {
+  padding-top: 5rem;
+}
+
+.section-h > span {
+  color: #top[secondary];
+}
+
+.section img {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/////////////////////LIGAND//////////////////////////
+
+.ligand-table tbody {
+  background: #top[white];
+  border-top: 0.2rem dotted #top[h-activated];
+  border-bottom: 0.2rem dotted #top[h-activated];
+}
+
+.description-table-ligand {
+  border-bottom: 0.15rem dotted #top[h-activated] !important;
+}
+
+.ligand-num > span {
+  color: #top[secondary];
+}
+
+.ligand-description {
+  margin-top: 5rem;
+}
+
+.ligand-img {
+  display: block;
+  width: fit-content !important;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+table caption {
+  text-align: center;
+  color: #top[black]
+}
+
+.ligand-table a {
+  color: #top[h];
+  text-decoration: dotted;
+}
+
+.ligand-table a:hover {
+  color: #top[h-activated];
+}
+
+
+/////////////////////JSMOL//////////////////////////
+
+.jsmol-container {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+}
+
+.jsmol-h {
+  margin-bottom: 2rem;
+}
+
+.jsmol-h > span {
+  color: #top[secondary];
+}
+
+#jmol1 {
+  margin: 0 auto;
+  height: 700px;
+  width: 700px;
+}
+
+#jmol2 {
+  margin: 0 auto;
+  height: 700px;
+  width: 700px;
+}
+
+.buttons {
+  font-family: monospace;
+}
+
+.buttons .btn {
+  margin: 0.5rem 0.2rem;
+}
+
+.buttons div {
+  padding: 0;
+}
+
+.buttons input {
+  display: inline-block;
+  background: transparent;
+  border-top: transparent !important;
+  border-left: transparent !important;
+  border-right: transparent !important;
+  border-bottom: none !important;
+  padding: 0.5rem 0.7rem;
+  height: 100% !important;
+  width: 100% !important;
+  font-weight: 400;
+  transition: all ease-in-out .3s;
+  font-size: 0.9rem;
+
+  color: #top[black];
+  background: #top[primary];
+}
+
+.buttons input:hover {
+  border-top: transparent !important;
+  border-left: transparent !important;
+  border-right: transparent !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+
+  background: #top[secondary];
+  color: #top[white]
+}
+
+.buttons .btn-primary {
+  background: transparent;
+  display: inline-block;
+  text-align: center;
+}
+
+.buttons .btn-primary:hover {
+  background: transparent;
+}
+
+
+/////////////////TABLE/////////////////////////
+
+.description-main-prot {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background: #4b6cb7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #182848, #4b6cb7); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.description-main-prot-h {
+  background: #top[primary];
+  color: #top[black];
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.description-main-prot-h2 {
+  background: #212529
+}
+
+.table-main-prot {
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+.table-main-prot caption {
+  background: #top[primary]
+}
+
+.table-main-prot caption i {
+  color: #top[white];
+}
+
+/////////////////EXTRA/////////////////////////
+
+.extra-content {
+  padding-top: 5rem;
+  background: black;
+}
+
+.extra-content i {
+  color: #top[primary];
+}
+
+.extra-content-h {
+  color: #top[white];
+}
+
+.carousel {
+  height: 90vh;
+  color: #top[white];
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.carousel-inner {
+  height: 90vh;
+}
+
+.carousel-item {
+  height: 90vh;
+  position: relative;
+}
+
+.carousel-item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  //margin-left: auto;
+  //margin-right: auto;
+}
+
+.carousel-caption {
+  color: #top[white];
+}
+
+.ls-footer {
+  color: #top[white];
+  background: #top[black];
+}
+
+.ls-footer a {
+  color: #top[white];
+}
+
+.out-button {
+  margin: 0 auto;
+  padding: 2rem 0;
+  background: #top[white] !important;
+  color: #top[secondary] !important;
+}
+
+.nucleus {
+  margin-top: 0;
+  margin-bottom: 3rem;
+}

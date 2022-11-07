@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>#3 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../../less/style/common_style.css">
+    <link rel="stylesheet" href="../../less/style/loading.css">
+    <link rel="stylesheet" href="page_style.css">
+</head>
+<body>
+
+<div id="button-to-end"
+     onclick="window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: window.scroll_behavior})"></div>
+<div id="breadcrumb">
+    <a href="../index.html">3 семестр</a><a href="index.html">3 практикум</a>
+</div>
+
+<header class="background-polka-dots">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col col-12 align-self-end">
+                <h1>
+                    <a class="header-link" href="http://kodomo.cmm.msu.su/wiki/2018/3/task3">
+                        Комплексы ДНК-белок
+                    </a>
+                </h1>
+            </div>
+            <div class="col col-12 align-self-baseline justify-content-end">
+                <h3>24 сентября 2019</h3>
+            </div>
+            <div class="button"
+                 onclick="window.scrollTo({left: 0, top: document.documentElement.clientHeight, behavior: window.scroll_behavior})"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container prac_content">
+        <div class="row basic_task">
+            <div class="col col-12 task_intro col-md-6">
+                <h1 class="prac_title">Предсказание вторичной структуры тРНК (ID 1O0B)</h1>
+                <p>Мы продолжаем изучение объекта предыдущего практикума &mdash; глутаминовой тРНК
+                    <a class="file-alt gradient" title="Перейти на сайт RCSB" href="http://www.rcsb.org/structure/1O0B">1O0B</a>.
+                    В этом задании мы намерены предсказать инвентированные повторы во вторичной структуре тРНК.
+                    Для этого мы воспользовались программой <span class="program">einverted</span> из
+                    пакета&nbsp;<a class="gradient package"
+                                   href="http://emboss.sourceforge.net/apps/cvs/emboss/apps/einverted.html"
+                                   title="Перейти на сайт EMBOSS">EMBOSS</a>
+                </p>
+            </div>
+            <div class="col col-12 col-md-6 mt-md-5">
+                <p>
+                    <span class="what">Что сделали?</span>
+                    Запустили программу <b>einverted</b> с измененными параметрами: <span class="highlight">Gap penalty &ndash; 4</span>,
+                    <span class="highlight">Minimum match score &ndash; 15</span>, так как тРНК, по&ndash;видимому,
+                    небольшая. Но и меньше
+                    параметры брать не стоит, так как гэпов будет много.
+                </p>
+                <p>В итоге, получили один инвертированный повтор:</p>
+                <p class="txt-file">SEQUENCE: Score 23: 9/9 (100%) matches, 1 gaps
+ 1 tggggtatcg 10
+   ||||||| ||
+71 accccat-gc 63</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12 col-md-6 mt-md-5">
+                <h2 class="task_title">Предсказание вторичной структуры тРНК по алгоритму Зукера</h2>
+                <p>
+                    Также предсказание вторичной структуры получили с помощью применения алгоритма Зукера,
+                    воспользовавшись
+                    командой <span class="program">RNAfold</span> из пакета <a class="package gradient"
+                                                                               href="https://www.tbi.univie.ac.at/RNA/"
+                                                                               title="Перейти на сайт TBG">Viena Rna
+                    Package</a>.
+                    Корректную структуру тРНК получили при первом&nbsp;же запуске&nbsp;(<a href="#picture1"
+                                                                                           title="Перейти к элементу"
+                                                                                           class="int-link">рисунок&nbsp;1</a>)
+                </p>
+            </div>
+            <div class="col col-12 col-md-6 mt-md-5">
+                <div class="wrap-img-lg">
+                    <img id="picture1" src="img/1O0B_B.svg" alt="secondary rRNA">
+                    <div class="img-cap">
+                        <span>Рисунок 1.</span> Предсказанная вторичная структура тРНК, ID 1O0B. Изображение получено с
+                        помощью RNAfold
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12 col-lg-4 mt-md-5">
+                <p>
+                    Дополнительно, была получена настоящая экспериментальная вторичная структура тРНК. Ее получили с
+                    сервера
+                    <a href="http://rnapdbee.cs.put.poznan.pl/" class="gradient ext-link"
+                       title="Перейти на сайт RNApdbee">RNApdbee</a>
+                    в виде изображения&nbsp;(<a href="#picture2" title="Перейти к элементу" class="int-link standart">рисунок
+                    2</a>).
+                    Затем всю полученную информацию сравнили и результат записали в <a href="#table1"
+                                                                                       title="Перейти к элементу"
+                                                                                       class="int-link standart">таблицу
+                    1</a>. Как оказалось, RNAfold и find_pair оказались довольно точными, а einverted дал плохой результат.</p>
+            </div>
+            <div class="col col-12 col-lg-8 mt-md-5">
+                <div class="wrap-img-xxl">
+                    <img id="picture2" src="img/1o0b_real.svg" alt="secondary rRNA">
+                    <div class="img-cap">
+                        <span>Рисунок 2.</span> Настоящая вторичная структура тРНК, ID 1O0B. Изображение получено с&nbsp;помощью&nbsp;RNApdbee
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col col-12 task_intro col-md-8">
+                <h2 class="prac_title">Поиск ДНК-белковых контактов в заданной структуре (ID 1P47)</h2>
+                <p>
+                    <span class="what">Что сделано?</span>
+                    Для выполнения данного задания была выбрана структура комплекса&nbsp;ДНК с&nbsp;белком Zif268&nbsp;(ID
+                    <a class="ext-link gradient" href="https://www.rcsb.org/structure/1P47"
+                       title="Перейти на сайт RCSB">1P47</a>).
+                </p>
+                <h4 class="sub_task_title">Упражнение 1</h4>
+                <p>
+                    Следующие действия были проделаны с помощью <a class="ext-link gradient"
+                                                                   title="Перейти на сайт JMOL"
+                                                                   href="http://jmol.sourceforge.net/">JMOL</a>:
+                </p>
+                <ul class="short">
+                    <li>Определили множество атомов кислорода 2'-дезоксирибозы&nbsp;(set1),</li>
+                    <li>Определили множество атомов кислорода в&nbsp;остатке фосфорной кислоты&nbsp;(set2),</li>
+                    <li>Определили множество атомов азота в&nbsp;азотистых основаниях&nbsp;(set3).</li>
+                </ul>
+                <p>
+                    Также сделали следующее:
+                </p>
+                <ul class="short">
+                    <li>Создали скрипт-файл с определениями этих множеств&nbsp;(<a href="#script1"
+                                                                                   title="Перейти к элементу"
+                                                                                   class="int-link standart">скрипт
+                        №1</a>),
+                    </li>
+                    <li>Создали скрипт-файл, вызов которого в JMol дает последовательное изображение всей структуры,
+                        только ДНК в проволочной модели, той же модели, но&nbsp;с выделенными шариками множеством атомов&nbsp;set1,
+                        затем set2&nbsp;и set3&nbsp;(<a
+                                title="Перейти к элементу" href="#script2" class="int-link standart">скрипт №2</a>).
+                    </li>
+                </ul>
+                <p>
+                    Скрипты можно скачать здесь:
+                    <a id="script1" href="prac/script1.spt" title="Скачать скрипт JMOL" class="gradient file-download"
+                       download="script1_pr3.spt">Первый скрипт</a>&nbsp;|&nbsp;<a id="script2" href="prac/script2.spt"
+                                                                                   title="Скачать скрипт JMOL"
+                                                                                   class="gradient file-download"
+                                                                                   download="script2_pr3.spt">Второй
+                    скрипт</a>.
+                </p>
+            </div>
+            <div class="col col-12 col-md-4 mt-3 mt-md-5">
+                <h4 class="sub_task_title mt-md-5">Упражнение 2</h4>
+                <p>
+                    <span class="what">Что сделано?</span>
+                    Были предсказаны многочисленные контакты между белком и нуклеиновой кислотой на основании расстояния
+                    между атомами. Результат можно найти в
+                    <a href="#table2" title="Перейти к элементу" class="int-link standart">таблице 2</a>.
+                </p>
+                <p>
+                    В целом, можно
+                    сказать, что основной вклад в полярные взаимодействия дают остатки фосфорной кислоты, что довольно
+                    логично. Еще можно сказать, что неполярные взаимодействия дают только нуклеозиды. Интересно,
+                    что все неполярные взаимодействия с азотистыми основаниями находятся в области большой бороздки.
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col col-12 col-md-4">
+                <h2 class="task_title">Nucplot</h2>
+                <p>
+                    Для получения схемы ДНК&ndash;белковых контактов (ID 1P47) была использована консольная программа
+                    <span class="program">nuclplot</span>. Изображение этой схемы на
+                    <a class="int-link standart" href="#picture3">рисунке 3</a>.
+
+                </p>
+            </div>
+            <div class="col col-12 col-md-8 mt-md-5">
+                <p>
+                    На схеме видно, что наибольшее количество контактов ДНК с белком у аминокислоты
+                    <b class="mono">Arg124(A)</b>. Поэтому я считаю данную аминокислоту самой важной для распознавания.
+                    Дополнительно, данная аминокислота взаимодействует сразу с двумя азотистыми основаниями.
+                    Взаимодействие <b class="mono">Arg124(A)</b> с <b class="mono">G10</b> и <b class="mono">G54</b>
+                    можно увидеть на <a href="#picture4" title="Перейти к элементу" class="int-link standart">рисунке 4</a>.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col col-12">
+                <h4 class="supplementary">Дополнительные материалы</h4>
+            </div>
+        </div>
+        <div class="row mt-3 mb-5">
+            <div class="col col-12 col-xl-6 mb-3">
+                <div class="table-wrap">
+                    <table id="table1" class="nowrap">
+                        <thead>
+                        <tr>
+                            <th>Участок структуры</th>
+                            <th>find-pair</th>
+                            <th>einverted</th>
+                            <th>RNAfold</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>Акцепторный<br/> стебель</th>
+                            <td>5'-902-907-3'<br/>5'-966-972-3'<br/>6 пар</td>
+                            <td>9 пар</td>
+                            <td>7 верных пар,<br/>1 лишняя</td>
+                        </tr>
+                        <tr>
+                            <th>D-стебель</th>
+                            <td>5'-910-912-3'<br/>5'-923-925-3'<br/>3 пары</td>
+                            <td>&mdash;</td>
+                            <td>3 верных пары<br/>2 не хватает</td>
+                        </tr>
+                        <tr>
+                            <th>T-стебель</th>
+                            <td>5'-961-965-3'<br/>5'-949-953-3'<br/>5 пар</td>
+                            <td>&mdash;</td>
+                            <td>4 верных пары,<br/>1 лишняя и<br/>одной не хватает</td>
+                        </tr>
+                        <tr>
+                            <th>Антикодоновый<br/> стебель</th>
+                            <td>5'-926-932-3'<br/>5'-937-944-3'<br/>7 пар</td>
+                            <td>&mdash;</td>
+                            <td>5 верных пар<br/>(канонических)</td>
+                        </tr>
+                        <tr>
+                            <th>Общее число<br/> канонических<br/> пар нуклеотидов</th>
+                            <td>11</td>
+                            <td>9</td>
+                            <td>19</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-cap">
+                        <span>Таблица 1.</span> Сравнение кристаллической структуры тРНК 1O0B c предсказанными
+                        структурами
+                        этой тРНК в программах einverted и&nbsp;RNAfold
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-xl-6 mb-3">
+                <div class="table-wrap">
+                    <table id="table2">
+                        <thead>
+                        <tr>
+                            <th>Контакты атомов белка с...</th>
+                            <th>Полярные</th>
+                            <th>Неполярные</th>
+                            <th>Всего</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>...остатками <br/>2'&ndash;дезоксирибозы</th>
+                            <td>3</td>
+                            <td>13</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <th>...остатками <br/>фосфорной <br/>кислоты</th>
+                            <td>28</td>
+                            <td>0</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <th>...остатками <br/>азотистых <br/>оснований со стороны <br/>большой бороздки</th>
+                            <td>16</td>
+                            <td>7</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>...остатками <br/>азотистых <br/>оснований со стороны <br/>малой бороздки</th>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-cap">
+                        <span>
+                            Таблица 2.
+                        </span>
+                        Контакты разного типа в&nbsp;комплексе ID&nbsp;1P47
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row p-0">
+            <div class="col col-12 p-0 my-5">
+                <div class="wrap-img-full-hd">
+                    <img id="picture3" src="img/full_structure.png" alt="complex">
+                    <div class="img-cap">
+                        <span>
+                            Рисунок 3.
+                        </span>
+                        Схема взаимодействий ДНК с белком в структуре ID&nbsp;1P47
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col col-12 p-0">
+                <div class="wrap-img-full-hd">
+                    <img id="picture4" src="img/raytraced.png" alt="Arg124">
+                    <div class="img-cap">
+                        <span>
+                            Рисунок 4.
+                        </span>
+                        Схема взаимодействий ДНК с белком в структуре ID&nbsp;1P47.
+                        Взаимодействующие остатки:
+                        Arg124(A), G10, G54
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="row justify-content-around">
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 terms resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Семестры
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term1/index.html">Первый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term2/index.html">Второй</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term3/index.html">Третий</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term4/index.html">Четвёртый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term5/index.html">Пятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term6/index.html">Шестой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term7/index.html">Седьмой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term8/index.html">Восьмой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term9/index.html">Девятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term10/index.html">Десятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term11/index.html">Одиннадцатый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term12/index.html">Двенадцатый</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 university resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Университет
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="http://www.fbb.msu.ru/" class="fbb">Сайт ФББ МГУ</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="https://www.msu.ru/" class="msu">Сайт МГУ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 communication resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Связь
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="https://vk.com/nikgr1" class="vk">Вконтакте |</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="mailto:nikit00000s@fbb.msu.ru" class="envelope">Почта kodomo |</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="mailto:NikGR1@yandex.ru" class="envelope">Личная почта |</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 other resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Остальное на сайте
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="../../index.html" class="main-page">Главная</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="../../html/about_me/about_me.html" class="me">Обо мне</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="http://kodomo.cmm.msu.su/wiki/2018" class="kodomofbb">KodomoFBB</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr class="clearfix hr-divider">
+
+    <div class="footer-copyright">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+    </div>
+    <div id="button-to-start" onclick="window.scrollTo({left: 0, top: 0, behavior: window.scroll_behavior})"></div>
+</footer>
+
+
+<script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../js/parallax.js-1.5.0/parallax.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+
+<script src="../../js/own/construction.js"></script>
+<script src="../../js/own/backgroundIcons.js"></script>
+<script src="../../js/own/timer.js"></script>
+</body>
+</html>

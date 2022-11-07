@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>#10 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/all.min.css"/>
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="../../css/old_style/template_v1.css"/>
+    <link rel="stylesheet" type="text/css" href="page_style.css">
+</head>
+<body>
+
+<div id="button-to-end" onclick="window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: 'smooth'})">
+    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+</div>
+
+<main>
+
+    <div class="container-fluid header">
+        <div class="row header-row">
+            <div class="col header-col">
+
+                <h1 class="header-caption">
+                    <span>
+                        <a class="header-link" href="http://kodomo.cmm.msu.su/wiki/2018/2/pr10">
+                            <i class="fa fa-bookmark" aria-hidden="true"></i>
+                            Практикум #10.
+                        </a>
+                        <span class="header-name">
+                            Парные выравнивания
+                        </span>
+                    </span>
+                </h1>
+                <h6 class="h6 text-md-center header-date">16 апреля 2019 г.</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid prac_content">
+        <div class="row justify-content-center">
+            <div class="basic_task col col-12 col-lg-8">
+                <!-- #FIXME -->
+                <h2 class="prac_title text-center">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i> Практикум #10.
+                </h2>
+
+                <p class="prac_intro">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> В этой работе мы познакомились с выравниваниями
+                    последовательностей.
+                    <br/> Для выполнения работы было использовано программное обеспечение с открытым исходным кодом
+                    Emboss, а
+                    именно:
+                </p>
+                <ul class="short">
+                    <li>
+                        <h5>Комманда <i class="fa fa-terminal" aria-hidden="true"></i> needle</h5> &ndash; глобальное выравнивание;
+                    </li>
+                    <li>
+                        <h5>Комманда <i class="fa fa-terminal" aria-hidden="true"></i> transeq</h5> &ndash; трансляция (создание аминокислотной последовательности в
+                        соответствии с нуклеотидной последовательностью).
+                    </li>
+                    <li>
+                        <h5>Комманда <i class="fa fa-terminal" aria-hidden="true"></i> infoalign</h5> &ndash; информация о последовательностях;
+                    </li>
+                </ul>
+            </div>
+            <section class="basic_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-circle" aria-hidden="true"></i> Задание. Исследование влияния на
+                    последовательности белков локальных мутаций в кодирующий последовательности</h3>
+
+                <div class="task_intro">
+                    <h5><i class="fa fa-book" aria-hidden="true"></i> Что было сделано?</h5>
+                    Сначала нашли полную последовательность (2Z,6E)-хедикариолсинтазы из генома бактерии <i
+                        class="species"><i class="fa fa-bug" aria-hidden="true"></i> Kitasatospora setae</i> KM-6054.
+                    Затем произвели мутации в исходной последовательности и сохранили их в отдельных файлах.
+                    Производили парные выравнивания исходной последовательности с каждой мутированной.
+                </div>
+
+                <div class="task_info">
+                    <h5><i class="fa fa-info-circle" aria-hidden="true"></i> Выполненная работа:</h5>
+                    Точные параметры выполненных выравниваний &ndash; в таблице <a href="prac/pr10_alignments.xlsx" download="gryzunov_pr10_alignments.xlsx"><i
+                        class="fa fa-download" aria-hidden="true"></i> pr10_alignments.xlsx</a>.
+
+
+                    <figure class="image">
+                        <img src="img/gryzunov-mutation-1.png" alt="mutation-1">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-square" aria-hidden="true"></i> Рисунок 1.</h5>
+                        Замена 21-го нуклеотида: с гуанина на тимин <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        Синонимическая мутация, остался пролин на 7-ом месте 
+                    </div>
+
+                    <figure class="image">
+                        <img src="img/gryzunov-mutation-2.png" alt="mutation-2">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-square" aria-hidden="true"></i> Рисунок 2.</h5>
+                        Замена 31-го нуклеотида: с гуанина на тимин <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        Миссенс-мутация, замена валина на фенилаланин на 11-ом месте 
+                    </div>
+
+                    <figure class="image">
+                        <img src="img/gryzunov-mutation-3.png" alt="mutation-3">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-square" aria-hidden="true"></i> Рисунок 3.</h5>
+                        Замена 41-го нуклеотида: с цитозина на тимин <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        Миссенс-мутация, замена пролина на лейцин на 14-ом месте 
+                    </div>
+
+                    <figure class="image">
+                        <img src="img/gryzunov-mutation-4.png" alt="mutation-4">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-square" aria-hidden="true"></i> Рисунок 4.</h5>
+                        Замена 51-го нуклеотида: с цитозина на тимин <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        Замены не произошло, остался цистеин на 17-ом месте 
+                    </div>
+
+                    <figure class="image">
+                        <img src="img/gryzunov-mutation-5.png" alt="mutation-5">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-square" aria-hidden="true"></i> Рисунок 5.</h5>
+                        Замена 60-го нуклеотида: с цитозина на тимин <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        Замены не произошло, остался гистидин на 20-ом месте 
+                    </div>
+
+                    <figure class="image">
+                        <img src="img/gryzunov-mutation-6.png" alt="mutation-6">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-square" aria-hidden="true"></i> Рисунок 6.</h5>
+                        Делеция нуклеотидов с 19 по 24 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        Потеря 2 аминокислотных остатков: пролина (7) и аспарагиновой кислоты (8) 
+                    </div>
+
+                    <figure class="image">
+                        <img src="img/gryzunov-mutation-7.png" alt="mutation-7">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-square" aria-hidden="true"></i> Рисунок 7.</h5>
+                        Делеция нуклеотидов с 20 по 25 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        Потеря 2 аминокислотных остатков: пролина (7) и аспарагиновой кислоты (8), замена фенилаланина (9) на лейцин 
+                    </div>
+
+                    <figure class="image">
+                        <img src="img/gryzunov-mutation-8.png" alt="mutation-8">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-square" aria-hidden="true"></i> Рисунок 8.</h5>
+                        Делеция 20-го нуклеотида <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        Сдвиг рамки считывания, образование многочисленных стоп кодонов, многочисленные замены
+                        (после изолейцина (6)) 
+                    </div>
+
+                    <figure class="image">
+                        <img src="img/gryzunov-mutation-9.png" alt="mutation-9">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-square" aria-hidden="true"></i> Рисунок 9.</h5>
+                        Вставка двух нуклеотидов после 20-го <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        Сдвиг рамки считывания, образование многочисленных стоп кодонов, многочисленные замены
+                        (после пролина (7)) 
+                    </div>
+
+                    <figure class="image">
+                        <img src="img/gryzunov-mutation-10.png" alt="mutation-10">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-square" aria-hidden="true"></i> Рисунок 10.</h5>
+                        Делеция 20-го нуклеотида, вставка нуклеотида после 40-го <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        Замены: пролин на аргинин (7), аспартат на треонин (8), фенилаланин на серин (9),
+                        тирозин на треонин (10), валин на серин (11), фенилаланин на серин (13), пролин на серин
+                        (14) 
+                    </div>
+
+                    <figure class="image">
+                        <img src="img/gryzunov-mutation-11.png" alt="mutation-11">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-square" aria-hidden="true"></i> Рисунок 11.</h5>
+                        Замена 51-го нуклеотида: с цитозина на аденин <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        Замена одного нуклеотида, приводящая к появлению стоп кодона на 17-ой позиции 
+                    </div>
+                </div>
+
+                <div class="task_outro">
+                    <h5><i class="fa fa-comment" aria-hidden="true"></i> Обсуждение результатов</h5>
+                    Мы можем выявить несколько закономерностей и явлений:
+                    <ul class="short">
+                        <li>
+                            Если мутация в одном кодоне выражается только в замене третьего нуклеотида, то есть большая вероятность того, что мутация окажется синонимической (из-за вырожденности генетического кода).
+                        </li>
+                        <li>
+                            Если произошла инсерция или делеция количества нуклеотидов, не кратного трем, то такая мутация, скорее всего, является критической (последовательность белка после места делеции сильно изменяется, здесь белок может оборваться, так как в кодирующей последовательности случайно может образоваться стоп-кодон), так как она нарушает рамку считывания.
+                        </li>
+                        <li>
+                            Вставка или делеция количества нуклеотидов, кратного трем, может привести к двум исходам. Если мутация началась с первого нуклеотида кодона (открытой рамки считывания), то близлежащие к мутации аминокислоты не изменяются. Если не так, то близлежащие аминокислоты могут измениться.
+                        </li>
+                    </ul>
+
+                    <!-- #FIXME -->
+                </div>
+
+            </section>
+
+
+            <!-- #FIXME -->
+        </div>
+    </div>
+
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- TERMS, FOOTER column -->
+
+            <div class="col col-6 terms">
+                <h1 class="text-uppercase">Семестры</h1>
+                <div class="terms1">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="../../term1/index.html">Первый</a>
+                        </li>
+                        <li>
+                            <a href="../../term2/index.html">Второй</a>
+                        </li>
+                        <li>
+                            <a href="../../term3/index.html">Третий</a>
+                        </li>
+                        <li>
+                            <a href="../../term4/index.html">Четвёртый</a>
+                        </li>
+                        <li>
+                            <a href="../../term5/index.html">Пятый</a>
+                        </li>
+                        <li>
+                            <a href="../../term6/index.html">Шестой</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="terms2">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="../../term7/index.html">Седьмой</a>
+                        </li>
+                        <li>
+                            <a href="../../term8/index.html">Восьмой</a>
+                        </li>
+                        <li>
+                            <a href="../../term9/index.html">Девятый</a>
+                        </li>
+                        <li>
+                            <a href="../../term10/index.html">Десятый</a>
+                        </li>
+                        <li>
+                            <a href="../../term11/index.html">Одиннадцатый</a>
+                        </li>
+                        <li>
+                            <a href="../../term12/index.html">Двенадцатый</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <hr class="clearfix w-100 d-md-none">
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col col-md-3 mx-auto">
+
+                <!-- Links -->
+                <h1 class="text-uppercase">МГУ</h1>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="http://www.fbb.msu.ru/" class="li">
+                            Сайт ФББ МГУ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.msu.ru/">МГУ</a>
+                    </li>
+                </ul>
+
+
+                <!--SOCIAL-->
+                <h1 class="text-uppercase">Связь</h1>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://vk.com/nikgr1">Вконтакте | <i class="fa fa-vk" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:nikit00000s@fbb.msu.ru">Почта kodomo | <i class="fa fa-envelope"
+                                                                                  aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:NikGR1@yandex.ru">Личная почта | <i class="fa fa-envelope"
+                                                                            aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col col-md-3 mx-auto">
+
+                <!-- STUFF -->
+                <h1 class="text-uppercase">Остальное на сайте</h1>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="../../index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="../../html/about_me/about_me.html">Обо мне</a>
+                    </li>
+                    <li>
+                        <a href="http://kodomo.cmm.msu.su/wiki/2018">KodomoFBB</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <hr class="clearfix w-100">
+    </div>
+    <!-- Copyright -->
+
+    <div class="footer-copyright text-center py-3">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+    </div>
+</footer>
+
+
+<script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../js/own/yearInit.js"></script>
+</body>
+</html>

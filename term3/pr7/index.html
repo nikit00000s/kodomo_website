@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>#7 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../../less/style/common_style.css">
+    <link rel="stylesheet" href="../../less/style/loading.css">
+    <link rel="stylesheet" href="page_style.css">
+</head>
+<body>
+
+<div id="button-to-end"
+     onclick="window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: window.scroll_behavior})"></div>
+<div id="breadcrumb">
+    <a href="../index.html">3 семестр</a><a href="index.html">7 практикум</a>
+</div>
+
+<header class="parallax-window" data-parallax="scroll" data-image-src="img/golden-eagle-1-c-stewart-finlayson.jpg"
+        id="img0">
+    <div class="container-fluid">
+        <div class="row align-items-end pb-5">
+            <div class="col col-5 align-self-center mt-5 pt-5">
+                <h1 class="left">
+                    <a class="header-link" href="http://kodomo.cmm.msu.su/wiki/2018/3/pr7">
+                        Банки нуклеотидных последовательностей
+                    </a>
+                </h1>
+            </div>
+            <div class="col col-7 justify-content-end">
+                <h3 class="purple">15 октября 2019 г.</h3>
+            </div>
+            <div class="button"
+                 onclick="window.scrollTo({left: 0, top: document.documentElement.clientHeight, behavior: window.scroll_behavior})"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container prac_content">
+        <div class="row basic_task-top background-DNA" data-dna="10">
+            <div class="col col-12 task_intro-top">
+                <h1 class="prac_title">Характеристика сборки генома <i class="nowrap">Aquila chrysaetos</i></h1>
+            </div>
+        </div>
+        <div class="row basic_task-bottom">
+            <div class="col col-12 col-md-6 task_intro">
+                <p>
+                    Для выполнения задания практикума была выбрана сборка <a class="gradient ext-link mono"
+                                                                             title="Перейти на сайт NCBI"
+                                                                             href="https://www.ncbi.nlm.nih.gov/assembly/GCA_900496995.2">bAquChr1.2</a>
+                    генома <i class="feather"><a
+                        href="https://en.wikipedia.org/wiki/Golden_eagle" class="gradient"
+                        title="Перейти на страницу Википедии">Aquila chrysaetos</a></i> (Беркут).
+                </p>
+                <p>Немного об организме. Беркут распространен преимущественно в Северном полушарии и чаще всего
+                    встречается в горах. Ведет оседлый образ жизни. Живут до 25&nbsp;лет в природе. Является самым
+                    крупным представителем рода Орлы&nbsp;<i>(Aquila)</i>, размах крыльев&nbsp;&mdash; до 240&nbsp;сантиметров.
+                    Охотится на грызунов, зайцев, других птиц, на детенышей некоторых парнокопытных и даже на крупных
+                    особей, питается падалью. Охотится обычно парами, подолгу паря в небе и высматривая добычу или
+                    выжидая из засады. Беркут&nbsp;&mdash; моногамная птица. В кладке обычно находится два яйца, но чаще
+                    всего только один из птенцов выживает. Обладает превосходным зрением, способен разглядеть мелкую
+                    цель на расстоянии до двух километров. Внутри глаза находятся сразу две центральные ямки. Беркут
+                    издает голос редко, только при токовом полёте, при общении с птенцами и защите территории.
+                </p>
+                <div class="wrap-img-lg" id="img1">
+                    <img src="img/golden-eagle-nestling.jpg" alt="Golden Eagle, nestling">
+                    <div class="img-cap"><span>Рисунок 1</span>. Птенцы в гнезде</div>
+                </div>
+            </div>
+            <div class="col col-12 col-md-6">
+                <div class="wrap-img-md" id="img2">
+                    <img src="img/Golden-Eagle-Eyes.jpg" alt="Golden Eagle, cool head!">
+                    <div class="img-cap"><span>Рисунок 2</span>. Голова взрослой особи. Какой взгляд!</div>
+                </div>
+                <div class="wrap-img-xl" id="img3">
+                    <img src="img/golden-eagle-rock.jpg" alt="Golden Eagle on rocks">
+                    <div class="img-cap"><span>Рисунок 3</span>. Взрослая особь на камнях</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12 col-md-4">
+                <p>
+                    Теперь немного о сборке генома. Для данного вида было проведено <span
+                        class="highlight mono">4</span> сборки.
+                    Как уже было сказано выше, выбрали лучшую сборку <span class="highlight mono">bAquChr1.2</span>.
+                    Некоторая информация об этой сборке приведена в <a title="Перейти к элементу" href="#table1">таблице
+                    1</a>. А&nbsp;<a href="https://www.ncbi.nlm.nih.gov/nuccore/UFQG00000000.2/" class="ext-link gradient">здесь</a>
+                    находится запись <span class="highlight">WGS</span>&nbsp;(Whole Genome Shortgun). В этой записи я нашел
+                    один <a href="prac/contig.fasta" class="ext-link standart">контиг</a>.
+                </p>
+            </div>
+            <div class="col col-12 col-md-8">
+                <div class="table-wrap" id="table1">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Название</th>
+                            <th class="mono">bAquChr1.2</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>AC сборки из RefSeq</td>
+                            <td class="mono">GCF_900496995.1</td>
+                        </tr>
+                        <tr>
+                            <td>Уровень сборки</td>
+                            <td>Хромосомный</td>
+                        </tr>
+                        <tr>
+                            <td>Общая длина последовательности</td>
+                            <td><span class="mono nowrap">1 203 454 851</span> нуклеотид</td>
+                        </tr>
+                        <tr>
+                            <td>Число скэффолдов</td>
+                            <td class="mono">142</td>
+                        </tr>
+                        <tr>
+                            <td>Число контигов</td>
+                            <td class="mono">333</td>
+                        </tr>
+                        <tr>
+                            <td>Скэффолд, N50</td>
+                            <td><span class="mono nowrap">46 934 974</span> нуклеотида</td>
+                        </tr>
+                        <tr>
+                            <td>Скэффолд, L50</td>
+                            <td class="mono">9</td>
+                        </tr>
+                        <tr>
+                            <td>Контиг, N50</td>
+                            <td><span class="mono nowrap">21 924 221</span> нуклеотид</td>
+                        </tr>
+                        <tr>
+                            <td>Контиг, N50</td>
+                            <td class="mono">19</td>
+                        </tr>
+                        <tr>
+                            <td>Число аннотированных белков</td>
+                            <td class="mono">39 713</td>
+                        </tr>
+                        <tr>
+                            <td>Страница BioProject</td>
+                            <td><a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJEB27699/" class="ext-link gradient mono">PRJEB27699</a></td>
+                        </tr>
+                        <tr>
+                            <td>Файл с контигом (<span class="mono">.fasta</span>)</td>
+                            <td><a href="prac/contig.fasta" class="mono ext-link standart">UFQG02000001.1</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-cap"><span>Таблица 1</span>. Характеристика сборки генома <i class="nowrap">A. chrysaetos</i></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row basic_task-top">
+            <div class="col col-12 task_intro-top">
+                <h1 class="task_title">CDS вируса</h1>
+            </div>
+        </div>
+        <div class="row basic_task-bottom">
+            <div class="col col-12 col-md-6">
+                <p>Для начала нужно было получить список полных геномов прокариотических вирусов <span class="highlight">Sphaerolipoviridae</span> длиной от <span class="mono nowrap">10 000</span> до <span class="mono nowrap">20 000</span> пар оснований. Для этой цели применили следующий запрос в <b>NCBI Nucleotide</b>:</p>
+                <kbd class="query">(Sphaerolipoviridae[Organism]) AND 10000:20000[Sequence Length] </kbd>
+                <p>В результате получили <span class="highlight mono">6</span> находок (3 из&nbsp;GenBank и&nbsp;3 из&nbsp;RefSeq).</p>
+            </div>
+            <div class="col col-12 col-md-6">
+                <p>Для дальнейшего подробного описания был выбран геном <i class="nowrap">Thermus phage</i>&nbsp;P23-77. Описание этого вируса можно найти в
+                    <a href="#table2" class="int-link standart">таблице 2</a>.</p>
+                <div class="table-wrap" id="table2">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>AC нуклеотидной записи</th>
+                            <th class="nowrap">NC_013197</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Латинское название
+                                вида</td>
+                            <td><i class="nowrap">Thermus phage</i>&nbsp;<span class="mono nowrap">P23-77</span></td>
+                        </tr>
+                        <tr>
+                            <td>Taxonomy ID вида</td>
+                            <td class="mono">1714272</td>
+                        </tr>
+                        <tr>
+                            <td>Тип генома</td>
+                            <td>Кольцевая ds-DNA</td>
+                        </tr>
+                        <tr>
+                            <td>Хозяин вируса</td>
+                            <td><i class="nowrap">Thermus thermophilus</i></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-cap"><span>Таблица 2</span>. Характеристика генома <i class="nowrap">Thermus phage</i>&nbsp;P23-77</div>
+                </div>
+                <p>
+                    <a href="prac/sequence.fasta" class="ext-link gradient">Файл</a> с CDS получил на странице нуклеотидной записи из меню
+                    <br><span class="mono">Send to:<i class="fa fas fa-chevron-circle-right"></i> Coding Sequences<i class="fa fas fa-chevron-circle-right"></i> FASTA (Nucleotide)<i class="fa fas fa-chevron-circle-right"></i> Create File</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="row basic_task-top">
+            <div class="col col-12 task_intro-top">
+                <h1 class="task_title">7 ключей в таблице особенностей</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12 col-md-5">
+                <p>В данном задании нужно было описать 7&nbsp;любых ключей в таблице особенностей&nbsp;(Feature Table в GenBank).</p>
+            </div>
+            <div class="col col-12 col-md-7">
+                <p>Ключи бывают 2&ndash;ух типов: ключи особенностей и ключи квалификаторов. Данные для этого задания я взял с сайта
+                    <a href="http://www.insdc.org/files/feature_table.html" class="ext-link gradient" title="The DDBJ/ENA/GenBank Feature Table Definition">INSDC</a> (см. Appendix II и Appendix III).</p>
+            </div>
+        </div>
+        <div class="row solid-bottom-light">
+            <div class="col col-12 col-md-5"><h6>Ключ и значение</h6></div>
+            <div class="col col-12 col-md-7 dashed-left-light"><h6>Пример</h6></div>
+        </div>
+        <div class="row solid-bottom-light">
+            <div class="col col-12 col-md-5">
+                <p>1. <b class="burgundy">regulatory</b> <small>(feature key)</small>&nbsp;&mdash; <br/> любой участок последовательности, который участвует в регуляции транскрипции, трансляции, репликации или структуры хроматина</p>
+            </div>
+            <div class="col col-12 col-md-7 dashed-left-light">
+<pre>
+<span class="burgundy">regulatory</span>      494..501
+                /regulatory_class="TATA_box"
+                /gene="E1A
+
+Оригинал: <a href="https://www.genome.jp/dbget-bin/www_bget?genbank-vrl:AY803294" class="ext-link standart">AY803294</a>
+</pre>
+            </div>
+        </div>
+
+        <div class="row solid-bottom-light">
+            <div class="col col-12 col-md-5">
+                <p>2. <b class="burgundy">stem_loop</b> <small>(feature key)</small>&nbsp;&mdash; <br/> шпилька; сдвоенная спирализированная область, образованная парными взаимодействиями оснований между смежными комплементарными последовательностями в одинарной цепи РНК или ДНК.</p>
+            </div>
+            <div class="col col-12 col-md-7 dashed-left-light">
+<pre>
+<span class="burgundy">stem_loop</span>       10631..10644
+                /note="short hairpin (sHP)"
+
+Оригинал: <a href="https://www.genome.jp/dbget-bin/www_bget?refseq:NC_001474" class="ext-link standart">NC_001474</a>
+</pre>
+            </div>
+        </div>
+
+        <div class="row solid-bottom-light">
+            <div class="col col-12 col-md-5">
+                <p>3. <b class="burgundy">gap_type</b> <small>(qualifier)</small>&nbsp;&mdash; <br/> тип гэпа (или соединяющего последовательности в записях сборки генома, или образованного из&ndash;за гетерохроматина, центромеры и&nbsp;так&nbsp;далее).</p>
+            </div>
+            <div class="col col-12 col-md-7 dashed-left-light">
+<pre>
+assembly_gap    1..10000
+                /estimated_length=10000
+                <span class="burgundy">/gap_type</span>="telomere"
+assembly_gap    11042..12861
+                /estimated_length=1820
+                <span class="burgundy">/gap_type</span>="within scaffold"
+
+Оригинал: <a href="http://getentry.ddbj.nig.ac.jp/getentry?database=ddbj&accession_number=DG000120" class="ext-link standart">DG000120</a>
+</pre>
+            </div>
+        </div>
+
+        <div class="row solid-bottom-light">
+            <div class="col col-12 col-md-5">
+                <p>4. <b class="burgundy">mobile_element_type</b> <small>(qualifier)</small>&nbsp;&mdash; <br/>
+                    тип и имя (или идентификатор) мобильного элемента, который описывается в feature.</p>
+            </div>
+            <div class="col col-12 col-md-7 dashed-left-light">
+<pre>
+mobile_element  52952..59063
+                <span class="burgundy">/mobile_element_type</span>="other:RLX_A_1.2"
+                /note="unclassified"
+mobile_element  complement(59064..67153)
+                <span class="burgundy">/mobile_element_type</span>="retrotransposon:Sabrina_2"
+                /note="Gypsy; 5' fragment"
+
+Оригинал: <a href="http://getentry.ddbj.nig.ac.jp/getentry/na/AB711913" class="ext-link standart">AB711913</a>
+</pre>
+            </div>
+        </div>
+
+        <div class="row solid-bottom-light">
+            <div class="col col-12 col-md-5">
+                <p>5. <b class="burgundy">product</b> <small>(qualifier)</small>&nbsp;&mdash; <br/>
+                    название продукта, связанного с feature, например, мРНК, полипептид, и&nbsp;так&nbsp;далее</p>
+            </div>
+            <div class="col col-12 col-md-7 dashed-left-light">
+<pre>
+mRNA            join(14311..14626,17063..17159,30888..31078,31878..32043,
+                32708..33392)
+                /gene="Spi1"
+                /gene_synonym="Dis-1; Dis1; PU.1; Sfpi-1; Sfpi1; Spi-1;
+                Tcfpu1; Tfpu.1"
+                <span class="burgundy">/product</span>="spleen focus forming virus (SFFV) proviral
+                integration oncogene"
+                /note="Derived by automated computational analysis using
+                gene prediction method: BestRefSeq."
+                /transcript_id="NM_011355.2"
+                /db_xref="GeneID:20375"
+                /db_xref="MGI:MGI:98282"
+
+Оригинал: <a href="https://www.ncbi.nlm.nih.gov/nuccore/NC_000068.7?report=genbank&from=91082368&to=91115759" class="ext-link standart">NC_000068</a>
+</pre>
+            </div>
+        </div>
+
+        <div class="row solid-bottom-light">
+            <div class="col col-12 col-md-5">
+                <p>6. <b class="burgundy">transl_table</b> <small>(qualifier)</small>&nbsp;&mdash; <br/>
+                    определяет таблицу генетического кода (при невозможности использования универсальной таблицы генетического кода).</p>
+            </div>
+            <div class="col col-12 col-md-7 dashed-left-light">
+<pre>
+CDS             complement(43961..44659)
+                /gene="ispD"
+                /locus_tag="BN2069_410"
+                /function="4-diphosphocytidyl-2-methyl-D-erithritol
+                synthase"
+                /note="Operon 24 Gene 3 COG1211
+                4-diphosphocytidyl-2-methyl-D-erithritol synthase"
+                /codon_start=1
+                <span class="burgundy">/transl_table</span>>=11
+                /protein_id="CRX66629.1"
+                /translation="MSAAIWVVVPAAGRGARFGAPLPKQYLQAGGQILLAHTLDALLA
+                HPAVAGAMVVIGQDDGDWPGWSEWAGKPVLTCIGGATRAASVLAGLQALPDSVRADEF
+                VLVHDAARPNLSLADLGRLLEVGRADPVGAILAAPVRDTLKRAGDDGGIDGTEPRERL
+                WRALTPQLFRRHQLSRALSDAAAAGVEVTDEAMAMERQGQRPLLVEGSEDNFKVTTPA
+                DLDRFEFVLSRRAG"
+
+Оригинал: <a href="https://www.ncbi.nlm.nih.gov/nuccore/CWHS01000001.1" class="ext-link standart">CWHS01000001</a>
+</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-12 col-md-5">
+                <p>7. <b class="burgundy">protein_bind</b> <small>(feature key)</small>&nbsp;&mdash; <br/>
+                    определяет сайт нековалентного связывания белка с нуклеиновой кислотой.</p>
+            </div>
+            <div class="col col-12 col-md-7 dashed-left-light">
+<pre>
+<span class="burgundy">protein_bind</span>    111..171
+                /bound_moiety="nuclear binding protein ARBP"
+
+Оригинал: <a href="https://www.ncbi.nlm.nih.gov/nuccore/X84223.1" class="ext-link standart">X84223</a>
+</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-12 mt-5">
+                <h4>Источники</h4>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col col-12 col-md-6">
+                <p>Изображения:</p>
+                <ol class="purple">
+                    <li>
+                        <a title="Перейти к изображению" href="#img0"><i class="fas fa-arrow-circle-up standart"></i> На
+                            сайте</a> |
+                        <a href="https://www.audubon.org/news/did-neanderthals-catch-and-kill-golden-eagles-their-feathers-and-talons"
+                           class="gradient ext-link" title="Перейти к источнику">Источник</a>
+                    </li>
+                    <li>
+                        <a title="Перейти к изображению" href="#img1"><i class="fas fa-arrow-circle-up standart"></i> На
+                            сайте</a> |
+                        <a href="http://www.peakpx.com/624711/golden-eagles-chicks-eaglets-nest-animals-in-the-wild-animal"
+                           class="gradient ext-link" title="Перейти к источнику">Источник</a>
+                    </li>
+                    <li>
+                        <a title="Перейти к изображению" href="#img2"><i class="fas fa-arrow-circle-up standart"></i> На
+                            сайте</a> |
+                        <a href="https://commons.wikimedia.org/wiki/File:Golden-Eagle-Szmurlo.jpg"
+                           class="gradient ext-link" title="Перейти к источнику">Источник</a>
+                    </li>
+                    <li>
+                        <a title="Перейти к изображению" href="#img3"><i class="fas fa-arrow-circle-up standart"></i> На
+                            сайте</a> |
+                        <a href="https://animals.sandiegozoo.org/animals/golden-eagle" class="gradient ext-link"
+                           title="Перейти к источнику">Источник</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="col col-12 col-md-6">
+                <p>Текст:</p>
+                <ol class="purple">
+                    <li><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D1%80%D0%BA%D1%83%D1%82"
+                           class="gradient ext-link" title="Перейти к источнику">Источник</a></li>
+                    <li><a href="https://www.poznavayka.org/zoologiya/ptitsa-berkut-samyiy-krupnyiy-orel/"
+                           class="gradient ext-link" title="Перейти к источнику">Источник</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="row justify-content-around">
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 terms resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Семестры
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term1/index.html">Первый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term2/index.html">Второй</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term3/index.html">Третий</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term4/index.html">Четвёртый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term5/index.html">Пятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term6/index.html">Шестой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term7/index.html">Седьмой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term8/index.html">Восьмой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term9/index.html">Девятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term10/index.html">Десятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term11/index.html">Одиннадцатый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term12/index.html">Двенадцатый</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 university resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Университет
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="http://www.fbb.msu.ru/" class="fbb">Сайт ФББ МГУ</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="https://www.msu.ru/" class="msu">Сайт МГУ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 communication resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Связь
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="https://vk.com/nikgr1" class="vk">Вконтакте |</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="mailto:nikit00000s@fbb.msu.ru" class="envelope">Почта kodomo |</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="mailto:NikGR1@yandex.ru" class="envelope">Личная почта |</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 other resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Остальное на сайте
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="../../index.html" class="main-page">Главная</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="../../html/about_me/about_me.html" class="me">Обо мне</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="http://kodomo.cmm.msu.su/wiki/2018" class="kodomofbb">KodomoFBB</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr class="clearfix hr-divider">
+
+    <div class="footer-copyright">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+    </div>
+    <div id="button-to-start" onclick="window.scrollTo({left: 0, top: 0, behavior: window.scroll_behavior})"></div>
+</footer>
+
+
+<script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../js/parallax.js-1.5.0/parallax.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+
+<script src="../../js/own/construction.js"></script>
+<script src="../../js/own/backgroundIcons.js"></script>
+<script src="../../js/own/timer.js"></script>
+</body>
+</html>

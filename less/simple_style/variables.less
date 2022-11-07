@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "EB Garamond";
+  src: url("../../font/EB_Garamond/EBGaramond-VariableFont:wght.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../../font/RobotoSlab/RobotoSlab-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Slab Bold";
+  src: url("../../font/RobotoSlab/RobotoSlab-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../../font/Roboto/Roboto-Bold.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("../../font/Roboto/RobotoMono-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../font/OpenSans/OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../../font/OpenSans/OpenSans-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  src: url("../../font/OpenSans/OpenSans-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@main_header_size: 2.5em;
+@header_size: 2em;
+@sm_header_size: 1.2em;
+@font_size: 1em;
+
+@f_text: "Open Sans";
+@f_text_bold: "Open Sans Bold";
+@f_text_italic: "Open Sans Italic";
+@f_link: "Roboto";
+@f_header: "Roboto Slab Bold";
+@f_min_header: "Roboto Slab";
+@f_mono: "Cousine";
+@c_text: #000;
+@c_back: #FFF;
+@c_active: #111111;
+@c_header: #ff8300;
+
+._captions {
+  margin: 0 auto;
+  padding-top: .5em;
+  text-align: center;
+  font-family: @f_text_italic;
+  font-style: italic;
+  font-size: .95em;
+  max-width: 75%;
+
+  h6 {
+    font-family: @f_text_bold;
+    font-style: normal;
+    font-size: inherit;
+    display: inline;
+    color: @c_header;
+  }
+}

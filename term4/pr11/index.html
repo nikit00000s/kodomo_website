@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>#11 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../less/simple_style/style.css">
+</head>
+<body>
+
+<h1>Практикум 11. GO - String - Human Protein Atlas</h1>
+<h2>Часть 1 - GO Enrichment Analysis</h2>
+<ol>
+    <li>&nbsp;
+        <p>
+            List11.txt - 12 ID
+        </p>
+    </li>
+    <li>&nbsp;
+        <p>
+            В анализе обогащения участвовало 11 ID (Multiple mapping information: 1 ID)
+        </p>
+    </li>
+    <li>&nbsp;
+        <p>
+            В выдаче оказалось 121 GO terms (FDR P < 0.05). <a href="prac/analysis.txt">Ссылка на GO terms</a>
+        </p>
+    </li>
+    <li>&nbsp;
+        <p>
+            <a href="prac/Most_frequent_GO_terms.txt">Ссылка на список десяти самых значимых GO terms</a>
+        </p>
+    </li>
+    <li>&nbsp;
+        <figure>
+            <img src="img/terms_tree.png" alt="tree_of_terms">
+            <figcaption><h6>Рисунок 1.</h6> Древо GO terms, связанных с 5 наиболее значимых terms из выдачи анализа обогащения</figcaption>
+        </figure>
+    </li>
+    <li>&nbsp;
+        <p>
+            Все категории связаны друг с другом исключительно отношениями наследования (общие и более частные категории). Высшие категории включают записи нижних категорий.
+        </p>
+    </li>
+    <li>&nbsp;
+        <p>
+            Почти все GO terms довольно близко связаны с тетрагидробиоптерином (например, с его синтезом, как у term с наименьшим FDR). Все terms включают в себя процесс синтеза этого соединения.
+        </p>
+        <figure>
+            <img src="img/(6R)-Tetrahydrobiopterin_structure.png" alt="Tetrahydrobiopterin_structure">
+            <figcaption><h6>Рисунок 2.</h6> Структура тетрагидробиоптерина</figcaption>
+        </figure>
+        <p>
+            Тетрагидробиоптерин действительно является диолом и одной из его составных частей является птерин.
+        </p>
+    </li>
+</ol>
+<h2>Часть 2 - String</h2>
+<ol>
+    <li>&nbsp;
+        <figure>
+            <img src="img/string.png" alt="graph_string">
+            <figcaption><h6>Рисунок 3.</h6> Граф String, основанный на выдаче анализа обогащения</figcaption>
+        </figure>
+    </li>
+    <li>&nbsp;
+        <p>Для всех 12 узлов (ID) есть 3D структура</p>
+    </li>
+    <li>&nbsp;
+        <figure>
+            <img src="img/connections.png" alt="connections_string">
+            <figcaption><h6>Рисунок 4.</h6> Связи в графе</figcaption>
+        </figure>
+        <p>Некоторые белки списка оказываются просто гомологичными (например, Alkaline phosphatases ALP*) и выявляются вместе (co-occurrence, встречаются в одних и тех же организмах). Многие белки коэкспрессируются. Многие гены соседствуют (gene neighborhood). Информация о некоторых взаимодействиях получена на основе тестового анализа (видимо, взаимной встречаемости в статьях?, textmining), другие же взаимодействия доказаны экспериментально или (и) наблюдаются в курируемых БД. </p>
+        <p>Интересно, что ALPs связаны с остальным графом через GCH1 (GTP cyclohydrolase 1) и его кофактором? PTS.</p>
+    </li>
+    <li>&nbsp;
+        <figure>
+            <img src="img/gene_coocurrence.png" alt="coocurrence">
+            <figcaption><h6>Рисунок 5.</h6> Представленность ID списка в различных организмах</figcaption>
+        </figure>
+        <p>Наиболее высококонсервативными являются белки PCBD1 (Pterin-4-alpha-carbinolamine dehydratase) и GCH1. В целом, белки (как, видимо, и вся система) не очень консервативна (вариативна).</p>
+    </li>
+    <li>&nbsp;
+        <figure>
+            <img src="img/coexpression.png" alt="coexpression">
+            <figcaption><h6>Рисунок 6.</h6> Коэкспрессия в разных организмах. Балл коэкспрессии базирован на паттернах РНК экспрессии и со-регуляции белков.</figcaption>
+        </figure>
+        <p>У всех (использованных в данном анализе) организмов наблюдается очень слабая коэкспрессия генов. Это означает, что граф построен больше на других взаимосвязях (описанных в пункте 3).</p>
+        <p>Предположительно, только 2 гена человека экспрессируются вместе:</p>
+        <span class="mono">ALPPL2 - Alkaline phosphatase, placental like 2 <br>
+                ALPP - Alkaline phosphatase, placental <br>
+                RNA coexpression score 0.279
+        </span>
+    </li>
+</ol>
+<a href="../" class="back">Вернуться на страницу семестра</a>
+</body>
+</html>

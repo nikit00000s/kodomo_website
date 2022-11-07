@@ -1,0 +1,88 @@
+zap
+load =1YEK
+
+set echo top center
+font echo 20
+color echo black
+echo 1YEK: H:GLY'104 - L:SER'43 (C=O- -H-O)
+
+select not (104:H or 43:L)
+cpk off
+wireframe off
+cartoons on
+color TRANSLUCENT chain
+
+select 104:H or 43:L
+calculate hbonds
+hbonds 50
+cpk on
+wireframe on
+cartoons off
+color cpk
+cpk 150
+wireframe 50
+center selected
+zoom 350
+draw line (104:H.O) (43:L.OG)
+color draw red
+measure (104:H.O) (43:L.OG)
+
+pause
+resume
+
+draw off
+hbonds off
+set echo top center
+font echo 20
+color echo black
+echo 1YEK: L:ILE'117 - H:GLY'129 (C=O- -H-N)
+
+select not (117:L or 129:H)
+cpk off
+wireframe off
+cartoons on
+color TRANSLUCENT chain
+
+select 117:L or 129:H
+calculate hbonds
+hbonds 50
+cpk on
+wireframe on
+cartoons off
+color cpk
+cpk 150
+wireframe 50
+center selected
+zoom 350
+measure (117:L.O) (129:H.N)
+
+pause
+resume
+
+draw off
+hbonds off
+set echo top center
+font echo 20
+color echo black
+echo 1YEK: B:PHE'48 - A:GLY'132 (C=O- -H-N)
+
+select not (32:L or 28:L)
+cpk off
+wireframe off
+cartoons on
+color TRANSLUCENT chain
+
+select 32:L or 28:L
+calculate hbonds
+hbonds 50
+cpk on
+wireframe on
+cartoons off
+color cpk
+cpk 150
+wireframe 50
+center selected
+zoom 350
+draw line (32:L.OH) (28:L.ND2)
+color draw red
+measure (32:L.OH) (28:L.ND2)

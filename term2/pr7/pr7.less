@@ -1,0 +1,174 @@
+#color() {
+  green-primary: #628520;
+  tr-green-primary: #628520b5;
+  green-secondary: #0a2406;
+  black: #000000;
+  white: #ecffc1;
+  green-light: #afc91f;
+  green-i: #1f4d03;
+  body-green: #a1b124;
+}
+
+main {
+  background: url(green_field_background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.big-header {
+  background: transparent;
+}
+
+.big-header-title > span {
+  background: #color[tr-green-primary];
+  color: #color[green-secondary];
+}
+
+.big-header-title a {
+  color: #color[white];
+}
+
+.big-header-title a:hover {
+  color: #color[green-secondary];
+}
+
+.big-header-date {
+  background: #color[tr-green-primary];
+  color: #color[white];
+}
+
+
+.prac_content {
+  background: #color[body-green];
+
+}
+
+.basic_task {
+  height: fit-content;
+  padding: 5rem 1.5rem;
+}
+
+.prac_title {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  color: #color[white];
+}
+
+.prac_content i {
+  color: #color[green-i];
+}
+
+.prac_content p {
+  padding-bottom: 1rem;
+  color: #color[green-secondary];
+}
+
+.task_title {
+  padding-top: 4rem;
+  padding-bottom: 0;
+  text-align: center;
+  color: #color[white];
+  margin-bottom: 3rem;
+}
+
+.task_table {
+  font-size: 1.15rem;
+  font-family: monospace;
+  background: #color[body-green];
+  color: #color[black];
+  border: none;
+  box-shadow: #color[black] 0 0 1rem;
+  width: initial;
+  margin: 2rem auto;
+
+  caption {
+    color: #color[green-secondary];
+    text-align: center;
+  }
+
+  th {
+    background: #color[green-primary];
+
+    border: 2px solid #color[tr-green-primary];
+  }
+
+  tr {
+    transition-duration: .2s;
+  }
+
+  tr:hover {
+    color: #color[white];
+  }
+
+  td {
+    border: 2px solid #color[tr-green-primary];
+  }
+}
+
+.task-info {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.task_outro {
+  margin-top: 1rem;
+}
+
+span.color {
+  color: #color[green-i];
+}
+
+.prac_content a {
+  color: #color[white];
+  text-decoration: underline dotted;
+
+  i {
+    color: #color[white];
+    text-decoration: underline dotted;
+  }
+}
+
+.prac_content a:hover {
+  color: #color[green-i];
+  text-decoration: underline solid;
+
+  i {
+    color: #color[green-i];
+    text-decoration: underline solid;
+  }
+}
+
+.prac_outro {
+  margin-top: 12rem;
+  margin-bottom: 2rem;
+}
+
+footer.ls-footer {
+  background: #color[green-light];
+  color: #color[green-secondary];
+
+  a {
+    color: #color[green-secondary];
+  }
+
+  a:hover {
+    color: #color[green-i];
+  }
+}
+
+.task2 {
+  .h6 {
+    font-size: 1.5rem;
+    color: #color[green-secondary];
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: 0.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+}
+

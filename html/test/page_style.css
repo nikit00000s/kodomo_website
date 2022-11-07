@@ -1,0 +1,17 @@
+.container.aos-feed {
+  height: auto;
+}
+.container.aos-feed .row.aos-elem {
+  height: auto;
+  margin-top: 10vh;
+}
+.container.aos-feed .row.aos-elem h2 {
+  transform-origin: left center;
+  writing-mode: vertical-rl;
+  margin: 0 auto;
+}
+.container.aos-feed .row.aos-elem .col.aos-opacity {
+  height: 100vh;
+  background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+/*# sourceMappingURL=page_style.css.map */

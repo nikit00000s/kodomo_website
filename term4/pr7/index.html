@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>#7 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../less/simple_style/style.css">
+</head>
+<body>
+
+<h1>Практикум 7. Сигналы и мотивы II</h1>
+<h3>Задание 2.</h3>
+<p>
+    Нужно вычислить <b>IC</b> (информационное содержание, information content) последовательностей<b>*</b> Козак в геноме <i>Danio rerio</i> и создать его
+    <a href="http://weblogo.berkeley.edu/logo.cgi">LOGO</a>.
+</p>
+<pre>
+<b>*</b>Выравнивание (вариант 7)
+    cagcatgac
+    aaacatggg
+    caaaatggt
+    caacatgtc
+    aaccatgga
+    gacaatggc
+    aattatggc
+    gaatatggc
+    gaagatgga
+    caagatgtc
+    cagcatgtc
+    aatcatgga
+</pre>
+<p>
+    IC вычисляется по следующим формулам:
+</p>
+<pre>
+    <b>(1)</b> IC(b, j) = f(b, j) * log<sub>2</sub>(f(b, j) / p(b))
+    (дополнительное условие: если f(b, j) = 0, то IC(b, j) = 0) <br>
+    <b>(2)</b> IC(j) = Σ<sub>bases</sub>IC(b, j) <br>
+    <b>(3)</b> IC = Σ<sub>positions</sub>IC(j)
+</pre>
+<h6>Вычисление IC</h6>
+<table border="1" class="mono">
+    <thead>
+    <tr style="text-align: right;">
+        <th>IC(b, j)</th>
+        <th>0</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>A</th>
+        <td>0.039576</td>
+        <td>1.703689</td>
+        <td>0.351845</td>
+        <td>-0.146879</td>
+        <td>1.703689</td>
+        <td>0.000000</td>
+        <td>0.000000</td>
+        <td>-0.156773</td>
+        <td>-0.074078</td>
+    </tr>
+    <tr>
+        <th>C</th>
+        <td>0.462622</td>
+        <td>0.000000</td>
+        <td>-0.035273</td>
+        <td>0.686664</td>
+        <td>0.000000</td>
+        <td>0.000000</td>
+        <td>0.000000</td>
+        <td>0.000000</td>
+        <td>0.930836</td>
+    </tr>
+    <tr>
+        <th>G</th>
+        <td>0.093332</td>
+        <td>0.000000</td>
+        <td>-0.035273</td>
+        <td>-0.035273</td>
+        <td>0.000000</td>
+        <td>0.000000</td>
+        <td>2.373327</td>
+        <td>1.192243</td>
+        <td>-0.100970</td>
+    </tr>
+    <tr>
+        <th>T</th>
+        <td>0.000000</td>
+        <td>0.000000</td>
+        <td>-0.146879</td>
+        <td>-0.146879</td>
+        <td>0.000000</td>
+        <td>1.703689</td>
+        <td>0.000000</td>
+        <td>-0.074078</td>
+        <td>-0.156773</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<table border="1" class="mono">
+    <thead>
+    <tr style="text-align: right;">
+        <th>IC(j)</th>
+        <th>0</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>A+C+G+T</th>
+        <td>0.595529</td>
+        <td>1.703689</td>
+        <td>0.134421</td>
+        <td>0.357633</td>
+        <td>1.703689</td>
+        <td>1.703689</td>
+        <td>2.373327</td>
+        <td>0.961393</td>
+        <td>0.599016</td>
+    </tr>
+    </tbody>
+</table>
+<p class="mono">TOTAL IC: 10.132</p>
+<h6>LOGO</h6>
+<img src="img/fileEFWUC6.png" alt="LOGO">
+<br>
+<a href="prac/task2.ipynb" download="">Ссылка на загрузку .ipynb с вычислениями IC</a>
+<h3>Задание 3. Проверка PWM для сайтов регуляции разрывной транскрипции sgmRNA</h3>
+<p>Для обнаружения мотивов в геноме <i>Magpie-robin coronavirus</i> HKU18 был использован результат комманды из пакета MEME (а не с сайта, как в практикуме 6)</p>
+<p class="mono">meme upstream_sequences.fasta -dna -nmotifs 3 -minw 6 -maxw -50</p>
+<p>Отличие от предыдущего практикума состоит в том, что был захвачен более длинный upstream регион (для поздних белков: -200, в стандартном случае получить нормальный результат FIMO трудно)</p>
+<p>Ссылка на результат работы FIMO <a href="prac/fimo.txt">fimo.txt</a></p>
+<p>Для создания LOGO последовательности Козак были использованы последовательности с координатами от -10 до 4 для всех генов.</p>
+<figure>
+    <img src="img/filevibTdq.png" alt="kozak_logo">
+    <figcaption>
+        <h6>Рисунок 2.</h6> LOGO последовательности Козак вируса
+    </figcaption>
+</figure>
+<p>Как можно заключить из следующего изображения, последовательность Козак вируса почти не совпадает с человеческой</p>
+<figure>
+    <img src="img/Human_Kozak_context._Version_2.png" alt="human">
+    <figcaption>
+        <h6>Рисунок 3.</h6> LOGO последовательности Козак человека (взято с англоязычной Википедии)
+    </figcaption>
+</figure>
+<p>К сожалению, для доказательства специфичности не нашлось секвенированных геномов вирусов такого же вида, но отличных по штамму. Зато было проведено сравнение мотивов с мотивами <i>Bulbul coronavirus</i> HKU11-934. Можно сказать, что схожие (возможно CS) последовательности есть (ACACCA), хотя они в достаточной мере вариабельны как в геноме изучаемого мною вируса, так и в геноме его родственника (хотя большое сходство есть, даже upstream координаты близки и примерно равны -170 нуклеотидов)</p>
+<p>Ссылка на результат работы FIMO <a href="prac/relative_fimo.txt">relative_fimo.txt</a></p>
+<table>
+    <thead>
+    <tr>
+        <th>Номер</th>
+        <th>Наименование гена</th>
+        <th>Белковый продукт</th>
+        <th>Координаты</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>orf1ab</td>
+        <td>replicase polyprotein</td>
+        <td>join(596..11434,11434..19356)</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>S</td>
+        <td>spike glycoprotein</td>
+        <td>19338..22991</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>E</td>
+        <td>envelope protein</td>
+        <td>22985..23233</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>M</td>
+        <td>membrane protein</td>
+        <td>23226..23882</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>NS6</td>
+        <td>NS6 protein</td>
+        <td>23882..24172</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>N</td>
+        <td>nucleocapsid protein</td>
+        <td>24355..25395</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>NS7a</td>
+        <td>NS7a protein</td>
+        <td>25407..25580</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>NS7b</td>
+        <td>NS7b protein</td>
+        <td>25561..25932</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>NS7c</td>
+        <td>NS7c protein</td>
+        <td>25941..26195</td>
+    </tr>
+    </tbody>
+    <caption>
+        <h6>Таблица 3.</h6> Дополнительная информация, координаты генов <i>Magpie-robin coronavirus</i> HKU18
+    </caption>
+</table>
+<a href="../" class="back">Вернуться на страницу семестра</a>
+</body>
+</html>

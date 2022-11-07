@@ -1,0 +1,10 @@
+NS7a	fimo	motif 1	11	23	18.4693	.	.	pvalue 3.07e-08; qvalue 2.08e-05; sequence ATCTGACAAGGAG;
+S	fimo	motif 1	23	35	14.3057	.	.	pvalue 8.52e-06; qvalue 0.00235; sequence CTCCTCCAAGGAG;
+E	fimo	motif 1	44	56	13.9658	.	.	pvalue 1.12e-05; qvalue 0.00235; sequence CTCTCACAACAAG;
+M	fimo	motif 1	54	66	13.7109	.	.	pvalue 1.39e-05; qvalue 0.00235; sequence CTCTGACACTGAG;
+NS6	fimo	motif 1	12	24	13.0311	.	.	pvalue 2.32e-05; qvalue 0.00312; sequence ATCTATCAGGGAG;
+orf1ab	fimo	motif 1	10	22	12.7762	.	.	pvalue 2.77e-05; qvalue 0.00312; sequence ATCTGATCTGGAC;
+NS7c	fimo	motif 1	21	33	12.3513	.	.	pvalue 3.68e-05; qvalue 0.00355; sequence ATCCGCTCAGGCG;
+NS7b	fimo	motif 1	79	91	11.9265	.	.	pvalue 4.75e-05; qvalue 0.00402; sequence CTCTCCTTTGAAG;
+orf1ab	fimo	motif 3	73	87	26.6746	.	.	pvalue 1.34e-09; qvalue 9.88e-07; sequence GCAGCTCCGCGCCTG;
+S	fimo	motif 3	69	83	26.4142	.	.	pvalue 5.51e-09; qvalue 2.04e-06; sequence GCATCTGGCCGCCTG;

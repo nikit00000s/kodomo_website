@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+}
+main {
+  background: #2D0922;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+.big-header-title,
+.big-header-link,
+.big-header-date {
+  font-family: Consolas, monaco, monospace;
+  font-weight: bolder;
+  color: #00C833;
+  background: rgba(0, 0, 0, 0.5);
+}
+.big-header-link:hover {
+  color: #2D0922;
+  background: rgba(0, 200, 51, 0.8);
+}
+main .row {
+  background: #2D0922;
+  color: #fff;
+}
+#sketch-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.bg-h1 {
+  color: #89d431;
+  font-family: Consolas, monaco, monospace;
+}
+.bg-h2 {
+  color: #fff;
+  font-family: Consolas, monaco, monospace;
+}
+.ls-footer {
+  position: relative;
+  padding-top: 0.5rem;
+  background: transparent;
+  color: #00C833;
+  overflow: hidden;
+  z-index: 1;
+  font-family: Consolas, monaco, monospace;
+}
+#back-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 99%;
+  width: 100%;
+  background-image: url(matrix.png);
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  background-position: center;
+  background-repeat: repeat;
+  transform: scale(1.05);
+  z-index: 0;
+}
+.ls-footer h5 {
+  font-weight: bold;
+}
+.ls-footer a {
+  color: #00C833;
+}
+.ls-footer a:hover {
+  color: #89d431;
+}
+main p {
+  margin: 1rem 0;
+}
+hr {
+  border: 0.1rem solid #00C833;
+  border-radius: 5px;
+  z-index: 2;
+}
+/*# sourceMappingURL=pr6.css.map */

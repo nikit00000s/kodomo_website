@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>#13 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/all.min.css"/>
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="../../css/old_style/template_v1.css"/>
+    <link rel="stylesheet" type="text/css" href="page_style.css">
+</head>
+<body>
+
+<div id="button-to-end" onclick="window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: 'smooth'})">
+    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+</div>
+
+<header class="container-fluid header">
+    <div class="row header-row">
+        <div class="col header-col">
+
+            <h1 class="header-caption">
+                    <span>
+                        <a class="header-link" href="http://kodomo.cmm.msu.su/wiki/2018/2/pr13">
+                            <i class="fa fa-bookmark" aria-hidden="true"></i>
+                            Практикум #13.
+                        </a>
+                        <span class="header-name">
+                            Блоки в множественных выравниваниях
+                        </span>
+                    </span>
+            </h1>
+            <h6 class="h6 text-md-center header-date">7 мая 2019 г.</h6>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <div class="container-fluid prac_content">
+        <div class="row justify-content-center">
+            <div class="basic_task col col-12 col-lg-8">
+                <h2 class="prac_title text-center">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i> Практикум #13. Блоки в множественных выравниваниях
+                </h2>
+
+                <p class="prac_intro">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> Данный практикум посвящен нахождению блоков в
+                    множественных выравниваниях.
+                </p>
+            </div>
+            <section class="basic_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-circle" aria-hidden="true"></i> Задание 1.
+                    Блоки в множественном выравнивании INDY</h3>
+
+                <div class="task_intro">
+                    <h5><i class="fa fa-book" aria-hidden="true"></i> Что было сделано?</h5>
+                    <p>
+                    <ul class="short">
+                        <li>Выбрали множественное выравнивание какого-либо белка</li>
+                        <li>Найшли и разметили блоки в выравнивании</li>
+                        <li>Объяснили гомологию</li>
+                    </ul>
+
+                    <h5><i class="fa fa-book" aria-hidden="true"></i> На каком белке было сделано?</h5>
+                    <p> Для данного задания я выбрал белок INDY (Protein I'm not dead yet, Uniprot ID&nbsp;&mdash; <a
+                            href="https://www.uniprot.org/uniprot/Q9VVT2"><i class="fa fa-external-link-square"
+                                                                             aria-hidden="true"></i>&nbsp;INDY1_DROME</a>)&nbsp;&mdash;
+                        катион-независимый электронейтральный переносчик (не связанный с деполяризацией мембраны)
+                        различных промежуточных соединений цикла трикарбоновых кислот. Транспорт осуществляется через
+                        эпителий кишечника и через плазматические мембраны органов, участвующих в промежуточном
+                        метаболизме. Сродство к субстратам убывает в следующем порядке: <span class="chem">цитрат</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i> <span class="chem">сукцинат</span> <i
+                                class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span class="chem">пируват</span>. <span class="chem">Фумарат</span>,
+                        <span class="chem">а-кетоглутарат</span> и <span class="chem">глутарат</span> также
+                        транспортируются, но <span class="chem">лактат</span> уже нет. Транспортный механизм
+                        не связан с <span class="chem">Na<sup>+</sup></span>, <span class="chem">K<sup>+</sup></span>
+                        или <span class="chem">Cl<sup>-</sup></span>. Функция показана в клеточных линиях ооцитов
+                        <i class="species"><i class="fa fa-bug" aria-hidden="true"></i> Xenopus</i> и пигментного
+                        эпителия сетчатки человека (HRPE).
+                </div>
+
+                <div class="task_info">
+                    <h4><i class="fa fa-heartbeat size-blink" aria-hidden="true"></i> I'm not dead yet&nbsp;(INDY1_DROME)
+                    </h4>
+                    <p>
+                        Для начала была скачана последовательность INDY1_DROME, затем эту последовательность ввели в
+                        BLAST. Результаты были следующими&nbsp;(рисунок&nbsp;1):
+                    </p>
+
+
+                    <div class="figure-wrap">
+                        <figure class="image">
+                            <img src="img/blast_top100.png" alt="blast results">
+                        </figure>
+                        <div class="caption">
+                            <h5><i class="fa fa-image" aria-hidden="true"></i> Рисунок 1.</h5>
+                            Распределение 100&nbsp;лучших результатов поиска BLAST по белку&nbsp;INDY1_DROME
+                        </div>
+                    </div>
+
+                    <p>
+                        Как мы можем видеть из рисунка&nbsp;1, BLAST нашел в белке INDY1_DROME множество тарнсмембранных
+                        спиралей. Это логично, ведь этот белок несет ответственность за транспорт веществ и локализован
+                        на плазматической мембране. Для функционирования белка достаточно важно поддеривать эти спирали
+                        в исправном состоянии. Поэтому домены, кодирующие эти спирали довольно консервативны.
+                    </p>
+                    <p>
+                        О высокой важности данных доменов также свидетельствует то, что в списке результатов вывелось
+                        больше сотни аминокислотных последовательностей с E-value, равным нулю. Всего получили 19&nbsp;451&nbsp;результатов.
+                        Процент идентичности больше&nbsp;90% у ~50&nbsp;последовательностей.
+                    </p>
+                    <p>
+                        Из результатов поиска BLAST я взял около 70 последовательностей&nbsp;(не только самых первых).
+                        Далее я произвел выравнивание с помощью программы <i class="fa fa-terminal"
+                                                                             aria-hidden="true"></i>&nbsp;muscle.
+                        Загрузил результат выравнивания в Jalview и начал отсорировывать те последовательности, которые
+                        мне показались негомологичными. Раскрасил столбцы, гомологичность которых составила больше 80%.
+                        Результат&nbsp;&mdash; рисунок&nbsp;2.
+                    </p>
+
+                    <figure class="image aligned">
+                        <img src="img/alignul.png" alt="blast results">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-image" aria-hidden="true"></i> Рисунок 2.</h5>
+                        Множественное выравнивание INDY1_DROME с гомологами из программы muscle, просмотр в Jalview,
+                        раскраска Clustal.
+                    </div>
+                </div>
+
+                <div class="task_outro">
+                    <h5><i class="fa fa-comment" aria-hidden="true"></i> Заключение</h5>
+                    <p> Я считаю, что последовательности, изображенные на рисунке&nbsp;2&nbsp;&mdash; гомологичные, так как в их выравнивании
+                    есть множество последовательно расположенных консервативных колонок. Например, колонки 190&ndash;195
+                    S-M-W-I-S-N, 487&ndash;493 [LV]-L-G(3)-[FY]-A и так далее. Я думаю, что протяженные совокупности
+                    консервативных (функционально консервативных) позиций кодируют трансмембранные спирали, так как
+                    эти вторичные структуры очень важны для закрепления белка в мембране, то есть в месте выполнения им
+                    его функций. Неконсервативные же колонки&nbsp;(например, с 222&mdash;245), как я думаю, скорее кодируют петли. </p>
+                    <!-- #FIXME -->
+                </div>
+
+            </section>
+
+
+            <!-- #FIXME -->
+        </div>
+    </div>
+
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- TERMS, FOOTER column -->
+
+            <div class="col col-6 terms">
+                <h1 class="text-uppercase">Семестры</h1>
+                <div class="terms1">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="../../term1/index.html">Первый</a>
+                        </li>
+                        <li>
+                            <a href="../../term2/index.html">Второй</a>
+                        </li>
+                        <li>
+                            <a href="../../term3/index.html">Третий</a>
+                        </li>
+                        <li>
+                            <a href="../../term4/index.html">Четвёртый</a>
+                        </li>
+                        <li>
+                            <a href="../../term5/index.html">Пятый</a>
+                        </li>
+                        <li>
+                            <a href="../../term6/index.html">Шестой</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="terms2">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="../../term7/index.html">Седьмой</a>
+                        </li>
+                        <li>
+                            <a href="../../term8/index.html">Восьмой</a>
+                        </li>
+                        <li>
+                            <a href="../../term9/index.html">Девятый</a>
+                        </li>
+                        <li>
+                            <a href="../../term10/index.html">Десятый</a>
+                        </li>
+                        <li>
+                            <a href="../../term11/index.html">Одиннадцатый</a>
+                        </li>
+                        <li>
+                            <a href="../../term12/index.html">Двенадцатый</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <hr class="clearfix w-100 d-md-none">
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col col-md-3 mx-auto">
+
+                <!-- Links -->
+                <h1 class="text-uppercase">МГУ</h1>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="http://www.fbb.msu.ru/" class="li">
+                            Сайт ФББ МГУ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.msu.ru/">МГУ</a>
+                    </li>
+                </ul>
+
+
+                <!--SOCIAL-->
+                <h1 class="text-uppercase">Связь</h1>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://vk.com/nikgr1">Вконтакте | <i class="fa fa-vk" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:nikit00000s@fbb.msu.ru">Почта kodomo | <i class="fa fa-envelope"
+                                                                                  aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:NikGR1@yandex.ru">Личная почта | <i class="fa fa-envelope"
+                                                                            aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col col-md-3 mx-auto">
+
+                <!-- STUFF -->
+                <h1 class="text-uppercase">Остальное на сайте</h1>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="../../index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="../../about_me.html">Обо мне</a>
+                    </li>
+                    <li>
+                        <a href="../../html/fun-useful-statements.html">Котелок</a>
+                    </li>
+                    <li>
+                        <a href="http://kodomo.cmm.msu.su/wiki/2018">KodomoFBB</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <hr class="clearfix w-100">
+    </div>
+    <!-- Copyright -->
+
+    <div class="footer-copyright">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+    </div>
+</footer>
+
+
+<script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../js/own/yearInit.js"></script>
+</body>
+</html>

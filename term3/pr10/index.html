@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>#10 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../less/simple_style/style.css">
+</head>
+<body>
+
+<h1>Геномные браузеры</h1>
+<p>
+    Учимся работать с геномными браузерами <b>Ensembl</b> и <b>UCSC</b> (University of California Santa Cruz)
+</p>
+<h2>UCSC</h2>
+<p>
+    Для поиска в браузере необходимо было выбрать ген, кодирующий белок человека. Этим геном стал <a
+        href="https://en.wikipedia.org/wiki/MAPK10"><b>MAPK10</b></a>. Информация по гену приведена в таблице 1.
+</p>
+<table>
+    <thead>
+    <tr>
+        <th>Имя гена</th>
+        <th>MAPK10</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>ID в GENCODE</th>
+        <td>ENSG00000109339.23</td>
+    </tr>
+    <tr>
+        <th>Цепь</th>
+        <td>обратная</td>
+    </tr>
+    <tr>
+        <th>Хромосома</th>
+        <td>4</td>
+    </tr>
+    <tr>
+        <th>Плечо</th>
+        <td>Длинное</td>
+    </tr>
+    <tr>
+        <th>Полоса</th>
+        <td>21.3</td>
+    </tr>
+    <tr>
+        <th>Число продуктов</th>
+        <td>192</td>
+    </tr>
+
+
+
+
+
+    <tr>
+        <th>ID в GENCODE транскрипта 1</th>
+        <td>ENST00000641010.1</td>
+    </tr>
+    <tr>
+        <th>Координаты в хромосоме</th>
+        <td>85,990,007-86,360,060</td>
+    </tr>
+    <tr>
+        <th>Число экзонов</th>
+        <td>15</td>
+    </tr>
+    <tr>
+        <th>Длина белка</th>
+        <td>473</td>
+    </tr>
+
+
+    <tr>
+        <th>ID в GENCODE транскрипта 2</th>
+        <td>ENST00000641324.1</td>
+    </tr>
+    <tr>
+        <th>Координаты в хромосоме</th>
+        <td>85,990,138-86,360,051</td>
+    </tr>
+    <tr>
+        <th>Число экзонов</th>
+        <td>15</td>
+    </tr>
+    <tr>
+        <th>Длина белка</th>
+        <td>435</td>
+    </tr>
+
+
+    <tr>
+        <th>ID в GENCODE транскрипта 3</th>
+        <td>ENST00000641102.1</td>
+    </tr>
+    <tr>
+        <th>Координаты в хромосоме</th>
+        <td>85,999,848-86,360,053</td>
+    </tr>
+    <tr>
+        <th>Число экзонов</th>
+        <td>15</td>
+    </tr>
+    <tr>
+        <th>Длина белка</th>
+        <td>551</td>
+    </tr>
+
+    </tbody>
+    <caption>
+        <h6>Таблица 1.</h6> Характеристика гена MAPK10.
+    </caption>
+</table>
+
+<figure>
+    <img src="img/hgt_genome_euro_1552a_18d360.png" alt="UCSC result image">
+    <figcaption>
+        <h6>Рисунок 1.</h6> Окрестность гена из Genome Browser cо следующими треками: транскрипты GENCODE и RefSeq, консервативность последовательности среди позвоночных (Conservation), частые полиморфизмы (Common SNPs).
+    </figcaption>
+</figure>
+
+<h2>Ensembl</h2>
+Были выравнены 2 последовательности: гены <a href="https://en.wikipedia.org/wiki/Amyloid_precursor_protein">APP</a> <i>Homo sapiens</i> и <i>Pan troglodytes</i> (<a
+        href="prac/alignment_Pan_troglodytes_21_12214618_12501469.fasta">выравнивание</a>). Затем был рассчитан процент различий между двумя последовательностями с помощью программы <b>distmat</b> из программного пакета EMBOSS. Вывод программы:
+<pre>
+Distance Matrix
+---------------
+
+Uncorrected for Multiple Substitutions
+Using base positions 123 in the codon
+Gap weighting is 0.000000
+
+            1       2
+          0.00    1.34          homo_sapiens_1-293057 1
+                  0.00          pan_troglodytes_1-293057 2
+</pre>
+<p>Следовательно, в выравнивании процент замен равен 1,34 (то есть 1,34 различий на 100 нуклеотидов). Исходя из того, что в полномаштабном сравнении геномов<sup>(1)</sup> процент замен составляет 1.24% ± 0.07%, можно сказать, что APP довольно слабо различается между человеком и шимпанзе относительно средней разницы.</p>
+<p>(1) <a href="https://www.cell.com/ajhg/fulltext/S0002-9297(07)64096-8">Genomic Divergences between Humans and Other Hominoids and the Effective Population Size of the Common Ancestor of Humans and Chimpanzees &mdash; Feng-Chi Chen, Wen-Hsiung Li
+</a></p>
+<a href="../" class="back">Вернуться на страницу семестра</a>
+<hr>
+&copy; Грызунов Никита, 2019 г.
+</body>
+</html>

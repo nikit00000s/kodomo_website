@@ -1,0 +1,45 @@
+########################################
+# Program: needle
+# Rundate: Sun 12 May 2019 11:32:37
+# Commandline: needle
+#    [-asequence] COPZ_BACSU.fasta
+#    [-bsequence] CCMD_ECOLI.fasta
+#    -outfile COPZ_BACSU_CCMD_ECOLI.needle
+#    -auto
+# Align_format: srspair
+# Report_file: COPZ_BACSU_CCMD_ECOLI.needle
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: COPZ_BACSU
+# 2: CCMD_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 109
+# Identity:       4/109 ( 3.7%)
+# Similarity:    14/109 (12.8%)
+# Gaps:          80/109 (73.4%)
+# Score: 8.0
+# 
+#
+#=======================================
+
+COPZ_BACSU         1 ----------------------------------------MEQKTLQVEG     10
+                                                             |:.:.: :.|
+CCMD_ECOLI         1 MTPAFASWNEFFAMGGYAFFVWLAVVMTVIPLVVLVVHSVMQHRAI-LRG     49
+
+COPZ_BACSU        11 MSCQHCVKAVETSVGELDGVSAVHVNLEAGKVDVSFDADKVSVKDIADAI     60
+                     ::.|...:|...:..:.:..                              
+CCMD_ECOLI        50 VAQQRAREARLRAAQQQEAA------------------------------     69
+
+COPZ_BACSU        61 EDQGYDVAK     69
+                              
+CCMD_ECOLI        69 ---------     69
+
+
+#---------------------------------------
+#---------------------------------------

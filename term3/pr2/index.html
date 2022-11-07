@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>#2 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="../../less/style/common_style.css">
+    <link rel="stylesheet" href="../../less/style/loading.css">
+    <link rel="stylesheet" href="page_style.css">
+</head>
+<body>
+
+<div id="button-to-end"
+     onclick="window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: window.scroll_behavior})"></div>
+<div id="breadcrumb">
+    <a href="../index.html">3 семестр</a><a href="index.html">2 практикум</a>
+</div>
+
+<header class="background-wiggle">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col col-12 align-self-end">
+                <h1>
+                    <a class="header-link border-to-background" href="http://kodomo.cmm.msu.su/wiki/2018/3/task2">
+                        A- и В- формы ДНК. Структура РНК
+                    </a>
+                </h1>
+            </div>
+            <div class="col col-12 align-self-baseline justify-content-end">
+                <h3 class="yellow-gradient">17 сентября 2019 г.</h3>
+            </div>
+            <div class="button yellow-gradient"
+                 onclick="window.scrollTo({left: 0, top: document.documentElement.clientHeight, behavior: window.scroll_behavior})"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container prac_content">
+        <div class="row basic_task">
+            <div class="col col-12 col-lg-4 task_intro">
+                <h1 class="prac_title">Задание 1</h1>
+                <p>
+                    <span class="what">Что сделали?</span>
+                    Построили модели дуплексов A&ndash;, B&ndash; и Z&ndash;формы ДНК, соответствующих
+                    последовательности <span class="seq">"GATCGATCGATCGATCGATC"</span> в&nbsp;случае <span
+                        class="nowrap">A&ndash; и B&ndash;формы</span> ДНК,&nbsp;и <span
+                        class="seq">"GCGCGCGCGCGCGCGCGCGC"</span> в&nbsp;случае <span
+                        class="nowrap">Z&ndash;формы</span> ДНК. Пользовались инструментами пакета <a
+                        class="ext-link gradient" title="Перейти на сайт RCSB" href="https://x3dna.org/">3DNA</a>, а
+                    именно
+                    программой <span class="program">fiber</span>. Полученные файлы можно скачать:
+                    <a href="prac/gatc-a.pdb" title="Скачать файл" class="file-download gradient" download="a_form.pdb">A&ndash;форма
+                        ДНК</a>
+                    |
+                    <a href="prac/gatc-b.pdb" title="Скачать файл" class="file-download gradient" download="b_form.pdb">B&ndash;форма
+                        ДНК</a>
+                    |
+                    <a href="prac/gatc-z.pdb" title="Скачать файл" class="file-download gradient" download="z_form.pdb">Z&ndash;форма
+                        ДНК</a>
+                </p>
+            </div>
+
+            <div class="col col-12 col-lg-4">
+                <h2 class="task_title">Задание 2</h2>
+                <p>
+                    <span class="what">Что сделали?</span> Из экспериментальной структуры <span class="nowrap">B&ndash;формы ДНК</span>
+                    <a
+                            class="dna gradient" title="Перейти на сайт RCSB"
+                            href="https://www.rcsb.org/structure/1bna">1BNA</a> выбрали одно
+                    основание <span
+                        class="highlight">тимин 19</span> (цепь&nbsp;B), на основе этого азотистого основания определили
+                    атомы,
+                    обращенные в сторону большой и малой бороздок.
+                </p>
+                <p>
+                    Как оказалось, в сторону большой бороздки были обращены атомы C4, C5, C6, C7 и O4.
+                    В сторону же малой бороздки были обращены следующие атомы: N1, C2, O2 и N3.
+                    Это распределение изображено на рисунке 1.
+                </p>
+            </div>
+
+            <div class="col col-12 col-lg-4 mt-lg-5">
+                <p>
+                    Дополнительно, были проанализированы экспериментальные структуры A&ndash;, B&ndash; и Z&ndash;формы
+                    ДНК (
+                    <a class="dna gradient" title="Перейти на сайт RCSB"
+                       href="https://www.rcsb.org/structure/3V9D">3V9D</a>,
+                    <a class="dna gradient" title="Перейти на сайт RCSB"
+                       href="https://www.rcsb.org/structure/1bna">1BNA</a> и
+                    <a class="dna gradient" title="Перейти на сайт RCSB"
+                       href="https://www.rcsb.org/structure/1tne">1TNE</a> соответственно).
+                    С результатами изучения структур можно ознакомиться в таблице 1.
+                </p>
+                <div class="wrap-sm">
+                    <img class="sm" src="img/thymine.png" alt="2dgd">
+                    <div class="img-cap"><span>Рисунок 1.</span> Тимин 19 из B цепи 1BNA. Красным отмечены атомы,
+                        обращенные в сторону большой бороздки, синим &mdash; в сторону малой
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12 col-lg-4">
+                <h2 class="task_title">Задание 3</h2>
+                <p>
+                    Для выполнения дальнеших упражнений была выбрана экспериментальная структура глутаминовой тРНК
+                    <a class="file-alt gradient" title="Перейти на сайт RCSB" href="http://www.rcsb.org/structure/1O0B">1O0B</a>.
+                    Для работы с
+                    пакетом 3DNA потребовалось перевести pdb файл в старый формат командой <span class="program">remediator</span>.
+                    Далее воспользовались конвеером:
+                </p>
+                <p class="bash"><span class="bash-user">user@pc</span>:<span class="bash-path">~$ </span>find_pair -t
+                    1o0b_old.pdb stdout | analyze</p>
+                <h4 class="sub_task_title">Упражнение 1</h4>
+                <p>
+                    <span class="what">Что сделали?</span>
+                    Определили торсионные углы структуры 1O0B (таблицы 2 и 3) и схожесть структуры с различными формами
+                    ДНК.
+                    Как оказалось, структура 1O0B схожа с A-ДНК.
+                </p>
+            </div>
+
+            <div class="col col-12 col-lg-8 mt-lg-5">
+                <h4 class="sub_task_title">Упражнение 2</h4>
+                <p>
+                    <span class="what">Что сделали?</span>
+                    Нашли стебли в структуре тРНК. Номера нуклеотидов, образующих стебли, можно найти ниже. Красным и
+                    синим цветом отображены нуклеотиды в составе стеблей. Координаты стеблей:
+                    <span class="highlight">902...907 &ndash; 966...971</span>,
+                    <span class="highlight">949...953 &ndash; 961...965</span>,
+                    <span class="highlight">937...944 &ndash; 926...933</span> и
+                    <span class="highlight">910...912 &ndash; 923...925</span>.
+                    В этой структуре было обнаружено 9 неканонических пар оснований (помечены хотя бы одной
+                    <b class="highlight">*</b>) и 2 пары оснований, стабилизирующих третичную структуру тРНК
+                    (помечены <b class="highlight">x</b>)
+                </p>
+                <p class="txt-file">            Strand I                    Strand II          Helix
+<span class="color-red-faded">
+ 1   (0.014) ....>B:.902_:[..G]G-----C[..C]:.971_:B<.... (0.007)     |
+ 2   (0.007) ....>B:.903_:[..G]G-----C[..C]:.970_:B<.... (0.007)     |
+ 3   (0.005) ....>B:.904_:[..G]G-----C[..C]:.969_:B<.... (0.005)     |
+ 4   (0.009) ....>B:.905_:[..G]G-----C[..C]:.968_:B<.... (0.007)     |
+ 5   (0.012) ....>B:.906_:[..U]U-----A[..A]:.967_:B<.... (0.010)     |
+ 6   (0.012) ....>B:.907_:[..A]A-----U[..U]:.966_:B<.... (0.009)     |
+</span><span class="color-purple-faded">
+ 7   (0.005) ....>B:.949_:[..C]C-----G[..G]:.965_:B<.... (0.009)     |
+ 8   (0.004) ....>B:.950_:[..G]G-----C[..C]:.964_:B<.... (0.003)     |
+ 9   (0.003) ....>B:.951_:[..A]A-----U[..U]:.963_:B<.... (0.002)     |
+10   (0.007) ....>B:.952_:[..G]G-----C[..C]:.962_:B<.... (0.005)     |
+11   (0.005) ....>B:.953_:[..G]G-----C[..C]:.961_:B<.... (0.006)     |
+</span>
+12   (0.002) ....>B:.954_:[..U]U-<b>**</b>--A[..A]:.958_:B<.... (0.010)     |
+13   (0.003) ....>B:.955_:[..U]U-<b>**</b>+-G[..G]:.918_:B<.... (0.005)     <b>x</b>
+<span class="color-red-faded">
+14   (0.009) ....>B:.937_:[..A]A-<b>**</b>--U[..U]:.933_:B<.... (0.006)     |
+15   (0.004) ....>B:.938_:[..U]U-<b>**</b>--U[..U]:.932_:B<.... (0.005)     |
+16   (0.004) ....>B:.939_:[..U]U-----A[..A]:.931_:B<.... (0.003)     |
+17   (0.003) ....>B:.940_:[..C]C-<b>*</b>---G[..G]:.930_:B<.... (0.009)     |
+18   (0.005) ....>B:.941_:[..C]C-----G[..G]:.929_:B<.... (0.010)     |
+19   (0.006) ....>B:.942_:[..G]G-----C[..C]:.928_:B<.... (0.005)     |
+20   (0.009) ....>B:.943_:[..G]G-----C[..C]:.927_:B<.... (0.008)     |
+21   (0.005) ....>B:.944_:[..C]C-<b>**</b>--A[..A]:.926_:B<.... (0.009)     |
+</span><span class="color-purple-faded">
+22   (0.011) ....>B:.910_:[..G]G-----C[..C]:.925_:B<.... (0.005)     |
+23   (0.002) ....>B:.911_:[..C]C-----G[..G]:.924_:B<.... (0.009)     |
+24   (0.002) ....>B:.912_:[..C]C-----G[..G]:.923_:B<.... (0.011)     |
+</span>
+25   (0.004) ....>B:.913_:[..A]A-<b>**</b>+-A[..A]:.945_:B<.... (0.005)     |
+26   (0.005) ....>B:.914_:[..A]A-<b>**</b>--U[..U]:.908_:B<.... (0.009)     |
+27   (0.007) ....>B:.915_:[..G]G-<b>**</b>+-C[..C]:.948_:B<.... (0.019)     <b>x</b>
+28   (0.026) ....>B:.919_:[..G]G-----C[..C]:.956_:B<.... (0.003)     +</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12 col-md-6">
+                <h4 class="sub_task_title">Упражнение 3</h4>
+                <p>
+                    <span class="what">Что сделали?</span>
+                    Нашли динуклеотидные пары с наибольшим (рисунки&nbsp;2 и&nbsp;3) и наименьшим (рисунки&nbsp;4 и&nbsp;5) стекинг&ndash;взаимодействием&nbsp;(перекрытием).
+                    Чтобы вырезать пару (number) из файла <span class="mono">stacking.pdb</span>, сделали следующее:
+                </p>
+                <p class="bash"><span class="bash-user">user@pc</span>:<span class="bash-path">~$ </span>ex_str -(number)
+                    stacking.pdb step(number).pdb
+                </p>
+            </div>
+            <div class="col col-12 col-md-6 mt-lg-5">
+                <p>
+                    Для того, чтобы создать изображение стекинга, воспользовались следующим:
+                </p>
+                <p class="bash"><span class="bash-user">user@pc</span>:<span class="bash-path">~$ </span>stack2img -cdolt step(number).pdb step(number).ps <span class="bash-cursor"></span></p>
+            </div>
+        </div>
+        <div class="row my-3 my-md-5">
+
+            <div class="col col-12">
+                <h3 class="supplementary">Дополнительные материалы</h3>
+            </div>
+
+            <div class="col col-12 my-2 my-md-3">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>A&ndash;форма</th>
+                            <th>B&ndash;форма</th>
+                            <th>Z&ndash;форма</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>Тип спирали</th>
+                            <td>Правая</td>
+                            <td>Правая</td>
+                            <td>Левая</td>
+                        </tr>
+                        <tr>
+                            <th>Шаг спирали&nbsp;(Å)</th>
+                            <td>28,6</td>
+                            <td>35,7</td>
+                            <td>45,6</td>
+                        </tr>
+                        <tr>
+                            <th>Число оснований на виток</th>
+                            <td>11</td>
+                            <td>10</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <th>Ширина большой бороздки&nbsp;(Å)</th>
+                            <td>12,8 <br/> <small class="highlight">(/3v9d//A/DT`7/P &ndash; /3v9d//B/DC`2/P)</small>
+                            </td>
+                            <td>17,3 <br/> <small class="highlight">(/1bna//A/DG`2/P &ndash; /1bna//B/DT`20/P)</small>
+                            </td>
+                            <td>18,1 <br/> <small class="highlight">(/1tne//A/DC`3/P &ndash; /1tne//B/DG`8/P)</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Ширина малой бороздки&nbsp;(Å)</th>
+                            <td>15,8 <br/> <small class="highlight">(/3v9d//A/DT`7/P &ndash; /3v9d//B/DG`11/P)</small>
+                            </td>
+                            <td>9,8 <br/> <small class="highlight">(/1bna//A/DC`9/P &ndash; /1bna//B/DT`20/P)</small>
+                            </td>
+                            <td>8,2 <br/> <small class="highlight">(/1tne//A/DG`6/P &ndash; /1tne//B/8MG`10/P)</small>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-cap">
+                        <span>Таблица 1.</span> Результат анализа экспериментальных структур A&ndash;, B&ndash; и Z&ndash;форм
+                        ДНК
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 col-md-6 my-2 my-md-3">
+                <div class="table-wrap ten-lines table-width-auto">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>base</th>
+                            <th>alpha</th>
+                            <th>beta</th>
+                            <th>gamma</th>
+                            <th>delta</th>
+                            <th>epsilon</th>
+                            <th>zeta</th>
+                            <th>chi</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>G</td>
+                            <td>&mdash;</td>
+                            <td>&mdash;</td>
+                            <td>163,4</td>
+                            <td>88,6</td>
+                            <td>-140,9</td>
+                            <td>-65,6</td>
+                            <td>178,3</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>G</td>
+                            <td>-70,4</td>
+                            <td>177,6</td>
+                            <td>54,4</td>
+                            <td>77,2</td>
+                            <td>-156,2</td>
+                            <td>-75,1</td>
+                            <td>-168,7</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>G</td>
+                            <td>-37,3</td>
+                            <td>164,5</td>
+                            <td>45,3</td>
+                            <td>80,1</td>
+                            <td>-159,0</td>
+                            <td>-60,1</td>
+                            <td>-160,4</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>G</td>
+                            <td>153,6</td>
+                            <td>-176,7</td>
+                            <td>-179,2</td>
+                            <td>82,4</td>
+                            <td>-144,1</td>
+                            <td>-73,9</td>
+                            <td>-171,0</td>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <td>U</td>
+                            <td>-61,1</td>
+                            <td>172,2</td>
+                            <td>52,3</td>
+                            <td>81,6</td>
+                            <td>176,5</td>
+                            <td>-79,2</td>
+                            <td>-157,4</td>
+                        </tr>
+                        <tr>
+                            <th>6</th>
+                            <td>A</td>
+                            <td>179,3</td>
+                            <td>-134,9</td>
+                            <td>170,0</td>
+                            <td>104,3</td>
+                            <td>-81,4</td>
+                            <td>-49,9</td>
+                            <td>-167,2</td>
+                        </tr>
+                        <tr>
+                            <th>7</th>
+                            <td>C</td>
+                            <td>28,8</td>
+                            <td>-148,1</td>
+                            <td>46,8</td>
+                            <td>87,0</td>
+                            <td>-154,4</td>
+                            <td>-66,4</td>
+                            <td>-166,7</td>
+                        </tr>
+                        <tr>
+                            <th>8</th>
+                            <td>G</td>
+                            <td>-58,4</td>
+                            <td>179,5</td>
+                            <td>50,5</td>
+                            <td>82,8</td>
+                            <td>-155,1</td>
+                            <td>-76,1</td>
+                            <td>-159,9</td>
+                        </tr>
+                        <tr>
+                            <th>9</th>
+                            <td>A</td>
+                            <td>-57,0</td>
+                            <td>173,0</td>
+                            <td>38,9</td>
+                            <td>80,3</td>
+                            <td>-159,8</td>
+                            <td>-85,3</td>
+                            <td>-152,4</td>
+                        </tr>
+                        <tr>
+                            <th>10</th>
+                            <td>G</td>
+                            <td>146,7</td>
+                            <td>-156,2</td>
+                            <td>178,3</td>
+                            <td>82,1</td>
+                            <td>-132,3</td>
+                            <td>-76,8</td>
+                            <td>-178,0</td>
+                        </tr>
+                        <tr>
+                            <th>11</th>
+                            <td>G</td>
+                            <td>-35,8</td>
+                            <td>159,8</td>
+                            <td>46,6</td>
+                            <td>80,9</td>
+                            <td>-159,3</td>
+                            <td>-64,4</td>
+                            <td>-172,0</td>
+                        </tr>
+                        <tr>
+                            <th>12</th>
+                            <td>U</td>
+                            <td>-85,5</td>
+                            <td>-157,9</td>
+                            <td>50,5</td>
+                            <td>86,4</td>
+                            <td>-160,0</td>
+                            <td>-59,6</td>
+                            <td>-160,7</td>
+                        </tr>
+                        <tr>
+                            <th>13</th>
+                            <td>U</td>
+                            <td>-77,6</td>
+                            <td>-177,2</td>
+                            <td>54,6</td>
+                            <td>88,1</td>
+                            <td>-122,8</td>
+                            <td>-101,3</td>
+                            <td>-162,5</td>
+                        </tr>
+                        <tr>
+                            <th>14</th>
+                            <td>A</td>
+                            <td>-117,4</td>
+                            <td>-166,8</td>
+                            <td>59,6</td>
+                            <td>80,4</td>
+                            <td>-144,4</td>
+                            <td>-62,1</td>
+                            <td>-175,6</td>
+                        </tr>
+                        <tr>
+                            <th>15</th>
+                            <td>U</td>
+                            <td>-59,7</td>
+                            <td>164,3</td>
+                            <td>58,1</td>
+                            <td>83,8</td>
+                            <td>-137,9</td>
+                            <td>-63,5</td>
+                            <td>-167,6</td>
+                        </tr>
+                        <tr>
+                            <th>16</th>
+                            <td>U</td>
+                            <td>-62,0</td>
+                            <td>175,8</td>
+                            <td>49,7</td>
+                            <td>85,3</td>
+                            <td>-158,1</td>
+                            <td>-59,0</td>
+                            <td>-156,6</td>
+                        </tr>
+                        <tr>
+                            <th>17</th>
+                            <td>C</td>
+                            <td>-61,8</td>
+                            <td>179,1</td>
+                            <td>45,0</td>
+                            <td>85,4</td>
+                            <td>-124,9</td>
+                            <td>-134,8</td>
+                            <td>-156,3</td>
+                        </tr>
+                        <tr>
+                            <th>18</th>
+                            <td>C</td>
+                            <td>106,4</td>
+                            <td>-110,9</td>
+                            <td>-178,8</td>
+                            <td>83,9</td>
+                            <td>-105,5</td>
+                            <td>-94,8</td>
+                            <td>180,0</td>
+                        </tr>
+                        <tr>
+                            <th>19</th>
+                            <td>G</td>
+                            <td>-49,4</td>
+                            <td>145,5</td>
+                            <td>52,4</td>
+                            <td>76,0</td>
+                            <td>-151,2</td>
+                            <td>-69,1</td>
+                            <td>-170,1</td>
+                        </tr>
+                        <tr>
+                            <th>20</th>
+                            <td>G</td>
+                            <td>-60,9</td>
+                            <td>-179,4</td>
+                            <td>49,5</td>
+                            <td>77,4</td>
+                            <td>-148,6</td>
+                            <td>-71,7</td>
+                            <td>-159,9</td>
+                        </tr>
+                        <tr>
+                            <th>21</th>
+                            <td>C</td>
+                            <td>-53,1</td>
+                            <td>170,9</td>
+                            <td>47,6</td>
+                            <td>79,4</td>
+                            <td>-104,1</td>
+                            <td>-128,2</td>
+                            <td>-141,4</td>
+                        </tr>
+                        <tr>
+                            <th>22</th>
+                            <td>G</td>
+                            <td>-148,7</td>
+                            <td>158,2</td>
+                            <td>41,7</td>
+                            <td>87,6</td>
+                            <td>-150,6</td>
+                            <td>-67,6</td>
+                            <td>-176,9</td>
+                        </tr>
+                        <tr>
+                            <th>23</th>
+                            <td>C</td>
+                            <td>-75,6</td>
+                            <td>-167,1</td>
+                            <td>52,2</td>
+                            <td>83,9</td>
+                            <td>-162,1</td>
+                            <td>-74,2</td>
+                            <td>-159,8</td>
+                        </tr>
+                        <tr>
+                            <th>24</th>
+                            <td>C</td>
+                            <td>136,3</td>
+                            <td>-165,8</td>
+                            <td>-171,6</td>
+                            <td>83,3</td>
+                            <td>-126,8</td>
+                            <td>-63,1</td>
+                            <td>-172,3</td>
+                        </tr>
+                        <tr>
+                            <th>25</th>
+                            <td>A</td>
+                            <td>-45,3</td>
+                            <td>165,1</td>
+                            <td>50,8</td>
+                            <td>79,0</td>
+                            <td>-177,7</td>
+                            <td>-73,6</td>
+                            <td>-156,7</td>
+                        </tr>
+                        <tr>
+                            <th>26</th>
+                            <td>A</td>
+                            <td>174,8</td>
+                            <td>170,5</td>
+                            <td>172,2</td>
+                            <td>90,5</td>
+                            <td>-119,7</td>
+                            <td>-62,8</td>
+                            <td>-170,0</td>
+                        </tr>
+                        <tr>
+                            <th>27</th>
+                            <td>G</td>
+                            <td>-47,6</td>
+                            <td>152,6</td>
+                            <td>55,4</td>
+                            <td>83,3</td>
+                            <td>173,8</td>
+                            <td>24,9</td>
+                            <td>-144,4</td>
+                        </tr>
+                        <tr>
+                            <th>28</th>
+                            <td>G</td>
+                            <td>-105,5</td>
+                            <td>124,5</td>
+                            <td>77,6</td>
+                            <td>89,5</td>
+                            <td>-170,2</td>
+                            <td>-156,1</td>
+                            <td>-133,5</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-cap"><span>Таблица 2.</span> Торсионные углы, структура 1o0b, цепь 1</div>
+                </div>
+            </div>
+
+            <div class="col col-12 col-md-6 my-2 my-md-3">
+                <div class="table-wrap ten-lines table-width-auto">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>base</th>
+                            <th>alpha</th>
+                            <th>beta</th>
+                            <th>gamma</th>
+                            <th>delta</th>
+                            <th>epsilon</th>
+                            <th>zeta</th>
+                            <th>chi</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>C</td>
+                            <td>-61.2</td>
+                            <td>178.2</td>
+                            <td>50.2</td>
+                            <td>84.3</td>
+                            <td>-137.0</td>
+                            <td>-88.2</td>
+                            <td>-148.2</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>C</td>
+                            <td>-66.4</td>
+                            <td>176.0</td>
+                            <td>52.5</td>
+                            <td>80.6</td>
+                            <td>-150.8</td>
+                            <td>-76.3</td>
+                            <td>-160.3</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>C</td>
+                            <td>-67.7</td>
+                            <td>179.0</td>
+                            <td>55.6</td>
+                            <td>82.2</td>
+                            <td>-148.1</td>
+                            <td>-72.9</td>
+                            <td>-172.4</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>C</td>
+                            <td>-63.5</td>
+                            <td>166.5</td>
+                            <td>54.5</td>
+                            <td>80.8</td>
+                            <td>-161.1</td>
+                            <td>-71.0</td>
+                            <td>-152.9</td>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <td>A</td>
+                            <td>-53.4</td>
+                            <td>171.5</td>
+                            <td>46.8</td>
+                            <td>83.0</td>
+                            <td>-149.4</td>
+                            <td>-78.3</td>
+                            <td>-154.4</td>
+                        </tr>
+                        <tr>
+                            <th>6</th>
+                            <td>U</td>
+                            <td>-56.8</td>
+                            <td>171.9</td>
+                            <td>44.3</td>
+                            <td>80.7</td>
+                            <td>-153.5</td>
+                            <td>-75.6</td>
+                            <td>-161.9</td>
+                        </tr>
+                        <tr>
+                            <th>7</th>
+                            <td>G</td>
+                            <td>144.8</td>
+                            <td>-145.8</td>
+                            <td>-178.3</td>
+                            <td>84.9</td>
+                            <td>-134.7</td>
+                            <td>-78.7</td>
+                            <td>177.9</td>
+                        </tr>
+                        <tr>
+                            <th>8</th>
+                            <td>C</td>
+                            <td>-47.8</td>
+                            <td>154.9</td>
+                            <td>46.4</td>
+                            <td>83.8</td>
+                            <td>-152.3</td>
+                            <td>-87.4</td>
+                            <td>-152.8</td>
+                        </tr>
+                        <tr>
+                            <th>9</th>
+                            <td>U</td>
+                            <td>-73.3</td>
+                            <td>-165.3</td>
+                            <td>46.2</td>
+                            <td>80.2</td>
+                            <td>-152.4</td>
+                            <td>-87.6</td>
+                            <td>-152.5</td>
+                        </tr>
+                        <tr>
+                            <th>10</th>
+                            <td>C</td>
+                            <td>-67.2</td>
+                            <td>-178.7</td>
+                            <td>53.4</td>
+                            <td>85.1</td>
+                            <td>-165.8</td>
+                            <td>-56.5</td>
+                            <td>-170.5</td>
+                        </tr>
+                        <tr>
+                            <th>11</th>
+                            <td>C</td>
+                            <td>-90.2</td>
+                            <td>-161.0</td>
+                            <td>50.9</td>
+                            <td>85.4</td>
+                            <td>-152.9</td>
+                            <td>-76.6</td>
+                            <td>-169.0</td>
+                        </tr>
+                        <tr>
+                            <th>12</th>
+                            <td>A</td>
+                            <td>-73.2</td>
+                            <td>-118.1</td>
+                            <td>67.2</td>
+                            <td>103.4</td>
+                            <td>-176.6</td>
+                            <td>-101.5</td>
+                            <td>-91.5</td>
+                        </tr>
+                        <tr>
+                            <th>13</th>
+                            <td>G</td>
+                            <td>40.5</td>
+                            <td>-173.5</td>
+                            <td>37.3</td>
+                            <td>92.6</td>
+                            <td>-27.5</td>
+                            <td>147.2</td>
+                            <td>-118.0</td>
+                        </tr>
+                        <tr>
+                            <th>14</th>
+                            <td>U</td>
+                            <td>-59.0</td>
+                            <td>162.2</td>
+                            <td>50.8</td>
+                            <td>83.9</td>
+                            <td>-109.1</td>
+                            <td>-119.7</td>
+                            <td>-154.0</td>
+                        </tr>
+                        <tr>
+                            <th>15</th>
+                            <td>U</td>
+                            <td>132.7</td>
+                            <td>-136.4</td>
+                            <td>-177.3</td>
+                            <td>84.7</td>
+                            <td>-108.5</td>
+                            <td>-76.7</td>
+                            <td>179.0</td>
+                        </tr>
+                        <tr>
+                            <th>16</th>
+                            <td>A</td>
+                            <td>-56.9</td>
+                            <td>-166.3</td>
+                            <td>45.1</td>
+                            <td>83.6</td>
+                            <td>-154.6</td>
+                            <td>-94.0</td>
+                            <td>-153.3</td>
+                        </tr>
+                        <tr>
+                            <th>17</th>
+                            <td>G</td>
+                            <td>-63.0</td>
+                            <td>163.8</td>
+                            <td>49.3</td>
+                            <td>78.2</td>
+                            <td>-166.2</td>
+                            <td>-67.0</td>
+                            <td>-170.8</td>
+                        </tr>
+                        <tr>
+                            <th>18</th>
+                            <td>G</td>
+                            <td>151.0</td>
+                            <td>176.2</td>
+                            <td>-179.5</td>
+                            <td>87.7</td>
+                            <td>-126.6</td>
+                            <td>-73.9</td>
+                            <td>-175.4</td>
+                        </tr>
+                        <tr>
+                            <th>19</th>
+                            <td>C</td>
+                            <td>-68.4</td>
+                            <td>-165.7</td>
+                            <td>45.4</td>
+                            <td>85.8</td>
+                            <td>-176.8</td>
+                            <td>-61.9</td>
+                            <td>-139.6</td>
+                        </tr>
+                        <tr>
+                            <th>20</th>
+                            <td>C</td>
+                            <td>-57.1</td>
+                            <td>174.4</td>
+                            <td>49.4</td>
+                            <td>79.2</td>
+                            <td>-152.1</td>
+                            <td>-69.4</td>
+                            <td>-154.3</td>
+                        </tr>
+                        <tr>
+                            <th>21</th>
+                            <td>A</td>
+                            <td>-72.1</td>
+                            <td>-178.9</td>
+                            <td>53.7</td>
+                            <td>80.6</td>
+                            <td>-155.0</td>
+                            <td>-59.4</td>
+                            <td>-159.2</td>
+                        </tr>
+                        <tr>
+                            <th>22</th>
+                            <td>C</td>
+                            <td>-58.7</td>
+                            <td>170.1</td>
+                            <td>50.7</td>
+                            <td>77.1</td>
+                            <td>-147.5</td>
+                            <td>-53.9</td>
+                            <td>-166.5</td>
+                        </tr>
+                        <tr>
+                            <th>23</th>
+                            <td>G</td>
+                            <td>-62.2</td>
+                            <td>173.9</td>
+                            <td>56.0</td>
+                            <td>80.6</td>
+                            <td>-149.9</td>
+                            <td>-69.2</td>
+                            <td>-167.2</td>
+                        </tr>
+                        <tr>
+                            <th>24</th>
+                            <td>G</td>
+                            <td>-54.5</td>
+                            <td>166.2</td>
+                            <td>48.5</td>
+                            <td>80.9</td>
+                            <td>-154.3</td>
+                            <td>-75.9</td>
+                            <td>-170.9</td>
+                        </tr>
+                        <tr>
+                            <th>25</th>
+                            <td>A</td>
+                            <td>-36.2</td>
+                            <td>-175.4</td>
+                            <td>57.8</td>
+                            <td>85.6</td>
+                            <td>169.2</td>
+                            <td>20.2</td>
+                            <td>-113.3</td>
+                        </tr>
+                        <tr>
+                            <th>26</th>
+                            <td>U</td>
+                            <td>-66.7</td>
+                            <td>-138.4</td>
+                            <td>57.6</td>
+                            <td>82.0</td>
+                            <td>-152.1</td>
+                            <td>-128.2</td>
+                            <td>-161.4</td>
+                        </tr>
+                        <tr>
+                            <th>27</th>
+                            <td>C</td>
+                            <td>-5.9</td>
+                            <td>130.7</td>
+                            <td>49.6</td>
+                            <td>97.5</td>
+                            <td>177.0</td>
+                            <td>152.8</td>
+                            <td>-153.0</td>
+                        </tr>
+                        <tr>
+                            <th>28</th>
+                            <td>C</td>
+                            <td>151.5</td>
+                            <td>-152.4</td>
+                            <td>49.3</td>
+                            <td>84.6</td>
+                            <td>-139.7</td>
+                            <td>-75.4</td>
+                            <td>-165.0</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-cap"><span>Таблица 3.</span> Торсионные углы, структура 1o0b, цепь 2</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid mb-5">
+        <div class="row justify-content-center">
+            <div class="wrap-img-lg col col-12 col-md-6">
+                <img src="img/step20.svg" alt="stacking_20">
+                <div class="img-cap"><span>Рисунок 2.</span> Лучшее стекинг&nbsp;взаимодействие, площадь&nbsp;равна&nbsp;10,29Å<sup>2</sup></div>
+            </div>
+            <div class="wrap-img-lg col col-12 col-md-6">
+                <img src="img/step22.svg" alt="stacking_20">
+                <div class="img-cap"><span>Рисунок 3.</span> Лучшее стекинг&nbsp;взаимодействие, площадь&nbsp;равна&nbsp;10,29Å<sup>2</sup></div>
+            </div>
+        </div>
+        <div class="row mt-3 justify-content-center">
+            <div class="wrap-img-lg col col-12 col-md-6">
+                <img src="img/step21.svg" alt="stacking_21">
+                <div class="img-cap"><span>Рисунок 4.</span> Худшее стекинг&nbsp;взаимодействие, площадь&nbsp;равна&nbsp;0Å<sup>2</sup></div>
+            </div>
+            <div class="wrap-img-lg col col-12 col-md-6">
+                <img src="img/step24.svg" alt="stacking_24">
+                <div class="img-cap"><span>Рисунок 5.</span> Худшее стекинг&nbsp;взаимодействие, площадь&nbsp;равна&nbsp;0Å<sup>2</sup></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="row justify-content-around">
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 terms resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Семестры
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term1/index.html">Первый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term2/index.html">Второй</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term3/index.html">Третий</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term4/index.html">Четвёртый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term5/index.html">Пятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term6/index.html">Шестой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term7/index.html">Седьмой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term8/index.html">Восьмой</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term9/index.html">Девятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term10/index.html">Десятый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term11/index.html">Одиннадцатый</a>
+                    </div>
+                    <div class="col col-12 col-sm-6">
+                        <a href="../../term12/index.html">Двенадцатый</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 university resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Университет
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="http://www.fbb.msu.ru/" class="fbb">Сайт ФББ МГУ</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="https://www.msu.ru/" class="msu">Сайт МГУ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 communication resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Связь
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="https://vk.com/nikgr1" class="vk">Вконтакте |</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="mailto:nikit00000s@fbb.msu.ru" class="envelope">Почта kodomo |</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="mailto:NikGR1@yandex.ru" class="envelope">Личная почта |</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 ml-5 ml-sm-0 col-md-6 col-xl-3 other resizing">
+                <div class="row head text-uppercase">
+                    <div class="col col-12">
+                        Остальное на сайте
+                    </div>
+                </div>
+                <div class="row body">
+                    <div class="col col-12 col-xl-6">
+                        <a href="../../index.html" class="main-page">Главная</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="../../html/about_me/about_me.html" class="me">Обо мне</a>
+                    </div>
+                    <div class="col col-12 col-xl-6">
+                        <a href="http://kodomo.cmm.msu.su/wiki/2018" class="kodomofbb">KodomoFBB</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr class="clearfix hr-divider">
+
+    <div class="footer-copyright">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+    </div>
+    <div id="button-to-start" onclick="window.scrollTo({left: 0, top: 0, behavior: window.scroll_behavior})"></div>
+</footer>
+
+
+<script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../js/parallax.js-1.5.0/parallax.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+
+<script src="../../js/own/construction.js"></script>
+<script src="../../js/own/backgroundIcons.js"></script>
+<script src="../../js/own/timer.js"></script>
+</body>
+</html>

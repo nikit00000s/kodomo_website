@@ -1,0 +1,81 @@
+########################################
+# Program: needle
+# Rundate: Sun 12 May 2019 11:32:37
+# Commandline: needle
+#    [-asequence] COTI_BACSU.fasta
+#    [-bsequence] PLSX_ECOLI.fasta
+#    -outfile COTI_BACSU_PLSX_ECOLI.needle
+#    -auto
+# Align_format: srspair
+# Report_file: COTI_BACSU_PLSX_ECOLI.needle
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: COTI_BACSU
+# 2: PLSX_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 562
+# Identity:      40/562 ( 7.1%)
+# Similarity:    76/562 (13.5%)
+# Gaps:         411/562 (73.1%)
+# Score: 27.0
+# 
+#
+#=======================================
+
+COTI_BACSU         0 --------------------------------------------------      0
+                                                                       
+PLSX_ECOLI         1 MTRLTLALDVMGGDFGPSVTVPAALQALNSNSQLTLLLVGNSDAITPLLA     50
+
+COTI_BACSU         0 --------------------------------------------------      0
+                                                                       
+PLSX_ECOLI        51 KADFEQRSRLQIIPAQSVIASDARPSQAIRASRGSSMRVALELVKEGRAQ    100
+
+COTI_BACSU         0 --------------------------------------------------      0
+                                                                       
+PLSX_ECOLI       101 ACVSAGNTGALMGLAKLLLKPLEGIERPALVTVLPHQQKGKTVVLDLGAN    150
+
+COTI_BACSU         1 -------------MCPLMAENHEVIEEGNS--SELPLSAEDAKKLTELAE     35
+                                  |..::||  ||:|..|.  :.|.:..|:.|.|..:.:
+PLSX_ECOLI       151 VDCDSTMLVQFAIMGSVLAE--EVVEIPNPRVALLNIGEEEVKGLDSIRD    198
+
+COTI_BACSU        36 --------------NVLQGWDVQAEKIDVI-----QGNQMALVWKVHTDS     66
+                                   ..|:..::...|.||:     .||.     .:.|..
+PLSX_ECOLI       199 ASAVLKTIPSINYIGYLEANELLTGKTDVLVCDGFTGNV-----TLKTME    243
+
+COTI_BACSU        67 GAV-----CLKRIHRPEKKALFSIFAQDYLAK--------------KGMN     97
+                     |.|     .||.....:|::.:.:..:.:|.|              .|..
+PLSX_ECOLI       244 GVVRMFLSLLKSQGEGKKRSWWLLLLKRWLQKSLTRRFSHLNPDQYNGAC    293
+
+COTI_BACSU        98 VPGILPNKKGSLYSKHGSFLFVVYDWIEGRPFELTVKQDLEFIMKGLADF    147
+                     :.|:    :|::...||:        ...|.|.:.::|.::.:.:.:...
+PLSX_ECOLI       294 LLGL----RGTVIKSHGA--------ANQRAFAVAIEQAVQAVQRQVPQR    331
+
+COTI_BACSU       148 HTASVGYQPPNGVPIFT--KLGRWPNHYTKRCKQMETWKLMAEAEKEDPF    195
+                     ..|.:....|.|..:..  |.|      |.|                   
+PLSX_ECOLI       332 IAARLESVYPAGFELLDGGKSG------TLR-------------------    356
+
+COTI_BACSU       196 SQLYLQEIDGFIEDGLRIKDRLLQSTYVPWTEQLKKSPNLCHQDYGTGNT    245
+                                                                       
+PLSX_ECOLI       356 --------------------------------------------------    356
+
+COTI_BACSU       246 LLGENEQIWVIDLDTVSFDLPIRDLRKMIIPLLDTTGVWDDETFNVMLNA    295
+                                                                       
+PLSX_ECOLI       356 --------------------------------------------------    356
+
+COTI_BACSU       296 YESRAPLTEEQKQVMFIDMLFPYELYDVIREKYVRKSALPKEELESAFEY    345
+                                                                       
+PLSX_ECOLI       356 --------------------------------------------------    356
+
+COTI_BACSU       346 ERIKANALRQLI    357
+                                 
+PLSX_ECOLI       356 ------------    356
+
+
+#---------------------------------------
+#---------------------------------------

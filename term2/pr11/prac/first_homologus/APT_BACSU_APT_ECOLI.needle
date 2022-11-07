@@ -1,0 +1,49 @@
+########################################
+# Program: needle
+# Rundate: Sun 12 May 2019 11:31:43
+# Commandline: needle
+#    [-asequence] APT_BACSU.fasta
+#    [-bsequence] APT_ECOLI.fasta
+#    -outfile APT_BACSU_APT_ECOLI.needle
+#    -auto
+# Align_format: srspair
+# Report_file: APT_BACSU_APT_ECOLI.needle
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: APT_BACSU
+# 2: APT_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 183
+# Identity:      92/183 (50.3%)
+# Similarity:   112/183 (61.2%)
+# Gaps:          13/183 ( 7.1%)
+# Score: 441.5
+# 
+#
+#=======================================
+
+APT_BACSU          1 --------MDLKQYVTIVPDYPKEGVQFKDITTLMDKGDVYRYATDQIVE     42
+                             ..||..:..:.||||.|:.|:|:|:|::....|..:.|.:||
+APT_ECOLI          1 MTATAQQLEYLKNSIKSIQDYPKPGILFRDVTSLLEDPKAYALSIDLLVE     50
+
+APT_BACSU         43 YAKEKQIDLVVGPEARGFIIGCPVAYALGVGFAPVRKEGKLPREVIKVDY     92
+                     ..|...|..|||.|||||:.|.|||..|||||.||||.||||||.|...|
+APT_ECOLI         51 RYKNAGITKVVGTEARGFLFGAPVALGLGVGFVPVRKPGKLPRETISETY    100
+
+APT_BACSU         93 GLEYGKDVLTIHKDAIKPGQRVLITDDLLATGGTIEATIKLVEELGGVVA    142
+                     .||||.|.|.||.||||||.:||:.|||||||||||||:||:..|||.||
+APT_ECOLI        101 DLEYGTDQLEIHVDAIKPGDKVLVVDDLLATGGTIEATVKLIRRLGGEVA    150
+
+APT_BACSU        143 GIAFLIELSYLDGRNKLEDYDI--LTLMKY---    170
+                     ..||:|.|..|.|..:||...|  .:|:.:   
+APT_ECOLI        151 DAAFIINLFDLGGEQRLEKQGITSYSLVPFPGH    183
+
+
+#---------------------------------------
+#---------------------------------------

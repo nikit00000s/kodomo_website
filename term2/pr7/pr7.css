@@ -1,0 +1,127 @@
+main {
+  background: url(green_field_background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.big-header {
+  background: transparent;
+}
+.big-header-title > span {
+  background: #628520b5;
+  color: #0a2406;
+}
+.big-header-title a {
+  color: #ecffc1;
+}
+.big-header-title a:hover {
+  color: #0a2406;
+}
+.big-header-date {
+  background: #628520b5;
+  color: #ecffc1;
+}
+.prac_content {
+  background: #a1b124;
+}
+.basic_task {
+  height: fit-content;
+  padding: 5rem 1.5rem;
+}
+.prac_title {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  color: #ecffc1;
+}
+.prac_content i {
+  color: #1f4d03;
+}
+.prac_content p {
+  padding-bottom: 1rem;
+  color: #0a2406;
+}
+.task_title {
+  padding-top: 4rem;
+  padding-bottom: 0;
+  text-align: center;
+  color: #ecffc1;
+  margin-bottom: 3rem;
+}
+.task_table {
+  font-size: 1.15rem;
+  font-family: monospace;
+  background: #a1b124;
+  color: #000000;
+  border: none;
+  box-shadow: #000000 0 0 1rem;
+  width: initial;
+  margin: 2rem auto;
+}
+.task_table caption {
+  color: #0a2406;
+  text-align: center;
+}
+.task_table th {
+  background: #628520;
+  border: 2px solid #628520b5;
+}
+.task_table tr {
+  transition-duration: 0.2s;
+}
+.task_table tr:hover {
+  color: #ecffc1;
+}
+.task_table td {
+  border: 2px solid #628520b5;
+}
+.task-info {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.task_outro {
+  margin-top: 1rem;
+}
+span.color {
+  color: #1f4d03;
+}
+.prac_content a {
+  color: #ecffc1;
+  text-decoration: underline dotted;
+}
+.prac_content a i {
+  color: #ecffc1;
+  text-decoration: underline dotted;
+}
+.prac_content a:hover {
+  color: #1f4d03;
+  text-decoration: underline solid;
+}
+.prac_content a:hover i {
+  color: #1f4d03;
+  text-decoration: underline solid;
+}
+.prac_outro {
+  margin-top: 12rem;
+  margin-bottom: 2rem;
+}
+footer.ls-footer {
+  background: #afc91f;
+  color: #0a2406;
+}
+footer.ls-footer a {
+  color: #0a2406;
+}
+footer.ls-footer a:hover {
+  color: #1f4d03;
+}
+.task2 .h6 {
+  font-size: 1.5rem;
+  color: #0a2406;
+  margin-bottom: 0;
+}
+.task2 p {
+  margin-top: 0.2rem;
+  margin-bottom: 0.8rem;
+}
+/*# sourceMappingURL=pr7.css.map */

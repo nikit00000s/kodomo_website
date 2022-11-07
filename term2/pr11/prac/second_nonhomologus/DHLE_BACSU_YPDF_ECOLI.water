@@ -1,0 +1,45 @@
+########################################
+# Program: water
+# Rundate: Sun 12 May 2019 11:18:53
+# Commandline: water
+#    [-asequence] DHLE_BACSU.fasta
+#    [-bsequence] YPDF_ECOLI.fasta
+#    -outfile DHLE_BACSU_YPDF_ECOLI.water
+#    -auto
+# Align_format: srspair
+# Report_file: DHLE_BACSU_YPDF_ECOLI.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: DHLE_BACSU
+# 2: YPDF_ECOLI
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 146
+# Identity:      22/146 (15.1%)
+# Similarity:    58/146 (39.7%)
+# Gaps:          17/146 (11.6%)
+# Score: 36.0
+# 
+#
+#=======================================
+
+DHLE_BACSU       195 EGANLIVTDINKQSVQRAVEDFG--ARAVDPDDIYSQDCDIYAPCALGAT    242
+                     :..|.:.|.:|:......::..|  .:.|..:..:....::.|. .:.||
+YPDF_ECOLI        72 DATNTLTTIVNQIIADEQLQTLGFEGQQVSWETAHRWQSELNAK-LVSAT    120
+
+DHLE_BACSU       243 INDDTIKQLKAKVIAGAANNQLKETRHGDQIHEMGIVYAPDYVINAGGVI    292
+                       .|.::|:|..       .::::.|....|.:.|..:...::.......
+YPDF_ECOLI       121 --PDVLRQIKTP-------EEVEKIRLACGIADRGAEHIRRFIQAGMSER    161
+
+DHLE_BACSU       293 NVADELYGYNAERALKKVEGIYGNIERVLEISQRDGIPAYLAADRL    338
+                     .:|.||..:..::..:|     .:.:.::....|..:|...|:|::
+YPDF_ECOLI       162 EIAAELEWFMRQQGAEK-----ASFDTIVASGWRGALPHGKASDKI    202
+
+
+#---------------------------------------
+#---------------------------------------

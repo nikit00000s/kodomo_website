@@ -1,0 +1,5 @@
+zap
+load=1p47
+define set1 *.O?' and nucleic
+define set2 *.OP? and nucleic
+define set3 *.N? and nucleic

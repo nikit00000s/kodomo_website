@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>#12 nikit00000s</title>
+    <link rel="icon" type="image/png" href="../../img/logos/l_favicon.png"/>
+
+    <link rel="stylesheet" href="../../css/all.min.css"/>
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="../../css/old_style/template_v1.css"/>
+    <link rel="stylesheet" type="text/css" href="page_style.css">
+
+</head>
+<body>
+
+
+<div id="button-to-end" onclick="window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: 'smooth'})">
+    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+</div>
+
+<!--<div id="button-to-end" onclick="window.scrollTo({top: document.body.scrollHeight, left: 0, behavior: 'smooth'});">
+    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+</div>-->
+
+<header class="container-fluid header">
+    <div class="row header-row">
+        <div class="col header-col">
+
+            <h1 class="header-caption">
+                    <span>
+                        <a class="header-link" href="http://kodomo.cmm.msu.su/wiki/2018/2/pr12">
+                            <i class="fa fa-bookmark" aria-hidden="true"></i>
+                            Практикум #12.
+                        </a>
+                        <span class="header-name">
+                            BLAST
+                        </span>
+                    </span>
+            </h1>
+            <h6 class="h6 text-md-center header-date">30 апреля 2019 г.</h6>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <div class="container-fluid prac_content">
+        <div class="row justify-content-center">
+            <div class="basic_task col col-12 col-lg-8">
+                <h2 class="prac_title text-center">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i> Практикум #12
+                </h2>
+
+                <p class="prac_intro">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> Данный практикум посвящен работе в <a
+                        href="https://ru.wikipedia.org/wiki/BLAST"><i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+                    BLAST</a> (англ. Basic
+                    Local Alignment Search Tool&nbsp;&ndash; средство поиска основного локального выравнивания)&nbsp;&mdash;
+                    семейство компьютерных программ, служащих для поиска гомологов белков или нуклеиновых кислот, для
+                    которых известна первичная структура (последовательность) или её фрагмент. Используя BLAST,
+                    исследователь может сравнить имеющуюся у него последовательность с последовательностями из базы
+                    данных и найти последовательности предполагаемых гомологов. Программы
+                    <a href="https://blast.ncbi.nlm.nih.gov"><i class="fa fa-external-link-square"
+                                                                aria-hidden="true"></i> BLAST</a>:
+                </p>
+                <ul class="short-descr">
+                    <li>
+                        <h5>
+                            blastp
+                            <i class="fa fa-cloud" aria-hidden="true"></i></h5>
+                        медленное сравнение аминокислотной последовательности с целью поиска всех сходных аминокислотных
+                        последовательностей;
+                    </li>
+                    <li>
+                        <h5>
+                            blastn
+                            <i class="fa fa-cloud" aria-hidden="true"></i></h5>
+                        медленное сравнение нуклеотидной последовательности с целью поиска всех сходных нуклеотидных
+                        последовательностей;
+                    </li>
+                    <li>
+                        <h5>
+                            blastx
+                            <i class="fa fa-cloud" aria-hidden="true"></i></h5>
+                        переводит изучаемую нуклеотидную последовательность в кодируемые аминокислоты, а затем
+                        сравнивает её с имеющейся базой данных аминокислотных последовательностей белков;
+                    </li>
+                    <li>
+                        <h5>
+                            tblastn
+                            <i class="fa fa-cloud" aria-hidden="true"></i></h5>
+                        изучаемая аминокислотная последовательность сравнивается с транслированными последовательностями
+                        базы данных секвенированных нуклеиновых кислот;
+                    </li>
+                    <li>
+                        <h5>
+                            tblastx
+                            <i class="fa fa-cloud" aria-hidden="true"></i></h5>
+                        переводит изучаемую нуклеотидную последовательность в аминокислотную, а затем сравнивает её с
+                        транслированными последовательностями базы данных секвенированных нуклеиновых кислот.
+                    </li>
+                </ul>
+
+            </div>
+            <section class="basic_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-circle" aria-hidden="true"></i> Задание 1.
+                    Поиск гомологов белка (2Z,6E)-хедикариолсинтазы</h3>
+
+                <div class="task_intro">
+                    <h5><i class="fa fa-book" aria-hidden="true"></i> Что было сделано?</h5>
+                    <ul class="short">
+                        <li>
+                            Написали описание параметров, включая Algorithm parameters, которые использовали при запуске
+                            сервиса BLAST;
+                        </li>
+                        <li>
+                            Сохранили полную таблицу находок;
+                        </li>
+                        <li>
+                            Построли множественное выравнивание выборки из 5&nbsp;—&nbsp;10 последовательностей из
+                            начала,
+                            середины и конца списка Description&nbsp;(результатов поиска BLAST);
+                        </li>
+                        <li>
+                            Отредактировали выравнивание, оставив в нем только гомологичные, по нашему мнению, белки;
+                        </li>
+                        <li>
+                            Обосновали гомологичность наших находок.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="task_info">
+                    <h4><i class="fa fa-check" aria-hidden="true"></i> Описание параметров программы blastp</h4>
+                    <p>
+                        Ниже, на рисунке 1, изображена страница вводных параметров для программы blastp из семейства
+                        компьютерных программ BLAST.
+                        Список обозначений:
+                    </p>
+
+                    <ul class="short-descr blast_page height-scroll" id="ul1">
+                        <li>
+                            <h5>#0 </h5> выбор программы, с которой Вы будете работать. <i
+                                class="fa fa-cog fa-spin"></i> Функции этих программ кратко описаны выше.
+                            <hr class="hr-text" data-content="Enter Query Sequence">
+                        </li>
+                        <li>
+                            <h5>#1 </h5> в текстовое поле можно ввести или аминокислотную последовательность белка, или
+                            его AC, или его ID&nbsp;(а ниже, в поле <b>Or,&nbsp;upload&nbsp;file</b> можно также
+                            загрузить файл с последовательностью);
+                        </li>
+                        <li>
+                            <h5>#2 </h5> учитывать в поиске только те аминокислоты Вашей последовательности, от какой по
+                            какую указано в двух текстовых полях&nbsp;(по умолчанию учитываются все);
+                        </li>
+                        <li>
+                            <h5>#3 </h5> в текстовое поле можно ввести название последовательности в данном поиске;
+                        </li>
+                        <li>
+                            <h5>#4 </h5> можно выставить флажок, чтобы произвести поиск и выравнивание более чем двух
+                            последовательностей.
+                            <hr class="hr-text" data-content="Choose Search Set">
+                        </li>
+                        <li>
+                            <h5>#5 </h5> из списка баз данных произвести выбор базы, в которой будет происходить работа;
+                        </li>
+                        <li>
+                            <h5>#6 </h5> произвести поиск только по указанным в текстовом поле организмам, опционально.
+                            Можно выставить флажок <i>exclude</i>, тогда будет происходить поиск только по тем
+                            организмам, которые не указаны в текстовом поле;
+                        </li>
+                        <li>
+                            <h5>#7 </h5> исключить из работы некоторые последовательности, опционально. Исключаемые
+                            последовательности можно выбрать, выставив нужные флажки.
+                            <br/> <b>Models&nbsp;(XM/XP):</b> исключить последовательности, аннотации которых сделаны
+                            автоматически,
+                            <br/> <b>Non-redundant RefSeq proteins&nbsp;(WP):</b> исключить референсные
+                            последовательности&nbsp;(исходники),
+                            <br/> <b>Uncultured/environmental sample sequences:</b> исключить последовательности,
+                            полученные из организмов в естественной среде обитания&nbsp;(которые не были выращены в
+                            культуре);
+                            <hr class="hr-text" data-content="Program Selection">
+                        </li>
+                        <li>
+                            <h5>#8 </h5> произвести выбор алгоритма поиска и выравнивания, выставив соответствующие
+                            флажки. Автоматически выставлен флажок <i>blastp&nbsp;(protein-protein BLAST)</i>;
+                        </li>
+                        <li>
+                            <h5>#9 </h5> <i>Начать&nbsp;бластование!!!</i> Результаты можно получить в отдельной
+                            вкладке, выставив флажок.
+                            <hr class="hr-text" data-content="General Parameters">
+                        </li>
+                        <li>
+                            <h5>#10 </h5> максимальное количество последовательностей, выводимое в результатах работы по
+                            данному запросу. Автоматически выбрано число&nbsp;100;
+                        </li>
+                        <li>
+                            <h5>#11 </h5> автоматическое регулирование размера слова&nbsp;(это понятие связано с
+                            механизмом работы BLAST, смотрите выше по ссылке) для коротких последовательностей. Можно
+                            дезактивировать, выставив флажок. Он автоматически выставлен;
+                        </li>
+                        <li>
+                            <h5>#12 </h5> выставить в текстовом поле максимальное значение E-value&nbsp;(тоже связано с
+                            механизмом работы). Отображаются только те результаты, E-value которых меньше заданного. Чем
+                            меньше E-value, тем больше максимальный вес в битах, соответственно, тем более идентичные по
+                            отношению к исходному запросу будут результаты. Автоматически выбрано число&nbsp;10;
+                        </li>
+                        <li>
+                            <h5>#13 </h5> выбрать из списка длину слова&nbsp;(связано с механизмом работы), на которые
+                            будет разбиваться заданная последовательность для отсортировки последовательностей из банка,
+                            подлежащих проведению среди них поиска. Автоматически выбрано максимальное число&nbsp;6;
+                        </li>
+                        <li>
+                            <h5>#14 </h5> ввести в текстовое поле ограничение максимального количества совпадений между
+                            данной и искомой последовательностями. Необходимо в том случае, если в результатах
+                            содержится очень много сильно идентичных последовательностях, что может привести к тому, что
+                            BLAST не сможет вывести менее идентичные, но интересные результаты. Автоматически выставлено
+                            число&nbsp;0, это значит, что никакого отбрасывания сильно идентичных последовательностей
+                            происходить не будет.
+                            <hr class="hr-text" data-content="Scoring Parameters">
+                        </li>
+                        <li>
+                            <h5>#15 </h5> выбрать из списка матрицу для вычисления очков выравнивания. По умолчанию&nbsp;-&nbsp;BLOSUM62;
+                        </li>
+                        <li>
+                            <h5>#16 </h5> выбрать из списка тип штрафов за гэпы&nbsp;(пропуски) в выравнивании;
+                        </li>
+                        <li>
+                            <h5>#17 </h5> выбрать из списка тип автоматического изменения&nbsp;(масштабирования)
+                            значений матрицы подстановок.
+                            <hr class="hr-text" data-content="Filters and Masking">
+                        </li>
+                        <li>
+                            <h5>#18 </h5> исключить последовательности низкой сложности&nbsp;(например, аргинин-глицин
+                            богатые последовательности, повторы) которые могут привести к неочевидным и нелогичным
+                            результатам;
+                        </li>
+                        <li>
+                            <h5>#19 </h5> производить поиск нетривиальным способом.
+                            <br/> <b>Mask for lookup table only</b>: производить выравнивания согласно сгенерированной
+                            хеш-таблицой поиска и только согласно с ней.
+                            <br/> <b>Mask lower case letters</b>: производить фильтрование по строчным символам
+                            последовательности (скрыть строчные символы).
+                        </li>
+
+                        <li class="button" id="b-ul1"
+                            onclick="ul = document.getElementById('ul1'); ul.scrollTo({top: ul.scrollTop + ul.offsetHeight, left: 0, behavior: 'smooth'});">
+                            <i class="fa fa-arrow-down"></i>
+                        </li>
+                    </ul>
+
+                    <figure class="image height-scroll">
+                        <img src="img/blast_page.png" alt="blast_page">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-image" aria-hidden="true"></i> Рисунок 1.</h5>
+                        Страница программы blastp на сайте Blast
+                    </div>
+                    <!-- #FIXME -->
+                </div>
+
+                <div class="task_info">
+                    <h4><i class="fa fa-plus" aria-hidden="true"></i> Дополнительные материалы</h4>
+
+                    <p>
+                        Ниже распологаются изображения трех выравниваний для аминокислотных последовательностей,
+                        полученных из BLAST. Выравнивания сделаны в программе <i class="fa fa-terminal"
+                                                                                 aria-hidden="true"></i>&nbsp;muscle,
+                        изображения получены через программу Jalview, раскраска&nbsp;&mdash;&nbsp;ClustalX. На каких
+                        именно последовательностях производилось выравнивание &mdash; описано ниже.
+
+                    </p>
+
+                    <figure class="image height-scroll">
+                        <img src="img/align1.png" alt="align1">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-image" aria-hidden="true"></i> Рисунок 2.</h5>
+                        Выравнивание белка HCS_KITSK с наиболее схожими последовательностями. Процент соответствия&nbsp;(identity)
+                        у них выше&nbsp;70%, E-value меньше&nbsp;10<sup>-164</sup>. Величина покрытия больше&nbsp;95%.
+                    </div>
+
+                    <figure class="image height-scroll">
+                        <img src="img/align2.png" alt="align2">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-image" aria-hidden="true"></i> Рисунок 3.</h5>
+                        Выравнивание белка HCS_KITSK с последовательностями средней степени схожести. Процент
+                        соответствия&nbsp;(identity)
+                        у них выше&nbsp;30%, E-value меньше&nbsp;10<sup>-41</sup>. Величина покрытия больше&nbsp;94%.
+                    </div>
+
+                    <figure class="image height-scroll">
+                        <img src="img/align3.png" alt="align3">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-image" aria-hidden="true"></i> Рисунок 4.</h5>
+                        Выравнивание белка HCS_KITSK с последовательностями малой степени схожести. Процент соответствия&nbsp;(identity)
+                        у них выше&nbsp;25%, E-value меньше&nbsp;10<sup>-18</sup>. Величина покрытия больше&nbsp;90%.
+                    </div>
+
+
+                    <figure class="image height-scroll">
+                        <img src="img/blast_result.png" alt="distribution">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-image" aria-hidden="true"></i> Рисунок 5.</h5>
+                        Распределение 100 лучших результатов запроса BLAST. <br/>
+                        <i class="fa fa-question" aria-hidden="true"></i> Пояснение. Сверху, в секции <b>Query seq.</b>
+                        изображена линейная последовательность белка&ndash;запроса; на ней изображены очень
+                        специфические части последовательности, которые BLAST смог найти. Эти подпоследовательности
+                        относятся к доменам, которые изображены ниже у секции <b>Superfamilies</b>. Ниже изображены
+                        собственно результаты поиска. Здесь графически представлено покрытие каждого результата (мы его
+                        можем представить по длине и расположению относительно последовательности запроса). Также здесь
+                        представлены величены E-value, оценить которые мы можем с помощью цветов. Красным окрашены
+                        последовательности с очень низким E-value.
+                    </div>
+
+                    <div class="table_wrap">
+                        <table class="table table-borderless">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Query (q) AC</th>
+                                <th>Subject (s) AC</th>
+                                <th>Identity, %</th>
+                                <th>Alignment length</th>
+                                <th>Mismatches</th>
+                                <th>Gap opens</th>
+                                <th>Q. start</th>
+                                <th>Q. end</th>
+                                <th>S. start</th>
+                                <th>S. end</th>
+                                <th>E&ndash;value</th>
+                                <th>Bit score</th>
+                                <th>Positives, %</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>0</th>
+                                <td>HCS_KITSK</td>
+                                <td>WP_014133196.1</td>
+                                <td>100.000</td>
+                                <td>338</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>338</td>
+                                <td>1</td>
+                                <td>338</td>
+                                <td>0</td>
+                                <td>688</td>
+                                <td>100.00</td>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <td>HCS_KITSK</td>
+                                <td>4MC0_A</td>
+                                <td>100.000</td>
+                                <td>338</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>338</td>
+                                <td>1</td>
+                                <td>338</td>
+                                <td>0</td>
+                                <td>687</td>
+                                <td>100.00</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>HCS_KITSK</td>
+                                <td>RPE50111.1</td>
+                                <td>72.531</td>
+                                <td>324</td>
+                                <td>89</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>324</td>
+                                <td>1</td>
+                                <td>324</td>
+                                <td>1.04 * 10<sup>-167</sup></td>
+                                <td>480</td>
+                                <td>81.17</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>HCS_KITSK</td>
+                                <td>WP_059414878.1</td>
+                                <td>70.393</td>
+                                <td>331</td>
+                                <td>98</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>331</td>
+                                <td>1</td>
+                                <td>331</td>
+                                <td>1.71 * 10<sup>-167</sup></td>
+                                <td>479</td>
+                                <td>80.97</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>HCS_KITSK</td>
+                                <td>GAP46009.1</td>
+                                <td>70.245</td>
+                                <td>326</td>
+                                <td>97</td>
+                                <td>0</td>
+                                <td>6</td>
+                                <td>331</td>
+                                <td>1</td>
+                                <td>326</td>
+                                <td>1.44 * 10<sup>-164</sup></td>
+                                <td>471</td>
+                                <td>80.98</td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>HCS_KITSK</td>
+                                <td>WP_086598900.1</td>
+                                <td>68.580</td>
+                                <td>331</td>
+                                <td>104</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>331</td>
+                                <td>1</td>
+                                <td>331</td>
+                                <td>5.66 * 10<sup>-160</sup></td>
+                                <td>460</td>
+                                <td>79.15</td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td>HCS_KITSK</td>
+                                <td>WP_078916148.1</td>
+                                <td>62.112</td>
+                                <td>322</td>
+                                <td>120</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>321</td>
+                                <td>1</td>
+                                <td>321</td>
+                                <td>9.75 * 10<sup>-127</sup></td>
+                                <td>375</td>
+                                <td>73.60</td>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <td>HCS_KITSK</td>
+                                <td>WP_115913110.1</td>
+                                <td>61.801</td>
+                                <td>322</td>
+                                <td>121</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>321</td>
+                                <td>1</td>
+                                <td>321</td>
+                                <td>5.12 * 10<sup>-126</sup></td>
+                                <td>374</td>
+                                <td>73.29</td>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <td>HCS_KITSK</td>
+                                <td>KMS75306.1</td>
+                                <td>61.356</td>
+                                <td>295</td>
+                                <td>112</td>
+                                <td>2</td>
+                                <td>28</td>
+                                <td>321</td>
+                                <td>1</td>
+                                <td>294</td>
+                                <td>3.93 * 10<sup>-109</sup></td>
+                                <td>330</td>
+                                <td>73.22</td>
+                            </tr>
+                            <tr>
+                                <th>9</th>
+                                <td>HCS_KITSK</td>
+                                <td>WP_050375609.1</td>
+                                <td>43.000</td>
+                                <td>300</td>
+                                <td>169</td>
+                                <td>1</td>
+                                <td>28</td>
+                                <td>325</td>
+                                <td>1</td>
+                                <td>300</td>
+                                <td>2.02 * 10<sup>-72</sup></td>
+                                <td>237</td>
+                                <td>56.33</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td>HCS_KITSK</td>
+                                <td>WP_093858087.1</td>
+                                <td>35.294</td>
+                                <td>323</td>
+                                <td>203</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>321</td>
+                                <td>2</td>
+                                <td>323</td>
+                                <td>2.07 * 10<sup>-47</sup></td>
+                                <td>172</td>
+                                <td>51.39</td>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <td>HCS_KITSK</td>
+                                <td>WP_049714840.1</td>
+                                <td>36.478</td>
+                                <td>318</td>
+                                <td>198</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>317</td>
+                                <td>23</td>
+                                <td>339</td>
+                                <td>1.37 * 10<sup>-44</sup></td>
+                                <td>165</td>
+                                <td>48.43</td>
+                            </tr>
+                            <tr>
+                                <th>12</th>
+                                <td>HCS_KITSK</td>
+                                <td>RPK77301.1</td>
+                                <td>35.185</td>
+                                <td>324</td>
+                                <td>203</td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>321</td>
+                                <td>1</td>
+                                <td>320</td>
+                                <td>5.87 * 10<sup>-44</sup></td>
+                                <td>163</td>
+                                <td>49.38</td>
+                            </tr>
+                            <tr>
+                                <th>13</th>
+                                <td>HCS_KITSK</td>
+                                <td>SCE18688.1</td>
+                                <td>35.185</td>
+                                <td>324</td>
+                                <td>203</td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>321</td>
+                                <td>1</td>
+                                <td>320</td>
+                                <td>1.17 * 10<sup>-43</sup></td>
+                                <td>162</td>
+                                <td>49.38</td>
+                            </tr>
+                            <tr>
+                                <th>14</th>
+                                <td>HCS_KITSK</td>
+                                <td>SFY17167.1</td>
+                                <td>35.494</td>
+                                <td>324</td>
+                                <td>202</td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>321</td>
+                                <td>1</td>
+                                <td>320</td>
+                                <td>1.31 * 10<sup>-43</sup></td>
+                                <td>162</td>
+                                <td>49.69</td>
+                            </tr>
+                            <tr>
+                                <th>15</th>
+                                <td>HCS_KITSK</td>
+                                <td>RAJ67521.1</td>
+                                <td>33.742</td>
+                                <td>326</td>
+                                <td>206</td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>321</td>
+                                <td>1</td>
+                                <td>321</td>
+                                <td>9.27 * 10<sup>-42</sup></td>
+                                <td>157</td>
+                                <td>50.31</td>
+                            </tr>
+                            <tr>
+                                <th>16</th>
+                                <td>HCS_KITSK</td>
+                                <td>ESU46049.1</td>
+                                <td>33.746</td>
+                                <td>323</td>
+                                <td>209</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>321</td>
+                                <td>1</td>
+                                <td>320</td>
+                                <td>1.20 * 10<sup>-41</sup></td>
+                                <td>157</td>
+                                <td>49.23</td>
+                            </tr>
+                            <tr>
+                                <th>17</th>
+                                <td>HCS_KITSK</td>
+                                <td>WP_052687012.1</td>
+                                <td>32.258</td>
+                                <td>310</td>
+                                <td>207</td>
+                                <td>2</td>
+                                <td>8</td>
+                                <td>316</td>
+                                <td>22</td>
+                                <td>329</td>
+                                <td>1.71 * 10<sup>-41</sup></td>
+                                <td>157</td>
+                                <td>47.10</td>
+                            </tr>
+                            <tr>
+                                <th>18</th>
+                                <td>HCS_KITSK</td>
+                                <td>WP_053923023.1</td>
+                                <td>34.307</td>
+                                <td>274</td>
+                                <td>177</td>
+                                <td>2</td>
+                                <td>8</td>
+                                <td>280</td>
+                                <td>11</td>
+                                <td>282</td>
+                                <td>1.76 * 10<sup>-41</sup></td>
+                                <td>157</td>
+                                <td>50.00</td>
+                            </tr>
+                            <tr>
+                                <th>19</th>
+                                <td>HCS_KITSK</td>
+                                <td>SCF61559.1</td>
+                                <td>33.746</td>
+                                <td>323</td>
+                                <td>209</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>321</td>
+                                <td>1</td>
+                                <td>320</td>
+                                <td>2.15 * 10<sup>-41</sup></td>
+                                <td>157</td>
+                                <td>48.92</td>
+                            </tr>
+                            <tr>
+                                <th>20</th>
+                                <td>HCS_KITSK</td>
+                                <td>SCF80729.1</td>
+                                <td>33.746</td>
+                                <td>323</td>
+                                <td>209</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>321</td>
+                                <td>1</td>
+                                <td>320</td>
+                                <td>4.37 * 10<sup>-41</sup></td>
+                                <td>156</td>
+                                <td>48.61</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="caption">
+                        <h5>
+                            <i class="fa fa-table" aria-hidden="true"></i> Таблица 1.
+                        </h5>
+                        Результат запроса BLAST, 21 первый результат
+                    </div>
+                </div>
+
+                <div class="task_info">
+                    <h4><i class="fa fa-info-circle" aria-hidden="true"></i> Поиск гомологов</h4>
+                    <p>
+                        После загрузки аминокислотной последовательности белка HCS_KITSK
+                        <small>[E4MYY0 (2Z,6E)-hedycaryol
+                            synthase {ECO:0000303 | PubMed:24399794} (HcS {ECO:0000303 | PubMed:24399794}) (4.2.3.187
+                            {ECO:0000269 | PubMed:24399794})]
+                        </small>
+                        в текстовое поле <i>Enter
+                        FASTA sequence(s)</i>, смены максимального количества результатов на 20&nbsp;000&nbsp;(максимальное
+                        возможное количество результатов, оно было выставлено для того, чтобы сравнить результаты с
+                        разными
+                        E-value) и нажатия на кнопку <b>BLAST</b> появилась веб-страница с результатами. <br/>
+                    <p> На ней мы можем увидеть многое. Например, изображение с распределением&nbsp;100 лучших
+                        результатов запроса BLAST&nbsp;(рисунок&nbsp;5, выше). Здесь мы также получили таблицу с
+                        результатами работы BLAST&nbsp;(таблица&nbsp;1, выше). Всего BLAST нашел 4&nbsp;562 белка.<br/>
+                    <p> Некоторые результаты я отобрал для выравнивания. Всего для дальнейшего исследования я взял 17&nbsp;белков,
+                        которые поделил на 3 группы:
+                    </p>
+                    <ul class="short-descr">
+                        <li>
+                            <h5> 1 </h5> выравнивание белка&nbsp;HCS_KITSK с наиболее схожими последовательностями.
+                            Процент соответствия&nbsp;(identity) у них выше&nbsp;70%, E-value
+                            меньше&nbsp;10<sup>-164</sup>. Также величина покрытия больше&nbsp;95%. Здесь нет ни одного
+                            инделя&nbsp;(пропусков нет), у первых двух последовательностей даже нет несовпадений&nbsp;(возможно
+                            это те же самые белки). У остальных по два инделя.
+                        </li>
+                        <li>
+                            <h5> 2 </h5> выравнивание белка HCS_KITSK с последовательностями средней степени схожести.
+                            Процент соответствия&nbsp;(identity) у них выше&nbsp;30%, E-value
+                            меньше&nbsp;10<sup>-41</sup>. Величина покрытия больше&nbsp;94%. Гэпов достаточно много.
+                        </li>
+                        <li>
+                            <h5> 3 </h5> выравнивание белка HCS_KITSK с последовательностями малой степени схожести.
+                            Процент соответствия&nbsp;(identity) у них выше&nbsp;25%, E-value
+                            меньше&nbsp;10<sup>-18</sup>. Величина покрытия больше&nbsp;90%. Гэпов достаточно много.
+                        </li>
+                    </ul>
+                    <p>
+                        Результат в таблице <a href="prac/gryzunov_hits.xlsx" download="gryzunov_hits.xlsx"><i class="fa fa-external-link-square" aria-hidden="true"></i> gryzunov_hits.xlsx</a>
+                    </p>
+                </div>
+
+                <div class="task_outro">
+                    <h5><i class="fa fa-comment" aria-hidden="true"></i> Выводы</h5>
+                    <p>
+                        Так как мой белок HCS_KITSK отвечает за вторичный метаболизм бактерий, то человеку известно не
+                        так уж и много белков, сходных с моим. Вторичные метаболиты бывают очень разнообразными,
+                        следовательно
+                        и белки мало чем похожи друг на друга. Этот факт меня расстроил; также, он отразился на том, что
+                        гомологичными я могу назвать только те белки, которые я использовал в первом выравнивании&nbsp;(рисунок&nbsp;2,
+                        выше).
+                        <br/>
+                    <p>
+                        Во втором&nbsp;(рисунок&nbsp;3) и третьем&nbsp;(рисунок&nbsp;4) выравниваниях получились очень
+                        плохие результаты (в&nbsp;плане гомологии), хотя мы можем наблюдать интересные совпадения.
+                        Например, колонки 50&ndash;65 во втором и 30&ndash;45 в третьем выравниваниях довольно похожи
+                        W-[ER]-W-x(5)-L-x(5)-A-[RQ], колонки 103&ndash;107 во втором и 83&ndash;87 D-D-x(2)-D и&nbsp;так&nbsp;далее.
+                        <br/>
+                    <p>
+                        Белки из первого выравнивания&nbsp;(рисунок 2) я расцениваю как гомологичные на том основании,
+                        что мы видим множество консервативных колонок расположеных подряд. Например, с&nbsp;52&nbsp;по&nbsp;66
+                        колонку мы видим 15 полностью консервативных позиций. Также мы можем наблюдать полностью
+                        консервативные позиции с&nbsp;76&nbsp;колонки по&nbsp;84, с&nbsp;175&nbsp;по&nbsp;193, с&nbsp;300&nbsp;по&nbsp;308
+                        колонку и&nbsp;так далее.
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="basic_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-circle" aria-hidden="true"></i> Задание 2.
+                    Карта сходства двух белков</h3>
+
+                <div class="task_intro">
+                    <h5><i class="fa fa-book" aria-hidden="true"></i> Что было сделано?</h5>
+                    <ul class="short">
+                        <li>
+                            Выбрали по идентификатору записи Uniprot из двух разных групп из данного заранее списка
+                            (всего групп 3);
+                        </li>
+                        <li>
+                            Построили карту локального сходства последовательностей этих белков;
+                        </li>
+                        <li>
+                            Объяснили крупные различия между последовательностями
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="task_info">
+                    <h4><i class="fa fa-info-circle" aria-hidden="true"></i> Карта локального сходства</h4>
+                    <p>
+                        Для этого задания я выбрал два белка из разных груп с идентификаторами E4ZIZ7_LEPMJ и
+                        K1VG04_TRIAC. У этих белков нет ручной аннотации на сайте Uniprot&nbsp;(для этих белков есть
+                        только нерецензированные, автоматически аннотированные записи).
+                        <br/>
+                    <p>
+                        Затем получил последовательности этих белков в FASTA-формате и ввел их в текстовое поле <i>Enter
+                        FASTA sequence(s)</i>, предварительно выставив флажок <i>Align two or more sequences</i>. Нажал
+                        на кнопку <b>BLAST</b> и запустил выравнивание двух белков. В результатах получил изображение
+                        выравнивания (рисунок 6) и карту локального сходства&nbsp;(Dot Matrix, рисунок 7).
+                    </p>
+
+                    <figure class="image">
+                        <img src="img/aligned.png" alt="alignment of two sequences">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-image" aria-hidden="true"></i> Рисунок 6.</h5>
+                        Результат парного выравнивания двух аминокислотных последовательностей E4ZIZ7_LEPMJ и
+                        K1VG04_TRIAC в BLAST
+                    </div>
+
+                    <figure class="image">
+                        <img src="img/dot_matrix.png" alt="dot matrix">
+                    </figure>
+                    <div class="caption">
+                        <h5><i class="fa fa-image" aria-hidden="true"></i> Рисунок 7.</h5>
+                        Карта локального сходства для двух аминокислотных последовательностей E4ZIZ7_LEPMJ и
+                        K1VG04_TRIAC в BLAST.
+                        Query_25605 &mdash; E4ZIZ7_LEPMJ, Query_25607 &mdash; K1VG04_TRIAC.
+                    </div>
+                </div>
+
+                <div class="task_outro">
+                    <h5><i class="fa fa-comment" aria-hidden="true"></i> Выводы</h5>
+                    <p>
+                        Из карты локального сходства двух аминокислотных последовательностей E4ZIZ7_LEPMJ и K1VG04_TRIAС&nbsp;(рисунок
+                        7) мы можем заключить, что разница между этими белками состоит в следующем. У последовательности
+                        K1VG04_TRIAС&nbsp;(Query_25607) относительно последовательности E4ZIZ7_LEPMJ&nbsp;(Query_25605)
+                        произошло две большие дупликации и три малые инсерции. У E4ZIZ7_LEPMJ относительно K1VG04_TRIAС
+                        произошло 6 инсерций.
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="basic_task col col-12 col-lg-8">
+                <h3 class="task_title"><i class="fa fa-circle" aria-hidden="true"></i> Задание 3.
+                    Игры с BLAST</h3>
+
+                <div class="task_intro">
+                    <h5><i class="fa fa-book" aria-hidden="true"></i> Что было сделано?</h5>
+                    <p>
+                        Сначала был произведен поиск случайной последовательности в BLAST.
+                        Для игры с параметрами BLAST мной была придумана последовательность <i
+                            class="fa fa-angle-double-left" aria-hidden="true"></i>&nbsp;<i class="burgundy">Surely
+                        you're joking, Mr.
+                        Alexeevsky!</i>&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i>. Затем я
+                        повторил первое задание, изменяя входные параметры BLAST.
+                    </p>
+                </div>
+
+                <div class="task_info">
+                    <h4><i class="fa fa-smile-o" aria-hidden="true"></i> Surely you're joking, Mr. Alexeevsky!</h4>
+                    <p>
+                        Эту последовательность я подал на вход программе <i class="fa fa-cloud" aria-hidden="true"></i>&nbsp;<b>blastp</b>.
+                        На выходе были получены не самые лучшие результаты: количество очков&nbsp;&mdash; менее&nbsp;40,
+                        процент покрытия&nbsp;&mdash; очень сильно варьируется от&nbsp;90&nbsp;до&nbsp;30, E-value&nbsp;&mdash;
+                        от&nbsp;3&nbsp;до&nbsp;265, соответствие&nbsp;(identity)&nbsp;&mdash; от&nbsp;33&nbsp;до&nbsp;85.
+                        Все неизвестные символы BLAST заменял на X.
+                    </p>
+                </div>
+
+                <div class="task_info">
+                    <h4><i class="fa fa-info-circle" aria-hidden="true"></i> Изменение входных параметров BLAST</h4>
+                    <p>
+                        На этот раз я использовал последовательность белка HCS_KITSK. Я производил поиск несколько раз,
+                        каждый раз изменяя какой-нибудь один параметр.
+                        <br/>
+                    <p>
+                        Сначала я использовал стандартные параметры и получил 3346&nbsp;результатов. Затем я попробовал
+                        отключить параметр <i>Short queries</i>, тогда я получил 3562&nbsp;. Список топ&ndash;100&nbsp;результатов
+                        не изменился, как и его "свойства"&nbsp;(E-values и так&nbsp;далее). Затем я поставил параметр
+                        <i>Expect threshold</i> на 0,001. И получил 3033&nbsp;результатов, в то же время свойства топ&ndash;100&nbsp;результатов
+                        не изменились.
+                        После я изменил <i>Word size</i> на&nbsp;2. На выходе я получил 7187&nbsp;результатов. Опять же,
+                        свойства топ&ndash;100&nbsp;результатов не изменились.
+                        <br>
+                    <p> Далее выбрал <i>Matrix</i> &ndash;
+                        BLOSUM90, на выходе получил 3339&nbsp;результатов. Это изменение довольно сильно повлияло на
+                        E-values не начальных последовательностей, что говорит, что похожесть этих последовательностей
+                        очень зависит от ситуации, в которой они были оценены. Когда же переставил этот параметр на
+                        BLOSUM45, то получил 5028&nbsp;результатов. Сразу стало заметно, что E-values стали меньше на 10
+                        порядков. Также я решил испытать матрицы серии PAM&ndash;(point accepted mutation matrix).
+                        Попробовал для начала PAM30, получил достаточно малое количество результатов&nbsp;&ndash; всего&nbsp;890.
+                        E-values увеличились на&nbsp;20&nbsp;порядков. На процент идентичности это изменение влияния не
+                        оказало. Я также решил испробовать PAM250. Получил 3537&nbsp;результатов, причем происходит
+                        смена мест в топ-10&nbsp;результатов, E-values увеличиваются в 20&nbsp;раз, процент соответствия&nbsp;(identity)
+                        незначительно падает&nbsp;(на 1&ndash;2%)
+                        <br/>
+                    <p>
+                        Напоследок я решил испробовать поля <i>Low complexity regions</i> и <i>Compositional
+                        adjustments</i>. Когда я убрал флажок с первого поля, то я получил 3528&nbsp;результатов,
+                        одновременно с этим E-values незначительно выросли. Когда я испытывал последний параметр&nbsp;(выставив
+                        <i>No adjustment</i>), то я получил 3064&nbsp; результатов, опять же, E-value которых было
+                        несколько больше.
+                    </p>
+                </div>
+
+                <div class="task_outro">
+                    <h5><i class="fa fa-comment" aria-hidden="true"></i> Выводы</h5>
+                    BLAST &mdash; довольно гибкая система. Если надавить с одной стороны, то какая-то деталь выдвинется с
+                    другой.
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- TERMS, FOOTER column -->
+
+            <div class="col col-6 terms">
+                <h1 class="text-uppercase">Семестры</h1>
+                <div class="terms1">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="../../term1/index.html">Первый</a>
+                        </li>
+                        <li>
+                            <a href="../../term2/index.html">Второй</a>
+                        </li>
+                        <li>
+                            <a href="../../term3/index.html">Третий</a>
+                        </li>
+                        <li>
+                            <a href="../../term4/index.html">Четвёртый</a>
+                        </li>
+                        <li>
+                            <a href="../../term5/index.html">Пятый</a>
+                        </li>
+                        <li>
+                            <a href="../../term6/index.html">Шестой</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="terms2">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="../../term7/index.html">Седьмой</a>
+                        </li>
+                        <li>
+                            <a href="../../term8/index.html">Восьмой</a>
+                        </li>
+                        <li>
+                            <a href="../../term9/index.html">Девятый</a>
+                        </li>
+                        <li>
+                            <a href="../../term10/index.html">Десятый</a>
+                        </li>
+                        <li>
+                            <a href="../../term11/index.html">Одиннадцатый</a>
+                        </li>
+                        <li>
+                            <a href="../../term12/index.html">Двенадцатый</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <hr class="clearfix w-100 d-md-none">
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col col-md-3 mx-auto">
+
+                <!-- Links -->
+                <h1 class="text-uppercase">МГУ</h1>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="http://www.fbb.msu.ru/" class="li">
+                            Сайт ФББ МГУ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.msu.ru/">МГУ</a>
+                    </li>
+                </ul>
+
+
+                <!--SOCIAL-->
+                <h1 class="text-uppercase">Связь</h1>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://vk.com/nikgr1">Вконтакте | <i class="fa fa-vk" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:nikit00000s@fbb.msu.ru">Почта kodomo | <i class="fa fa-envelope"
+                                                                                  aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:NikGR1@yandex.ru">Личная почта | <i class="fa fa-envelope"
+                                                                            aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col col-md-3 mx-auto">
+
+                <!-- STUFF -->
+                <h1 class="text-uppercase">Остальное на сайте</h1>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="../../index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="../../about_me.html">Обо мне</a>
+                    </li>
+                    <li>
+                        <a href="../../html/fun-useful-statements.html">Котелок</a>
+                    </li>
+                    <li>
+                        <a href="http://kodomo.cmm.msu.su/wiki/2018">KodomoFBB</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <hr class="clearfix w-100">
+    </div>
+    <!-- Copyright -->
+
+    <div class="footer-copyright">
+
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        Все права защищены. Грызунов Никита, <span id="CurrentYear"></span> г.
+    </div>
+</footer>
+
+
+<script src="../../js/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../js/own/yearInit.js"></script>
+</body>
+</html>
